@@ -54,9 +54,9 @@
                         </div>
                         <!-- ====== Mobile Menu (Offcanvas) ====== -->
                         <aside id="mainmenu"
-                            class="max-[1131px]:fixed max-[1131px]:h-screen max-[1131px]:inset-y-0 max-[1131px]:-mt-[1px] max-[1131px]:-left-4 max-[1131px]:-top-4 max-[1131px]:z-[60] max-[1131px]:w-[320px] max-[1131px]:max-w-[86vw] max-[1131px]:bg-white max-[1131px]:border-r max-[1131px]:border-primary/80 max-[1131px]:transition-transform max-[1131px]:duration-300 max-[1131px]:ease-in-out">
+                            class="max-lt:fixed max-lt:h-screen max-lt:inset-y-0 max-lt:-mt-[1px] max-lt:-left-4 max-lt:-top-4 max-lt:z-[60] max-lt:w-[320px] max-lt:max-w-[86vw] max-lt:bg-white max-lt:border-r max-lt:border-primary/80 max-lt:transition-transform max-lt:duration-300 max-lt:ease-in-out">
                             <div
-                                class="min-[1131px]:hidden flex items-center justify-between px-4 py-4 border-b border-primary/80">
+                                class="lt:hidden flex items-center justify-between px-4 py-4 border-b border-primary/80">
                                 <div class="flex items-center gap-2">
                                     <img src="image/main-logo-black.svg" alt="Pranavya" class="w- h-7">
                                 </div>
@@ -65,14 +65,14 @@
                                 </button>
                             </div>
                             <!-- Navigation -->
-                            <nav class="max-[1131px]:overflow-y-auto max-lt:h-[calc(100vh-64px)] max-lt:pb-6">
+                            <nav class="max-lt:overflow-y-auto max-lt:h-[calc(100vh-64px)] max-lt:pb-6">
                                 <ul
-                                    class="min-[1131px]:flex min-[1131px]:items-center 2xl:space-x-10 1xl:space-x-6 xl:space-x-5 min-[1131px]:space-x-3 max-[1131px]:divide-y max-[1131px]:divide-primary/80">
+                                    class="lt:flex lt:items-center 2xl:space-x-10 1xl:space-x-6 xl:space-x-5 space-x-4 max-lt:divide-y max-lt:divide-primary/80">
                                     <li>
                                         <div class="group has-mega">
                                             <a href="javascript:void(0)"
-                                                class="menu_link_text inline-flex items-center min-[1131px]:justify-normal justify-between w-full gap-x-2.5 md:leading-9 2xl:text-18 md:text-15 text-14 font-normal uppercase min-[1131px]:px-0 px-4">
-                                                <span class="xl:py-5 min-[1131px]:py-4 md:py-2.5 py-2">Home</span>
+                                                class="menu_link_text inline-flex items-center gap-x-2.5 md:leading-9 2xl:text-18 md:text-15 text-14 font-normal uppercase">
+                                                <span class="xl:py-5 lg:py-4 md:py-2.5 py-2">Home</span>
                                                 <svg width="11" height="7" viewBox="0 0 11 7" fill="none"
                                                     class="group-hover:rotate-180 transition-transform duration-300">
                                                     <path d="M1.49951 1.5L5.49991 5.5L9.49951 1.5" stroke="currentColor"
@@ -81,11 +81,11 @@
                                                 </svg>
                                             </a>
                                             <div
-                                                class="w-full min-[1131px]:absolute min-[1131px]:left-0 min-[1131px]:top-full hidden z-[60] mega-panel px-11 pt-[1px]">
+                                                class="w-full min-lt:absolute min-lt:left-0 min-lt:top-full !block z-[60] mega-panel px-11 pt-[1px]">
                                                 <div
                                                     class="bg-white rounded-b-[10px] 2xl:p-[30px] p-6 mx-auto pointer-events-auto">
                                                     <div
-                                                        class="grid grid-cols-1 sm:grid-cols-2 min-[1131px]:grid-cols-4 1xl:gap-10 gap-7">
+                                                        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 1xl:gap-10 gap-7">
                                                         <div class="w-full rounded-sm border-2 border-primary">
                                                             <a href="javascript:void(0)"
                                                                 class="block overflow-hidden border border-primary">
@@ -165,19 +165,19 @@
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)"
-                                            class="menu_link_text inline-flex items-center min-[1131px]:justify-normal justify-between w-full gap-x-2.5 md:leading-9 2xl:text-18 md:text-15 text-14 font-normal uppercase lg:px-0 px-4 hover:text-primary">
+                                            class="menu_link_text inline-flex items-center gap-x-2.5 md:leading-9 2xl:text-18 md:text-15 text-14 font-normal uppercase hover:text-primary">
                                             <span class="xl:py-5 lg:py-4 md:py-2.5 py-2">About</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)"
-                                            class="menu_link_text inline-flex items-center min-[1131px]:justify-normal justify-between w-full gap-x-2.5 md:leading-9 2xl:text-18 md:text-15 text-14 font-normal uppercase lg:px-0 px-4 hover:text-primary">
+                                            class="menu_link_text inline-flex items-center gap-x-2.5 md:leading-9 2xl:text-18 md:text-15 text-14 font-normal uppercase hover:text-primary">
                                             <span class="xl:py-5 lg:py-4 md:py-2.5 py-2">membership</span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0)"
-                                            class="menu_link_text inline-flex items-center min-[1131px]:justify-normal justify-between w-full gap-x-2.5 md:leading-9 2xl:text-18 md:text-15 text-14 font-normal uppercase lg:px-0 px-4 hover:text-primary">
+                                            class="menu_link_text inline-flex items-center gap-x-2.5 md:leading-9 2xl:text-18 md:text-15 text-14 font-normal uppercase hover:text-primary">
                                             <span class="xl:py-5 lg:py-4 md:py-2.5 py-2">our
                                                 podcast</span>
                                         </a>
@@ -185,7 +185,7 @@
                                     <li>
                                         <div class="group has-mega">
                                             <a href="javascript:void(0)"
-                                                class="menu_link_text inline-flex items-center min-[1131px]:justify-normal justify-between w-full gap-x-2.5 md:leading-9 2xl:text-18 md:text-15 text-14 font-normal uppercase lg:px-0 px-4 group-hover:text-primary">
+                                                class="menu_link_text inline-flex items-center gap-x-2.5 md:leading-9 2xl:text-18 md:text-15 text-14 font-normal uppercase group-hover:text-primary">
                                                 <span class="xl:py-5 lg:py-4 md:py-2.5 py-2">Classes</span>
                                                 <svg width="11" height="7" viewBox="0 0 11 7" fill="none"
                                                     class="group-hover:rotate-180 transition-transform duration-300">
@@ -199,7 +199,7 @@
                                                 <div
                                                     class="bg-white rounded-b-[10px] p-[30px] mx-auto pointer-events-auto overflow-y-auto h-[calc(100vh-49vh)] scrollbar-custom">
                                                     <div
-                                                        class="grid grid-cols-1 sm:grid-cols-2 mmin-[1131px]:grid-cols-3 xl:grid-cols-5 gap-[30px]">
+                                                        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-[30px]">
                                                         <!-- 1st class -->
                                                         <a href="#classes"
                                                             class="block overflow-hidden relative flex-shrink-0 before:content-[''] before:pt-[119%] before:block w-full h-full group/class">
@@ -600,7 +600,7 @@
                                     <li>
                                         <div class="group has-mega">
                                             <a href="javascript:void(0)"
-                                                class="menu_link_text inline-flex items-center min-[1131px]:justify-normal justify-between w-full gap-x-2.5 md:leading-9 2xl:text-18 md:text-15 text-14 font-normal uppercase lg:px-0 px-4 group-hover:text-primary">
+                                                class="menu_link_text inline-flex items-center gap-x-2.5 md:leading-9 2xl:text-18 md:text-15 text-14 font-normal uppercase group-hover:text-primary">
                                                 <span class="xl:py-5 lg:py-4 md:py-2.5 py-2">Shop</span>
                                                 <svg width="11" height="7" viewBox="0 0 11 7" fill="none"
                                                     class="group-hover:rotate-180 transition-transform duration-300">
@@ -878,7 +878,7 @@
                                     <li>
                                         <div class="group has-mega">
                                             <a href="javascript:void(0)"
-                                                class="menu_link_text inline-flex items-center lgmoin-[1131px]:justify-normal justify-between w-full gap-x-2.5 md:leading-9 2xl:text-18 md:text-15 text-14 font-normal uppercase lg:px-0 px-4 group-hover:text-primary">
+                                                class="menu_link_text inline-flex items-center gap-x-2.5 md:leading-9 2xl:text-18 md:text-15 text-14 font-normal uppercase group-hover:text-primary">
                                                 <span class="xl:py-5 lg:py-4 md:py-2.5 py-2">Blog</span>
                                                 <svg width="11" height="7" viewBox="0 0 11 7" fill="none"
                                                     class="group-hover:rotate-180 transition-transform duration-300">
@@ -955,7 +955,7 @@
                                     <li class="relative">
                                         <div class="group has-mega">
                                             <a href="javascript:void(0)"
-                                                class="menu_link_text inline-flex items-center min-[1131px]:justify-normal justify-between w-full gap-x-2.5 md:leading-9 2xl:text-18 md:text-15 text-14 font-normal uppercase lg:px-0 px-4 group-hover:text-primary">
+                                                class="menu_link_text inline-flex items-center gap-x-2.5 md:leading-9 2xl:text-18 md:text-15 text-14 font-normal uppercase group-hover:text-primary">
                                                 <span class="xl:py-5 lg:py-4 md:py-2.5 py-2">Pages</span>
                                                 <svg width="11" height="7" viewBox="0 0 11 7" fill="none"
                                                     class="group-hover:rotate-180 transition-transform duration-300">
@@ -1006,8 +1006,10 @@
                         </aside>
 
                         <!-- Right icons -->
-                        <div class="flex items-center 2xl:gap-10 xl:gap-8 gap-3">
+                        <div class="flex items-center 2xl:gap-10 xl:gap-8 lg:gap-6 md:gap-4 gap-3">
+
                             <div id="nav-site-search" class="site-search">
+
                                 <button class="site-search__open cursor-pointer border-0 bg-transparent block">
                                     <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
                                         class="2xl:w-7 2xl:h-7 w-6 h-6">
@@ -1048,39 +1050,39 @@
                                                     class="site-search__suggestion-list grid md:grid-cols-2 grid-cols-1 list-disc marker:text-gray-900">
                                                     <li class="site-search__suggestion-item md:pr-5">
                                                         <a class="font-Satoshi text-black hover:text-vividblue-400 font-normal text-sm 2xl:text-md lg:my-3 my-2 block"
-                                                            href="javascript:;">
-                                                            Career Growth Strategies
-                                                        </a>
+                                                            href="javascript:;">Career
+                                                            Growth
+                                                            Strategies</a>
                                                     </li>
                                                     <li class="site-search__suggestion-item md:pr-5">
                                                         <a class="font-Satoshi text-black hover:text-vividblue-400 font-normal text-sm 2xl:text-md lg:my-3 my-2 block"
-                                                            href="javascript:;">
-                                                            Effective Leadership Techniques
-                                                        </a>
+                                                            href="javascript:;">Effective
+                                                            Leadership
+                                                            Techniques</a>
                                                     </li>
                                                     <li class="site-search__suggestion-item md:pr-5">
                                                         <a class="font-Satoshi text-black hover:text-vividblue-400 font-normal text-sm 2xl:text-md lg:my-3 my-2 block"
-                                                            href="javascript:;">
-                                                            Finding a Mentor in Tech
-                                                        </a>
+                                                            href="javascript:;">Finding
+                                                            a Mentor in
+                                                            Tech</a>
                                                     </li>
                                                     <li class="site-search__suggestion-item md:pr-5">
                                                         <a class="font-Satoshi text-black hover:text-vividblue-400 font-normal text-sm 2xl:text-md lg:my-3 my-2 block"
-                                                            href="javascript:;">
-                                                            Effective Leadership Techniques
-                                                        </a>
+                                                            href="javascript:;">Effective
+                                                            Leadership
+                                                            Techniques</a>
                                                     </li>
                                                     <li class="site-search__suggestion-item md:pr-5">
                                                         <a class="font-Satoshi text-black hover:text-vividblue-400 font-normal text-sm 2xl:text-md lg:my-3 my-2 block"
-                                                            href="javascript:;">
-                                                            Finding a Mentor in Tech
-                                                        </a>
+                                                            href="javascript:;">Finding
+                                                            a Mentor in
+                                                            Tech</a>
                                                     </li>
                                                     <li class="site-search__suggestion-item md:pr-5">
                                                         <a class="font-Satoshi text-black hover:text-vividblue-400 font-normal text-sm 2xl:text-md lg:my-3 my-2 block"
-                                                            href="javascript:;">
-                                                            Finding a Mentor in Tech
-                                                        </a>
+                                                            href="javascript:;">Finding
+                                                            a Mentor in
+                                                            Tech</a>
                                                     </li>
                                                 </ul>
                                             </section>
@@ -1143,6 +1145,7 @@
                                                     </div>
                                                 </div>
                                             </section>
+
                                         </div>
                                     </form>
 
@@ -1160,22 +1163,17 @@
                             </div>
 
                             <a href="javascript:void(0)"
-                                class="text-white hover:text-gray-300 border-0 bg-transparent min-[1131px]:hidden">
+                                class="text-white hover:text-gray-300 border-0 bg-transparent lt:hidden">
                                 <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
                                     <path
                                         d="M8.61133 12.1709H12.3887C15.6169 12.1709 18.25 14.8089 18.25 18.0527V18.25H2.75V18.0527C2.75 14.8088 5.38224 12.1709 8.61133 12.1709ZM10.5 1.75C12.4266 1.75 13.9997 3.32451 14 5.2627C14 7.20109 12.4268 8.77637 10.5 8.77637C8.57323 8.77637 7 7.20109 7 5.2627C7.00025 3.32451 8.57338 1.75 10.5 1.75Z"
                                         stroke="currentColor" stroke-width="1.5" />
                                 </svg>
                             </a>
-                            <a href="javascript:void(0)"
-                                class="btn btn-primary hidden min-[1131px]:inline-block">login</a>
+                            <a href="javascript:void(0)" class="btn btn-primary hidden lt:inline-block">login</a>
                             <button name="mobile-menu-view" aria-label="Open menu"
-                                class="min-[1131px]:hidden text-white border-0 bg-transparent">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14"
-                                    fill="none">
-                                    <path d="M0 0H20V2H0V0ZM0 6H20V8H0V6ZM0 12H20V14H0V12Z" fill="currentColor" />
-                                </svg>
-                            </button>
+                                class="lt:hidden text-white border-0 bg-transparent"><i
+                                    class="fas fa-bars text-2xl"></i></button>
                         </div>
                     </div>
                 </div>

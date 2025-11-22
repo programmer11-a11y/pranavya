@@ -1,33 +1,32 @@
 @import "tailwindcss";
 
 @theme {
-  
-
   /* Breakpoint */
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
   --breakpoint-lt: 992px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
+  --breakpoint-lg: 1025px;
+  --breakpoint-xl: 1281px;
   --breakpoint-1xl: 1440px;
   --breakpoint-2xl: 1782px;
-  
+
   /* Globe Color */
-  --color-yellow-100: #FFC107;
-  --color-black-100: #1E1E1E;
+  --color-primary: #673e2c;
+  --color-yellow-100: #ffc107;
+  --color-black-100: #1e1e1e;
   --color-black-200: #333333;
-  --color-fantasy-100: #F6F2F0;
-  --color-irishcoffee-100: #673E2C;
-  --color-whitesmoke-100: #F7F5F4;
-  --color-whitesmoke-200: #FBFAF9;
-  --color-bronco-100: #B39F95;
-  --color-thunder-100: #2D2D2D;
-  --color-border-100: #F9F9F980;
-  --color-grey-goose-100: #D1CFD2;
+  --color-fantasy-100: #f6f2f0;
+  /* --color-primary: #673e2c; */
+  --color-whitesmoke-100: #f7f5f4;
+  --color-whitesmoke-200: #fbfaf9;
+  --color-bronco-100: #b39f95;
+  --color-thunder-100: #2d2d2d;
+  --color-border-100: #f9f9f980;
+  --color-grey-goose-100: #d1cfd2;
 
   /* Font Family */
-  --font-primary: 'Work Sans', sans-serif;
-  --font-secondary: 'Baskervville', sans-serif;
+  --font-primary: "Work Sans", sans-serif;
+  --font-secondary: "Baskervville", sans-serif;
 
   /* Font Size */
   --text-13: 13px;
@@ -136,144 +135,157 @@
 }
 
 @font-face {
-  font-family: 'Baskervville';
-  src: url('../layouts/font/Baskervville-Regular.eot');
-  src: url('../layouts/font/Baskervville-Regular.eot?#iefix') format('embedded-opentype'),
-  url('../layouts/font/Baskervville-Regular.woff2') format('woff2'),
-  url('../layouts/font/Baskervville-Regular.woff') format('woff'),
-  url('../layouts/font/Baskervville-Regular.ttf') format('truetype');
+  font-family: "Baskervville";
+  src: url("../layouts/font/Baskervville-Regular.eot");
+  src: url("../layouts/font/Baskervville-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../layouts/font/Baskervville-Regular.woff2") format("woff2"),
+    url("../layouts/font/Baskervville-Regular.woff") format("woff"),
+    url("../layouts/font/Baskervville-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Baskervville';
-  src: url('../layouts/font/Baskervville-SemiBold.eot');
-  src: url('../layouts/font/Baskervville-SemiBold.eot?#iefix') format('embedded-opentype'),
-  url('../layouts/font/Baskervville-SemiBold.woff2') format('woff2'),
-  url('../layouts/font/Baskervville-SemiBold.woff') format('woff'),
-  url('../layouts/font/Baskervville-SemiBold.ttf') format('truetype');
+  font-family: "Baskervville";
+  src: url("../layouts/font/Baskervville-SemiBold.eot");
+  src: url("../layouts/font/Baskervville-SemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../layouts/font/Baskervville-SemiBold.woff2") format("woff2"),
+    url("../layouts/font/Baskervville-SemiBold.woff") format("woff"),
+    url("../layouts/font/Baskervville-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Baskervville';
-  src: url('../layouts/font/Baskervville-Medium.eot');
-  src: url('../layouts/font/Baskervville-Medium.eot?#iefix') format('embedded-opentype'),
-  url('../layouts/font/Baskervville-Medium.woff2') format('woff2'),
-  url('../layouts/font/Baskervville-Medium.woff') format('woff'),
-  url('../layouts/font/Baskervville-Medium.ttf') format('truetype');
+  font-family: "Baskervville";
+  src: url("../layouts/font/Baskervville-Medium.eot");
+  src: url("../layouts/font/Baskervville-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../layouts/font/Baskervville-Medium.woff2") format("woff2"),
+    url("../layouts/font/Baskervville-Medium.woff") format("woff"),
+    url("../layouts/font/Baskervville-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Baskervville';
-  src: url('../layouts/font/Baskervville-Bold.eot');
-  src: url('../layouts/font/Baskervville-Bold.eot?#iefix') format('embedded-opentype'),
-  url('../layouts/font/Baskervville-Bold.woff2') format('woff2'),
-  url('../layouts/font/Baskervville-Bold.woff') format('woff'),
-  url('../layouts/font/Baskervville-Bold.ttf') format('truetype');
+  font-family: "Baskervville";
+  src: url("../layouts/font/Baskervville-Bold.eot");
+  src: url("../layouts/font/Baskervville-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../layouts/font/Baskervville-Bold.woff2") format("woff2"),
+    url("../layouts/font/Baskervville-Bold.woff") format("woff"),
+    url("../layouts/font/Baskervville-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Work Sans';
-  src: url('../layouts/font/WorkSans-Bold.eot');
-  src: url('../layouts/font/WorkSans-Bold.eot?#iefix') format('embedded-opentype'),
-  url('../layouts/font/WorkSans-Bold.woff2') format('woff2'),
-  url('../layouts/font/WorkSans-Bold.woff') format('woff'),
-  url('../layouts/font/WorkSans-Bold.ttf') format('truetype');
+  font-family: "Work Sans";
+  src: url("../layouts/font/WorkSans-Bold.eot");
+  src: url("../layouts/font/WorkSans-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../layouts/font/WorkSans-Bold.woff2") format("woff2"),
+    url("../layouts/font/WorkSans-Bold.woff") format("woff"),
+    url("../layouts/font/WorkSans-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Work Sans';
-  src: url('../layouts/font/WorkSans-Black.eot');
-  src: url('../layouts/font/WorkSans-Black.eot?#iefix') format('embedded-opentype'),
-  url('../layouts/font/WorkSans-Black.woff2') format('woff2'),
-  url('../layouts/font/WorkSans-Black.woff') format('woff'),
-  url('../layouts/font/WorkSans-Black.ttf') format('truetype');
+  font-family: "Work Sans";
+  src: url("../layouts/font/WorkSans-Black.eot");
+  src: url("../layouts/font/WorkSans-Black.eot?#iefix")
+      format("embedded-opentype"),
+    url("../layouts/font/WorkSans-Black.woff2") format("woff2"),
+    url("../layouts/font/WorkSans-Black.woff") format("woff"),
+    url("../layouts/font/WorkSans-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Work Sans';
-  src: url('../layouts/font/WorkSans-ExtraBold.eot');
-  src: url('../layouts/font/WorkSans-ExtraBold.eot?#iefix') format('embedded-opentype'),
-  url('../layouts/font/WorkSans-ExtraBold.woff2') format('woff2'),
-  url('../layouts/font/WorkSans-ExtraBold.woff') format('woff'),
-  url('../layouts/font/WorkSans-ExtraBold.ttf') format('truetype');
+  font-family: "Work Sans";
+  src: url("../layouts/font/WorkSans-ExtraBold.eot");
+  src: url("../layouts/font/WorkSans-ExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../layouts/font/WorkSans-ExtraBold.woff2") format("woff2"),
+    url("../layouts/font/WorkSans-ExtraBold.woff") format("woff"),
+    url("../layouts/font/WorkSans-ExtraBold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Work Sans';
-  src: url('../layouts/font/WorkSans-ExtraLight.eot');
-  src: url('../layouts/font/WorkSans-ExtraLight.eot?#iefix') format('embedded-opentype'),
-  url('../layouts/font/WorkSans-ExtraLight.woff2') format('woff2'),
-  url('../layouts/font/WorkSans-ExtraLight.woff') format('woff'),
-  url('../layouts/font/WorkSans-ExtraLight.ttf') format('truetype');
+  font-family: "Work Sans";
+  src: url("../layouts/font/WorkSans-ExtraLight.eot");
+  src: url("../layouts/font/WorkSans-ExtraLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("../layouts/font/WorkSans-ExtraLight.woff2") format("woff2"),
+    url("../layouts/font/WorkSans-ExtraLight.woff") format("woff"),
+    url("../layouts/font/WorkSans-ExtraLight.ttf") format("truetype");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Work Sans';
-  src: url('../layouts/font/WorkSans-Light.eot');
-  src: url('../layouts/font/WorkSans-Light.eot?#iefix') format('embedded-opentype'),
-  url('../layouts/font/WorkSans-Light.woff2') format('woff2'),
-  url('../layouts/font/WorkSans-Light.woff') format('woff'),
-  url('../layouts/font/WorkSans-Light.ttf') format('truetype');
+  font-family: "Work Sans";
+  src: url("../layouts/font/WorkSans-Light.eot");
+  src: url("../layouts/font/WorkSans-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("../layouts/font/WorkSans-Light.woff2") format("woff2"),
+    url("../layouts/font/WorkSans-Light.woff") format("woff"),
+    url("../layouts/font/WorkSans-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Work Sans';
-  src: url('../layouts/font/WorkSans-SemiBold.eot');
-  src: url('../layouts/font/WorkSans-SemiBold.eot?#iefix') format('embedded-opentype'),
-  url('../layouts/font/WorkSans-SemiBold.woff2') format('woff2'),
-  url('../layouts/font/WorkSans-SemiBold.woff') format('woff'),
-  url('../layouts/font/WorkSans-SemiBold.ttf') format('truetype');
+  font-family: "Work Sans";
+  src: url("../layouts/font/WorkSans-SemiBold.eot");
+  src: url("../layouts/font/WorkSans-SemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../layouts/font/WorkSans-SemiBold.woff2") format("woff2"),
+    url("../layouts/font/WorkSans-SemiBold.woff") format("woff"),
+    url("../layouts/font/WorkSans-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Work Sans';
-  src: url('../layouts/font/WorkSans-Medium.eot');
-  src: url('../layouts/font/WorkSans-Medium.eot?#iefix') format('embedded-opentype'),
-  url('../layouts/font/WorkSans-Medium.woff2') format('woff2'),
-  url('../layouts/font/WorkSans-Medium.woff') format('woff'),
-  url('../layouts/font/WorkSans-Medium.ttf') format('truetype');
+  font-family: "Work Sans";
+  src: url("../layouts/font/WorkSans-Medium.eot");
+  src: url("../layouts/font/WorkSans-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../layouts/font/WorkSans-Medium.woff2") format("woff2"),
+    url("../layouts/font/WorkSans-Medium.woff") format("woff"),
+    url("../layouts/font/WorkSans-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Work Sans';
-  src: url('../layouts/font/WorkSans-Regular.eot');
-  src: url('../layouts/font/WorkSans-Regular.eot?#iefix') format('embedded-opentype'),
-  url('../layouts/font/WorkSans-Regular.woff2') format('woff2'),
-  url('../layouts/font/WorkSans-Regular.woff') format('woff'),
-  url('../layouts/font/WorkSans-Regular.ttf') format('truetype');
+  font-family: "Work Sans";
+  src: url("../layouts/font/WorkSans-Regular.eot");
+  src: url("../layouts/font/WorkSans-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../layouts/font/WorkSans-Regular.woff2") format("woff2"),
+    url("../layouts/font/WorkSans-Regular.woff") format("woff"),
+    url("../layouts/font/WorkSans-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Work Sans';
-  src: url('../layouts/font/WorkSans-Thin.eot');
-  src: url('../layouts/font/WorkSans-Thin.eot?#iefix') format('embedded-opentype'),
-  url('../layouts/font/WorkSans-Thin.woff2') format('woff2'),
-  url('../layouts/font/WorkSans-Thin.woff') format('woff'),
-  url('../layouts/font/WorkSans-Thin.ttf') format('truetype');
+  font-family: "Work Sans";
+  src: url("../layouts/font/WorkSans-Thin.eot");
+  src: url("../layouts/font/WorkSans-Thin.eot?#iefix")
+      format("embedded-opentype"),
+    url("../layouts/font/WorkSans-Thin.woff2") format("woff2"),
+    url("../layouts/font/WorkSans-Thin.woff") format("woff"),
+    url("../layouts/font/WorkSans-Thin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -286,85 +298,186 @@
   body {
     @apply font-primary font-normal 2xl:text-20 1xl:text-19 xl:text-18 lg:text-17 md:text-16 sm:text-15 text-14 2xl:leading-[34px] 1xl:leading-[33px] xl:leading-[32px] lg:leading-[30px] md:leading-[28px] sm:leading-[24px] leading-[20px] m-0;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-secondary m-0;
   }
-  h1,.h1 {
+  h1,
+  .h1 {
     @apply 2xl:text-100 1xl:text-90 xl:text-80 lg:text-64 md:text-48 sm:text-36 text-28 2xl:leading-[110px] 1xl:leading-[100px] xl:leading-[90px] lg:leading-[74px] md:leading-[58px] sm:leading-[46px] leading-[38px];
   }
-  h2,.h2 {
+  h2,
+  .h2 {
     @apply 2xl:text-58 1xl:text-52 xl:text-48 lg:text-40 md:text-32 sm:text-26 text-20 2xl:leading-[80px] 1xl:leading-[72px] xl:leading-[66px] lg:leading-[56px] md:leading-[46px] sm:leading-[38px] leading-[30px];
   }
-  h3,.h3 {
+  h3,
+  .h3 {
     @apply 2xl:text-35 1xl:text-32 xl:text-30 lg:text-26 md:text-22 sm:text-18 text-14 2xl:leading-[45px] 1xl:leading-[42px] xl:leading-[40px] lg:leading-[36px] md:leading-[32px] sm:leading-[28px] leading-[24px];
   }
-  h4,.h4 {
-    @apply 2xl:text-35 1xl:text-32 xl:text-30 lg:text-28 md:text-24 sm:text-20 text-17 2xl:leading-[44px] 1xl:leading-[42px] xl:leading-[40px] lg:leading-[36px] md:leading-[32px] sm:leading-[28px] leading-[24px];
+  h4,
+  .h4 {
+    @apply 2xl:text-35 1xl:text-30 xl:text-26 md:text-24 sm:text-20 text-17 2xl:leading-[44px] 1xl:leading-[42px] xl:leading-[40px] lg:leading-[36px] md:leading-[32px] sm:leading-[28px] leading-[24px];
   }
-  h5,.h5 {
+  h5,
+  .h5 {
     @apply 2xl:text-25 1xl:text-25 xl:text-24 lg:text-22 md:text-20 sm:text-18 text-15 2xl:leading-[35px] 1xl:leading-[35px] xl:leading-[34px] lg:leading-[32px] md:leading-[30px] sm:leading-[28px] leading-[25px];
   }
-  h6,.h6 {
+  h6,
+  .h6 {
     @apply 2xl:text-20 1xl:text-19 xl:text-18 lg:text-17 md:text-16 sm:text-15 text-14 2xl:leading-[34px] 1xl:leading-[33px] xl:leading-[32px] lg:leading-[30px] md:leading-[28px] sm:leading-[24px] leading-[20px];
   }
   p {
     @apply 2xl:text-20 1xl:text-19 xl:text-18 lg:text-17 md:text-16 sm:text-15 text-14 2xl:leading-[34px] 1xl:leading-[33px] xl:leading-[32px] lg:leading-[30px] md:leading-[28px] sm:leading-[24px] leading-[20px] m-0;
   }
   .btn {
-    @apply md:py-2.5 py-1.5 xl:px-10 lg:px-8 md:px-6 px-5 rounded-full 2xl:text-20 xl:text-18 lg:text-16 text-14 leading-normal uppercase font-medium border inline-block;
+    @apply md:py-2.5 py-1.5 xl:px-10 lg:px-8 md:px-6 px-5 rounded-full 2xl:text-20 xl:text-17 lg:text-16 text-14 leading-normal uppercase font-medium border inline-block;
+  }
+  .btn-round-arrow {
+    @apply py-[15px] px-[13px] rounded-full 2xl:text-20 xl:text-18 lg:text-16 text-14 leading-normal uppercase font-medium border inline-block;
   }
   .btn-primary {
-    @apply border-irishcoffee-100 bg-whitesmoke-200 hover:bg-irishcoffee-100 text-irishcoffee-100 hover:text-white;
+    @apply border-primary bg-primary text-white hover:bg-white focus:bg-white active:bg-white hover:text-primary active:text-primary focus:text-primary;
   }
+
+  /* .btn-primary {
+    @apply border-primary bg-whitesmoke-200 hover:bg-primary text-primary hover:text-white;
+  } */
   .btn-secondary {
-    @apply w-fit text-irishcoffee-100 hover:text-thunder-100 inline-flex items-center lg:gap-3.5 md:gap-3 sm:gap-2.5 gap-2 after:content-['🡥'] after:font-secondary after:inline-block after:-ml-0.5 hover:after:ml-0 after:-mb-1 after:transition-all after:duration-300 2xl:text-20 1xl:text-19 xl:text-18 lg:text-17 md:text-16 sm:text-15 text-14 2xl:leading-[30px] 1xl:leading-[28px] xl:leading-[26px] lg:leading-[25px] md:leading-[24px] sm:leading-[22px] leading-[20px];
+    @apply w-fit text-primary hover:text-thunder-100 inline-flex items-center lg:gap-3.5 md:gap-3 sm:gap-2.5 gap-2 after:content-['🡥'] after:font-secondary after:inline-block after:-ml-0.5 hover:after:ml-0 after:-mb-1 after:transition-all after:duration-300 2xl:text-20 1xl:text-19 xl:text-18 lg:text-17 md:text-16 sm:text-15 text-14 2xl:leading-[30px] 1xl:leading-[28px] xl:leading-[26px] lg:leading-[25px] md:leading-[24px] sm:leading-[22px] leading-[20px];
   }
   .btn-secondary span {
     @apply underline decoration-[1px] hover:no-underline;
   }
+  .nav-class-arrow {
+    @apply border-white text-white bg-transparent hover:bg-white focus:bg-white active:bg-white hover:text-black focus:text-black active:text-black;
+  }
   .slider-custom-arrow {
-    @apply !static !m-0 after:hidden p-3 lg:!size-14 md:!size-12 !size-10.5 !rounded-full !bg-white hover:!bg-irishcoffee-100 !text-irishcoffee-100 hover:!text-white border !border-irishcoffee-100  cursor-pointer flex items-center justify-center;
+    @apply !static !m-0 after:hidden p-3 lg:!size-12.5 md:!size-10.5 !size-9 !rounded-full !bg-white hover:!bg-primary !text-primary hover:!text-white border !border-primary  cursor-pointer flex items-center justify-center;
+  }
+  .swiper-navigation-icon {
+    @apply rotate-180 !w-5 !h-4;
+  }
+  /* .shop .slider-custom-arrow.swiper-button-prev::after,
+  .shop .slider-custom-arrow.swiper-button-next::after{
+    @apply hidden
+  } */
+
+  /* scrtollbar */
+  /* Scrollbar container */
+  .scrollbar-custom {
+    overflow-y: scroll;
   }
 
-
-
-  .header_style_1.scrolled, .header_style_1.not_scrolled_hover {
-    @apply  !bg-white !border-irishcoffee-100;
+  /* TRACK width = 20px */
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 11px;
   }
 
+  /* TRACK STYLE */
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: #f2f1f0;
+  }
+
+  /* THUMB width = 11px (centered using transparent padding) */
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    border-radius: 9999px;
+    background-color: white;
+
+    /* Center thumb inside the 20px track */
+    box-sizing: content-box;
+    border: 0; /* remove normal border */
+    padding: 0 4.5px; /* (20 - 11) / 2 = 4.5px space on left/right */
+
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+
+    /* === EXACT 4 LINES === */
+    background-image: linear-gradient(
+        to bottom,
+        #b9a9a2 0 2px,
+        transparent 2px 6px
+      ),
+      linear-gradient(to bottom, #b9a9a2 0 2px, transparent 2px 6px),
+      linear-gradient(to bottom, #b9a9a2 0 2px, transparent 2px 6px),
+      linear-gradient(to bottom, #b9a9a2 0 2px, transparent 2px 6px);
+
+    background-repeat: no-repeat;
+
+    /* 4 exact stripe positions */
+    background-size: 100% 2px, 100% 2px, 100% 2px, 100% 2px;
+    background-position: center 38%, center 48%, center 58%, center 68%;
+  }
+
+  /* header */
+  .header_style_1.scrolled,
+  .header_style_1.not_scrolled_hover {
+    @apply !bg-white border-primary text-primary;
+  }
+  .site-search__open,
+  .menu_link_text {
+    @apply text-white border-b-2 border-transparent;
+  }
+  .has-mega.mega-open .menu_link_text {
+    @apply !text-primary border-b-2 border-primary;
+  }
+  .mega-open .menu_link_text svg {
+    @apply rotate-180;
+  }
+  .header_style_1.not_scrolled_hover .site-search__open,
+  .header_style_1.not_scrolled_hover .menu_link_text {
+    @apply text-black hover:text-primary hover:border-primary;
+  }
+  .in-submenu.active {
+    @apply text-black hover:text-primary hover:border-primary;
+  }
+  .header_style_1.scrolled .site-search__open,
+  .header_style_1.scrolled .menu_link_text {
+    @apply text-black;
+  }
   .header_style_1.scrolled button[name="mobile-menu-view"],
   .header_style_1.not_scrolled_hover button[name="mobile-menu-view"],
   .header_style_1.scrolled .site-search__open,
   .header_style_1.not_scrolled_hover .site-search__open,
-  .header_style_1.scrolled .menu_link_text,
-  .header_style_1.not_scrolled_hover .menu_link_text {
-    @apply  !text-irishcoffee-100 hover:!text-thunder-100;
+  .header_style_1.not_scrolled_hover
+    .menu_link_text
+    .header_style_1.scrolled
+    .menu_link_text {
+    @apply hover:!text-primary  text-thunder-100;
   }
 
   #mainmenu {
-    @apply max-lt:-translate-x-full;
+    @apply max-[1131px]:-translate-x-full;
   }
   #mainmenu.active {
-    @apply max-lt:translate-x-0;
+    @apply max-[1131px]:translate-x-0;
   }
-  /* .mfp-bg {
-    @apply backdrop-blur-xl !bg-irishcoffee-100/35 !opacity-100;
-  } */
-
 }
 
-
-
+.shop .swiper-wrapper {
+  @apply items-center h-auto pl-[15px];
+}
+.shop .swiper-wrapper .swiper-slide .product-slide {
+  @apply h-[342px];
+}
+.shop .swiper-wrapper .swiper-slide.swiper-slide-active .product-slide {
+  @apply h-[250px];
+}
+.shop .swiper-wrapper .swiper-slide.swiper-slide-next .product-slide {
+  @apply h-[300px];
+}
 
 .bg_body_box {
   display: none; /* hidden until JS fades it in */
 }
-.float-right-icon #scroll-to-top.off{
+.float-right-icon #scroll-to-top.off {
   margin-right: -200px;
 }
 @media (max-width: 767px) {
-  .float-right-icon{
-      display: none; 
+  .float-right-icon {
+    display: none;
   }
 }
 
@@ -401,7 +514,7 @@
   left: 0;
   right: 0;
   top: 0;
-  transition: opacity .5s;
+  transition: opacity 0.5s;
   opacity: 0;
   pointer-events: none;
 }
@@ -430,13 +543,13 @@
   transform: scaleY(0);
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
-  transition: -webkit-transform .3s .5s;
-  transition: transform .3s .5s;
-  transition: transform .3s .5s, -webkit-transform .3s .5s;
+  transition: -webkit-transform 0.3s 0.5s;
+  transition: transform 0.3s 0.5s;
+  transition: transform 0.3s 0.5s, -webkit-transform 0.3s 0.5s;
   max-height: 80vh;
   overflow: auto;
 }
-.site-search__suggestions-block>div {
+.site-search__suggestions-block > div {
   width: 100%;
 }
 .site-search__search-form {
@@ -466,16 +579,12 @@
   padding-right: 17px;
 } */
 
-
 @media (max-width: 991px) {
-   /* #nav-site-search.open .site-search__form-wrap {
+  /* #nav-site-search.open .site-search__form-wrap {
       left: 0;
       width: 100%;
   } */
-  
 }
-
-
 
 .marquee {
   animation: marquee 30s linear infinite;
@@ -483,10 +592,10 @@
 
 @keyframes marquee {
   0% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
 
   100% {
-      transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 }

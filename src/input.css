@@ -333,10 +333,7 @@
     @apply 2xl:text-20 lg:text-17 md:text-16 sm:text-15 text-14 2xl:leading-[34px] 1xl:leading-[33px] xl:leading-[32px] lg:leading-[30px] md:leading-[28px] sm:leading-[24px] leading-[20px] m-0;
   }
   p {
-    @apply 2xl:text-18 md:text-15 text-14 leading-[34px] m-0;
-  }
-  .p2 {
-    @apply 2xl:text-18 md:text-15 text-14 leading-[34px];
+    @apply 2xl:text-18 md:text-15 text-14 leading-[28px] m-0;
   }
   button {
     @apply cursor-pointer;

@@ -84,20 +84,37 @@ jQuery(document).ready(function () {
         const item = jQuery(this);
 
         item.off("mouseenter mouseleave");
+        item.find(".mega-panel").off("mouseenter mouseleave");
 
         item.on("mouseenter", function () {
+          clearTimeout(item.data('closeTimer')); // clear any pending close
           item.addClass("mega-open");
           item.find(".mega-panel").stop(true, true).fadeIn(160);
           $(".bg_body_box").removeClass("hidden").fadeIn(200);
         });
 
         item.on("mouseleave", function () {
-          item.removeClass("mega-open");
-          item.find(".mega-panel").stop(true, true).fadeOut(150);
-          $(".bg_body_box").fadeOut(200, function () {
-            $(this).addClass("hidden");
-          });
+          item.data('closeTimer', setTimeout(function() {
+            item.removeClass("mega-open");
+            item.find(".mega-panel").stop(true, true).fadeOut(150);
+            $(".bg_body_box").fadeOut(200, function () {
+              $(this).addClass("hidden");
+            });
+          }, 0)); // 0ms delay
+        });
 
+        item.find(".mega-panel").on("mouseenter", function() {
+          clearTimeout(item.data('closeTimer'));
+        });
+
+        item.find(".mega-panel").on("mouseleave", function() {
+          item.data('closeTimer', setTimeout(function() {
+            item.removeClass("mega-open");
+            item.find(".mega-panel").stop(true, true).fadeOut(150);
+            $(".bg_body_box").fadeOut(200, function () {
+              $(this).addClass("hidden");
+            });
+          }, 0));
         });
       });
     }
@@ -352,6 +369,52 @@ jQuery(document).ready(function () {
     preloader: false,
     focus: '#name',
   });
+
+// ===== CART & WISHLIST SIDEBAR FIX =====
+
+// GLOBAL OVERLAY
+const overlay = jQuery(".bg_body_box");
+
+// OPEN WISHLIST
+jQuery("#openWishlist").on("click", function () {
+    jQuery("#wishlistSidebar").removeClass("translate-x-full");
+
+    overlay.removeClass("hidden").fadeIn(200);
+    jQuery("body").addClass("overflow-hidden");
+});
+
+// CLOSE WISHLIST
+jQuery("#closeWishlist, .bg_body_box").on("click", function () {
+    jQuery("#wishlistSidebar").addClass("translate-x-full");
+
+    overlay.fadeOut(200, function () {
+        overlay.addClass("hidden");
+    });
+    jQuery("body").removeClass("overflow-hidden");
+});
+
+// OPEN CART
+jQuery("#openCart").on("click", function () {
+    jQuery("#cartSidebar").removeClass("translate-x-full");
+
+    overlay.removeClass("hidden").fadeIn(200);
+    jQuery("body").addClass("overflow-hidden");
+});
+
+// CLOSE CART
+jQuery("#closeCart, .bg_body_box").on("click", function () {
+    jQuery("#cartSidebar").addClass("translate-x-full");
+
+    overlay.fadeOut(200, function () {
+        overlay.addClass("hidden");
+    });
+    jQuery("body").removeClass("overflow-hidden");
+});
+
+
+
+
+
 
   // ===== Video Popup (YouTube/Vimeo/HTML5) ===== //
   jQuery('.video-popup').magnificPopup({

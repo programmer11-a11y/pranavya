@@ -290,9 +290,11 @@
   font-style: normal;
   font-display: swap;
 }
+
 @utility container {
   @apply w-full mx-auto px-4;
 }
+
 /* Then your font and layer definitions */
 @layer base {
   body {
@@ -340,13 +342,16 @@
     @apply cursor-pointer;
   }
   .btn {
-    @apply 2xl:py-2.5 xl:py-2 py-1.5 2xl:px-10 lg:px-8 md:px-6 px-5 rounded-full 2xl:text-20 xl:text-17 lg:text-16 text-14 leading-normal  flex w-max;
+    @apply 2xl:py-2.5 xl:py-2 py-1.5 2xl:px-10 lg:px-8 md:px-6 px-5 rounded-full 2xl:text-20 xl:text-17 lg:text-16 text-14 leading-normal text-center w-max;
   }
   .btn-round-arrow {
     @apply 2xl:py-[15px] 2xl:px-[13px] px-[10px] py-3 rounded-full 2xl:text-20 xl:text-18 lg:text-16 text-14 leading-normal uppercase font-medium border inline-block;
   }
   .btn-primary {
     @apply border border-primary bg-primary text-white hover:bg-white focus:bg-white active:bg-white hover:text-primary active:text-primary focus:text-primary uppercase font-medium;
+  }
+  .btn-primary-second {
+    @apply border border-primary bg-[#FBFAF9] text-primary hover:bg-primary focus:bg-primary active:bg-primary hover:text-white active:text-white focus:text-white uppercase font-medium;
   }
   .btn-secondary {
     @apply uppercase border font-medium text-primary border-primary bg-white hover:text-white focus:text-white active:text-white hover:bg-primary active:bg-primary focus:bg-primary;
@@ -471,7 +476,8 @@
   .mega-open .menu_link_text svg {
     @apply rotate-180;
   }
-  .header_style_1.not_scrolled_hover .site-search__open,
+
+  .header_style_1.not_scrolled_hover .nav-icon svg,
   .header_style_1.not_scrolled_hover .menu_link_text {
     @apply !text-black hover:text-primary hover:border-primary;
   }
@@ -553,7 +559,7 @@
   }
 }
 
-@media (max-width: 1131px) {
+@media (max-width: 1130px) {
   .header_style_1.not_scrolled_hover .site-search__open,
   .header_style_1.not_scrolled_hover .menu_link_text {
     @apply hover:border-0;

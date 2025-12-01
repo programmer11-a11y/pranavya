@@ -36,11 +36,638 @@
     <!-- ====== Main-Content ====== -->
     <main class="h-full overflow-x-hidden">
         <!-- ====== Header ====== -->
-        <div class="bg_body_box fixed inset-0 w-full h-full backdrop-blur-xl bg-primary/35 z-50"></div>
         <header class="fixed md:top-5 top-4 left-0 right-0 z-50">
-            <div class="container max-w-[1832px] relative">
+            <div class="bg_body_box fixed inset-0 w-full h-full backdrop-blur-xl bg-primary/35 z-50"></div>
+
+            <!-- ============================= -->
+            <!-- WISHLIST SIDEBAR  -->
+            <!-- ============================= -->
+            <div id="wishlistSidebar"
+                class="fixed bg-white top-0 right-0 h-screen w-[440px] max-w-[440px] shadow-2xl translate-x-full transition-transform duration-300 z-[999999] flex flex-col">
+                <div class="w-full bg-white h-full flex flex-col">
+
+                    <!-- Header -->
+                    <div class="flex items-center justify-between bg-whitesmoke-100 p-[22px]">
+                        <h3 class="text-[#6F4E37] text-center w-full">MY CART</h3>
+                        <button class="absolute right-[27px] top-[24px] p-0 btn text-thunder-100 hover:text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
+                                fill="none">
+                                <g filter="url(#filter0_d_3923_7901)">
+                                    <path d="M28 12L12 28" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M12 12L28 28" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- CART ITEM -->
+                    <div class="px-[22px] overflow-y-auto">
+
+                        <!-- Item 1 -->
+                        <div class="flex gap-5 py-5 border-b border-[#673E2C33]">
+                            <div
+                                class="bg-[#E0E0E0] rounded-sm p-[10px] border border-[#F4F1EF] relative 2xl:h-[150px] lt:h-[125px] h-[132px] w-[120px] flex items-center justify-center group/shop">
+                                <img src="./image/nav-product-1.webp" alt="product-1" class="w-auto h-auto" />
+
+                            </div>
+
+                            <div class="flex-1 space-y-3">
+                                <h6 class="font-primary text-[#2D2D22]">Manduka PRO Yoga Mat 6mm</h6>
+
+                                <div class="flex items-center justify-between w-full gap-3">
+                                    <p class="flex items-center gap-2 p2 text-[#2D2D2DCC]">Color:
+                                        <span
+                                            class="inline-block w-[19px] h-[19px] rounded-full bg-[#B4C7E2] ml-1"></span>
+                                    </p>
+
+                                    <!-- Quantity -->
+                                    <div
+                                        class="flex items-center justify-between gap-[14px] px-2 rounded-full border border-[#673E2C80]">
+                                        <button class="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
+                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <span class="text-[12px] uppercase font-medium leading-[28px]">1</span>
+                                        <button class="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
+                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
+                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center justify-between">
+                                    <p class="p2 text-[#2D2D2DCC]">$138.00</p>
+                                    <button class="flex items-center">
+                                        <p class="flex items-center gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <mask id="mask0_3923_7940" style="mask-type:alpha"
+                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                                    <rect width="16" height="16" fill="url(#pattern0_3923_7940)" />
+                                                </mask>
+                                                <g mask="url(#mask0_3923_7940)">
+                                                    <rect width="16" height="16" fill="#673E2C" />
+                                                </g>
+                                                <defs>
+                                                    <pattern id="pattern0_3923_7940"
+                                                        patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                        <use xlink:href="#image0_3923_7940"
+                                                            transform="scale(0.0078125)" />
+                                                    </pattern>
+                                                    <image id="image0_3923_7940" width="128" height="128"
+                                                        preserveAspectRatio="none"
+                                                        xlink:href="data:image/png;base64,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" />
+                                                </defs>
+                                            </svg> Remove
+                                        </p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="flex gap-5 py-5 border-b border-[#673E2C33]">
+                            <div
+                                class="bg-[#E0E0E0] rounded-sm p-[10px] border border-[#F4F1EF] relative 2xl:h-[150px] lt:h-[125px] h-[132px] w-[120px] flex items-center justify-center group/shop">
+                                <img src="./image/nav-product-2.webp" alt="product-1" class="w-auto h-auto" />
+
+                            </div>
+
+                            <div class="flex-1 space-y-3">
+                                <h6 class="font-primary text-[#2D2D22]">Buddha Teas Organic Calm Tea</h6>
+
+                                <div class="flex items-center justify-between w-full gap-3">
+                                    <p class="flex items-center gap-2 p2 text-[#2D2D2DCC]">Color:
+                                        <span
+                                            class="inline-block w-[19px] h-[19px] rounded-full bg-[#B4C7E2] ml-1"></span>
+                                    </p>
+
+                                    <!-- Quantity -->
+                                    <div
+                                        class="flex items-center justify-between gap-[14px] px-2 rounded-full border border-[#673E2C80]">
+                                        <button class="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
+                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <span class="text-[12px] uppercase font-medium leading-[28px]">1</span>
+                                        <button class="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
+                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
+                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center justify-between">
+                                    <p class="p2 text-[#2D2D2DCC]">$49.98</p>
+                                    <button class="flex items-center">
+                                        <p class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <mask id="mask0_3923_7940" style="mask-type:alpha"
+                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                                    <rect width="16" height="16" fill="url(#pattern0_3923_7940)" />
+                                                </mask>
+                                                <g mask="url(#mask0_3923_7940)">
+                                                    <rect width="16" height="16" fill="#673E2C" />
+                                                </g>
+                                                <defs>
+                                                    <pattern id="pattern0_3923_7940"
+                                                        patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                        <use xlink:href="#image0_3923_7940"
+                                                            transform="scale(0.0078125)" />
+                                                    </pattern>
+                                                    <image id="image0_3923_7940" width="128" height="128"
+                                                        preserveAspectRatio="none"
+                                                        xlink:href="data:image/png;base64,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" />
+                                                </defs>
+                                            </svg> Remove</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="flex gap-5 py-5 border-b border-[#673E2C33]">
+                            <div
+                                class="bg-[#E0E0E0] rounded-sm p-[10px] border border-[#F4F1EF] relative 2xl:h-[150px] lt:h-[125px] h-[132px] w-[120px] flex items-center justify-center group/shop">
+                                <img src="./image/nav-product-3.webp" alt="product-1" class="w-auto h-auto" />
+
+                            </div>
+
+                            <div class="flex-1 space-y-3">
+                                <h6 class="font-primary text-[#2D2D22]">Gaiam Yoga Starter Kit</h6>
+
+                                <div class="flex items-center justify-between w-full gap-3">
+                                    <p class="flex items-center gap-2 p2 text-[#2D2D2DCC]">Color:
+                                        <span
+                                            class="inline-block w-[19px] h-[19px] rounded-full bg-[#9581B9] ml-1"></span>
+                                    </p>
+
+                                    <!-- Quantity -->
+                                    <div
+                                        class="flex items-center justify-between gap-[14px] px-2 rounded-full border border-[#673E2C80]">
+                                        <button class="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
+                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <span class="text-[12px] uppercase font-medium leading-[28px]">1</span>
+                                        <button class="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
+                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
+                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center justify-between">
+                                    <p class="p2 text-[#2D2D2DCC]">$49.98</p>
+                                    <button class="flex items-center">
+                                        <p class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <mask id="mask0_3923_7940" style="mask-type:alpha"
+                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                                    <rect width="16" height="16" fill="url(#pattern0_3923_7940)" />
+                                                </mask>
+                                                <g mask="url(#mask0_3923_7940)">
+                                                    <rect width="16" height="16" fill="#673E2C" />
+                                                </g>
+                                                <defs>
+                                                    <pattern id="pattern0_3923_7940"
+                                                        patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                        <use xlink:href="#image0_3923_7940"
+                                                            transform="scale(0.0078125)" />
+                                                    </pattern>
+                                                    <image id="image0_3923_7940" width="128" height="128"
+                                                        preserveAspectRatio="none"
+                                                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADsQAAA7EB9YPtSQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAZ4SURBVHic7Z1LjBVFFIa/eWJkEEGUh4lGJBCjBDQYE1a+MRojxo0mulJj2JC4UuNOE1e6Ni5cqFsTViZKcOlGhKCCPOQRo1EhDiMDIwGEcVGMc7n3dlV3366q7q7/SyqZTPepV//3dNWp6m4QQgghhBBCCCGEEEkwFLsCFbMW2ALcCawAhivK9wrwB3AM+Ar4uaJ8RUU8BewFZgOl74AngrRMWJkAdhDuwnenz4GF3lsp+rIU+J54F38u7QGWeG6r6GIU2EX8iz+XdgIjXlssruF14l/07rTda4vF/ywGJol/wbvTSWCRx3Z7oappUkiexdz/68YtwNbYlSjKaOwKlOCZHOf8COwG/q2ozFHgfmC947yngc8qKlNkcBi7K/4QP55tGPjIUfYhD+WKLs5jvwgrPZa9ylH2tMeyvdDEUPCs47jvNsUuv1KaOAgUFSIBJI4EkDgSQOKUjQNcB7wEbMa9GjYGrAZuJIzg/glQho1fK8jjCmZGcRy44Dh3BvgGE39wnVsJNwD7iB96Vbo27cUsjxeizArWO8BzJeyEX1ZipqBfFzEqM2c9itlyJerHEWBdEYMy9+TlJWxEGApHQcsIQPHu+vJTUYMyAvighI0Iw/tFDcoMAg9ghLO5pL2onovAu5iV0EIMsnCxDLNGnjX1WAR87MjjU8zunixGgQUZx8Yw45Fxi/2Q43gexrF7ykvAFNl7D8Zy1OEh7D+mV4EzGcfOYfY+/OUoIzgjmICGbe76QLTa1YchjHhs/TSoiDPxGZm7DJx1nLPYY/lNYRH2X/8MxsV7wXdodspxXAIwIXIbf/ss3LcAXJWXAFouAJcHcDU+BZIWgDyABJA8EkDitFoAGgS6cQnA9SMaCHmA+Lj6ICsCWAkSQHxafQuQANxEFYDvh0N9CmAJsPHq3/tylFU3+zmiCsA367Avclwqme8bmFWwuXzOXf1fU+w72YO9jzaVzLcWLMe9m7XoS5a2WfLa1gD7bo5Z8psF1pTIszaM4xbAqoJ57rfktb8B9t243nayrESetWIGewPvKpjfRUteeZZNY9t3MoS5Ddr6Z6xgnoUI8aRO1QNBW4fk6azY9p1MYB+In6P8OCkXTRRAm4g+A5AA4hI1DAwSQGyS8ABaEMomCQHIA2QjASAB2JAAWk4SAnA1IuWNoVH3AoA8QGyS8AASQDYSABKADQWCWo48AOatY416v26FJCGA89jfXzcKXB+gHnUkCQGAwsH9GMLe7llaMg0EjQP64doLcBbzjgWv1EUAKQaDort/qI8AUvQAEkAHEkAvEkDLSUoAmgX04mpzqwQgD9BLUh5AAugl+joASAAxib4XACSAmCR1C9AgsJekBCAP0IsE0IFCwb20SgBnsT/kKA/QS6sEAPZRbYqbQpITgO02MELxN4U0HddegCCfoq+LACCt28AE9ncJTBNgLwCEFYCmgvPUIgoI8gCxqMX9HySAWEgAfZAA5mmlAPSQ6DxJCkAeYB4JoA8SwDxBloJBAohFLbaDgQQQC90C+pBXALbXsdqeQayLPSQqgKoigT9Yju1rgD242xosEhiSYUx8O+ulyHk772H6f5T6MvBgA+wBvu1j35k25MyncUyR3egTBfJ5ATjdYTsJPN8g+yPYBXB7gbwaxXGyG326YF4TwOPAY1f/LkpM+1PYBdDaAbHt8yiXSWdTyAXs/RBsbBZyEAj2wc0w5X6JTWMh5ksqWZzBjDGCUCcBQItdXwe1mQJCeAFoU0jiApAHqMkjYXOEFsCk4/htQWoRF9cUr+hsaCBCC+B3x/HWBkA6uM9x/LcgtYjEJuzz3xO0eyo4DPyCvQ9ei1a7AIxjnhKydcCL0Wrnn5ext30WWB+tdoH4BHsHnKSdodA1uL8SeiBa7QLyKO5fwUHgjlgV9MBa4Cjudpf9AHWjGAEO4e6M05j7oddPp3pmAbAdM7VztXeG4t9RHphYA64twJc5z/0T+AKzDn+KQI9MDcAIsALYCDwJ3JzT7m3gPV+VqiM7cP8qUklHMN4iKW4CDhO/82OnaeDeAfuysazGjPpjX4RY6SLmdpg0G7BvFGlrmga2VtB/rWApZlAY+6KESoeAuyvpuRYxjIkCHiP+BfKVJoE3SfcTObkYB14BdmLukbEv2qDpCrAbeIsaLnfXfeFlMfAIcA9wK7AkbnVycwYTszgI7MLEMoQQQgghhBBCCCGEiMd/9XEntoCv8NQAAAAASUVORK5CYII=" />
+                                                </defs>
+                                            </svg> Remove</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Subtotal & Buttons (Sticky bottom) -->
+                    <div class="mt-auto pt-6 sticky bottom-5 bg-white px-[22px]">
+
+                        <div
+                            class="flex items-center justify-between text-lg font-medium mb-6 py-[15px] border-y border-[#673E2C33]">
+                            <h6 class="font-medium font-primary">Sub Total</h6>
+                            <h6 class="font-medium font-primary">$449.00</h6>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="flex flex-col gap-6">
+                            <button class="btn btn-primary-second w-full">
+                                View Cart
+                            </button>
+                            <button class="btn btn-primary-second w-full">
+                                Checkout
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ============================= -->
+            <!-- CART SIDEBAR -->
+            <!-- ============================= -->
+            <div id="cartSidebar"
+                class="fixed bg-white top-0 right-0 h-screen w-[440px] max-w-[440px] shadow-2xl translate-x-full transition-transform duration-300 z-[999999] flex flex-col">
+                <div class="w-full bg-white h-full flex flex-col">
+
+                    <!-- Header -->
+                    <div class="flex items-center justify-between bg-whitesmoke-100 p-[22px]">
+                        <h3 class="text-[#6F4E37] text-center w-full">MY CART</h3>
+                        <button id="closeCart"
+                            class="absolute right-[27px] top-[24px] p-0 btn text-thunder-100 hover:text-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
+                                fill="none">
+                                <g filter="url(#filter0_d_3923_7901)">
+                                    <path d="M28 12L12 28" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M12 12L28 28" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- CART ITEM -->
+                    <div class="px-[22px] overflow-y-auto">
+
+                        <!-- Item 1 -->
+                        <div class="flex gap-5 py-5 border-b border-[#673E2C33]">
+                            <div
+                                class="bg-[#E0E0E0] rounded-sm p-[10px] border border-[#F4F1EF] relative 2xl:h-[150px] lt:h-[125px] h-[132px] w-[120px] flex items-center justify-center group/shop">
+                                <img src="./image/nav-product-1.webp" alt="product-1" class="w-auto h-auto" />
+
+                            </div>
+
+                            <div class="flex-1 space-y-3">
+                                <h6 class="font-primary text-[#2D2D22]">Manduka PRO Yoga Mat 6mm</h6>
+
+                                <div class="flex items-center justify-between w-full gap-[10px]">
+                                    <p class="flex items-center gap-2 p2 text-[#2D2D2DCC]">Color:
+                                        <span
+                                            class="inline-block w-[19px] h-[19px] rounded-full bg-[#B4C7E2] ml-1"></span>
+                                    </p>
+
+                                    <!-- Quantity -->
+                                    <div
+                                        class="flex items-center justify-between gap-[14px] px-2 rounded-full border border-[#673E2C80]">
+                                        <button class="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
+                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <span class="text-[12px] uppercase font-medium leading-[28px]">1</span>
+                                        <button class="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
+                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
+                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center justify-between">
+                                    <p class="p2 text-[#2D2D2DCC]">$138.00</p>
+                                    <button class="flex items-center">
+                                        <p class="flex items-center gap-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <mask id="mask0_3923_7940" style="mask-type:alpha"
+                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                                    <rect width="16" height="16" fill="url(#pattern0_3923_7940)" />
+                                                </mask>
+                                                <g mask="url(#mask0_3923_7940)">
+                                                    <rect width="16" height="16" fill="#673E2C" />
+                                                </g>
+                                                <defs>
+                                                    <pattern id="pattern0_3923_7940"
+                                                        patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                        <use xlink:href="#image0_3923_7940"
+                                                            transform="scale(0.0078125)" />
+                                                    </pattern>
+                                                    <image id="image0_3923_7940" width="128" height="128"
+                                                        preserveAspectRatio="none"
+                                                        xlink:href="data:image/png;base64,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" />
+                                                </defs>
+                                            </svg> Remove
+                                        </p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="flex gap-5 py-5 border-b border-[#673E2C33]">
+                            <div
+                                class="bg-[#E0E0E0] rounded-sm p-[10px] border border-[#F4F1EF] relative 2xl:h-[150px] lt:h-[125px] h-[132px] w-[120px] flex items-center justify-center group/shop">
+                                <img src="./image/nav-product-2.webp" alt="product-1" class="w-auto h-auto" />
+
+                            </div>
+
+                            <div class="flex-1 space-y-3">
+                                <h6 class="font-primary text-[#2D2D22]">Buddha Teas Organic Calm Tea</h6>
+
+                                <div class="flex items-center justify-between w-full gap-[10px]">
+                                    <p class="flex items-center gap-2 p2 text-[#2D2D2DCC]">Color:
+                                        <span
+                                            class="inline-block w-[19px] h-[19px] rounded-full bg-[#B4C7E2] ml-1"></span>
+                                    </p>
+
+                                    <!-- Quantity -->
+                                    <div
+                                        class="flex items-center justify-between gap-[14px] px-2 rounded-full border border-[#673E2C80]">
+                                        <button class="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
+                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <span class="text-[12px] uppercase font-medium leading-[28px]">1</span>
+                                        <button class="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
+                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
+                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center justify-between">
+                                    <p class="p2 text-[#2D2D2DCC]">$49.98</p>
+                                    <button class="flex items-center">
+                                        <p class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <mask id="mask0_3923_7940" style="mask-type:alpha"
+                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                                    <rect width="16" height="16" fill="url(#pattern0_3923_7940)" />
+                                                </mask>
+                                                <g mask="url(#mask0_3923_7940)">
+                                                    <rect width="16" height="16" fill="#673E2C" />
+                                                </g>
+                                                <defs>
+                                                    <pattern id="pattern0_3923_7940"
+                                                        patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                        <use xlink:href="#image0_3923_7940"
+                                                            transform="scale(0.0078125)" />
+                                                    </pattern>
+                                                    <image id="image0_3923_7940" width="128" height="128"
+                                                        preserveAspectRatio="none"
+                                                        xlink:href="data:image/png;base64,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" />
+                                                </defs>
+                                            </svg> Remove</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="flex gap-5 py-5 border-b border-[#673E2C33]">
+                            <div
+                                class="bg-[#E0E0E0] rounded-sm p-[10px] border border-[#F4F1EF] relative 2xl:h-[150px] lt:h-[125px] h-[132px] w-[120px] flex items-center justify-center group/shop">
+                                <img src="./image/nav-product-3.webp" alt="product-1" class="w-auto h-auto" />
+
+                            </div>
+
+                            <div class="flex-1 space-y-3">
+                                <h6 class="font-primary text-[#2D2D22]">Gaiam Yoga Starter Kit</h6>
+
+                                <div class="flex items-center justify-between w-full gap-[10px]">
+                                    <p class="flex items-center gap-2 p2 text-[#2D2D2DCC]">Color:
+                                        <span
+                                            class="inline-block w-[19px] h-[19px] rounded-full bg-[#9581B9] ml-1"></span>
+                                    </p>
+
+                                    <!-- Quantity -->
+                                    <div
+                                        class="flex items-center justify-between gap-[14px] px-2 rounded-full border border-[#673E2C80]">
+                                        <button class="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
+                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <span class="text-[12px] uppercase font-medium leading-[28px]">1</span>
+                                        <button class="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
+                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
+                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center justify-between">
+                                    <p class="p2 text-[#2D2D2DCC]">$49.98</p>
+                                    <button class="flex items-center">
+                                        <p class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <mask id="mask0_3923_7940" style="mask-type:alpha"
+                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                                    <rect width="16" height="16" fill="url(#pattern0_3923_7940)" />
+                                                </mask>
+                                                <g mask="url(#mask0_3923_7940)">
+                                                    <rect width="16" height="16" fill="#673E2C" />
+                                                </g>
+                                                <defs>
+                                                    <pattern id="pattern0_3923_7940"
+                                                        patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                        <use xlink:href="#image0_3923_7940"
+                                                            transform="scale(0.0078125)" />
+                                                    </pattern>
+                                                    <image id="image0_3923_7940" width="128" height="128"
+                                                        preserveAspectRatio="none"
+                                                        xlink:href="data:image/png;base64,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" />
+                                                </defs>
+                                            </svg> Remove</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Item 4 -->
+                        <div class="flex gap-5 py-5 border-b border-[#673E2C33]">
+                            <div
+                                class="bg-[#E0E0E0] rounded-sm p-[10px] border border-[#F4F1EF] relative 2xl:h-[150px] lt:h-[125px] h-[132px] w-[120px] flex items-center justify-center group/shop">
+                                <img src="./image/gidt-card.webp" alt="product-1" class="w-auto h-auto" />
+
+                            </div>
+
+                            <div class="flex-1 space-y-3">
+                                <h6 class="font-primary text-[#2D2D22]">Wellness Gift Card</h6>
+
+                                <div class="flex items-center justify-between w-full gap-[10px]">
+                                    <p class="flex items-center gap-2 p2 text-[#2D2D2DCC]">Code:(YOGA20)</p>
+
+                                    <!-- Quantity -->
+                                    <div
+                                        class="flex items-center justify-between gap-[14px] px-2 rounded-full border border-[#673E2C80]">
+                                        <button class="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
+                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <span class="text-[12px] uppercase font-medium leading-[28px]">1</span>
+                                        <button class="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
+                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
+                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center justify-between">
+                                    <p class="p2 text-[#2D2D2DCC]">$39.00</p>
+                                    <button class="flex items-center">
+                                        <p class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16"
+                                                viewBox="0 0 16 16" fill="none">
+                                                <mask id="mask0_3923_7940" style="mask-type:alpha"
+                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                                    <rect width="16" height="16" fill="url(#pattern0_3923_7940)" />
+                                                </mask>
+                                                <g mask="url(#mask0_3923_7940)">
+                                                    <rect width="16" height="16" fill="#673E2C" />
+                                                </g>
+                                                <defs>
+                                                    <pattern id="pattern0_3923_7940"
+                                                        patternContentUnits="objectBoundingBox" width="1" height="1">
+                                                        <use xlink:href="#image0_3923_7940"
+                                                            transform="scale(0.0078125)" />
+                                                    </pattern>
+                                                    <image id="image0_3923_7940" width="128" height="128"
+                                                        preserveAspectRatio="none"
+                                                        xlink:href="data:image/png;base64,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" />
+                                                </defs>
+                                            </svg> Remove</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Subtotal & Buttons (Sticky bottom) -->
+                    <div class="mt-auto pt-6 sticky bottom-5 bg-white px-[22px]">
+
+                        <div
+                            class="flex items-center justify-between text-lg font-medium mb-6 py-[15px] border-y border-[#673E2C33]">
+                            <h6 class="font-medium font-primary">Sub Total</h6>
+                            <h6 class="font-medium font-primary">$449.00</h6>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="flex flex-col gap-6">
+                            <button class="btn btn-primary-second w-full">
+                                View Cart
+                            </button>
+                            <button class="btn btn-primary-second w-full">
+                                Checkout
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container max-w-[1832px] w-full">
                 <div
-                    class="header_style_1 border-1 border-border-100 backdrop-blur-sm shadow-md 1xl:px-11 xl:px-8 md:px-6 px-4 rounded-full bg-black/10">
+                    class="header_style_1 border-1 border-border-100 backdrop-blur-sm shadow-md 1xl:px-11 md:px-5 px-4 rounded-full bg-black/10">
                     <div class="flex items-center gap-4 justify-between nav">
                         <!-- Logo -->
                         <div
@@ -239,8 +866,7 @@
                                                                         class="flex items-center justify-between w-full gap-3">
                                                                         <h5
                                                                             class="font-normal font-secondary uppercase hover:underline underline-offset-1 decoration-1">
-                                                                            Hatha
-                                                                            Yoga
+                                                                            Hatha Yoga
                                                                         </h5>
                                                                         <div
                                                                             class="rounded-full border border-white flex-shrink-0 w-8 h-8 flex items-center justify-center nav-class-arrow">
@@ -533,9 +1159,7 @@
                                                                             </svg>
                                                                         </div>
                                                                     </div>
-                                                                    <h6>Slow,
-                                                                        Soothing,
-                                                                        Centered</h6>
+                                                                    <h6>Slow, Soothing, Centered</h6>
                                                                 </div>
                                                             </div>
                                                         </a>
@@ -555,9 +1179,7 @@
                                                                         class="flex items-center justify-between w-full gap-3">
                                                                         <h5
                                                                             class="font-normal font-secondary uppercase hover:underline underline-offset-1 decoration-1">
-                                                                            Yin
-                                                                            &
-                                                                            Restore
+                                                                            Yin & Restore
                                                                         </h5>
                                                                         <div
                                                                             class="rounded-full border border-white flex-shrink-0 w-8 h-8 flex items-center justify-center nav-class-arrow">
@@ -574,9 +1196,7 @@
                                                                             </svg>
                                                                         </div>
                                                                     </div>
-                                                                    <h6>Deep
-                                                                        &
-                                                                        Meditative</h6>
+                                                                    <h6>Deep & Meditative</h6>
                                                                 </div>
                                                             </div>
                                                         </a>
@@ -596,8 +1216,7 @@
                                                                         class="flex items-center justify-between w-full gap-3">
                                                                         <h5
                                                                             class="font-normal font-secondary uppercase hover:underline underline-offset-1 decoration-1">
-                                                                            Power
-                                                                            Yoga
+                                                                            Power Yoga
                                                                         </h5>
                                                                         <div
                                                                             class="rounded-full border border-white flex-shrink-0 w-8 h-8 flex items-center justify-center nav-class-arrow">
@@ -614,9 +1233,7 @@
                                                                             </svg>
                                                                         </div>
                                                                     </div>
-                                                                    <h6>Strength
-                                                                        Flow
-                                                                        Intensity</h6>
+                                                                    <h6>Strength Flow Intensity</h6>
                                                                 </div>
                                                             </div>
                                                         </a>
@@ -945,7 +1562,7 @@
                                                 </svg>
                                             </a>
                                             <div
-                                                class="w-full lg:absolute lg:left-0 lg:top-full hidden z-[60] mega-panel lg:px-11 pt-[1px] nav-blog">
+                                                class="w-full lg:absolute lg:left-0 lg:top-full hidden group-hover:block z-[60] mega-panel lg:px-11 pt-[1px] nav-blog">
                                                 <div
                                                     class="bg-white lg:rounded-b-[10px] mx-auto pointer-events-auto h-full max-h-[calc(100vh-10vh)] scrollbar-custom">
                                                     <div
@@ -1292,7 +1909,7 @@
                                         </div>
                                     </li>
                                     <li class="relative">
-                                        <div class="group has-mega 2xl:px-5 1xl:px-3 xl:px-[10px] px-[7px]">
+                                        <div class="has-mega 2xl:px-5 1xl:px-3 xl:px-[10px] px-[7px]">
                                             <a href="javascript:void(0)"
                                                 class="menu_link_text inline-flex items-center lg:justify-normal justify-between w-full gap-x-2.5 md:leading-9 2xl:text-18 md:text-15 text-14 font-normal uppercase group-hover:text-primary">
                                                 <span class="xl:py-5 lg:py-4 sm:py-2.5 py-2">Pages</span>
@@ -1313,34 +1930,42 @@
                                                 </svg>
                                             </a>
                                             <div
-                                                class="lg:min-w-52 lg:max-w-52 w-full lg:absolute lg:left-0 lg:top-full hidden z-[60] mega-panel max-lg:px-4 pt-[1px]">
+                                                class="lg:min-w-52 lg:max-w-52 w-full lg:absolute lg:right-0 lg:top-full hidden group-hover:block z-[60] mega-panel max-lg:px-4 pt-[1px]">
                                                 <!-- class="min-w-52 max-w-52 w-full absolute left-0 top-full hidden z-[60] mega-panel pt-[25px] mega-panel"> -->
                                                 <div
-                                                    class="bg-white lg:rounded-b-[10px] 2xl:p-[30px] p-5 mx-auto pointer-events-auto">
+                                                    class="bg-white lg:rounded-b-[10px] py-5 mx-auto pointer-events-auto">
                                                     <ul class="flex flex-col space-y-1">
-                                                        <li>
-                                                            <a href="#"
-                                                                class="inline p2 font-normal uppercase transition-all duration-300 hover:text-primary text-thunder-100">
-                                                                Home One
+                                                        <li class="group relative">
+                                                            <a href="javascript:void(0)"
+                                                                class="inline-flex items-center justify-between w-full px-4 py-2 hover:bg-primary hover:text-white text-thunder-100 uppercase font-normal">
+                                                                <span>Home</span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                    height="24" viewBox="0 0 24 24" fill="none">
+                                                                    <path d="M11 8.56055L15 12.5609L11 16.5605"
+                                                                        stroke="currentColor" stroke-width="1.3"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
                                                             </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"
-                                                                class="inline p2 font-normal uppercase transition-all duration-300 hover:text-primary text-thunder-100">
-                                                                Home Two
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"
-                                                                class="inline p2 font-normal uppercase transition-all duration-300 hover:text-primary text-thunder-100">
-                                                                Home Three
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#"
-                                                                class="inline p2 font-normal uppercase transition-all duration-300 hover:text-primary text-thunder-100">
-                                                                Home Four
-                                                            </a>
+                                                            <div
+                                                                class="absolute left-full top-0 hidden group-hover:block rounded-[10px] z-[60] min-w-52 pl-3">
+                                                                <span
+                                                                    class="absolute left-auto 1xl:right-[188px] xl:right-[166px] right-[149px] top-6 w-4 h-4 rounded-xs bg-white rotate-45 sm:border border-gray-200 z-[-1] lg:block hidden"></span>
+                                                                <ul class=" bg-white p-4 rounded-[10px]">
+                                                                    <li><a href="javascript:void(0)"
+                                                                            class="block px-4 py-2 hover:bg-primary hover:text-white text-thunder-100 uppercase font-normal">Home
+                                                                            One</a></li>
+                                                                    <li><a href="javascript:void(0)"
+                                                                            class="block px-4 py-2 hover:bg-primary hover:text-white text-thunder-100 uppercase font-normal">Home
+                                                                            Two</a></li>
+                                                                    <li><a href="javascript:void(0)"
+                                                                            class="block px-4 py-2 hover:bg-primary hover:text-white text-thunder-100 uppercase font-normal">Home
+                                                                            Three</a></li>
+                                                                    <li><a href="javascript:void(0)"
+                                                                            class="block px-4 py-2 hover:bg-primary hover:text-white text-thunder-100 uppercase font-normal">Home
+                                                                            Four</a></li>
+                                                                </ul>
+                                                            </div>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -1352,13 +1977,13 @@
                         </aside>
 
                         <!-- Right icons -->
-                        <div class="flex items-center 2xl:gap-10 xl:gap-8 gap-3 nav-icon">
+                        <div class="flex items-center 2xl:gap-[35px] 1xl:gap-7 gap-3 nav-icon">
                             <div id="nav-site-search" class="site-search">
                                 <button class="site-search__open cursor-pointer border-0 bg-transparent block">
-                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
-                                        class="2xl:w-7 2xl:h-7 w-6 h-6">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 28 28"
+                                        fill="none" class="w-6 h-6">
                                         <path
-                                            d="M17.473 18.888C15.7839 20.2576 13.6746 21.0034 11.5 21C9.62108 21 7.78435 20.4428 6.22209 19.399C4.65982 18.3551 3.44218 16.8714 2.72315 15.1355C2.00412 13.3996 1.81598 11.4895 2.18254 9.64664C2.5491 7.80382 3.45389 6.11108 4.78249 4.78249C6.11109 3.45389 7.80383 2.5491 9.64665 2.18254C11.4895 1.81598 13.3996 2.00411 15.1355 2.72314C16.8714 3.44218 18.3551 4.65982 19.399 6.22208C20.4428 7.78435 21 9.62108 21 11.5C21.0032 13.6747 20.2569 15.7841 18.887 17.473L24.707 23.293C24.8892 23.4816 24.99 23.7342 24.9877 23.9964C24.9854 24.2586 24.8802 24.5094 24.6948 24.6948C24.5094 24.8802 24.2586 24.9854 23.9964 24.9877C23.7342 24.99 23.4816 24.8892 23.293 24.707L17.473 18.888ZM19 11.5C19 9.51088 18.2098 7.60322 16.8033 6.1967C15.3968 4.79018 13.4891 4 11.5 4C9.51088 4 7.60323 4.79018 6.1967 6.1967C4.79018 7.60322 4 9.51088 4 11.5C4 13.4891 4.79018 15.3968 6.1967 16.8033C7.60323 18.2098 9.51088 19 11.5 19C13.4891 19 15.3968 18.2098 16.8033 16.8033C18.2098 15.3968 19 13.4891 19 11.5Z"
+                                            d="M17.473 18.888C15.7839 20.2576 13.6746 21.0034 11.5 21C9.62108 21 7.78435 20.4428 6.22209 19.399C4.65982 18.3551 3.44218 16.8714 2.72315 15.1355C2.00412 13.3996 1.81598 11.4895 2.18254 9.64665C2.5491 7.80383 3.45389 6.11109 4.78249 4.78249C6.11109 3.45389 7.80383 2.5491 9.64665 2.18254C11.4895 1.81598 13.3996 2.00412 15.1355 2.72315C16.8714 3.44218 18.3551 4.65982 19.399 6.22209C20.4428 7.78435 21 9.62108 21 11.5C21.0032 13.6747 20.2569 15.7841 18.887 17.473L24.707 23.293C24.8892 23.4816 24.99 23.7342 24.9877 23.9964C24.9854 24.2586 24.8802 24.5094 24.6948 24.6948C24.5094 24.8802 24.2586 24.9854 23.9964 24.9877C23.7342 24.99 23.4816 24.8892 23.293 24.707L17.473 18.888ZM19 11.5C19 9.51088 18.2098 7.60323 16.8033 6.1967C15.3968 4.79018 13.4891 4 11.5 4C9.51088 4 7.60323 4.79018 6.1967 6.1967C4.79018 7.60323 4 9.51088 4 11.5C4 13.4891 4.79018 15.3968 6.1967 16.8033C7.60323 18.2098 9.51088 19 11.5 19C13.4891 19 15.3968 18.2098 16.8033 16.8033C18.2098 15.3968 19 13.4891 19 11.5Z"
                                             fill="currentColor" />
                                     </svg>
                                 </button>
@@ -1387,12 +2012,12 @@
                                             <section class="site-search__suggestions-section">
                                                 <h6>Blog</h6>
                                                 <div class="w-full 2xl:p-[30px] lg:p-6 pr-4">
-                                                    <div class="grid grid-cols-2 2xl:gap-10 lg:gap-8 gap-6">
+                                                    <div class="grid grid-cols-3 2xl:gap-10 lg:gap-8 gap-6">
                                                         <!-- 1st Blog -->
                                                         <div class="flex items-center 2xl:gap-7 1xl:gap-6 gap-4">
                                                             <div
                                                                 class="rounded-sm block overflow-hidden relative flex-shrink-0 2xl:w-[160px] 1xl:w-[145px] w-[130px] 2xl:h-[190px] 1xl:h-[170px] h-[160px]">
-                                                                <img src="./image/nav-blog-1.webp" alt="blog"
+                                                                <img src="./image/search-blog-1.webp" alt="blog"
                                                                     class="w-full h-full object-cover" />
                                                             </div>
 
@@ -1401,8 +2026,7 @@
                                                                     class="flex flex-col items-start 2xl:gap-[30px] gap-5">
                                                                     <h5
                                                                         class="text-primary uppercase hover:text-thunder-100">
-                                                                        Morning Stillness: The Power of a 6
-                                                                        Practice
+                                                                        HIP-OPENING SEQUENCE FOR MOBILITY
                                                                     </h5>
                                                                     <button
                                                                         class="btn-link uppercase 2xl:text-17 1xl:text-14 text-13">
@@ -1427,7 +2051,7 @@
                                                         <div class="flex items-center 2xl:gap-7 1xl:gap-6 gap-4">
                                                             <div
                                                                 class="rounded-sm block overflow-hidden relative flex-shrink-0 2xl:w-[160px] 1xl:w-[145px] w-[130px] 2xl:h-[190px] 1xl:h-[170px] h-[160px]">
-                                                                <img src="./image/nav-blog-2.webp" alt="blog"
+                                                                <img src="./image/search-blog-2.webp" alt="blog"
                                                                     class="w-full h-full object-cover" />
                                                             </div>
 
@@ -1436,81 +2060,11 @@
                                                                     class="flex flex-col items-start 2xl:gap-[30px] gap-5">
                                                                     <h5
                                                                         class="text-primary uppercase hover:text-thunder-100">
-                                                                        Discovering Strength in Stillness
+                                                                        RESTORATIVE POSES FOR STRESS RELIEF
                                                                     </h5>
                                                                     <button
                                                                         class="btn-link uppercase 2xl:text-17 1xl:text-14 text-13">
                                                                         Discover More
-                                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                                            width="13" height="13" viewBox="0 0 13 13"
-                                                                            fill="none"
-                                                                            class="mt-1 2xl:w-[13px] 2xl:h-[13px] w-[10px] h-[10px]">
-                                                                            <path
-                                                                                d="M0.71517 11.4403L11.0492 1.1062M11.0492 1.1062C11.2941 1.35111 11.4434 1.69168 11.4396 2.06795L11.3655 9.39997M11.0492 1.1062C10.8043 0.861295 10.4637 0.712054 10.0875 0.715856L2.75546 0.789943"
-                                                                                stroke="currentColor"
-                                                                                stroke-width="1.43157"
-                                                                                stroke-linecap="round"
-                                                                                stroke-linejoin="round" />
-                                                                        </svg>
-                                                                    </button>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- 3rd Blog -->
-                                                        <div class="flex items-center 2xl:gap-7 1xl:gap-6 gap-4">
-                                                            <div
-                                                                class="rounded-sm block overflow-hidden relative flex-shrink-0 2xl:w-[160px] 1xl:w-[145px] w-[130px] 2xl:h-[190px] 1xl:h-[170px] h-[160px]">
-                                                                <img src="./image/nav-blog-3.webp" alt="blog"
-                                                                    class="w-full h-full object-cover" />
-                                                            </div>
-
-                                                            <div>
-                                                                <a href="#blogs"
-                                                                    class="flex flex-col items-start 2xl:gap-[30px] gap-5">
-                                                                    <h5
-                                                                        class="text-primary uppercase hover:text-thunder-100">
-                                                                        Sun Salutation Sequence for Beginners
-                                                                    </h5>
-                                                                    <button
-                                                                        class="btn-link uppercase 2xl:text-17 1xl:text-14 text-13">
-                                                                        Discover
-                                                                        More
-                                                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                                                            width="13" height="13" viewBox="0 0 13 13"
-                                                                            fill="none"
-                                                                            class="mt-1 2xl:w-[13px] 2xl:h-[13px] w-[10px] h-[10px]">
-                                                                            <path
-                                                                                d="M0.71517 11.4403L11.0492 1.1062M11.0492 1.1062C11.2941 1.35111 11.4434 1.69168 11.4396 2.06795L11.3655 9.39997M11.0492 1.1062C10.8043 0.861295 10.4637 0.712054 10.0875 0.715856L2.75546 0.789943"
-                                                                                stroke="currentColor"
-                                                                                stroke-width="1.43157"
-                                                                                stroke-linecap="round"
-                                                                                stroke-linejoin="round" />
-                                                                        </svg>
-                                                                    </button>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- 4th Blog -->
-                                                        <div class="flex items-center 2xl:gap-7 1xl:gap-6 gap-4">
-                                                            <div
-                                                                class="rounded-sm block overflow-hidden relative flex-shrink-0 2xl:w-[160px] 1xl:w-[145px] w-[130px] 2xl:h-[190px] 1xl:h-[170px] h-[160px]">
-                                                                <img src="./image/nav-blog-4.webp" alt="blog"
-                                                                    class="w-full h-full object-cover" />
-                                                            </div>
-
-                                                            <div>
-                                                                <a href="#blogs"
-                                                                    class="flex flex-col items-start 2xl:gap-[30px] gap-5">
-                                                                    <h5
-                                                                        class="text-primary uppercase hover:text-thunder-100">
-                                                                        5 Morning Yoga Poses to Start Fresh
-                                                                    </h5>
-                                                                    <button
-                                                                        class="btn-link uppercase 2xl:text-17 1xl:text-14 text-13">
-                                                                        Discover
-                                                                        More
                                                                         <svg xmlns="http://www.w3.org/2000/svg"
                                                                             width="13" height="13" viewBox="0 0 13 13"
                                                                             fill="none"
@@ -1612,6 +2166,34 @@
                                 </div>
                             </div>
 
+                            <!-- wishlist icon -->
+                            <button id="openWishlist">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M7.5 4C4.4625 4 2 6.4625 2 9.5C2 15 8.5 20 12 21.163C15.5 20 22 15 22 9.5C22 6.4625 19.5375 4 16.5 4C14.64 4 12.995 4.9235 12 6.337C11.4928 5.61469 10.819 5.0252 10.0357 4.61841C9.25238 4.21162 8.38263 3.9995 7.5 4Z"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+
+
+
+                            <!-- cart icon -->
+                            <button id="openCart">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M8.75 13C8.75 12.8011 8.67098 12.6103 8.53033 12.4697C8.38968 12.329 8.19891 12.25 8 12.25C7.80109 12.25 7.61032 12.329 7.46967 12.4697C7.32902 12.6103 7.25 12.8011 7.25 13V17C7.25 17.1989 7.32902 17.3897 7.46967 17.5303C7.61032 17.671 7.80109 17.75 8 17.75C8.19891 17.75 8.38968 17.671 8.53033 17.5303C8.67098 17.3897 8.75 17.1989 8.75 17V13ZM16 12.25C16.1989 12.25 16.3897 12.329 16.5303 12.4697C16.671 12.6103 16.75 12.8011 16.75 13V17C16.75 17.1989 16.671 17.3897 16.5303 17.5303C16.3897 17.671 16.1989 17.75 16 17.75C15.8011 17.75 15.6103 17.671 15.4697 17.5303C15.329 17.3897 15.25 17.1989 15.25 17V13C15.25 12.8011 15.329 12.6103 15.4697 12.4697C15.6103 12.329 15.8011 12.25 16 12.25ZM12.75 13C12.75 12.8011 12.671 12.6103 12.5303 12.4697C12.3897 12.329 12.1989 12.25 12 12.25C11.8011 12.25 11.6103 12.329 11.4697 12.4697C11.329 12.6103 11.25 12.8011 11.25 13V17C11.25 17.1989 11.329 17.3897 11.4697 17.5303C11.6103 17.671 11.8011 17.75 12 17.75C12.1989 17.75 12.3897 17.671 12.5303 17.5303C12.671 17.3897 12.75 17.1989 12.75 17V13Z"
+                                        fill="currentColor" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M17.2736 3.473C16.7976 3.287 16.2646 3.256 15.5816 3.251C15.4398 2.95147 15.2158 2.69838 14.9357 2.52117C14.6557 2.34396 14.3311 2.24993 13.9996 2.25H9.99963C9.66832 2.24984 9.34378 2.34373 9.06372 2.52075C8.78367 2.69777 8.55963 2.95066 8.41763 3.25C7.73363 3.256 7.20163 3.287 6.72563 3.473C6.15741 3.69527 5.66323 4.07301 5.29964 4.563C4.93264 5.056 4.75964 5.69 4.52364 6.561L3.89563 8.864C3.50225 9.06248 3.15741 9.34518 2.88563 9.692C2.26363 10.489 2.15364 11.438 2.26464 12.526C2.37164 13.582 2.70463 14.912 3.12063 16.576L3.14663 16.683C3.41063 17.735 3.62364 18.59 3.87764 19.257C4.14263 19.953 4.47963 20.523 5.03363 20.956C5.58863 21.389 6.22363 21.576 6.96263 21.666C7.67063 21.75 8.55263 21.75 9.63763 21.75H14.3616C15.4466 21.75 16.3276 21.75 17.0366 21.665C17.7766 21.577 18.4106 21.389 18.9646 20.955C19.5196 20.523 19.8556 19.953 20.1206 19.257C20.3756 18.59 20.5886 17.735 20.8516 16.682L20.8786 16.577C21.2946 14.912 21.6266 13.582 21.7346 12.527C21.8446 11.437 21.7346 10.489 21.1126 9.692C20.8411 9.34529 20.4967 9.0626 20.1036 8.864L19.4756 6.561C19.2386 5.69 19.0656 5.056 18.6996 4.562C18.3359 4.07238 17.8417 3.695 17.2736 3.473ZM7.27163 4.87C7.49163 4.784 7.75763 4.759 8.41863 4.752C8.70063 5.342 9.30263 5.75 9.99863 5.75H13.9986C14.6966 5.75 15.2986 5.342 15.5806 4.752C16.2416 4.759 16.5076 4.784 16.7276 4.87C17.0336 4.99 17.2996 5.193 17.4956 5.457C17.6716 5.694 17.7746 6.025 18.0656 7.092L18.4196 8.389C17.3816 8.25 16.0416 8.25 14.3766 8.25H9.62163C7.95763 8.25 6.61763 8.25 5.57963 8.389L5.93363 7.092C6.22363 6.025 6.32763 5.694 6.50363 5.457C6.69945 5.19311 6.9656 4.98968 7.27163 4.87ZM9.99963 3.75C9.93333 3.75 9.86974 3.77634 9.82286 3.82322C9.77597 3.87011 9.74963 3.9337 9.74963 4C9.74963 4.0663 9.77597 4.12989 9.82286 4.17678C9.86974 4.22366 9.93333 4.25 9.99963 4.25H13.9996C14.0659 4.25 14.1295 4.22366 14.1764 4.17678C14.2233 4.12989 14.2496 4.0663 14.2496 4C14.2496 3.9337 14.2233 3.87011 14.1764 3.82322C14.1295 3.77634 14.0659 3.75 13.9996 3.75H9.99963ZM4.06863 10.615C4.34763 10.258 4.78863 10.018 5.69863 9.886C6.62963 9.752 7.89163 9.75 9.68464 9.75H14.3146C16.1076 9.75 17.3686 9.752 18.2996 9.886C19.2106 10.018 19.6516 10.258 19.9306 10.616C20.2096 10.973 20.3356 11.458 20.2416 12.374C20.1466 13.31 19.8426 14.534 19.4076 16.274C19.1306 17.382 18.9376 18.15 18.7196 18.724C18.5076 19.278 18.3006 19.571 18.0416 19.774C17.7826 19.976 17.4476 20.105 16.8586 20.176C16.2486 20.249 15.4586 20.25 14.3146 20.25H9.68464C8.54064 20.25 7.74963 20.249 7.14063 20.176C6.55063 20.106 6.21664 19.976 5.95764 19.774C5.69764 19.571 5.49064 19.278 5.27964 18.724C5.06164 18.15 4.86864 17.382 4.59064 16.274C4.15664 14.534 3.85163 13.31 3.75663 12.374C3.66363 11.458 3.78963 10.972 4.06863 10.615Z"
+                                        fill="currentColor" />
+                                </svg>
+                            </button>
+
+
+
                             <a href="javascript:void(0)"
                                 class="text-white hover:text-gray-300 border-0 bg-transparent lg:hidden">
                                 <svg width="21" height="20" viewBox="0 0 21 20" fill="none">
@@ -1664,12 +2246,8 @@
 
                     <!-- Description -->
                     <p class="text-white max-w-[913px] 2xl:mb-12 1xl:mb-10 xl:mb-8 lg:mb-7 mb-6">
-                        At Pranavya, we guide you through a journey of
-                        mindful movement,
-                        deep breathwork, and inner balance. Our modern
-                        approach blends
-                        ancient yoga traditions with today's lifestyle
-                        welcoming all
+                        At Pranavya, we guide you through a journey of mindful movement, deep breathwork, and inner
+                        balance. Our modern approach blends ancient yoga traditions with today's lifestyle welcoming all
                         bodies, all levels, and all paths.
                     </p>
 
@@ -1749,17 +2327,10 @@
                             Discover Balance, Embrace Serenity
                         </h2>
                         <p class="text-thunder-100 max-w-[890px]">
-                            At Pranavya Yoga, we create a modern sanctuary
-                            for wellness,
-                            where the wisdom of ancient yoga meets the
-                            rhythm of
-                            contemporary living. Rooted in tradition yet
-                            open to evolution,
-                            our studio offers a space that nurtures both the
-                            body and the
-                            mind encouraging balance, strength, and
-                            self-awareness in a
-                            fast-paced world.
+                            At Pranavya Yoga, we create a modern sanctuary for wellness, where the wisdom of ancient
+                            yoga meets the rhythm of contemporary living. Rooted in tradition yet open to evolution, our
+                            studio offers a space that nurtures both the body and the mind encouraging balance,
+                            strength, and self-awareness in a fast-paced world.
                         </p>
 
                         <!-- Bullets -->
@@ -1860,11 +2431,8 @@
                             Move, Breathe, Thrive
                         </h2>
                         <p class="text-thunder-100 max-w-[890px]">
-                            Welcome to Pranavya Yoga’s curated class
-                            offerings, where
-                            ancient practice meets modern flow. Our sessions
-                            are designed to
-                            inspire, energize, and center
+                            Welcome to Pranavya Yoga’s curated class offerings, where ancient practice meets modern
+                            flow. Our sessions are designed to inspire, energize, and center
                         </p>
                     </div>
                     <div class="pointer-events-none opacity-20 hidden md:block">

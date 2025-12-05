@@ -29,13 +29,11 @@ jQuery(document).ready(function () {
        OVERLAY FUNCTIONS
     ============================================================ */
     function showOverlay() {
-      overlay.removeClass("hidden").css("display", "block").hide().fadeIn(200);
+      overlay.removeClass("hidden").css("display", "block");
     }
 
     function hideOverlay() {
-      overlay.fadeOut(200, function () {
-        overlay.addClass("hidden").css("display", "none");
-      });
+      overlay.addClass("hidden").css("display", "none");
     }
 
     /* ============================================================
@@ -67,7 +65,7 @@ jQuery(document).ready(function () {
     ============================================================ */
 
     function initDesktopMenu() {
-      if (jQuery(window).width() < 1131) return;
+      if (jQuery(window).width() < 1220) return;
 
       jQuery("#mainmenu .has-mega").each(function () {
         const item = jQuery(this);
@@ -76,43 +74,38 @@ jQuery(document).ready(function () {
         item.find(".mega-panel").off("mouseenter mouseleave");
 
         item.on("mouseenter", function () {
-          clearTimeout(item.data("closeTimer")); // clear any pending close
+          clearTimeout(item.data("closeTimer"));
           item.addClass("mega-open");
           item.find(".mega-panel").stop(true, true).fadeIn(160);
-          $(".bg_body_box").removeClass("hidden").fadeIn(200);
-        });
-
-        item.on("mouseleave", function () {
-          item.data(
-            "closeTimer",
-            setTimeout(function () {
-              item.removeClass("mega-open");
-              item.find(".mega-panel").stop(true, true).fadeOut(150);
-              $(".bg_body_box").fadeOut(200, function () {
-                $(this).addClass("hidden");
-              });
-            }, 0),
-          ); // 0ms delay
+          fixInnerTextWhite();
+          $(".bg_body_box").removeClass("hidden").css("display", "block");
         });
 
         item.find(".mega-panel").on("mouseenter", function () {
           clearTimeout(item.data("closeTimer"));
         });
 
-        item.find(".mega-panel").on("mouseleave", function () {
-          item.data(
-            "closeTimer",
-            setTimeout(function () {
-              item.removeClass("mega-open");
-              item.find(".mega-panel").stop(true, true).fadeOut(150);
-              $(".bg_body_box").fadeOut(200, function () {
-                $(this).addClass("hidden");
-              });
-            }, 0),
-          );
+        item.on("mouseleave", function () {
+          item.removeClass("mega-open");
+          item.find(".mega-panel").stop(true, true).fadeOut(150);
+          jQuery(".bg_body_box").addClass("hidden").css("display", "none");
         });
       });
+
+
+      // HIDE OVERLAY when cursor goes to NON-DROPDOWN menu items
+      jQuery("#mainmenu > ul > li").on("mouseenter", function () {
+        const item = jQuery(this);
+
+        if (!item.hasClass("has-mega")) {
+          jQuery("#mainmenu .has-mega").removeClass("mega-open");
+          jQuery("#mainmenu .mega-panel").stop(true, true).fadeOut(150);
+
+          jQuery(".bg_body_box").addClass("hidden").css("display", "none");
+        }
+      });
     }
+
 
     initDesktopMenu();
 
@@ -121,9 +114,9 @@ jQuery(document).ready(function () {
     ============================================================ */
 
     function initMobileMenu() {
-      jQuery(document).off("click.mobileMenu click.mobileBackBtn");
+      jQuery(document).off("click.mobileMenu click.mobileBackBtn click.mobilePagesEvents click.mobilePagesEventsBack");
 
-      if (jQuery(window).width() >= 1131) return;
+      if (jQuery(window).width() >= 1220) return;
 
       // OPEN SUBMENU
       jQuery(document).on(
@@ -145,6 +138,7 @@ jQuery(document).ready(function () {
           wrap.addClass("mobile-open");
 
           panel.show(0).addClass("mobile-step").removeClass("in");
+          fixInnerTextWhite();
 
           // Animation: left → right
           if (panel[0] && panel[0].animate) {
@@ -164,14 +158,19 @@ jQuery(document).ready(function () {
 
           // Add Back Button
           if (!panel.find(".mobile-back-btn").length) {
+
+            const parentTitle = wrap.find("> a .menu_link_text, > a p, > a span")
+              .first()
+              .text()
+              .trim() || "Back";
+
             panel.prepend(`
             <div class="px-4">
           <button class="mobile-back-btn w-full text-left py-3 border-b text-thunder-100">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <path d="M6.56385 12.2344L1.33008 7.0006L6.56385 1.76683M2.05699 7.0006L12.6699 7.0006"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
+              <path d="M5.98377 11.2168L0.75 5.98302L5.98377 0.74925M1.47691 5.98302L12.0898 5.98302" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            Back
+              <span class="uppercase">${parentTitle}</span>
           </button>
           </div>
         `);
@@ -205,6 +204,100 @@ jQuery(document).ready(function () {
           if (!jQuery("#mainmenu .has-mega.mobile-open").length) {
             jQuery("#mainmenu").removeClass("in-submenu");
           }
+
+          // Always hide Pages > Events third-step panel when going back to root
+          jQuery("#mobile-pages-events-panel").addClass("hidden");
+        },
+      );
+
+      // THIRD-LEVEL: Nested menu items (mobile only, step 3)
+      jQuery(document).on(
+        "click.mobileNestedMenus",
+        "#mainmenu .mega-panel li.group > a",
+        function (e) {
+          if (jQuery(window).width() >= 1220) return; // keep desktop hover behaviour
+          e.preventDefault();
+
+          const menuItem = jQuery(this).closest("li.group");
+          const menuText = jQuery(this).find('p').text().trim();
+          const thirdList = menuItem.find("> div ul").first();
+
+          if (!thirdList.length) return;
+
+          // Create dynamic panel ID based on menu text
+          const panelId = "mobile-nested-panel-" + menuText.toLowerCase().replace(/\s+/g, '-');
+          let panel = jQuery("#" + panelId);
+
+          // Create third-step panel container for each nested menu
+          if (!panel.length) {
+            panel = jQuery(
+              '<div id="' + panelId + '" class="lg:hidden fixed inset-0 z-[60] bg-white flex flex-col transform -translate-x-full transition-all ease-in-out sm:top-0 top-[6px]">' +
+              '<div class="px-4 border-b border-primary/20">' +
+              '<button type="button" class="mobile-nested-back w-full text-left py-3 text-thunder-100 inline-flex items-center gap-2" data-panel="' + panelId + '">' +
+              '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">' +
+              '<path d="M6.56385 12.2344L1.33008 7.0006L6.56385 1.76683M2.05699 7.0006L12.6699 7.0006" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+              '</svg>' +
+              '<span class="uppercase">' + menuText + '</span>' +
+              "</button>" +
+              "</div>" +
+              '<ul class="flex-1 overflow-y-auto bg-white"></ul>' +
+              "</div>"
+            );
+            jQuery("#mainmenu").append(panel);
+          }
+
+
+          const list = panel.find("ul").first();
+          list.empty();
+
+          // Clone existing menu items into mobile panel
+          thirdList.children("li").each(function () {
+            const clone = jQuery(this).clone(true, true);
+            list.append(clone);
+          });
+
+          // Add opening animation (left → right)
+          if (panel[0] && panel[0].animate) {
+            const anim = panel[0].animate(
+              [
+                { transform: "translateX(-110%)" },
+                { transform: "translateX(0)" },
+              ],
+              { duration: 260, easing: "ease", fill: "forwards" },
+            );
+            anim.onfinish = function () {
+              panel.removeClass("-translate-x-full");
+            };
+          } else {
+            panel.removeClass("-translate-x-full");
+          }
+        },
+      );
+
+      // BACK from any nested menu (step 3) to parent menu (step 2)
+      jQuery(document).on(
+        "click.mobileNestedBack",
+        ".mobile-nested-back",
+        function (e) {
+          e.preventDefault();
+          const panelId = jQuery(this).data('panel');
+          const panel = jQuery("#" + panelId);
+
+          // Add closing animation (right → left)
+          if (panel[0] && panel[0].animate) {
+            const anim = panel[0].animate(
+              [
+                { transform: "translateX(0)" },
+                { transform: "translateX(-110%)" },
+              ],
+              { duration: 220, easing: "ease", fill: "forwards" },
+            );
+            anim.onfinish = function () {
+              panel.addClass("-translate-x-full").removeAttr("style");
+            };
+          } else {
+            panel.addClass("-translate-x-full");
+          }
         },
       );
     }
@@ -216,16 +309,32 @@ jQuery(document).ready(function () {
     ============================================================ */
 
     jQuery(window).on("resize", function () {
-      if (jQuery(window).width() >= 1131) {
+      if (jQuery(window).width() >= 1220) {
         sidebar.removeClass("active in-submenu");
         jQuery("#mainmenu .mega-panel").removeAttr("style");
         jQuery("#mainmenu .has-mega").removeClass("mobile-open");
+        // Also ensure all nested panels are hidden on desktop
+        jQuery("#mobile-pages-events-panel").addClass("hidden");
+        jQuery('[id^="mobile-nested-panel-"]').addClass("-translate-x-full").removeAttr("style");
         hideOverlay();
         body.removeClass("overflow-hidden");
       }
 
       initDesktopMenu();
+
+      // CLOSE ALL MEGA MENUS + OVERLAY WHEN LEAVING HEADER
+      jQuery(".header_style_1").on("mouseleave", function () {
+        jQuery("#mainmenu .has-mega").removeClass("mega-open");
+        jQuery("#mainmenu .mega-panel").stop(true, true).fadeOut(150);
+
+        // Only hide overlay if both sidebars are closed
+        if (jQuery("#wishlistSidebar").hasClass("translate-x-full") && jQuery("#cartSidebar").hasClass("translate-x-full")) {
+          jQuery(".bg_body_box").addClass("hidden").css("display", "none");
+        }
+      });
+
       initMobileMenu();
+
     });
 
     /* ============================================================
@@ -238,6 +347,8 @@ jQuery(document).ready(function () {
 
       setTimeout(() => {
         jQuery("#nav-site-search").addClass("search_bar");
+        fixInnerTextWhite();
+
       }, 300);
     });
 
@@ -295,7 +406,7 @@ jQuery(document).ready(function () {
         siteLogo.attr("src", BLACK_LOGO);
 
         // TEXT + ICONS → BLACK
-        jQuery(".menu_link_text, .site-search__open, .header_style_1 .nav-icon")
+        jQuery(".header_style_1 > .container .menu_link_text, .header_style_1 > .container .site-search__open, .header_style_1 > .container .nav-icon")
           .removeClass("text-white")
           .addClass("text-black-100");
 
@@ -306,7 +417,7 @@ jQuery(document).ready(function () {
         siteLogo.attr("src", WHITE_LOGO);
 
         // TEXT + ICONS → WHITE
-        jQuery(".menu_link_text, .site-search__open, .header_style_1 .nav-icon")
+        jQuery(".header_style_1 > .container .menu_link_text, .header_style_1 > .container .site-search__open, .header_style_1 > .container .nav-icon")
           .removeClass("text-black-100")
           .addClass("text-white");
 
@@ -333,6 +444,18 @@ jQuery(document).ready(function () {
     jQuery(window).on("scroll.headerToggle resize.headerToggle", function () {
       applyScrolledState(jQuery(window).scrollTop() > 0);
     });
+    /* ============================================================
+   FIX: Remove text-white only inside mega menu + search
+============================================================ */
+    function fixInnerTextWhite() {
+      // Mega menu text
+      jQuery("#mainmenu .mega-panel .text-white").removeClass("text-white");
+
+      // Search suggestion text (REAL container)
+      jQuery(".site-search__suggestions-block .text-white").removeClass("text-white");
+    }
+
+
   });
 
   // MENU JS
@@ -362,30 +485,36 @@ jQuery(document).ready(function () {
 
   // ===== CART & WISHLIST SIDEBAR FIX =====
 
-  // OPEN WISHLIST
+  // OPEN WISHLIST (Desktop)
   jQuery("#openWishlist").on("click", function () {
-    jQuery("#wishlistSidebar").removeClass("translate-x-full");
+    jQuery("#wishlistSidebar").removeClass("translate-x-full shadow-none").addClass("shadow-[-20px_0px_14px_0_#00000069]");
+    jQuery("body").addClass("overflow-hidden");
+  });
+
+  // OPEN WISHLIST (Mobile)
+  jQuery("#openWishlistMobile").on("click", function () {
+    jQuery("#wishlistSidebar").removeClass("translate-x-full shadow-none").addClass("shadow-[-20px_0px_14px_0_#00000069]");
     jQuery("body").addClass("overflow-hidden");
   });
 
   // CLOSE WISHLIST
   jQuery("#closeWishlist").on("click", function () {
-    jQuery("#wishlistSidebar").addClass("translate-x-full");
+    jQuery("#wishlistSidebar").addClass("translate-x-full shadow-none").removeClass("shadow-[-20px_0px_14px_0_#00000069]");
     jQuery("body").removeClass("overflow-hidden");
   });
 
   // OPEN CART
   jQuery("#openCart").on("click", function () {
-    jQuery("#cartSidebar").removeClass("translate-x-full");
+    jQuery("#cartSidebar").removeClass("translate-x-full shadow-none").addClass("shadow-[-20px_0px_14px_0_#00000069]");
     jQuery("body").addClass("overflow-hidden");
   });
 
   // CLOSE CART
   jQuery("#closeCart").on("click", function () {
-    jQuery("#cartSidebar").addClass("translate-x-full");
+    jQuery("#cartSidebar").addClass("translate-x-full shadow-none").removeClass("shadow-[-20px_0px_14px_0_#00000069]");
     jQuery("body").removeClass("overflow-hidden");
   });
-  
+
 
   // ===== Video Popup (YouTube/Vimeo/HTML5) ===== //
   jQuery(".video-popup").magnificPopup({
@@ -557,7 +686,7 @@ jQuery(document).ready(function () {
 
   jQuery(".site-search__open").click(function () {
     jQuery("#nav-site-search").addClass("open");
-    jQuery(".bg_body_box").fadeIn(1000);
+    jQuery(".bg_body_box").removeClass("hidden").css("display", "block");
     jQuery("html").addClass("hide-scrollbar");
     setTimeout(function () {
       jQuery("#nav-site-search").addClass("search_bar");
@@ -566,7 +695,7 @@ jQuery(document).ready(function () {
   jQuery(".site-search__close").click(function () {
     jQuery("html").removeClass("hide-scrollbar");
     jQuery("#nav-site-search").removeClass("search_bar");
-    jQuery(".bg_body_box").fadeOut(1000);
+    jQuery(".bg_body_box").addClass("hidden").css("display", "none");
     setTimeout(function () {
       jQuery("#nav-site-search").removeClass("open");
     }, 1000);
@@ -578,7 +707,7 @@ jQuery(document).ready(function () {
     ) {
       jQuery("#nav-site-search").removeClass("search_bar");
       jQuery("html").removeClass("hide-scrollbar");
-      jQuery(".bg_body_box").fadeOut(1000);
+      jQuery(".bg_body_box").addClass("hidden").css("display", "none");
       setTimeout(function () {
         jQuery("#nav-site-search").removeClass("open");
       }, 1000);
@@ -644,3 +773,60 @@ jQuery(document).ready(function () {
     },
   });
 });
+
+// our-classes.js
+document.addEventListener("DOMContentLoaded", () => {
+
+  const slides = [
+      {
+          id: "01",
+          title: "HATHA YOGA",
+          desc: "Perfect for beginners and anyone looking to build a strong foundation. Hatha classes help improve posture, flexibility, and overall well-being.",
+          image: "./image/hatha-yoga.jpg",
+          icon: "./image/hatha-yoga.svg",
+      },
+      {
+          id: "02",
+          title: "VINYASA FLOW YOGA",
+          desc: "A dynamic style of yoga that links movement with breath for a flowing sequence.",
+          image: "./image/vinyasa-flow-yoga.jpg",
+          icon: "./image/vinyasa-flow-yoga.svg",
+      },
+      {
+          id: "03",
+          title: "PRANAYAMA YOGA",
+          desc: "Focuses on breath control practices that enhance vitality and mental clarity.",
+          image: "./image/pranayama-yoga.jpg",
+          icon: "./image/pranayama-yoga.svg",
+      },
+      {
+          id: "04",
+          title: "YIN YOGA",
+          desc: "Slow, deep stretches that target connective tissues and help relax the entire body.",
+          image: "./image/yin-yoga.jpg",
+          icon: "./image/yin-yoga.svg",
+      }
+  ];
+
+  function updateSlide(i) {
+      const s = slides[i];
+
+      document.querySelector(".slide-id").textContent = s.id;
+      document.querySelector(".slide-title").textContent = s.title;
+      document.querySelector(".slide-desc").textContent = s.desc;
+      document.querySelector(".slide-img").src = s.image;
+      document.querySelector(".slide-icon").src = s.icon;
+  }
+
+  updateSlide(0);
+
+  document.querySelectorAll(".nav-btn").forEach(tab => {
+      tab.addEventListener("click", function () {
+          updateSlide(this.dataset.slide);
+      });
+  });
+  setActive("01");
+
+});
+
+

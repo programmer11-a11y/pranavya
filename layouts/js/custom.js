@@ -76,15 +76,36 @@ jQuery(document).ready(function () {
           item.find(".mega-panel").stop(true, true).fadeIn(160);
           fixInnerTextWhite();
           $(".bg_body_box").removeClass("hidden").css("display", "block");
+          applyScrolledState(); // Update header state when mega menu opens
         });
 
         item.find(".mega-panel").on("mouseenter", function () {
           clearTimeout(item.data("closeTimer"));
+          // Ensure header maintains bg-white when mouse enters mega panel
+          applyScrolledState();
+        });
+        
+        item.find(".mega-panel").on("mouseleave", function () {
+          // When leaving mega panel, check if we should maintain bg-white
+          // This handles the case when moving from menu item to mega panel
+          applyScrolledState();
         });
 
         item.on("mouseleave", function () {
           item.removeClass("mega-open");
-          item.find(".mega-panel").stop(true, true).fadeOut(150);
+          item.find(".mega-panel").stop(true, true).fadeOut(150, function() {
+            // Call after fadeOut animation completes
+            applyScrolledState(); // Update header state when mega menu closes
+            // If at top and nothing is open, remove not_scrolled_hover
+            if (jQuery(window).scrollTop() === 0) {
+              const megaOpen = jQuery(".mega-panel:visible").length > 0;
+              const sidebarOpen = jQuery("#mainmenu").hasClass("active");
+              const searchOpen = jQuery("#nav-site-search").hasClass("open");
+              if (!megaOpen && !sidebarOpen && !searchOpen) {
+                jQuery(".all-header").removeClass("not_scrolled_hover");
+              }
+            }
+          });
           jQuery(".bg_body_box").addClass("hidden").css("display", "none");
         });
       });
@@ -98,6 +119,8 @@ jQuery(document).ready(function () {
           jQuery("#mainmenu .mega-panel").stop(true, true).fadeOut(150);
 
           jQuery(".bg_body_box").addClass("hidden").css("display", "none");
+          // Update header state when closing mega menu
+          applyScrolledState();
         }
       });
     }
@@ -365,6 +388,7 @@ jQuery(document).ready(function () {
 
       setTimeout(() => {
         jQuery("#nav-site-search").removeClass("open");
+        applyScrolledState(); // Update header state when search closes
       }, 300);
     });
 
@@ -377,6 +401,7 @@ jQuery(document).ready(function () {
         hideOverlay();
         setTimeout(() => {
           jQuery("#nav-site-search").removeClass("open");
+          applyScrolledState(); // Update header state when search closes by clicking outside
         }, 300);
       }
     });
@@ -399,16 +424,19 @@ jQuery(document).ready(function () {
       const wishlistOpen =
         !jQuery("#wishlistSidebar").hasClass("translate-x-full");
       const cartOpen = !jQuery("#cartSidebar").hasClass("translate-x-full");
+      const hasHover = jQuery(".all-header").hasClass("not_scrolled_hover");
       const mobileLogo = jQuery("#mainmenu > div img").first();
 
-      // 🔥 Condition for black UI
+      // 🔥 Condition for black UI (bg-white)
+      // Show bg-white when: scrolled, mega menu open, search open, sidebar open, wishlist open, cart open, OR hover on header
       const useBlack =
         scrolled ||
         megaOpen ||
         sidebarOpen ||
         searchOpen ||
         wishlistOpen ||
-        cartOpen;
+        cartOpen ||
+        hasHover;
 
       if (useBlack) {
         // LOGO
@@ -434,7 +462,7 @@ jQuery(document).ready(function () {
           .removeClass("text-black-100")
           .addClass("text-white");
 
-        // Header BG
+        // Header BG - Remove bg-white to make it transparent
         jQuery(".all-header").removeClass("bg-white");
       }
 
@@ -451,7 +479,7 @@ jQuery(document).ready(function () {
     }
 
     // Run once on load
-    applyScrolledState(jQuery(window).scrollTop() > 0);
+    applyScrolledState();
 
     // Apply on scroll + resize
     jQuery(window).on("scroll.headerToggle resize.headerToggle", function () {
@@ -484,6 +512,14 @@ jQuery(document).ready(function () {
       jQuery("#mainmenu").removeClass("active");
       jQuery("html,body").removeClass("overflow-hidden");
       applyScrolledState(); // Force header state update after mobile menu closes
+      // If at top and nothing is open, remove not_scrolled_hover
+      if (jQuery(window).scrollTop() === 0) {
+        const megaOpen = jQuery(".mega-panel:visible").length > 0;
+        const searchOpen = jQuery("#nav-site-search").hasClass("open");
+        if (!megaOpen && !searchOpen) {
+          jQuery(".all-header").removeClass("not_scrolled_hover");
+        }
+      }
     });
 
     jQuery(document).on("keyup", function (e) {
@@ -691,35 +727,52 @@ jQuery(document).ready(function () {
     });
     // ===== Header Js ===== //
     jQuery(window).scroll(function () {
+      // Always call applyScrolledState to handle all conditions (mega menu, scroll, etc.)
+      applyScrolledState();
+      
       if (jQuery(this).scrollTop() > 0) {
         jQuery(".all-header").addClass("scrolled");
-        jQuery(".all-header .site-logo img").attr(
-          "src",
-          "./image/main-logo-black.svg",
-        );
+        jQuery(".all-header").removeClass("not_scrolled_hover");
       } else {
         jQuery(".all-header").removeClass("scrolled");
-        jQuery(".all-header .site-logo img").attr(
-          "src",
-          "./image/main-logo-white.svg",
-        );
       }
     });
 
     jQuery(".all-header").hover(
       function () {
-        jQuery(".all-header").addClass("not_scrolled_hover");
-        jQuery(".all-header:not(.scrolled) .site-logo img").attr(
-          "src",
-          "./image/main-logo-black.svg",
-        );
+        // Only add hover class if:
+        // 1. Page is not scrolled
+        // 2. Mega menu is not open
+        // 3. Search is not open
+        const isScrolled = jQuery(window).scrollTop() > 0;
+        const megaOpen = jQuery(".mega-panel:visible").length > 0;
+        const searchOpen = jQuery("#nav-site-search").hasClass("open");
+        
+        if (!isScrolled && !megaOpen && !searchOpen) {
+          jQuery(".all-header").addClass("not_scrolled_hover");
+          jQuery(".all-header:not(.scrolled) .site-logo img").attr(
+            "src",
+            "./image/main-logo-black.svg",
+          );
+          applyScrolledState(); // Update header state when hover is added
+        }
       },
       function () {
-        jQuery(".all-header").removeClass("not_scrolled_hover");
-        jQuery(".all-header:not(.scrolled) .site-logo img").attr(
-          "src",
-          "./image/main-logo-white.svg",
-        );
+        // Only remove hover class if page is not scrolled and mega menu/search is not open
+        const isScrolled = jQuery(window).scrollTop() > 0;
+        const megaOpen = jQuery(".mega-panel:visible").length > 0;
+        const searchOpen = jQuery("#nav-site-search").hasClass("open");
+        
+        // Don't remove hover if mega menu is open (mouse might be moving to mega panel)
+        if (!isScrolled && !megaOpen && !searchOpen) {
+          jQuery(".all-header").removeClass("not_scrolled_hover");
+          jQuery(".all-header:not(.scrolled) .site-logo img").attr(
+            "src",
+            "./image/main-logo-white.svg",
+          );
+        }
+        // Always call applyScrolledState to ensure correct state
+        applyScrolledState();
       },
     );
   });
@@ -739,6 +792,7 @@ jQuery(document).ready(function () {
     jQuery(".bg_body_box").addClass("hidden").css("display", "none");
     setTimeout(function () {
       jQuery("#nav-site-search").removeClass("open");
+      applyScrolledState(); // Update header state when search closes
     }, 1000);
   });
   jQuery(document).click(function (event) {
@@ -751,7 +805,7 @@ jQuery(document).ready(function () {
       jQuery(".bg_body_box").addClass("hidden").css("display", "none");
       setTimeout(function () {
         jQuery("#nav-site-search").removeClass("open");
-        // applyScrolledState(); // Force header state update when searchbar closes by clicking outside
+        applyScrolledState(); // Force header state update when searchbar closes by clicking outside
       }, 1000);
     }
   });

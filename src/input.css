@@ -492,6 +492,29 @@
   .all-header.not_scrolled_hover.bg-white #mainmenu nav .nav-icon {
     @apply text-black;
   }
+  
+  /* When header has bg-white, icons should be primary color, text and SVG should be black */
+  /* .all-header.bg-white .nav-icon {
+    @apply !text-primary;
+  } */
+  /* .all-header.bg-white .site-search__open {
+    @apply !text-primary;
+  }
+  .all-header.bg-white .site-search__open .nav-icon {
+    @apply !text-primary;
+  } */
+  .all-header.bg-white .menu_link_text {
+    @apply !text-black;
+  }
+  .all-header.bg-white .menu_link_text svg,
+  .all-header.bg-white .menu_link_text svg path {
+    @apply !text-black;
+  }
+  /* General SVG elements in header (but not nav-icon) should be black when bg-white */
+  .all-header.bg-white svg:not(.nav-icon) {
+    @apply !text-black;
+  }
+  
   .nav-icon,
   .menu_link_text {
     @apply text-white border-b-2 border-transparent;
@@ -504,7 +527,13 @@
   }
 
   .all-header.not_scrolled_hover .nav-icon {
-    @apply text-black hover:text-primary;
+    @apply !text-black hover:!text-primary;
+  }
+  .all-header.not_scrolled_hover .site-search__open {
+    @apply !text-black;
+  }
+  .all-header.not_scrolled_hover .site-search__open .nav-icon {
+    @apply !text-black hover:!text-primary;
   }
   .all-header.not_scrolled_hover .menu_link_text {
     @apply text-black hover:text-primary hover:border-primary;

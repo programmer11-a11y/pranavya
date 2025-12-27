@@ -9841,6 +9841,15 @@
   .all-header.scrolled, .all-header.scrolled .nav-icon, .all-header.not_scrolled_hover.bg-white #mainmenu nav .nav-icon {
     color: var(--color-black);
   }
+  .all-header.bg-white .menu_link_text {
+    color: var(--color-black) !important;
+  }
+  .all-header.bg-white .menu_link_text svg, .all-header.bg-white .menu_link_text svg path {
+    color: var(--color-black) !important;
+  }
+  .all-header.bg-white svg:not(.nav-icon) {
+    color: var(--color-black) !important;
+  }
   .nav-icon, .menu_link_text {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 2px;
@@ -9857,10 +9866,21 @@
     rotate: 180deg;
   }
   .all-header.not_scrolled_hover .nav-icon {
-    color: var(--color-black);
+    color: var(--color-black) !important;
     &:hover {
       @media (hover: hover) {
-        color: var(--color-primary);
+        color: var(--color-primary) !important;
+      }
+    }
+  }
+  .all-header.not_scrolled_hover .site-search__open {
+    color: var(--color-black) !important;
+  }
+  .all-header.not_scrolled_hover .site-search__open .nav-icon {
+    color: var(--color-black) !important;
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-primary) !important;
       }
     }
   }

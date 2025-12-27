@@ -565,14 +565,10 @@ jQuery(document).ready(function () {
         var target = $(this).data("target");
 
         // reset all tabs
-        $btns
-          .removeClass("bg-primary text-white")
-          .addClass("text-primary");
+        $btns.removeClass("bg-primary text-white").addClass("text-primary");
 
         // activate clicked tab
-        $(this)
-          .removeClass("text-black")
-          .addClass("bg-primary text-white");
+        $(this).removeClass("text-black").addClass("bg-primary text-white");
 
         // panels toggle
         $panels.addClass("hidden");
@@ -759,70 +755,78 @@ jQuery(document).ready(function () {
       }, 1000);
     }
   });
-
 });
 
 // our-classes.js
 document.addEventListener("DOMContentLoaded", () => {
+  const slideId = document.querySelector(".slide-id");
+  const slideTitle = document.querySelector(".slide-title");
+  const slideDesc = document.querySelector(".slide-desc");
+  const slideImg = document.querySelector(".slide-img");
+  const slideIcon = document.querySelector(".slide-icon");
+  const viewBtn = document.querySelector(".slide-button");
+  const navBtns = document.querySelectorAll(".nav-btn");
+
   const slides = [
     {
       id: "01",
       title: "HATHA YOGA",
-      desc: "Perfect for beginners and anyone looking to build a strong foundation. Hatha classes help improve posture, flexibility, and overall well-being.",
+      desc: "Perfect for beginners and anyone looking to build a strong foundation.",
       image: "./image/hatha-yoga.webp",
       icon: "./image/hatha-yoga.svg",
+      link: "./class-detail-1.html",
     },
     {
       id: "02",
       title: "VINYASA FLOW YOGA",
-      desc: "A dynamic style of yoga that links movement with breath for a flowing sequence.",
+      desc: "A dynamic style of yoga that links movement with breath.",
       image: "./image/vinyasa-flow-yoga.webp",
       icon: "./image/vinyasa-flow-yoga.svg",
+      link: "./class-detail-2.html",
     },
     {
       id: "03",
       title: "PRANAYAMA YOGA",
-      desc: "Focuses on breath control practices that enhance vitality and mental clarity.",
+      desc: "Focuses on breath control practices that enhance vitality.",
       image: "./image/pranayama-yoga.webp",
       icon: "./image/pranayama-yoga.svg",
+      link: "./class-detail-3.html",
     },
     {
       id: "04",
       title: "YIN YOGA",
-      desc: "Slow, deep stretches that target connective tissues and help relax the entire body.",
+      desc: "Slow, deep stretches that target connective tissues.",
       image: "./image/yin-yoga.webp",
       icon: "./image/yin-yoga.svg",
+      link: "./class-detail-4.html",
     },
   ];
 
-  function updateSlide(i) {
-    const s = slides[i];
+  function updateSlide(index) {
+    const s = slides[index];
 
-    document.querySelector(".slide-id").textContent = s.id;
-    document.querySelector(".slide-title").textContent = s.title;
-    document.querySelector(".slide-desc").textContent = s.desc;
-    document.querySelector(".slide-img").src = s.image;
-    document.querySelector(".slide-icon").src = s.icon;
+    slideId.textContent = s.id;
+    slideTitle.textContent = s.title;
+    slideDesc.textContent = s.desc;
+    slideImg.src = s.image;
+    slideIcon.src = s.icon;
+    viewBtn.href = s.link;
+
+    // Active state
+    navBtns.forEach((btn) => btn.classList.remove("active"));
+    navBtns[index].classList.add("active");
   }
 
+  // Init first slide
   updateSlide(0);
 
-  document.querySelectorAll(".nav-btn").forEach((tab) => {
-    tab.addEventListener("click", function () {
-      updateSlide(this.dataset.slide);
+  // Click handling
+  navBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const index = parseInt(btn.dataset.slide, 10);
+      updateSlide(index);
     });
   });
-
-  function setActive(id) {
-    document.querySelectorAll(".nav-btn").forEach((btn) => {
-      btn.classList.remove("active");
-      if (btn.dataset.slide === id) {
-        btn.classList.add("active");
-      }
-    });
-  }
-
-  setActive("01");
 });
 
 // validation form logic
@@ -1030,16 +1034,24 @@ $(function () {
     });
   })();
 
-   new Swiper(".testimonial-slider", {
-    slidesPerView: "2.5",
+  new Swiper(".testimonial-slider", {
+    slidesPerView: "1",
     centeredSlides: true,
     loop: true,
-    spaceBetween: 80,
+    spaceBetween: 20,
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
-});
-
+    breakpoints: {
+      640: { slidesPerView: 1, spaceBetween: 30 },
+      767: { slidesPerView: 1.2, spaceBetween: 40 },
+      992: { slidesPerView: 1.3, spaceBetween: 40 },
+      1131: { slidesPerView: 1.5, spaceBetween: 55 },
+      1281: { slidesPerView: 1.5, spaceBetween: 70 },
+      1500: { slidesPerView: 1.5, spaceBetween: 90 },
+      1782: { slidesPerView: 1.6, spaceBetween: 110 },
+    },
+  });
 });
 // =================== END INDEX-2.HTML ========================

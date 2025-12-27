@@ -95,15 +95,24 @@ jQuery(document).ready(function () {
           item.removeClass("mega-open");
           item.find(".mega-panel").stop(true, true).fadeOut(150, function() {
             // Call after fadeOut animation completes
-            applyScrolledState(); // Update header state when mega menu closes
-            // If at top and nothing is open, remove not_scrolled_hover
-            if (jQuery(window).scrollTop() === 0) {
-              const megaOpen = jQuery(".mega-panel:visible").length > 0;
-              const sidebarOpen = jQuery("#mainmenu").hasClass("active");
-              const searchOpen = jQuery("#nav-site-search").hasClass("open");
-              if (!megaOpen && !sidebarOpen && !searchOpen) {
-                jQuery(".all-header").removeClass("not_scrolled_hover");
-              }
+            const isScrolled = jQuery(window).scrollTop() === 0;
+            const megaOpen = jQuery(".mega-panel:visible").length > 0;
+            const sidebarOpen = jQuery("#mainmenu").hasClass("active");
+            const searchOpen = jQuery("#nav-site-search").hasClass("open");
+            
+            // Only remove hover if mouse is not on any menu item
+            // If mouse moved to another menu item, it will be handled by that item's mouseenter
+            if (isScrolled === false && !megaOpen && !sidebarOpen && !searchOpen) {
+              // Use a small delay to check if mouse moved to another menu item
+              setTimeout(function() {
+                const stillOnMenu = jQuery("#mainmenu > ul > li:hover").length > 0;
+                if (!stillOnMenu) {
+                  jQuery(".all-header").removeClass("not_scrolled_hover");
+                }
+                applyScrolledState();
+              }, 50);
+            } else {
+              applyScrolledState();
             }
           });
           jQuery(".bg_body_box").addClass("hidden").css("display", "none");
@@ -116,11 +125,14 @@ jQuery(document).ready(function () {
 
         if (!item.hasClass("has-mega")) {
           jQuery("#mainmenu .has-mega").removeClass("mega-open");
-          jQuery("#mainmenu .mega-panel").stop(true, true).fadeOut(150);
+          jQuery("#mainmenu .mega-panel").stop(true, true).fadeOut(150, function() {
+            // After mega menu closes, update header state
+            // Don't force add not_scrolled_hover - let header hover handler manage it
+            // But ensure state is correct
+            applyScrolledState();
+          });
 
           jQuery(".bg_body_box").addClass("hidden").css("display", "none");
-          // Update header state when closing mega menu
-          applyScrolledState();
         }
       });
     }
@@ -763,16 +775,23 @@ jQuery(document).ready(function () {
         const megaOpen = jQuery(".mega-panel:visible").length > 0;
         const searchOpen = jQuery("#nav-site-search").hasClass("open");
         
-        // Don't remove hover if mega menu is open (mouse might be moving to mega panel)
-        if (!isScrolled && !megaOpen && !searchOpen) {
-          jQuery(".all-header").removeClass("not_scrolled_hover");
-          jQuery(".all-header:not(.scrolled) .site-logo img").attr(
-            "src",
-            "./image/main-logo-white.svg",
-          );
-        }
-        // Always call applyScrolledState to ensure correct state
-        applyScrolledState();
+        // Check if mouse is still over any menu item before removing hover
+        // This prevents removing hover when moving between menu items
+        // Use a small delay to allow menu item mouseenter to fire first
+        setTimeout(function() {
+          const stillOnMenu = jQuery("#mainmenu > ul > li:hover").length > 0;
+          
+          // Don't remove hover if mega menu is open or mouse is still on menu
+          if (!isScrolled && !megaOpen && !searchOpen && !stillOnMenu) {
+            jQuery(".all-header").removeClass("not_scrolled_hover");
+            jQuery(".all-header:not(.scrolled) .site-logo img").attr(
+              "src",
+              "./image/main-logo-white.svg",
+            );
+          }
+          // Always call applyScrolledState to ensure correct state
+          applyScrolledState();
+        }, 10);
       },
     );
   });

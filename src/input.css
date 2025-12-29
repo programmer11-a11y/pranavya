@@ -403,42 +403,44 @@
     @apply hidden;
   }
 
-  /* scrtollbar */
-  .scrollbar-custom {
-    overflow-y: auto;
-  }
+  /* Scroll container */
+.scrollbar-custom {
+  overflow-y: auto;
+}
 
-  /* TRACK width = 20px */
-  .scrollbar-custom::-webkit-scrollbar {
-    width: 11px;
-  }
+/* TOTAL scrollbar width (track width) */
+.scrollbar-custom::-webkit-scrollbar {
+  width: 20px;
+}
 
-  /* TRACK STYLE */
-  .scrollbar-custom::-webkit-scrollbar-track {
-    background: #f2f1f0;
-    padding: 0px;
-  }
+/* TRACK */
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: #f2f1f0;
+}
 
-  /* THUMB width = 11px (centered using transparent padding) */
-  .scrollbar-custom::-webkit-scrollbar-thumb {
-    border-radius: 9999px;
-    background-color: white;
-    box-sizing: content-box;
-    border: 0;
-    padding: 0 4.5px;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
-    background-image: linear-gradient(
-        to bottom,
-        #b9a9a2 0 2px,
-        transparent 2px 6px
-      ),
-      linear-gradient(to bottom, #b9a9a2 0 2px, transparent 2px 6px),
-      linear-gradient(to bottom, #b9a9a2 0 2px, transparent 2px 6px),
-      linear-gradient(to bottom, #b9a9a2 0 2px, transparent 2px 6px);
-    background-repeat: no-repeat;
-    background-size: 100% 2px, 100% 2px, 100% 2px, 100% 2px;
-    background-position: center 38%, center 48%, center 58%, center 68%;
-  }
+/* THUMB */
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 9999px;
+
+  /* THIS creates left & right space */
+  border: 4.5px solid transparent;
+  background-clip: content-box;
+
+  /* grip lines */
+  background-image:
+    linear-gradient(to bottom, #b9a9a2 0 2px, transparent 2px 6px),
+    linear-gradient(to bottom, #b9a9a2 0 2px, transparent 2px 6px),
+    linear-gradient(to bottom, #b9a9a2 0 2px, transparent 2px 6px),
+    linear-gradient(to bottom, #b9a9a2 0 2px, transparent 2px 6px);
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  background-position:
+    center 38%,
+    center 48%,
+    center 58%,
+    center 68%;
+}
 
   /* header */
   .all-header,
@@ -492,7 +494,7 @@
   .all-header.not_scrolled_hover.bg-white #mainmenu nav .nav-icon {
     @apply text-black;
   }
-  
+
   /* When header has bg-white, icons should be primary color, text and SVG should be black */
   /* .all-header.bg-white .nav-icon {
     @apply !text-primary;
@@ -514,7 +516,7 @@
   .all-header.bg-white svg:not(.nav-icon) {
     @apply !text-black;
   }
-  
+
   .nav-icon,
   .menu_link_text {
     @apply text-white border-b-2 border-transparent;
@@ -555,6 +557,9 @@
   }
   .all-header aside#mainmenu {
     @apply !-left-4 !-top-[22px];
+  }
+  .header-2 .all-header aside#mainmenu {
+    @apply !left-0 !top-0;
   }
   .all-header.scrolled aside#mainmenu {
     @apply !-left-0 !top-0;
@@ -597,13 +602,48 @@
     margin-right: -200px;
   }
   /* MOBILE SUBMENU HORIZONTAL STEP */
-  .mega-panel.mobile-step {
-    @apply !block fixed bg-white top-0 left-0 w-full h-screen  transform translate-x-full z-[9999];
-    transition: transform 250ms ease;
+  .mobile-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+    z-index: 9999;
     will-change: transform;
   }
-  .mega-panel.mobile-step.in {
-    @apply transform translate-x-0;
+
+  .step-3-content {
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    transform: translateX(100%);
+    transition: transform 0.35s ease;
+    z-index: 50;
+  }
+
+  .step-3-content.active {
+    transform: translateX(0);
+  }
+
+  .mobile-back-wrapper {
+    @apply sticky top-0 z-[9999] bg-white;
+  }
+
+  .mobile-back-btn {
+    @apply w-full text-left py-3 border-b text-thunder-100 flex items-center gap-3;
+  }
+
+  /* fallback for the mobile-drawer (step-3) if you use it */
+  .mobile-drawer {
+    @apply fixed top-0 right-0 w-full h-screen bg-white z-[99999] transform translate-x-full transition-transform duration-300;
+  }
+
+  .mobile-drawer.active,
+  .mobile-drawer.translate-x-0 {
+    @apply translate-x-0;
   }
   .input-error {
     @apply border-red-500;
@@ -909,7 +949,7 @@
   .swiper-slide-prev .swiper-slide .testimonial-content {
     @apply hidden;
   }
-   .testimonial-slider .swiper-slide-prev .testimonial-img {
+  .testimonial-slider .swiper-slide-prev .testimonial-img {
     @apply ml-auto;
   }
   .swiper-slide-prev .swiper-slide .testimonial-content,

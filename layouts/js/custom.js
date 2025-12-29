@@ -106,15 +106,17 @@ jQuery(document).ready(function () {
             const sidebarOpen = jQuery("#mainmenu").hasClass("active");
             const searchOpen = jQuery("#nav-site-search").hasClass("open");
             
-            // Check if mouse moved to another menu item before removing hover
+            // Check if mouse moved to another menu item or overlay before removing hover
             // Use a small delay to allow other menu item's mouseenter to fire first
             setTimeout(function() {
               const stillOnMenu = jQuery("#mainmenu > ul > li:hover").length > 0;
               const stillOnHeader = jQuery(".all-header:hover").length > 0;
+              const overlayVisible = !jQuery(".bg_body_box").hasClass("hidden") && jQuery(".bg_body_box").css("display") !== "none";
               
               // Only remove hover if mouse is not on any menu item AND not on header
-              // If mouse moved to another menu item or is still on header, maintain hover
+              // If mouse moved to overlay (overlay is visible but mouse not on header), remove hover
               if (isScrolled === false && !megaOpen && !sidebarOpen && !searchOpen && !stillOnMenu && !stillOnHeader) {
+                // If overlay is visible but mouse is not on header, it means mouse moved to overlay - remove hover
                 jQuery(".all-header").removeClass("not_scrolled_hover");
               }
               applyScrolledState();
@@ -427,12 +429,44 @@ jQuery(document).ready(function () {
         jQuery("#mainmenu .has-mega").removeClass("mega-open");
         jQuery("#mainmenu .mega-panel").stop(true, true).fadeOut(150);
 
+        // Check if mouse moved away from header - if so, remove hover state
+        setTimeout(function() {
+          const stillOnHeader = jQuery(".all-header:hover").length > 0;
+          const stillOnMenu = jQuery("#mainmenu > ul > li:hover").length > 0;
+          const isScrolled = jQuery(window).scrollTop() > 0;
+          const megaOpen = jQuery(".mega-panel:visible").length > 0;
+          const searchOpen = jQuery("#nav-site-search").hasClass("open");
+          const sidebarOpen = jQuery("#mainmenu").hasClass("active");
+          
+          // If mouse is not on header or menu, and page is not scrolled, and nothing else is open, remove hover
+          if (!isScrolled && !megaOpen && !searchOpen && !sidebarOpen && !stillOnHeader && !stillOnMenu) {
+            jQuery(".all-header").removeClass("not_scrolled_hover");
+            applyScrolledState();
+          }
+        }, 100);
+
         // Only hide overlay if both sidebars are closed
         if (
           jQuery("#wishlistSidebar").hasClass("translate-x-full") &&
           jQuery("#cartSidebar").hasClass("translate-x-full")
         ) {
           jQuery(".bg_body_box").addClass("hidden").css("display", "none");
+        }
+      });
+      
+      // Handle mouse entering overlay - remove hover if not on header
+      overlay.on("mouseenter", function() {
+        const isScrolled = jQuery(window).scrollTop() > 0;
+        const megaOpen = jQuery(".mega-panel:visible").length > 0;
+        const searchOpen = jQuery("#nav-site-search").hasClass("open");
+        const sidebarOpen = jQuery("#mainmenu").hasClass("active");
+        const stillOnHeader = jQuery(".all-header:hover").length > 0;
+        const stillOnMenu = jQuery("#mainmenu > ul > li:hover").length > 0;
+        
+        // If mouse is on overlay (not on header or menu) and page is not scrolled, remove hover
+        if (!isScrolled && !megaOpen && !searchOpen && !sidebarOpen && !stillOnHeader && !stillOnMenu) {
+          jQuery(".all-header").removeClass("not_scrolled_hover");
+          applyScrolledState();
         }
       });
 
@@ -569,12 +603,52 @@ jQuery(document).ready(function () {
       }
     }
 
-    // Run once on load
+    // Run once on load - ensure initial state is correct
+    // Remove hover state if nothing is open and page is not scrolled
+    if (jQuery(window).scrollTop() === 0) {
+      const megaOpen = jQuery(".mega-panel:visible").length > 0;
+      const sidebarOpen = jQuery("#mainmenu").hasClass("active");
+      const searchOpen = jQuery("#nav-site-search").hasClass("open");
+      const wishlistOpen = !jQuery("#wishlistSidebar").hasClass("translate-x-full");
+      const cartOpen = !jQuery("#cartSidebar").hasClass("translate-x-full");
+      
+      if (!megaOpen && !sidebarOpen && !searchOpen && !wishlistOpen && !cartOpen) {
+        jQuery(".all-header").removeClass("not_scrolled_hover");
+      }
+    }
     applyScrolledState();
 
     // Apply on scroll + resize
     jQuery(window).on("scroll.headerToggle resize.headerToggle", function () {
       applyScrolledState(jQuery(window).scrollTop() > 0);
+    });
+    
+    // Check hover state on document mousemove to ensure it's only active when mouse is on header
+    // Use throttling to avoid performance issues
+    let hoverCheckTimeout;
+    jQuery(document).on("mousemove", function(e) {
+      clearTimeout(hoverCheckTimeout);
+      hoverCheckTimeout = setTimeout(function() {
+        const isScrolled = jQuery(window).scrollTop() > 0;
+        const megaOpen = jQuery(".mega-panel:visible").length > 0;
+        const sidebarOpen = jQuery("#mainmenu").hasClass("active");
+        const searchOpen = jQuery("#nav-site-search").hasClass("open");
+        const wishlistOpen = !jQuery("#wishlistSidebar").hasClass("translate-x-full");
+        const cartOpen = !jQuery("#cartSidebar").hasClass("translate-x-full");
+        const hasHover = jQuery(".all-header").hasClass("not_scrolled_hover");
+        
+        // Check if mouse is actually on header or related elements
+        const $target = jQuery(e.target);
+        const isOnHeader = $target.closest(".all-header").length > 0;
+        const isOnMenu = $target.closest("#mainmenu > ul > li").length > 0;
+        const isOnMegaPanel = $target.closest(".mega-panel").length > 0;
+        
+        // If hover class is active but mouse is not on header/menu/mega panel and nothing else is open, remove it
+        if (hasHover && !isScrolled && !megaOpen && !sidebarOpen && !searchOpen && !wishlistOpen && !cartOpen && !isOnHeader && !isOnMenu && !isOnMegaPanel) {
+          jQuery(".all-header").removeClass("not_scrolled_hover");
+          applyScrolledState();
+        }
+      }, 100);
     });
     /* ============================================================
    FIX: Remove text-white only inside mega menu + search
@@ -862,6 +936,9 @@ jQuery(document).ready(function () {
         const isScrolled = jQuery(window).scrollTop() > 0;
         const megaOpen = jQuery(".mega-panel:visible").length > 0;
         const searchOpen = jQuery("#nav-site-search").hasClass("open");
+        const sidebarOpen = jQuery("#mainmenu").hasClass("active");
+        const wishlistOpen = !jQuery("#wishlistSidebar").hasClass("translate-x-full");
+        const cartOpen = !jQuery("#cartSidebar").hasClass("translate-x-full");
         
         // Check if mouse is still over any menu item or header before removing hover
         // This prevents removing hover when moving between menu items
@@ -872,7 +949,8 @@ jQuery(document).ready(function () {
           const stillOnMegaPanel = jQuery(".mega-panel:hover").length > 0;
           
           // Don't remove hover if mega menu is open, mouse is still on menu, header, or mega panel
-          if (!isScrolled && !megaOpen && !searchOpen && !stillOnMenu && !stillOnHeader && !stillOnMegaPanel) {
+          // Also check if any sidebar is open
+          if (!isScrolled && !megaOpen && !searchOpen && !sidebarOpen && !wishlistOpen && !cartOpen && !stillOnMenu && !stillOnHeader && !stillOnMegaPanel) {
             jQuery(".all-header").removeClass("not_scrolled_hover");
             jQuery(".all-header:not(.scrolled) .site-logo img").attr(
               "src",

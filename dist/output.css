@@ -6826,6 +6826,11 @@
       gap: calc(var(--spacing) * 3);
     }
   }
+  .xl\:gap-4 {
+    @media (width >= 1281px) {
+      gap: calc(var(--spacing) * 4);
+    }
+  }
   .xl\:gap-5 {
     @media (width >= 1281px) {
       gap: calc(var(--spacing) * 5);

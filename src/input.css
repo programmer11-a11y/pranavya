@@ -8,7 +8,7 @@
   --breakpoint-lg: 1131px;
   --breakpoint-xl: 1281px;
   --breakpoint-1xl: 1500px;
-  --breakpoint-2xl: 1782px;
+  --breakpoint-2xl: 1768px;
 
   /* Globe Color */
   --color-primary: #673e2c;
@@ -26,6 +26,7 @@
   /* Font Family */
   --font-primary: "Work Sans", sans-serif;
   --font-secondary: "Baskervville", sans-serif;
+  --font-third: "Creato Display", sans-serif;
 
   /* Font Size */
   --text-13: 13px;
@@ -133,159 +134,240 @@
   /* --spacing-30: 30px; */
 }
 
+/* ================== BAASKERVIILLE FONTS ====================== */
 @font-face {
   font-family: "Baskervville";
-  src: url("../layouts/font/Baskervville-Regular.eot");
-  src: url("../layouts/font/Baskervville-Regular.eot?#iefix")
+  src: url("../layouts/font/Baskervville/Baskervville-Regular.eot");
+  src: url("../layouts/font/Baskervville/Baskervville-Regular.eot?#iefix")
       format("embedded-opentype"),
-    url("../layouts/font/Baskervville-Regular.woff2") format("woff2"),
-    url("../layouts/font/Baskervville-Regular.woff") format("woff"),
-    url("../layouts/font/Baskervville-Regular.ttf") format("truetype");
+    url("../layouts/font/Baskervville/Baskervville-Regular.woff2")
+      format("woff2"),
+    url("../layouts/font/Baskervville/Baskervville-Regular.woff") format("woff"),
+    url("../layouts/font/Baskervville/Baskervville-Regular.ttf")
+      format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Baskervville";
-  src: url("../layouts/font/Baskervville-SemiBold.eot");
-  src: url("../layouts/font/Baskervville-SemiBold.eot?#iefix")
+  src: url("../layouts/font/Baskervville/Baskervville-Medium.eot");
+  src: url("../layouts/font/Baskervville/Baskervville-Medium.eot?#iefix")
       format("embedded-opentype"),
-    url("../layouts/font/Baskervville-SemiBold.woff2") format("woff2"),
-    url("../layouts/font/Baskervville-SemiBold.woff") format("woff"),
-    url("../layouts/font/Baskervville-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Baskervville";
-  src: url("../layouts/font/Baskervville-Medium.eot");
-  src: url("../layouts/font/Baskervville-Medium.eot?#iefix")
-      format("embedded-opentype"),
-    url("../layouts/font/Baskervville-Medium.woff2") format("woff2"),
-    url("../layouts/font/Baskervville-Medium.woff") format("woff"),
-    url("../layouts/font/Baskervville-Medium.ttf") format("truetype");
+    url("../layouts/font/Baskervville/Baskervville-Medium.woff2")
+      format("woff2"),
+    url("../layouts/font/Baskervville/Baskervville-Medium.woff") format("woff"),
+    url("../layouts/font/Baskervville/Baskervville-Medium.ttf")
+      format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Baskervville";
-  src: url("../layouts/font/Baskervville-Bold.eot");
-  src: url("../layouts/font/Baskervville-Bold.eot?#iefix")
+  src: url("../layouts/font/Baskervville/Baskervville-SemiBold.eot");
+  src: url("../layouts/font/Baskervville/Baskervville-SemiBold.eot?#iefix")
       format("embedded-opentype"),
-    url("../layouts/font/Baskervville-Bold.woff2") format("woff2"),
-    url("../layouts/font/Baskervville-Bold.woff") format("woff"),
-    url("../layouts/font/Baskervville-Bold.ttf") format("truetype");
+    url("../layouts/font/Baskervville/Baskervville-SemiBold.woff2")
+      format("woff2"),
+    url("../layouts/font/Baskervville/Baskervville-SemiBold.woff")
+      format("woff"),
+    url("../layouts/font/Baskervville/Baskervville-SemiBold.ttf")
+      format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Baskervville";
+  src: url("../layouts/font/Baskervville/Baskervville-Bold.eot");
+  src: url("../layouts/font/Baskervville/Baskervville-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../layouts/font/Baskervville/Baskervville-Bold.woff2") format("woff2"),
+    url("../layouts/font/Baskervville/Baskervville-Bold.woff") format("woff"),
+    url("../layouts/font/Baskervville/Baskervville-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ======================= WORK SANS FONT ============================= */
+@font-face {
+  font-family: "Work Sans";
+  src: url("../layouts/font/WorkSans/WorkSans-Bold.eot");
+  src: url("../layouts/font/WorkSans/WorkSans-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../layouts/font/WorkSans/WorkSans-Bold.woff2") format("woff2"),
+    url("../layouts/font/WorkSans/WorkSans-Bold.woff") format("woff"),
+    url("../layouts/font/WorkSans/WorkSans-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Work Sans";
-  src: url("../layouts/font/WorkSans-Bold.eot");
-  src: url("../layouts/font/WorkSans-Bold.eot?#iefix")
+  src: url("../layouts/font/WorkSans/WorkSans-Black.eot");
+  src: url("../layouts/font/WorkSans/WorkSans-Black.eot?#iefix")
       format("embedded-opentype"),
-    url("../layouts/font/WorkSans-Bold.woff2") format("woff2"),
-    url("../layouts/font/WorkSans-Bold.woff") format("woff"),
-    url("../layouts/font/WorkSans-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Work Sans";
-  src: url("../layouts/font/WorkSans-Black.eot");
-  src: url("../layouts/font/WorkSans-Black.eot?#iefix")
-      format("embedded-opentype"),
-    url("../layouts/font/WorkSans-Black.woff2") format("woff2"),
-    url("../layouts/font/WorkSans-Black.woff") format("woff"),
-    url("../layouts/font/WorkSans-Black.ttf") format("truetype");
+    url("../layouts/font/WorkSans/WorkSans-Black.woff2") format("woff2"),
+    url("../layouts/font/WorkSans/WorkSans-Black.woff") format("woff"),
+    url("../layouts/font/WorkSans/WorkSans-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Work Sans";
-  src: url("../layouts/font/WorkSans-ExtraBold.eot");
-  src: url("../layouts/font/WorkSans-ExtraBold.eot?#iefix")
+  src: url("../layouts/font/WorkSans/WorkSans-ExtraBold.eot");
+  src: url("../layouts/font/WorkSans/WorkSans-ExtraBold.eot?#iefix")
       format("embedded-opentype"),
-    url("../layouts/font/WorkSans-ExtraBold.woff2") format("woff2"),
-    url("../layouts/font/WorkSans-ExtraBold.woff") format("woff"),
-    url("../layouts/font/WorkSans-ExtraBold.ttf") format("truetype");
+    url("../layouts/font/WorkSans/WorkSans-ExtraBold.woff2") format("woff2"),
+    url("../layouts/font/WorkSans/WorkSans-ExtraBold.woff") format("woff"),
+    url("../layouts/font/WorkSans/WorkSans-ExtraBold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Work Sans";
-  src: url("../layouts/font/WorkSans-ExtraLight.eot");
-  src: url("../layouts/font/WorkSans-ExtraLight.eot?#iefix")
+  src: url("../layouts/font/WorkSans/WorkSans-ExtraLight.eot");
+  src: url("../layouts/font/WorkSans/WorkSans-ExtraLight.eot?#iefix")
       format("embedded-opentype"),
-    url("../layouts/font/WorkSans-ExtraLight.woff2") format("woff2"),
-    url("../layouts/font/WorkSans-ExtraLight.woff") format("woff"),
-    url("../layouts/font/WorkSans-ExtraLight.ttf") format("truetype");
+    url("../layouts/font/WorkSans/WorkSans-ExtraLight.woff2") format("woff2"),
+    url("../layouts/font/WorkSans/WorkSans-ExtraLight.woff") format("woff"),
+    url("../layouts/font/WorkSans/WorkSans-ExtraLight.ttf") format("truetype");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Work Sans";
-  src: url("../layouts/font/WorkSans-Light.eot");
-  src: url("../layouts/font/WorkSans-Light.eot?#iefix")
+  src: url("../layouts/font/WorkSans/WorkSans-Light.eot");
+  src: url("../layouts/font/WorkSans/WorkSans-Light.eot?#iefix")
       format("embedded-opentype"),
-    url("../layouts/font/WorkSans-Light.woff2") format("woff2"),
-    url("../layouts/font/WorkSans-Light.woff") format("woff"),
-    url("../layouts/font/WorkSans-Light.ttf") format("truetype");
+    url("../layouts/font/WorkSans/WorkSans-Light.woff2") format("woff2"),
+    url("../layouts/font/WorkSans/WorkSans-Light.woff") format("woff"),
+    url("../layouts/font/WorkSans/WorkSans-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Work Sans";
-  src: url("../layouts/font/WorkSans-SemiBold.eot");
-  src: url("../layouts/font/WorkSans-SemiBold.eot?#iefix")
+  src: url("../layouts/font/WorkSans/WorkSans-SemiBold.eot");
+  src: url("../layouts/font/WorkSans/WorkSans-SemiBold.eot?#iefix")
       format("embedded-opentype"),
-    url("../layouts/font/WorkSans-SemiBold.woff2") format("woff2"),
-    url("../layouts/font/WorkSans-SemiBold.woff") format("woff"),
-    url("../layouts/font/WorkSans-SemiBold.ttf") format("truetype");
+    url("../layouts/font/WorkSans/WorkSans-SemiBold.woff2") format("woff2"),
+    url("../layouts/font/WorkSans/WorkSans-SemiBold.woff") format("woff"),
+    url("../layouts/font/WorkSans/WorkSans-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Work Sans";
-  src: url("../layouts/font/WorkSans-Medium.eot");
-  src: url("../layouts/font/WorkSans-Medium.eot?#iefix")
+  src: url("../layouts/font/WorkSans/WorkSans-Medium.eot");
+  src: url("../layouts/font/WorkSans/WorkSans-Medium.eot?#iefix")
       format("embedded-opentype"),
-    url("../layouts/font/WorkSans-Medium.woff2") format("woff2"),
-    url("../layouts/font/WorkSans-Medium.woff") format("woff"),
-    url("../layouts/font/WorkSans-Medium.ttf") format("truetype");
+    url("../layouts/font/WorkSans/WorkSans-Medium.woff2") format("woff2"),
+    url("../layouts/font/WorkSans/WorkSans-Medium.woff") format("woff"),
+    url("../layouts/font/WorkSans/WorkSans-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Work Sans";
-  src: url("../layouts/font/WorkSans-Regular.eot");
-  src: url("../layouts/font/WorkSans-Regular.eot?#iefix")
+  src: url("../layouts/font/WorkSans/WorkSans-Regular.eot");
+  src: url("../layouts/font/WorkSans/WorkSans-Regular.eot?#iefix")
       format("embedded-opentype"),
-    url("../layouts/font/WorkSans-Regular.woff2") format("woff2"),
-    url("../layouts/font/WorkSans-Regular.woff") format("woff"),
-    url("../layouts/font/WorkSans-Regular.ttf") format("truetype");
+    url("../layouts/font/WorkSans/WorkSans-Regular.woff2") format("woff2"),
+    url("../layouts/font/WorkSans/WorkSans-Regular.woff") format("woff"),
+    url("../layouts/font/WorkSans/WorkSans-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Work Sans";
-  src: url("../layouts/font/WorkSans-Thin.eot");
-  src: url("../layouts/font/WorkSans-Thin.eot?#iefix")
+  src: url("../layouts/font/WorkSans/WorkSans-Thin.eot");
+  src: url("../layouts/font/WorkSans/WorkSans-Thin.eot?#iefix")
       format("embedded-opentype"),
-    url("../layouts/font/WorkSans-Thin.woff2") format("woff2"),
-    url("../layouts/font/WorkSans-Thin.woff") format("woff"),
-    url("../layouts/font/WorkSans-Thin.ttf") format("truetype");
+    url("../layouts/font/WorkSans/WorkSans-Thin.woff2") format("woff2"),
+    url("../layouts/font/WorkSans/WorkSans-Thin.woff") format("woff"),
+    url("../layouts/font/WorkSans/WorkSans-Thin.ttf") format("truetype");
   font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================== CREATO DISPLAY FONT ===================================== */
+/* Creato Display – Thin */
+@font-face {
+  font-family: "Creato Display";
+  src: url("../layouts/font/Creato Display/CreatoDisplay-Thin.otf")
+    format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Creato Display – Light */
+@font-face {
+  font-family: "Creato Display";
+  src: url("../layouts/font/Creato Display/CreatoDisplay-Light.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Creato Display – Regular */
+@font-face {
+  font-family: "Creato Display";
+  src: url("../layouts/font/Creato Display/CreatoDisplay-Regular.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Creato Display – Medium */
+@font-face {
+  font-family: "Creato Display";
+  src: url("../layouts/font/Creato Display/CreatoDisplay-Medium.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Creato Display – Bold */
+@font-face {
+  font-family: "Creato Display";
+  src: url("../layouts/font/Creato Display/CreatoDisplay-Bold.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Creato Display – ExtraBold */
+@font-face {
+  font-family: "Creato Display";
+  src: url("../layouts/font/Creato Display/CreatoDisplay-ExtraBold.otf")
+    format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Creato Display – Black */
+@font-face {
+  font-family: "Creato Display";
+  src: url("../layouts/font/Creato Display/CreatoDisplay-Black.otf")
+    format("opentype");
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
@@ -316,7 +398,7 @@
   }
   h3,
   .h3 {
-    @apply 2xl:text-35 1xl:text-28 lg:text-23 lt:text-20 text-18 2xl:leading-[45px] 1xl:leading-[42px] xl:leading-[40px] lg:leading-[36px] lt:leading-[32px] sm:leading-[28px] leading-[24px];
+    @apply 2xl:text-35 1xl:text-28 lg:text-23 lt:text-20 text-18 2xl:leading-[45px] 1xl:leading-[42px] xl:leading-[38px] lg:leading-[36px] lt:leading-[32px] sm:leading-[28px] leading-[24px];
   }
   /* h4,
   .h4 {
@@ -362,6 +444,9 @@
   .btn-secondary span {
     @apply underline decoration-[1px] hover:no-underline;
   }
+  .btn-dark {
+    @apply uppercase border font-medium text-black border-thunder-100 bg-white hover:text-white focus:text-white active:text-white hover:bg-black active:bg-black focus:bg-black;
+  }
   .btn-link {
     @apply flex items-center justify-center 2xl:gap-3 bg-white gap-[10px] text-black hover:text-primary active:text-primary focus:text-primary underline underline-offset-3;
   }
@@ -369,7 +454,7 @@
     @apply border-white !text-white !bg-transparent hover:!bg-white focus:!bg-white active:!bg-white hover:!text-black focus:!text-black active:!text-black;
   }
   .slider-custom-arrow {
-    @apply !static !m-0 after:hidden lt:p-3 md:p-2 p-1.5 2xl:!size-12.5 lt:!size-10.5 md:!size-8 !size-7.5 !rounded-full !bg-white hover:!bg-primary !text-primary hover:!text-white border !border-primary  cursor-pointer flex items-center justify-center;
+    @apply !static !m-0 after:hidden lt:p-3 md:p-2 p-1.5 2xl:!size-12.5 lt:!size-10.5 !size-9 !rounded-full !bg-white hover:!bg-primary !text-primary hover:!text-white border !border-primary cursor-pointer flex items-center justify-center;
   }
   .testimonial-custom-arrow.swiper-button-next,
   .testimonial-custom-arrow.swiper-button-prev {
@@ -404,43 +489,66 @@
   }
 
   /* Scroll container */
-.scrollbar-custom {
-  overflow-y: auto;
-}
+  /* 1st scroll */
+  .scrollbar-custom {
+    overflow-y: auto;
+  }
 
-/* TOTAL scrollbar width (track width) */
-.scrollbar-custom::-webkit-scrollbar {
-  width: 20px;
-}
+  /* TOTAL scrollbar width (track width) */
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 20px;
+  }
 
-/* TRACK */
-.scrollbar-custom::-webkit-scrollbar-track {
-  background: #f2f1f0;
-}
+  /* TRACK */
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: #f2f1f0;
+  }
 
-/* THUMB */
-.scrollbar-custom::-webkit-scrollbar-thumb {
-  background-color: white;
-  border-radius: 9999px;
+  /* THUMB */
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 9999px;
 
-  /* THIS creates left & right space */
-  border: 4.5px solid transparent;
-  background-clip: content-box;
+    /* THIS creates left & right space */
+    border: 4.5px solid transparent;
+    background-clip: content-box;
 
-  /* grip lines */
-  background-image:
-    linear-gradient(to bottom, #b9a9a2 0 2px, transparent 2px 6px),
-    linear-gradient(to bottom, #b9a9a2 0 2px, transparent 2px 6px),
-    linear-gradient(to bottom, #b9a9a2 0 2px, transparent 2px 6px),
-    linear-gradient(to bottom, #b9a9a2 0 2px, transparent 2px 6px);
-  background-repeat: no-repeat;
-  background-size: 100% 2px;
-  background-position:
-    center 38%,
-    center 48%,
-    center 58%,
-    center 68%;
-}
+    /* grip lines */
+    background-image: linear-gradient(
+        to bottom,
+        #b9a9a2 0 2px,
+        transparent 2px 6px
+      ),
+      linear-gradient(to bottom, #b9a9a2 0 2px, transparent 2px 6px),
+      linear-gradient(to bottom, #b9a9a2 0 2px, transparent 2px 6px),
+      linear-gradient(to bottom, #b9a9a2 0 2px, transparent 2px 6px);
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    background-position: center 38%, center 48%, center 58%, center 68%;
+  }
+
+  /* 2nd scroll */
+  /* Scroll container */
+  .custom-scroll {
+    @apply w-full overflow-x-auto;
+  }
+
+  /* native CSS — REQUIRED */
+  .custom-scroll-2::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  .custom-scroll-2::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 999px;
+    border: 2px solid #673e2c;
+  }
+
+  .custom-scroll-2::-webkit-scrollbar-track {
+    background-color: #673e2c;
+    border-radius: 999px;
+  }
+  /* scroll end */
 
   /* header */
   .all-header,
@@ -506,7 +614,7 @@
     @apply !text-primary;
   } */
   .all-header.bg-white .menu_link_text {
-    @apply !text-black;
+    @apply text-black;
   }
   .all-header.bg-white .menu_link_text svg,
   .all-header.bg-white .menu_link_text svg path {
@@ -514,7 +622,7 @@
   }
   /* General SVG elements in header (but not nav-icon) should be black when bg-white */
   .all-header.bg-white svg:not(.nav-icon) {
-    @apply !text-black;
+    @apply text-black;
   }
 
   .nav-icon,
@@ -553,7 +661,7 @@
   .all-header.not_scrolled_hover button[name="mobile-menu-view"],
   .all-header.not_scrolled_hover .menu_link_text,
   .all-header.scrolled .menu_link_text {
-    @apply hover:!text-primary !text-thunder-100;
+    @apply hover:!text-primary !text-thunder-100 min-[1221px]:hover:border-primary border-transparent;
   }
   .all-header aside#mainmenu {
     @apply !-left-4 !-top-[22px];
@@ -888,21 +996,21 @@
   .header-2 .header-container-scrolled {
     @apply !px-4;
   }
-  .schedule-panel table tr th {
+  .schedule-2 .schedule-panel table tr th {
     @apply 2xl:text-25 1xl:text-20 lt:text-18 md:text-17 text-16 2xl:leading-[35px] 1xl:leading-[30px] lg:leading-[28px] leading-[26px] font-normal font-secondary
     text-center text-primary block md:table-cell border border-[#673E2C33] 2xl:p-7 1xl:p-6 xl:p-4.5 lt:p-4 p-3 uppercase;
   }
-  .schedule-panel table thead tr {
+  .schedule-2 .schedule-panel table thead tr {
     @apply border border-[#673E2C33] md:border-none block md:table-row absolute -top-full md:relative;
   }
-  .schedule-panel table tbody tr {
+  .schedule-2 .schedule-panel table tbody tr {
     @apply border border-[#673E2C33] md:border-none block md:table-row divide-y md:divide-y-0 hover:bg-whitesmoke-100;
   }
-  .schedule-panel table tbody tr td {
+  .schedule-2 .schedule-panel table tbody tr td {
     @apply flex md:justify-center justify-between md:table-cell 2xl:p-7 1xl:p-6 xl:p-4.5 lt:p-4 p-3 text-center group-hover:text-primary border border-[#673E2C33];
   }
-  .schedule-2 .schedule-tab,
-  .schedule-2 .select-arrow option {
+  #schedule .schedule-tab,
+  #schedule .select-arrow option {
     @apply bg-whitesmoke-100 rounded-sm overflow-hidden 2xl:px-[55px] 1xl:px-[52px] xl:px-10 lt:px-4 px-2 2xl:py-5 1xl:py-[18px] xl:py-4 lg:py-[14px] lt:py-3 py-2.5 w-full;
   }
 
@@ -957,3 +1065,103 @@
     @apply hidden !w-0;
   }
 }
+
+/* index-3.html */
+.home-3-hero .swiper-wrapper .swiper-slide.swiper-slide-active {
+  @apply !scale-100 opacity-100;
+}
+.home-3-hero .swiper-wrapper .swiper-slide .class-card {
+  @apply 2xl:p-[22px] xl:p-5 sm:p-4 p-[10px];
+}
+.home-3-hero .swiper-wrapper .swiper-slide .class-card .card-title {
+  @apply font-primary italic 2xl:text-35 1xl:text-28 lg:text-23 lt:text-20 sm:text-18 text-[16px] 2xl:leading-[45px] 1xl:leading-[42px] xl:leading-[40px] lg:leading-[36px] lt:leading-[32px] sm:leading-[28px] leading-[24px];
+}
+.home-3-hero .swiper-wrapper .swiper-slide-active .class-card .title-arrow {
+  @apply 2xl:w-[30px] 1xl:w-[26px] xl:w-6 lg:w-[22px] sm:w-5 w-[13px] h-full;
+}
+.home-3-hero .swiper-wrapper .swiper-slide .class-card .img-wrapper {
+  @apply 2xl:w-[53px] 2xl:h-[53px] xl:w-[50px] xl:h-[50px] sm:w-[44px] sm:h-[44px] w-8 h-8 rounded-full border border-white;
+}
+.home-3-hero .swiper-wrapper .swiper-slide {
+  @apply !scale-86 m-auto opacity-40;
+}
+/* .home-3-hero .swiper-wrapper .swiper-slide-next .class-card,
+.home-3-hero .swiper-wrapper .swiper-slide-prev .class-card {
+  @apply 2xl:p-5 xl:p-[16px] p-[14px];
+} */
+.home-3-hero .swiper-wrapper .swiper-slide-next .class-card .title-arrow,
+.home-3-hero .swiper-wrapper .swiper-slide-prev .class-card .title-arrow {
+  @apply 2xl:w-[25px] 1xl:w-[23px] xl:w-[20px] w-[18px] h-full;
+}
+/* .home-3-hero .swiper-wrapper .swiper-slide-next .class-card .card-title,
+.home-3-hero .swiper-wrapper .swiper-slide-prev .class-card .card-title {
+  @apply font-primary italic 2xl:text-30 1xl:text-25 lt:text-21 md:text-18 text-17 2xl:leading-[30px] 1xl:leading-[27px] lg:leading-[24px] leading-[21px];
+} */
+/* .home-3-hero .swiper-wrapper .swiper-slide-next .class-card .img-wrapper,
+.home-3-hero .swiper-wrapper .swiper-slide-prev .class-card .img-wrapper {
+  @apply rounded-full border border-white;
+} */
+.home-3-hero .swiper-wrapper .swiper-slide .class-card .card-desc {
+  @apply 2xl:text-20 1xl:text-18 md:text-16 sm:text-15 text-[11px] 2xl:leading-[34px] 1xl:leading-[30px] lg:leading-[28px] lt:leading-[26px] sm:leading-[24px] leading-[20px] font-primary m-0;
+}
+.schedule-panel {
+  /* width: 100%; */
+  overflow-x: auto;
+}
+.schedule-3 table {
+  @apply border-separate w-full lg:border-spacing-3 lt:border-spacing-2 border-spacing-1.5 lt:mx-auto sm:min-w-[950px] min-w-[840px];
+}
+
+.schedule-3 .schedule-panel table thead tr {
+  @apply table-row;
+}
+
+.schedule-3 .schedule-panel table th {
+  @apply uppercase text-primary bg-whitesmoke-100 2xl:text-25 1xl:text-20 lt:text-18 md:text-17 text-16 2xl:leading-[35px] 1xl:leading-[30px] lg:leading-[28px] leading-[26px] font-normal font-secondary text-center 2xl:p-7 1xl:p-6 xl:p-4.5 lt:p-4 sm:p-3.5 p-3;
+}
+
+.schedule-3 .schedule-panel table tbody tr td {
+  @apply hover:bg-[#673E2C33] hover:border-[#673E2C33];
+}
+
+.schedule-3 .schedule-panel table td {
+  @apply text-center align-middle 2xl:p-7 1xl:p-6 xl:p-4.5 lt:p-4 sm:p-3.5 p-3 bg-whitesmoke-100;
+}
+
+/* Default schedule */
+/* Default schedule colors */
+.schedule-1 .schedule-tab {
+  @apply text-primary bg-white;
+}
+.schedule-2 .schedule-tab {
+  @apply bg-whitesmoke-100 text-primary;
+}
+.schedule-1 .schedule-tab.is-active,
+.schedule-2 .schedule-tab.is-active {
+  @apply text-white bg-primary;
+}
+
+.schedule-3 .schedule-tab {
+  @apply bg-white text-primary border border-[#673E2C33];
+}
+.schedule-3 .schedule-tab.is-active {
+  @apply bg-[#673E2C33];
+}
+
+ .home-3_instagram .swiper-wrapper {
+  @apply items-center;
+} 
+.home-3_instagram .swiper-wrapper .swiper-slide .product-slide {
+  @apply 2xl:h-[365px] xl:h-[320px] lt:h-[270px] sm:h-[250px] h-[200px]; 
+}
+.home-3_instagram .swiper-wrapper .swiper-slide-active .product-slide {
+  @apply 2xl:h-[505px] xl:h-[450px] lt:h-[370px] sm:h-[330px] h-[255px];
+}
+.home-3_instagram .swiper-wrapper .swiper-slide.swiper-slide-next .product-slide,
+.home-3_instagram .swiper-wrapper .swiper-slide.swiper-slide-prev .product-slide {
+  @apply 2xl:h-[436px] xl:h-[380px] lt:h-[315px] sm:h-[290px] h-[220px];
+}
+.home-3_instagram .slider-custom-arrow.swiper-button-prev::after,
+.home-3_instagram .slider-custom-arrow.swiper-button-next::after {
+  @apply hidden; 
+} 

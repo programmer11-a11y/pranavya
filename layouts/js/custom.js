@@ -168,140 +168,140 @@ jQuery(document).ready(function () {
 
     if (jQuery(window).width() >= 1220) return;
 
-     
-        // OPEN SUBMENU
-        jQuery(document).on(
-          "click.mobileMenu",
-          "#mainmenu .has-mega > a",
-          function (e) {
-            e.preventDefault();
-  
-            const wrap = jQuery(this).closest(".has-mega");
-            const panel = wrap.find(".mega-panel").first();
-  
-            jQuery("#mainmenu .has-mega")
-              .not(wrap)
-              .removeClass("mobile-open")
-              .find(".mega-panel")
-              .removeClass("mobile-step in")
-              .hide();
-  
-            wrap.addClass("mobile-open");
-  
-            // Remove any existing classes and hide panel first
-            panel.removeClass("mobile-step in").hide();
-            
-            // Set initial state: positioned off-screen and invisible
-            // Use inline styles with high specificity
-            panel.css({
-              position: "fixed",
-              top: "4px",
-              left: "0",
-              width: "100%",
-              height: "100vh",
-              backgroundColor: "#fff",
-              zIndex: "9999",
-              transform: "translateX(100%)", // Off-screen to the right
-              opacity: "0",
-              visibility: "hidden",
-              display: "block"
+
+    // OPEN SUBMENU
+    jQuery(document).on(
+      "click.mobileMenu",
+      "#mainmenu .has-mega > a",
+      function (e) {
+        e.preventDefault();
+
+        const wrap = jQuery(this).closest(".has-mega");
+        const panel = wrap.find(".mega-panel").first();
+
+        jQuery("#mainmenu .has-mega")
+          .not(wrap)
+          .removeClass("mobile-open")
+          .find(".mega-panel")
+          .removeClass("mobile-step in")
+          .hide();
+
+        wrap.addClass("mobile-open");
+
+        // Remove any existing classes and hide panel first
+        panel.removeClass("mobile-step in").hide();
+
+        // Set initial state: positioned off-screen and invisible
+        // Use inline styles with high specificity
+        panel.css({
+          position: "fixed",
+          top: "4px",
+          left: "0",
+          width: "100%",
+          height: "100vh",
+          backgroundColor: "#fff",
+          zIndex: "9999",
+          transform: "translateX(100%)", // Off-screen to the right
+          opacity: "0",
+          visibility: "hidden",
+          display: "block"
+        });
+
+        fixInnerTextWhite();
+
+        // Use requestAnimationFrame to ensure styles are applied
+        requestAnimationFrame(function () {
+          // Make panel visible but still off-screen
+          panel.css({
+            visibility: "visible",
+            opacity: "1"
+          });
+
+          // Use another frame to ensure visibility change is rendered
+          requestAnimationFrame(function () {
+            // Now add the mobile-step class (for CSS transitions if needed)
+            panel.addClass("mobile-step");
+
+            // Use another frame before starting animation
+            requestAnimationFrame(function () {
+              // Animation: slide from right (100%) to center (0%)
+              if (panel[0] && panel[0].animate) {
+                const anim = panel[0].animate(
+                  [
+                    { transform: "translateX(100%)" }, // Start from right (off-screen)
+                    { transform: "translateX(0)" },     // End at center (on-screen)
+                  ],
+                  { duration: 260, easing: "ease", fill: "forwards" },
+                );
+                anim.onfinish = function () {
+                  panel.addClass("in").css("transform", "translateX(0)");
+                };
+              } else {
+                // Fallback: use CSS transition by adding .in class
+                setTimeout(function () {
+                  panel.addClass("in");
+                }, 10);
+              }
             });
-            
-            fixInnerTextWhite();
-  
-            // Use requestAnimationFrame to ensure styles are applied
-            requestAnimationFrame(function() {
-              // Make panel visible but still off-screen
-              panel.css({
-                visibility: "visible",
-                opacity: "1"
-              });
-              
-              // Use another frame to ensure visibility change is rendered
-              requestAnimationFrame(function() {
-                // Now add the mobile-step class (for CSS transitions if needed)
-                panel.addClass("mobile-step");
-                
-                // Use another frame before starting animation
-                requestAnimationFrame(function() {
-                  // Animation: slide from right (100%) to center (0%)
-                  if (panel[0] && panel[0].animate) {
-                    const anim = panel[0].animate(
-                      [
-                        { transform: "translateX(100%)" }, // Start from right (off-screen)
-                        { transform: "translateX(0)" },     // End at center (on-screen)
-                      ],
-                      { duration: 260, easing: "ease", fill: "forwards" },
-                    );
-                    anim.onfinish = function () {
-                      panel.addClass("in").css("transform", "translateX(0)");
-                    };
-                  } else {
-                    // Fallback: use CSS transition by adding .in class
-                    setTimeout(function() {
-                      panel.addClass("in");
-                    }, 10);
-                  }
-                });
-              });
-            });
-  
-            jQuery("#mainmenu").addClass("in-submenu");
-  
-            // Add Back Button
-            if (!panel.find(".mobile-back-btn").length) {
-              const parentTitle =
-                wrap
-                  .find("> a .menu_link_text, > a p, > a span")
-                  .first()
-                  .text()
-                  .trim() || "Back";
-  
-              panel.prepend(`
+          });
+        });
+
+        jQuery("#mainmenu").addClass("in-submenu");
+
+        // Add Back Button
+        if (!panel.find(".mobile-back-btn").length) {
+          const parentTitle =
+            wrap
+              .find("> a .menu_link_text, > a p, > a span")
+              .first()
+              .text()
+              .trim() || "Back";
+
+          panel.prepend(`
               <div class="px-4">
             <button class="mobile-back-btn w-full text-left py-3 border-b border-[#673E2C33] text-thunder-100">
               <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
                 <path d="M5.98377 11.2168L0.75 5.98302L5.98377 0.74925M1.47691 5.98302L12.0898 5.98302" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-                <span class="uppercase">${parentTitle}</span>
+                <span class="uppercase sm:text-lg text-base">${parentTitle}</span>
             </button>
             </div>
           `);
-            }
-          },
-        );
-  
-        // CLOSE SUBMENU
-        jQuery(document).on(
-          "click.mobileBackBtn",
-          ".mobile-back-btn",
-          function () {
-            const panel = jQuery(this).closest(".mega-panel");
-            const wrap = panel.closest(".has-mega");
-  
-            if (panel[0] && panel[0].animate) {
-              const anim = panel[0].animate(
-                [
-                  { transform: "translateX(0)" },
-                  { transform: "translateX(110%)" },
-                ],
-                { duration: 220, easing: "ease", fill: "forwards" },
-              );
-              anim.onfinish = function () {
-                panel.removeClass("mobile-step in").hide().css("transform", "");
-              };
-            }
-  
-            wrap.removeClass("mobile-open");
-  
-            if (!jQuery("#mainmenu .has-mega.mobile-open").length) {
-              jQuery("#mainmenu").removeClass("in-submenu");
-            }
-  
-            // Always hide Pages > Events third-step panel when going back to root
-            jQuery("#mobile-pages-events-panel").addClass("hidden");
-          },
-        );
+        }
+      },
+    );
+
+    // CLOSE SUBMENU
+    jQuery(document).on(
+      "click.mobileBackBtn",
+      ".mobile-back-btn",
+      function () {
+        const panel = jQuery(this).closest(".mega-panel");
+        const wrap = panel.closest(".has-mega");
+
+        if (panel[0] && panel[0].animate) {
+          const anim = panel[0].animate(
+            [
+              { transform: "translateX(0)" },
+              { transform: "translateX(110%)" },
+            ],
+            { duration: 220, easing: "ease", fill: "forwards" },
+          );
+          anim.onfinish = function () {
+            panel.removeClass("mobile-step in").hide().css("transform", "");
+          };
+        }
+
+        wrap.removeClass("mobile-open");
+
+        if (!jQuery("#mainmenu .has-mega.mobile-open").length) {
+          jQuery("#mainmenu").removeClass("in-submenu");
+        }
+
+        // Always hide Pages > Events third-step panel when going back to root
+        jQuery("#mobile-pages-events-panel").addClass("hidden");
+      },
+    );
 
     // THIRD-LEVEL: Nested menu items (mobile only, step 3)
     // STEP 3 OPEN
@@ -327,7 +327,7 @@ jQuery(document).ready(function () {
             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
             <path d="M5.98377 11.2168L0.75 5.98302L5.98377 0.74925M1.47691 5.98302L12.0898 5.98302" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          <span class="uppercase">${title}</span>
+          <span class="uppercase uppercase sm:text-lg text-base">${title}</span>
           </button>
         </div>
         <div class=""><ul class="p-4 step3-content"></ul></div>
@@ -714,34 +714,62 @@ jQuery(document).ready(function () {
   /* ----------------------------
      TAB CLICK (EXISTING LOGIC)
   -----------------------------*/
-  jQuery(document).on("click", ".schedule-tab", function () {
-    var $btns = jQuery(".schedule-tab");
-    var $panels = jQuery(".schedule-panel");
-    var target = jQuery(this).data("target");
+  jQuery(document).ready(function () {
 
-    // reset all tabs
-    $btns.removeClass("bg-primary text-white").addClass("text-primary");
+    const $schedule = $("#schedule");
 
-    // activate clicked tab
-    jQuery(this).removeClass("text-black").addClass("bg-primary text-white");
+    if (!$schedule.length) return;
 
-    // panels toggle
+    const $tabs = $schedule.find(".schedule-tab");
+    const $panels = $schedule.find(".schedule-panel");
+    const $select = $schedule.find("select");
+
+    // ===============================
+    // INITIAL STATE
+    // ===============================
+    $tabs.removeClass("is-active");
     $panels.addClass("hidden");
-    jQuery(target).removeClass("hidden");
 
-    // sync SELECT value (desktop → mobile)
-    jQuery("#scheduleSelect").val(target);
+    const $firstTab = $tabs.first();
+    const firstTarget = $firstTab.data("target");
+
+    $firstTab.addClass("is-active");
+    $schedule.find(firstTarget).removeClass("hidden");
+
+    // ===============================
+    // TAB CLICK
+    // ===============================
+    $tabs.on("click", function () {
+      const target = $(this).data("target");
+
+      $tabs.removeClass("is-active");
+      $panels.addClass("hidden");
+
+      $(this).addClass("is-active");
+      $schedule.find(target).removeClass("hidden");
+    });
+
+    // ===============================
+    // MOBILE SELECT
+    // ===============================
+    $select.on("change", function () {
+      const target = $(this).val();
+
+      $tabs.removeClass("is-active");
+      $schedule.find(`.schedule-tab[data-target="${target}"]`).addClass("is-active");
+
+      $panels.addClass("hidden");
+      $schedule.find(target).removeClass("hidden");
+    });
+
   });
 
-  /* ----------------------------
-     SELECT CHANGE (MOBILE)
-  -----------------------------*/
-  jQuery("#scheduleSelect").on("change", function () {
-    var target = jQuery(this).val();
 
-    // trigger same tab logic
-    jQuery('.schedule-tab[data-target="' + target + '"]').trigger("click");
-  });
+
+
+
+
+
 
   // Content slider (fade in/out)
   const contentSwiper = new Swiper(".testimonials-content-swiper", {
@@ -829,20 +857,12 @@ jQuery(document).ready(function () {
       prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 10,
-      },
-      768: {
-        slidesPerView: 2.9,
-        spaceBetween: 10,
-      },
-      769: {
-        slidesPerView: 2.9,
-        spaceBetween: 15,
-      },
+      640: { slidesPerView: 2, spaceBetween: 10, },
+      768: { slidesPerView: 2.9, spaceBetween: 10, },
+      769: { slidesPerView: 2.9, spaceBetween: 15, },
     },
   });
+
   // ===== Header Js ===== //
   jQuery(window).scroll(function () {
     // Always call applyScrolledState to handle all conditions (mega menu, scroll, etc.)
@@ -1194,6 +1214,10 @@ $(function () {
     });
   })();
 
+  // =================== END INDEX-2.HTML ========================
+
+  // =================== START INDEX-3.HTML ========================
+
   new Swiper(".testimonial-slider", {
     slidesPerView: "1",
     centeredSlides: true,
@@ -1214,4 +1238,60 @@ $(function () {
     },
   });
 });
-// =================== END INDEX-2.HTML ========================
+
+var swiper = new Swiper(".home-3-hero", {
+  direction: "horizontal",
+  slidesPerView: 1.3,
+  spaceBetween: 0,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  centeredSlides: true,
+  loop: true,
+  breakpoints: {
+    640: { slidesPerView: 2, spaceBetween: 2, direction: "horizontal", },
+    769: { slidesPerView: 2.5, spaceBetween: 6, direction: "horizontal", },
+    992: { slidesPerView: 3, spaceBetween: 6, direction: "vertical", },
+    1131: { slidesPerView: 3, spaceBetween: 6, direction: "vertical", },
+    1281: { slidesPerView: 3, spaceBetween: 6, direction: "vertical", },
+    1500: { slidesPerView: 3, spaceBetween: 9, direction: "vertical", },
+  },
+});
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+
+    500: { slidesPerView: 1.4, spaceBetween: 25, },
+    769: { slidesPerView: 1.5, spaceBetween: 30, },
+    992: { slidesPerView: 2.05, spaceBetween: 30, },
+    1131: { slidesPerView: 2.10, spaceBetween: 40, },
+    1281: { slidesPerView: 2.15, spaceBetween: 40, },
+    1500: { slidesPerView: 2.23, spaceBetween: 50, },
+  },
+});
+
+// NAVBAR SHOP
+var swiper = new Swiper(".home-3_instagram", {
+  slidesPerView: 1.9,
+  spaceBetween: 10,
+  centeredSlides: true,
+  loop: true,
+  autoplay: true,
+  breakpoints: {
+    376: { slidesPerView: 2.2, paceBetween: 12, },
+    426: { slidesPerView: 2.7, spaceBetween: 12, },
+    500: { slidesPerView: 3.3, spaceBetween: 12, },
+    992: { slidesPerView: 4, spaceBetween: 12, },
+    1131: { slidesPerView: 5, spaceBetween: 12, },
+  },
+});
+
+
+// =================== END INDEX-3.HTML ========================

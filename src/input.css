@@ -390,15 +390,15 @@
   }
   h1,
   .h1 {
-    @apply 2xl:text-90 xl:text-80 lg:text-64 md:text-48 sm:text-36 text-28 2xl:leading-[110px] 1xl:leading-[100px] xl:leading-[90px] lg:leading-[74px] md:leading-[58px] sm:leading-[46px] leading-[38px];
+    @apply 2xl:text-90 1xl:text-80 xl:text-77 lg:text-64 md:text-48 sm:text-36 text-28 2xl:leading-[110px] 1xl:leading-[100px] xl:leading-[90px] lg:leading-[74px] md:leading-[58px] sm:leading-[46px] leading-[38px];
   }
   h2,
   .h2 {
-    @apply 2xl:text-58 1xl:text-52 xl:text-48 lg:text-40 md:text-32 sm:text-26 text-20 2xl:leading-[80px] 1xl:leading-[72px] xl:leading-[66px] lg:leading-[56px] md:leading-[46px] sm:leading-[38px] leading-[30px];
+    @apply 2xl:text-58 1xl:text-52 xl:text-46 lg:text-40 md:text-32 sm:text-26 text-20 2xl:leading-[80px] 1xl:leading-[72px] xl:leading-[66px] lg:leading-[56px] md:leading-[46px] sm:leading-[38px] leading-[30px];
   }
   h3,
   .h3 {
-    @apply 2xl:text-35 1xl:text-28 lg:text-23 lt:text-20 text-18 2xl:leading-[45px] 1xl:leading-[42px] xl:leading-[38px] lg:leading-[36px] lt:leading-[32px] sm:leading-[28px] leading-[24px];
+    @apply 2xl:text-35 1xl:text-28 xl:text-25 lg:text-23 lt:text-20 text-18 2xl:leading-[45px] 1xl:leading-[42px] xl:leading-[38px] lg:leading-[36px] lt:leading-[32px] sm:leading-[28px] leading-[24px];
   }
   /* h4,
   .h4 {
@@ -613,6 +613,13 @@
   .all-header.bg-white .site-search__open .nav-icon {
     @apply !text-primary;
   } */
+  .vertical-text {
+    writing-mode: vertical-rl;
+  }
+  .vertical-text-rotate {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
   .all-header.bg-white .menu_link_text {
     @apply text-black;
   }
@@ -1148,20 +1155,26 @@
   @apply bg-[#673E2C33];
 }
 
- .home-3_instagram .swiper-wrapper {
+.home-3_instagram .swiper-wrapper {
   @apply items-center;
-} 
+}
 .home-3_instagram .swiper-wrapper .swiper-slide .product-slide {
-  @apply 2xl:h-[365px] xl:h-[320px] lt:h-[270px] sm:h-[250px] h-[200px]; 
+  @apply 2xl:h-[365px] xl:h-[320px] lt:h-[270px] sm:h-[250px] h-[200px];
 }
 .home-3_instagram .swiper-wrapper .swiper-slide-active .product-slide {
   @apply 2xl:h-[505px] xl:h-[450px] lt:h-[370px] sm:h-[330px] h-[255px];
 }
-.home-3_instagram .swiper-wrapper .swiper-slide.swiper-slide-next .product-slide,
-.home-3_instagram .swiper-wrapper .swiper-slide.swiper-slide-prev .product-slide {
+.home-3_instagram
+  .swiper-wrapper
+  .swiper-slide.swiper-slide-next
+  .product-slide,
+.home-3_instagram
+  .swiper-wrapper
+  .swiper-slide.swiper-slide-prev
+  .product-slide {
   @apply 2xl:h-[436px] xl:h-[380px] lt:h-[315px] sm:h-[290px] h-[220px];
 }
 .home-3_instagram .slider-custom-arrow.swiper-button-prev::after,
 .home-3_instagram .slider-custom-arrow.swiper-button-next::after {
-  @apply hidden; 
-} 
+  @apply hidden;
+}

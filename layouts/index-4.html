@@ -535,10 +535,10 @@
 
                         <!-- Buttons -->
                         <div class="flex flex-col 2xl:gap-6 gap-4">
-                            <button class="btn btn-primary-second w-full 2xl:text-[18px] text-[15px] font-normal">
+                            <button class="btn btn-primary-second w-full 2xl:text-18 text-15 font-normal">
                                 View Cart
                             </button>
-                            <button class="btn btn-primary-second w-full 2xl:text-[18px] text-[15px] font-normal">
+                            <button class="btn btn-primary-second w-full 2xl:text-18 text-15 font-normal">
                                 Checkout
                             </button>
                         </div>
@@ -2303,69 +2303,76 @@
         <section
             class="relative lg:min-h-screen lt:min-h-[90vh] sm:min-h-[78vh] min-[340px]:min-h-[80vh] min-h-screen flex items-center 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10">
             <!-- Container -->
-            <div class="lt:container mx-auto z-1 relative w-full">
+            <div class="container mx-auto z-1 relative w-full px-4">
                 <div
-                    class="flex lt:flex-row flex-col lt:items-center items-start justify-between w-full z-1 relative xl:pt-18 pt-6 min-[340px]:gap-10 gap-7 1xl:pb-16 xl:pb-13 min-[340px]:pb-10 pb-7">
+                    class="flex lt:flex-row flex-col lt:items-center items-start justify-between w-full z-1 relative xl:pt-18 lt:pt-14 sm:pt-19 pt-15 pb-5 lt:gap-10 gap-7">
                     <!-- Left Content -->
-                    <div
-                        class="2xl:w-3/5 sm:w-3/4 2xl:max-w-[840px] 1xl:max-w-[750px] xl:max-w-[630px] lg:max-w-[530px] lt:max-w-[500px] max-w-full lt:px-0 md:px-8 sm:px-6 px-4">
+                    <div class="w-full 2xl:max-w-[840px] 1xl:max-w-[750px] max-w-full">
+                        <!-- Offer Badge -->
+                        <h3 class="text-white font-primary italic font-medium xl:mb-7.5 lg:mb-6 md:mb-5 sm:mb-4 mb-2.5">
+                            get to 40% Off
+                        </h3>
+
                         <!-- Main Heading -->
                         <h1 class="text-white font-normal uppercase md:mb-5 mb-3.5">
-                            Grounded in Motion
+                            Find Stillness in Motion
                         </h1>
 
                         <!-- Description -->
                         <p
-                            class="font-primary font-normal text-white 1xl:max-w-[65%] xl:max-w-[70%] sm:max-w-[85%] max-w-[380px] w-full 2xl:mb-12 1xl:mb-10 xl:mb-8 lg:mb-7 mb-6">
-                            Where breath meets purpose.Move with intention, find your inner
-                            rhythm.
+                            class="font-primary font-normal text-white 1xl:max-w-[65%] lg:max-w-[80%] sm:max-w-[90%] max-w-[380px] w-full 2xl:mb-12 1xl:mb-10 xl:mb-8 lg:mb-7 mb-6">
+                            Pause the rush of life with yoga designed to ground, heal, and energize. All bodies and
+                            levels welcome.
                         </p>
 
                         <!-- CTA Button -->
-                        <a href="./classes.html" class="btn btn-secondary">Become a Member</a>
+                        <a href="./plans.html" class="btn btn-secondary">View Plans</a>
                     </div>
 
-                    <div class="max-w-[690px] w-full ml-auto mr-0 space-y-6">
+                    <div
+                        class="2xl:max-w-[690px] 1xl:max-w-[636px] xl:max-w-[535px] lt:max-w-[518px] w-full ml-auto mr-0 lg:space-y-6 space-y-4">
 
                         <!-- Card 1: Bring a Friend -->
-                        <div class="bg-white rounded-[10px] shadow-xl p-[30px] relative overflow-hidden">
+                        <div
+                            class="bg-white rounded-[10px] shadow-xl 1xl:p-[30px] xl:p-7 lg:p-5.5 p-4 relative overflow-hidden lt:w-full md:w-[70%] sm:w-[81%] w-full">
                             <img src="./image/card-back-banner-1.webp" alt="banner"
-                                class="w-full h-full object-cover opacity-10 absolute top-0 left-0" />
+                                class="w-full h-full object-cover opacity-10 absolute top-0 left-0 pointer-events-none" />
                             <!-- Discount Badge -->
-                            <div class="absolute top-0 right-0">
+                            <div class="absolute 1xl:top-0 1xl:right-0 lg:-top-2 lg:-right-2 lt:-top-3 lt:-right-3 -top-4 -right-4">
                                 <div class="relative">
                                     <img src="./image/percentage-back-1.png" alt="precentage"
                                         class="w-full h-full object-cover" />
-                                    <div class="absolute left-5 bottom-5 inset-0 flex flex-col items-center justify-center text-white">
-                                        <p class="text-center">40% <br/>off</p>
+                                    <div
+                                        class="absolute 1xl:left-5 1xl:bottom-5 lt:left-4 lt:bottom-4 left-2 bottom-2 inset-0 flex flex-col items-center justify-center text-white">
+                                        <p class="text-center">40% <br />off</p>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="">
-                                <h3 class="uppercase text-primary max-w-[80%] mb-[17px]">
+                                <h3 class="uppercase text-primary sm:max-w-[80%] max-w-[75%] 1xl:mb-[17px] sm:mb-3 mb-2 max-[530px]:text-sm">
                                     Bring a Friend, Get a Class Free
                                 </h3>
 
-                                <p class="mb-[21px]">
+                                <p
+                                    class="1xl:mb-[21px] lg:mb-[18px] max-[530px]:mb-2 mb-[15px] 1xl:max-w-[95%] lt:max-w-full sm:max-w-[90%] max-w-[85%] w-full max-[530px]:text-[11px]">
                                     Enjoy 15% off your next membership or class pack. Whether you're dropping in or
                                     signing up long-term, save you stretch.
                                 </p>
 
-                                <ul
-                                    class="flex flex-wrap items-center justify-between w-full gap-3 list-disc px-4 mb-7">
-                                    <li class="font-medium text-thunder-100 uppercase">
-                                        <p>Valid For:<span class="text-primary normal-case"> All users (one time)</span>
+                                <ul class="flex flex-wrap max-[530px]:flex-col min-[530px]:items-center w-full min-[530px]:gap-3 gap-0 list-disc 1xl:mb-7 lg:mb-5 max-[530px]:mb-3.5 mb-2">
+                                    <li class="font-medium text-thunder-100 uppercase ml-4">
+                                        <p class="max-[530px]:text-[11px]">Valid For:<span class="text-primary normal-case"> All users (one time)</span>
                                         </p>
                                     </li>
-                                    <li class="font-medium text-thunder-100 uppercase">
-                                        <p>Expires:<span class="text-primary normal-case"> 7 years</span></p>
+                                    <li class="font-medium text-thunder-100 uppercase ml-4">
+                                        <p class="max-[530px]:text-[11px]">Expires:<span class="text-primary normal-case"> 7 years</span></p>
                                     </li>
                                 </ul>
 
-                                <div
-                                    class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-                                    <button class="btn btn-secondary flex items-center justify-between gap-[17px]">
+                                <div class="flex flex-col min-[530px]:flex-row min-[530px]:items-end items-start justify-between min-[530px]:gap-4 gap-2">
+                                    <a href="./book-class.html"
+                                        class="btn btn-secondary flex items-center justify-between gap-[17px]">
                                         BOOK NOW
                                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
                                             viewBox="0 0 14 14" fill="none">
@@ -2374,9 +2381,8 @@
                                                 stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                                 stroke-linejoin="round" />
                                         </svg>
-                                    </button>
-                                    <div
-                                        class="bg-primary text-white px-4 py-2 rounded-full text-[11px] uppercase">
+                                    </a>
+                                    <div class="bg-primary text-white px-4 py-2 rounded-full text-[11px] uppercase ">
                                         Coupon Code: LOYALTY50
                                     </div>
                                 </div>
@@ -2384,82 +2390,85 @@
                         </div>
 
                         <!-- Card 2: Personal Yoga Trainer -->
-                        <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 relative overflow-hidden">
-                            <!-- Side Text -->
-                            <div class="absolute right-0 top-1/2 -translate-y-1/2 writing-mode-vertical">
-                                <p class="text-gray-400 text-xs tracking-widest"
-                                    style="writing-mode: vertical-rl; transform: rotate(180deg);">
-                                    FIRST 10 Student Discount
-                                </p>
-                            </div>
+                        <div
+                            class="bg-white rounded-[10px] 1xl:p-[30px] xl:p-7 lg:p-5.5 p-4 relative overflow-hidden lt:w-full md:w-[70%] sm:w-[81%] w-full">
+                            <img src="./image/card-back-banner-1.webp" alt="banner"
+                                class="w-full h-full object-cover opacity-10 absolute top-0 left-0 pointer-events-none" />
 
                             <!-- Discount Badge -->
-                            <div class="absolute -top-2 -right-2 md:top-8 md:right-20">
-                                <div class="relative">
-                                    <svg width="120" height="120" viewBox="0 0 120 120"
-                                        class="w-24 h-24 md:w-32 md:h-32">
-                                        <circle cx="60" cy="60" r="50" fill="#f5e6d3" stroke="#d4a574"
-                                            stroke-width="2" />
-                                        <circle cx="60" cy="60" r="42" fill="transparent" stroke="#d4a574"
-                                            stroke-width="1" stroke-dasharray="2,4" />
-                                    </svg>
-                                    <div class="absolute inset-0 flex flex-col items-center justify-center">
-                                        <span class="text-4xl md:text-5xl font-bold text-amber-900">50%</span>
-                                        <span class="text-xs md:text-sm text-amber-900 italic">Off</span>
+                            <div class="absolute top-0 left-auto 1xl:right-0 -right-7 h-full pointer-events-none">
+                                <div class="relative h-full pointer-events-none">
+                                    <img src="./image/percentage-back-banner-2.png" alt="percentage"
+                                        class="w-full h-full ml-auto mr-0 opacity-10 pointer-events-none" />
+                                    <div
+                                        class="absolute inset-0 1xl:right-3 right-9 left-auto flex flex-row items-center gap-2 justify-center">
+                                        <div class="flex flex-col items-end gap-[10px]">
+                                            <h3 class="font-medium italic text-primary font-primary 2xl:text-37">50%
+                                            </h3>
+                                            <h5 class="text-thunder-100 vertical-text">Discount</h5>
+                                        </div>
+                                        <p class="p2 2xl:text-16 text-thunder-100 vertical-text pb-20">First 100
+                                            Student</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="max-w-2xl">
-                                <h2
-                                    class="heading-font text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-800 mb-6 md:mb-8">
-                                    PERSONAL YOGA TRAINER
-                                </h2>
+                            <div class="w-full">
+                                <h3 class="text-primary uppercase 1xl:mb-5 lg:mb-4 min-[530px]:mb-2 mb-1 max-[530px]:text-sm">
+                                    Personal Yoga Trainer
+                                </h3>
 
-                                <div class="flex items-start gap-3 md:gap-4 mb-6 md:mb-8">
-                                    <div
-                                        class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-amber-200 shrink-0 overflow-hidden">
-                                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23d4a574'/%3E%3C/svg%3E"
-                                            alt="Trainer" class="w-full h-full object-cover" />
-                                    </div>
-                                    <div>
-                                        <h3 class="heading-font text-xl md:text-2xl font-semibold text-gray-800 mb-2">
-                                            TRAINER NAME: ANAYA R.
-                                        </h3>
-                                        <p class="text-gray-600 text-xs md:text-sm">
-                                            • Certified Yoga Therapist | 10+ Years of Experience
+                                <div class="flex max-[530px]:items-center items-start justify-start gap-2 min-[530px]:mb-2.5 mb-1.5">
+                                    <img src="./image/bag.png" alt="bag"
+                                        class="1xl:w-auto lg:w-5.5 max-[530px]:w-4 w-5 h-auto 1xl:mt-[2px]" />
+                                    <h5 class="text-primary uppercase max-[530px]:text-sm">TRAINER NAME:
+                                        <span class="text-thunder-100"> ANAYA R.</span>
+                                    </h5>
+                                </div>
+
+                                <div>
+                                    <div class="flex items-start 1xl:mb-5 lg:mb-3 mb-2 gap-2.5 lg:w-full lt:w-1/2 w-full max-[530px]:w-[58%]">
+                                        <div
+                                            class="size-[5px] 2xl:mt-4 1xl:mt-3.5 lt:mt-3 mt-2.5 bg-primary rounded-full flex-shrink-0">
+                                        </div>
+                                        <p class="text-primary font-medium max-[530px]:text-[11px]">
+                                            Certified Yoga Therapist | 10+ Years of Experience
                                         </p>
                                     </div>
+                                    <ul class="flex flex-wrap items-center w-full lg:gap-12 min-[530px]:gap-6 gap-0 list-disc min-[530px]:mb-2 max-[530px]:w-[80%]">
+                                        <li class="font-medium text-thunder-100 uppercase ml-4">
+                                            <p class="max-[530px]:text-[11px]">Valid For: <span class="text-primary normal-case">7 years</span>
+                                            </p>
+                                        </li>
+                                        <li class="font-medium text-thunder-100 uppercase ml-4">
+                                            <p class="max-[530px]:text-[11px]">Expires:<span class="text-primary normal-case"> 7 years</span></p>
+                                        </li>
+                                    </ul>
+                                    <ul class="w-full list-disc min-[530px]:mb-[18px] mb-4">
+                                        <li class="font-medium text-thunder-100 uppercase ml-4">
+                                            <p class="max-[530px]:text-[11px]">Terms:<span class="text-primary normal-case"> One-time use per
+                                                    user.</span>
+                                            </p>
+                                        </li>
+                                    </ul>
+
+
                                 </div>
 
-                                <div class="space-y-2 md:space-y-3 mb-6 md:mb-8 text-xs md:text-sm">
-                                    <div class="flex flex-wrap gap-4 md:gap-8">
-                                        <div>
-                                            <span class="font-semibold text-gray-800">• VALID FOR:</span>
-                                            <span class="text-gray-600"> 7 years</span>
-                                        </div>
-                                        <div>
-                                            <span class="font-semibold text-gray-800">• EXPIRES:</span>
-                                            <span class="text-gray-600"> 7 years</span>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <span class="font-semibold text-gray-800">• TERMS:</span>
-                                        <span class="text-gray-600"> One-time use per user.</span>
-                                    </div>
-                                </div>
-
-                                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                                    <button
-                                        class="border-2 border-gray-800 text-gray-800 px-6 md:px-8 py-3 rounded-full hover:bg-gray-800 hover:text-white transition-all duration-300 font-medium text-sm md:text-base flex items-center gap-2">
+                                <div class="flex flex-col min-[530px]:flex-row min-[530px]:items-end items-start justify-between min-[530px]:gap-4 gap-2">
+                                    <a href="./book-class.html"
+                                        class="btn btn-secondary flex items-center justify-between gap-[17px]">
                                         BOOK NOW
-                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M7 17L17 7M17 7H7M17 7v10" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                                            viewBox="0 0 14 14" fill="none">
+                                            <path
+                                                d="M1.00003 12.6234C1.00003 12.6234 8.97683 4.64654 12.2993 1.32401M12.2993 1.32401L12.624 9.83157M12.2993 1.32401L3.79115 0.999894"
+                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                stroke-linejoin="round" />
                                         </svg>
-                                    </button>
-                                    <div class="bg-amber-900 text-white px-4 py-2 rounded-full text-xs md:text-sm">
-                                        COUPON CODE: STUDENT20
+                                    </a>
+                                    <div class="bg-primary text-white px-4 py-2 rounded-full text-[11px] uppercase">
+                                        Coupon Code: LOYALTY50
                                     </div>
                                 </div>
                             </div>

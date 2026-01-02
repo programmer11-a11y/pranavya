@@ -1001,7 +1001,7 @@
     @apply sm:max-w-full w-full;
   }
   .header-2 .header-container-scrolled {
-    @apply !px-4;
+    @apply sm:!px-4;
   }
   .schedule-2 .schedule-panel table tr th {
     @apply 2xl:text-25 1xl:text-20 lt:text-18 md:text-17 text-16 2xl:leading-[35px] 1xl:leading-[30px] lg:leading-[28px] leading-[26px] font-normal font-secondary

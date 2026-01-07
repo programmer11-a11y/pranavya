@@ -418,7 +418,7 @@
   }
   p,
   .p {
-    @apply 2xl:text-20 1xl:text-18 md:text-16 sm:text-15 text-14 2xl:leading-[34px] 1xl:leading-[30px] lg:leading-[28px] lt:leading-[26px] sm:leading-[24px] leading-[20px] font-primary m-0;
+    @apply 2xl:text-20 1xl:text-19 md:text-16 sm:text-15 text-14 2xl:leading-[34px] 1xl:leading-[30px] lg:leading-[28px] lt:leading-[26px] sm:leading-[24px] leading-[20px] font-primary m-0;
   }
   .p2 {
     @apply 2xl:text-18 md:text-15 text-14 1xl:leading-[28px] xl:leading-[25px] leading-6 m-0;
@@ -439,7 +439,7 @@
     @apply border border-primary bg-[#FBFAF9] text-primary hover:bg-primary focus:bg-primary active:bg-primary hover:text-white active:text-white focus:text-white uppercase font-medium;
   }
   .btn-secondary {
-    @apply uppercase border font-medium text-primary border-primary bg-white hover:text-white focus:text-white active:text-white hover:bg-primary active:bg-primary focus:bg-primary;
+    @apply uppercase border font-medium text-primary border-primary bg-[#FBFAF9] hover:text-white focus:text-white active:text-white hover:bg-primary active:bg-primary focus:bg-primary;
   }
   .btn-secondary span {
     @apply underline decoration-[1px] hover:no-underline;

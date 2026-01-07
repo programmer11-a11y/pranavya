@@ -1165,7 +1165,7 @@
                                                 <div
                                                     class="min-[1221px]:mt-0 sm:mt-6 mt-5 min-[1221px]:px-0 sm:px-6 px-5 bg-white min-[1221px]:rounded-b-[10px] mx-auto pointer-events-auto h-full max-h-[calc(100vh-12vh)] scrollbar-custom 2xl:py-[30px] min-[1221px]:py-6 mega-menu">
                                                     <div
-                                                        class="flex items-center lt:flex-row flex-col-reverse w-full lt:divide-x divide-[#673E2C80] lt:gap-0 gap-4">
+                                                        class="flex items-center lt:flex-row flex-col w-full lt:divide-x divide-[#673E2C80] lt:gap-0 gap-4">
                                                         <div
                                                             class="lt:w-[55%] w-full flex flex-col items-center justify-center 2xl:px-[30px] min-[1221px]:px-6 lt:pr-5">
                                                             <div
@@ -2326,7 +2326,7 @@
                         </p>
 
                         <!-- CTA Button -->
-                        <a href="./plans.html" class="btn btn-secondary">View Plans</a>
+                        <a href="./plans.html" class="btn btn-secondary bg-white">View Plans</a>
                     </div>
 
                     <div
@@ -2350,7 +2350,7 @@
                                 </div>
                             </div>
 
-                            <div class="">
+                            <div>
                                 <h3
                                     class="uppercase text-primary sm:max-w-[80%] max-w-[75%] 1xl:mb-[17px] sm:mb-3 mb-2 max-[530px]:text-sm">
                                     Bring a Friend, Get a Class Free
@@ -2378,7 +2378,7 @@
                                 <div
                                     class="flex flex-col min-[530px]:flex-row min-[530px]:items-end items-start justify-between min-[530px]:gap-4 gap-2">
                                     <a href="./book-class.html"
-                                        class="btn btn-secondary flex items-center justify-between gap-[17px]">
+                                        class="btn btn-secondary flex items-center justify-between gap-[17px] bg-white">
                                         BOOK NOW
                                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
                                             viewBox="0 0 14 14" fill="none">
@@ -2471,7 +2471,7 @@
                                 <div
                                     class="flex flex-col min-[530px]:flex-row min-[530px]:items-end items-start justify-between min-[530px]:gap-4 gap-2">
                                     <a href="./book-class.html"
-                                        class="btn btn-secondary flex items-center justify-between gap-[17px]">
+                                        class="btn btn-secondary flex items-center justify-between gap-[17px] bg-white">
                                         BOOK NOW
                                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
                                             viewBox="0 0 14 14" fill="none">
@@ -2509,89 +2509,366 @@
         <!-- ====== About Us Section ====== -->
         <section class="relative bg-white 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10">
             <div class="container">
-                <div class="grid grid-cols-2">
+                <div
+                    class="grid lt:grid-cols-2 grid-cols-1 items-center 2xl:gap-[135px] 1xl:gap-[80px] lg:gap-[50px] gap-[30px]">
 
                     <!-- Right: Content -->
                     <div class="w-full">
                         <h3
-                            class="text-thunder-100 font-primary italic font-medium 1xl:mb-7 lg:mb-6 md:mb-5 sm:mb-4 mb-2.5">
+                            class="text-thunder-100 font-primary italic font-medium 1xl:mb-[30px] xl:mb-6 md:mb-[18px] sm:mb-4 mb-2.5">
                             Breathe In. Begin Again.
                         </h3>
-                        <h2 class="text-primary font-normal uppercase 1xl:mb-5 mb-2">
+                        <h2 class="text-primary font-normal uppercase 1xl:mb-[25px] mb-3">
                             Ancient Practice. Present Moment.
                         </h2>
-                        <p class="text-thunder-100 mb-5 max-w-[92%]">
+                        <p class="text-thunder-100 xl:mb-5 mb-4">
                             At Pranavya Yoga, we believe yoga is more than movement — it's a mindful journey toward
                             balance, clarity, and inner peace. Our studio blends ancient yogic wisdom with a modern,
                             inclusive approach, offering a safe space for every body and every level. Whether you're
                             joining us in-studio or online, our certified instructors guide you through personalized.
                         </p>
-                        <p>
+                        <p class="font-medium">
                             We don’t just teach poses — we teach presence, breath, and connection.
                         </p>
 
                         <!-- Bullets -->
-                        <div
-                            class="2xl:mt-9 1xl:mt-8.5 xl:mt-8 lg:mt-7 md:mt-6 sm:mt-5 mt-4 2xl:gap-7.5 1xl:gap-4 sm:gap-3 gap-3 grid-cols-1">
-                            <div class="flex items-center md:gap-2.5 gap-2">
-                                <span
-                                    class="shrink-0 whitespace-nowrap xl:w-7.5 lg:w-6 md:w-5 w-4 xl:h-7.5 lg:h-6 md:h-5 h-4">
+                        <ul
+                            class="1xl:mt-7 sm:mt-5 mt-4 flex flex-col items-start justify-center 2xl:gap-5 1xl:gap-4 gap-3">
+                            <li class="flex items-center md:gap-[11px] gap-2">
+                                <span class="shrink-0 whitespace-nowrap 1xl:w-7.5 xl:w-7 lg:w-6 md:w-5 w-4 h-full">
                                     <img decoding="async" src="./image/bullets-point.svg" alt="Bullets Point" />
                                 </span>
                                 <p class="text-primary font-medium p2">
-                                   Small class sizes for personal attention
+                                    Small class sizes for personal attention
                                 </p>
-                            </div>
-                            <div class="flex items-center md:gap-2.5 gap-2">
-                                <span
-                                    class="shrink-0 whitespace-nowrap xl:w-7.5 lg:w-6 md:w-5 w-4 xl:h-7.5 lg:h-6 md:h-5 h-4">
+                            </li>
+                            <li class="flex items-center md:gap-[11px] gap-2">
+                                <span class="shrink-0 whitespace-nowrap 1xl:w-7.5 xl:w-7 lg:w-6 md:w-5 w-4 h-full">
                                     <img decoding="async" src="./image/bullets-point.svg" alt="Bullets Point" />
                                 </span>
                                 <p class="text-primary font-medium p2">
-                                   Certified, compassionate instructors
+                                    Certified, compassionate instructors
                                 </p>
-                            </div>
-                            <div class="flex items-center md:gap-2.5 gap-2">
-                                <span
-                                    class="shrink-0 whitespace-nowrap xl:w-7.5 lg:w-6 md:w-5 w-4 xl:h-7.5 lg:h-6 md:h-5 h-4">
+                            </li>
+                            <li class="flex items-center md:gap-[11px] gap-2">
+                                <span class="shrink-0 whitespace-nowrap 1xl:w-7.5 xl:w-7 lg:w-6 md:w-5 w-4 h-full">
                                     <img decoding="async" src="./image/bullets-point.svg" alt="Bullets Point" />
                                 </span>
                                 <p class="text-primary font-medium p2">
                                     Options for group, private, and virtual sessions
                                 </p>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
 
-                        <div class="2xl:mt-11.5 1xl:mt-11 xl:mt-10 lg:mt-9 md:mt-8 sm:mt-7 mt-6">
+                        <div class="2xl:mt-11 1xl:mt-10 md:mt-8 sm:mt-7 mt-5">
                             <a href="./about-us.html" class="btn btn-secondary">Discover the Space</a>
                         </div>
                     </div>
 
                     <!-- Left: Image -->
-                    <div class="w-full md:sticky md:top-24">
+                    <div class="w-full">
                         <div
-                            class="rounded overflow-hidden relative before:content-[''] before:block 1xl:before:pt-[98%] xl:before:pt-[106%] md:before:pt-[122%] before:pt-[100%] w-full">
+                            class="overflow-hidden relative before:content-[''] before:block 2xl:before:pt-[96%] xl:before:pt-[100%] lg:before:pt-[116%] lt:before:pt-[125%] sm:before:pt-[65%] before:pt-[89%] w-full">
                             <img decoding="async" src="./image/home-4_about-us.webp" alt="About Image"
                                 class="absolute top-0 left-0 w-full h-full object-cover" />
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </section>
         <!-- ====== End About Us Section ====== -->
 
         <!-- ====== Find Your Flow Section ====== -->
+        <section
+            class="relative bg-whitesmoke-100 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10 2xl:py-20 1xl:py-17 lg:py-14 md:py-12 sm:py-11 py-10 overflow-hidden">
+            <div class="container">
+                <div class="text-start max-w-full w-full 2xl:mb-[50px] 1xl:mb-11 md:mb-9 mb-7">
+                    <h3 class="font-primary italic font-medium 2xl:mb-7 1xl:mb-6 xl:mb-5 sm:mb-3 mb-2.5">
+                        Practice Tailored to Your Path
+                    </h3>
+                    <h2 class="text-primary uppercase 1xl:mb-5 mb-3">
+                        Move with Purpose and Ease
+                    </h2>
+                    <p
+                        class="text-thunder-100 2xl:max-w-[45%] xl:max-w-[50%] lg:max-w-[60%] lt:max-w-[65%] md:max-w-[85%] max-w-full w-full">
+                        Join classes that honor your pace—whether you’re building strength, restoring balance, or
+                        deepening awareness.
+                    </p>
+                </div>
 
+                <!-- Featured Post Row -->
+                <div class="flex flex-col 1xl:gap-[30px] md:gap-[26px] sm:gap-5.5 gap-4">
+                    <!-- 1st practice -->
+                    <div
+                        class="flex md:flex-row flex-col justify-between border-y border-primary/40 bg-white group/blog lg:gap-6 lt:gap-4 md:gap-2 gap-1">
+                        <!-- Left: Content -->
+                        <div class="w-full 1xl:p-[30px] lt:p-[26px] sm:p-5 p-4">
+                            <div class="flex flex-col justify-center h-full">
+                                <h3 class="text-primary hover:text-thunder-100 uppercase max-w-[80%] mb-2.5">
+                                    <a href="./blog-detail-1.html" class="text-current">
+                                        Power Yoga
+                                    </a>
+                                </h3>
+
+                                <p class="font-medium 1xl:mb-[14px] mb-2.5">
+                                    Strong Body, Clear Mind.
+                                </p>
+                                <p class="1xl:mb-[26px] lt:mb-5.5 mb-4.5">
+                                    High-energy, fitness-based yoga that boosts stamina and builds full-body strength.
+                                </p>
+
+                                <a href="./blog-detail-1.html" class="btn btn-secondary">
+                                    Join class
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Right: Image -->
+                        <div
+                            class="overflow-hidden block w-full md:h-auto h-full relative before:content-[''] before:block md:before:pt-[48%] before:pt-[44%] lg:max-w-[32.5%] md:max-w-[38%] max-w-full">
+                            <img decoding="async" src="./image/home-4_class-1.webp" alt="Blog Images"
+                                class="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" />
+                        </div>
+                    </div>
+
+                    <!-- 2nd practice -->
+                    <div
+                        class="flex md:flex-row flex-col justify-between border-y border-primary/40 bg-white group/blog lg:gap-6 lt:gap-4 md:gap-2 gap-1">
+                        <!-- Left: Content -->
+                        <div class="w-full 1xl:p-[30px] lt:p-[26px] sm:p-5 p-4">
+                            <div class="flex flex-col justify-center h-full">
+                                <h3 class="text-primary hover:text-thunder-100 uppercase max-w-[80%] mb-2.5">
+                                    <a href="./blog-detail-1.html" class="text-current">
+                                        Restore & Recharge
+                                    </a>
+                                </h3>
+
+                                <p class="font-medium 1xl:mb-[14px] mb-2.5">
+                                    Deep rest meets gentle stretch.
+                                </p>
+                                <p class="1xl:mb-[26px] lt:mb-5.5 mb-4.5">
+                                    Perfect for stress relief and healing slow-paced with props, guided stillness, and
+                                    mindful recovery.
+                                </p>
+
+                                <a href="./blog-detail-1.html" class="btn btn-secondary">
+                                    Join class
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Right: Image -->
+                        <div
+                            class="overflow-hidden block w-full md:h-auto h-full relative before:content-[''] before:block md:before:pt-[48%] before:pt-[44%] lg:max-w-[32.5%] md:max-w-[38%] max-w-full">
+                            <img decoding="async" src="./image/home-4_class-2.webp" alt="Blog Images"
+                                class="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" />
+                        </div>
+                    </div>
+
+                    <!-- 3rd practice -->
+                    <div
+                        class="flex md:flex-row flex-col justify-between border-y border-primary/40 bg-white group/blog lg:gap-6 lt:gap-4 md:gap-2 gap-1">
+                        <!-- Left: Content -->
+                        <div class="w-full 1xl:p-[30px] lt:p-[26px] sm:p-5 p-4">
+                            <div class="flex flex-col justify-center h-full">
+                                <h3 class="text-primary hover:text-thunder-100 uppercase max-w-[80%] mb-2.5">
+                                    <a href="./blog-detail-1.html" class="text-current">
+                                        Core Balance
+                                    </a>
+                                </h3>
+
+                                <p class="font-medium 1xl:mb-[14px] mb-2.5">
+                                    Stability. Focus. Functional strength.
+                                </p>
+                                <p class="1xl:mb-[26px] lt:mb-5.5 mb-4.5">
+                                    A core-focused class that fuses yoga alignment, mobility, and body awareness for
+                                    real-life support.
+                                </p>
+
+                                <a href="./blog-detail-1.html" class="btn btn-secondary">
+                                    Join class
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Right: Image -->
+                        <div
+                            class="overflow-hidden block w-full md:h-auto h-full relative before:content-[''] before:block md:before:pt-[48%] before:pt-[44%] lg:max-w-[32.5%] md:max-w-[38%] max-w-full">
+                            <img decoding="async" src="./image/home-4_class-3.webp" alt="Blog Images"
+                                class="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" />
+                        </div>
+                    </div>
+
+                </div>
+
+                <a href="./classes.html" class="btn btn-secondary 2xl:mt-[50px] 1xl:mt-11 md:mt-9 mt-7 mx-auto">
+                    view more classes
+                </a>
+            </div>
+        </section>
         <!-- ====== End Find Your Flow Section ====== -->
 
         <!-- ====== Our Why Us Section ====== -->
+        <section
+            class="relative 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10 w-full bg-white border-t border-b border-primary/20 overflow-hidden 2xl:py-6 1xl:py-5 xl:py-4.5 lg:py-4 md:py-3.5 sm:py-3 py-2.5">
+            <div>
+                <ul class="flex items-center justify-center 2xl:gap-10 1xl:gap-9 xl:gap-8 lg:gap-6 sm:gap-4 gap-1">
+                    <li class="flex items-center 2xl:gap-10 1xl:gap-9 xl:gap-8 lg:gap-6 sm:gap-4 gap-1">
+                        <svg class="lt:w-5 lt:h-5 md:w-4.5 md:h-4.5 dm:w-4 sm:h-4 w-1 h-1 shrink-0 text-primary/70"
+                            viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.2 10.2L12.72 10.44L14.82 12.72L16.68 15.48L11.1 19.08L9.84 15.78L9.24 12.6L7.38 15.66L4.86 18.96L0.6 15.54L3.6 12.66L6.48 10.44L3.18 10.26L0 9.66L2.82 4.08L5.76 5.34L8.52 7.02L8.4 3.72L8.76 0H15L13.8 3.72L12.3 7.02L15.66 5.28L19.02 3.96L19.68 9.54L16.2 10.2Z" />
+                        </svg>
+                        <h5
+                            class="uppercase text-primary/80 italic underline underline-offset-4 decoration-1 2xl:text-25 1xl:text-20 lt:text-18 md:text-15 sm:text-xs text-[7px]">
+                            Studio & Online Classes
+                        </h5>
+                    </li>
+                    <li class="flex items-center 2xl:gap-10 1xl:gap-9 xl:gap-8 lg:gap-6 sm:gap-4 gap-1">
+                        <svg class="lt:w-5 lt:h-5 md:w-4.5 md:h-4.5 dm:w-4 sm:h-4 w-1 h-1 shrink-0 text-primary/70"
+                            viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.2 10.2L12.72 10.44L14.82 12.72L16.68 15.48L11.1 19.08L9.84 15.78L9.24 12.6L7.38 15.66L4.86 18.96L0.6 15.54L3.6 12.66L6.48 10.44L3.18 10.26L0 9.66L2.82 4.08L5.76 5.34L8.52 7.02L8.4 3.72L8.76 0H15L13.8 3.72L12.3 7.02L15.66 5.28L19.02 3.96L19.68 9.54L16.2 10.2Z" />
+                        </svg>
+                        <h5
+                            class="uppercase text-primary/80 italic underline underline-offset-4 decoration-1 2xl:text-25 1xl:text-20 lt:text-18 md:text-15 sm:text-xs text-[7px]">
+                            Drop-In or Membership
+                        </h5>
+                    </li>
+                    <li class="flex items-center 2xl:gap-10 1xl:gap-9 xl:gap-8 lg:gap-6 sm:gap-4 gap-1">
+                        <svg class="lt:w-5 lt:h-5 md:w-4.5 md:h-4.5 dm:w-4 sm:h-4 w-1 h-1 shrink-0 text-primary/70"
+                            viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.2 10.2L12.72 10.44L14.82 12.72L16.68 15.48L11.1 19.08L9.84 15.78L9.24 12.6L7.38 15.66L4.86 18.96L0.6 15.54L3.6 12.66L6.48 10.44L3.18 10.26L0 9.66L2.82 4.08L5.76 5.34L8.52 7.02L8.4 3.72L8.76 0H15L13.8 3.72L12.3 7.02L15.66 5.28L19.02 3.96L19.68 9.54L16.2 10.2Z" />
+                        </svg>
+                        <h5
+                            class="uppercase text-primary/80 italic underline underline-offset-4 decoration-1 2xl:text-25 1xl:text-20 lt:text-18 md:text-15 sm:text-xs text-[7px]">
+                            All Levels Welcome
+                        </h5>
+                    </li>
+                    <li class="flex items-center 2xl:gap-10 1xl:gap-9 xl:gap-8 lg:gap-6 sm:gap-4 gap-1">
+                        <svg class="lt:w-5 lt:h-5 md:w-4.5 md:h-4.5 dm:w-4 sm:h-4 w-1 h-1 shrink-0 text-primary/70"
+                            viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.2 10.2L12.72 10.44L14.82 12.72L16.68 15.48L11.1 19.08L9.84 15.78L9.24 12.6L7.38 15.66L4.86 18.96L0.6 15.54L3.6 12.66L6.48 10.44L3.18 10.26L0 9.66L2.82 4.08L5.76 5.34L8.52 7.02L8.4 3.72L8.76 0H15L13.8 3.72L12.3 7.02L15.66 5.28L19.02 3.96L19.68 9.54L16.2 10.2Z" />
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
         <!-- ====== End Our Why Us Section ====== -->
 
         <!-- ====== Why Full Image Section ====== -->
 
+        <section class="relative bg-white 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10">
+            <div class="container">
+                <div
+                    class="flex lg:items-center items-start md:flex-row flex-col 2xl:gap-16 1xl:gap-14 xl:gap-12 lg:gap-11 md:gap-9 sm:gap-7 gap-5">
+
+                    <!-- Right: Content -->
+                    <div class="w-full">
+                        <h3
+                            class="text-thunder-100 font-primary italic font-medium 1xl:mb-7 lg:mb-6 md:mb-5 sm:mb-4 mb-2.5">
+                            About Us
+                        </h3>
+                        <h2 class="text-primary font-normal uppercase 1xl:mb-5 mb-2">
+                            Discover Balance, Embrace Serenity
+                        </h2>
+                        <p class="text-thunder-100 max-w-[890px]">
+                            At Pranavya Yoga, we create a modern sanctuary for wellness, where the wisdom of ancient
+                            yoga meets the rhythm of contemporary living. Rooted in tradition yet open to evolution, our
+                            studio offers a space that nurtures both the body and the mind encouraging balance,
+                            strength, and self-awareness in a fast-paced world.
+                        </p>
+
+                        <!-- Bullets -->
+                        <ul
+                            class="2xl:mt-9 1xl:mt-8.5 xl:mt-8 lg:mt-7 md:mt-6 sm:mt-5 mt-4 2xl:gap-7.5 1xl:gap-4 sm:gap-3 gap-3 grid xl:grid-cols-2 grid-cols-1">
+                            <ul class="flex items-center md:gap-2.5 gap-2">
+                                <span class="shrink-0 whitespace-nowrap 1xl:w-7.5 xl:w-7 lg:w-6 md:w-5 w-4 h-full">
+                                    <img decoding="async" src="./image/bullets-point.svg" alt="Bullets Point" />
+                                </span>
+                                <p class="text-primary font-medium p2">
+                                    Come breathe and move freely.
+                                </p>
+                            </ul>
+                            <ul class="flex items-center md:gap-2.5 gap-2">
+                                <span class="shrink-0 whitespace-nowrap 1xl:w-7.5 xl:w-7 lg:w-6 md:w-5 w-4 h-full">
+                                    <img decoding="async" src="./image/bullets-point.svg" alt="Bullets Point" />
+                                </span>
+                                <p class="text-primary font-medium p2">
+                                    Step into stillness and movement.
+                                </p>
+                            </ul>
+                            <ul class="flex items-center md:gap-2.5 gap-2">
+                                <span class="shrink-0 whitespace-nowrap 1xl:w-7.5 xl:w-7 lg:w-6 md:w-5 w-4 h-full">
+                                    <img decoding="async" src="./image/bullets-point.svg" alt="Bullets Point" />
+                                </span>
+                                <p class="text-primary font-medium p2">
+                                    Reconnect with the calm inside you.
+                                </p>
+                            </ul>
+                            <ul class="flex items-center md:gap-2.5 gap-2">
+                                <span class="shrink-0 whitespace-nowrap 1xl:w-7.5 xl:w-7 lg:w-6 md:w-5 w-4 h-full">
+                                    <img decoding="async" src="./image/bullets-point.svg" alt="Bullets Point" />
+                                </span>
+                                <p class="text-primary font-medium p2">
+                                    Awaken the balance within you.
+                                </p>
+                            </ul>
+                        </ul>
+
+                        <div class="2xl:mt-11.5 1xl:mt-11 xl:mt-10 lg:mt-9 md:mt-8 sm:mt-7 mt-6">
+                            <a href="./about-us.html" class="btn btn-secondary">Begin Your Journey</a>
+                        </div>
+                    </div>
+
+                    <!-- Left: Image -->
+                    <div class="w-full 1xl:max-w-[748px] max-w-[560px] md:sticky md:top-24">
+                        <div
+                            class="rounded overflow-hidden relative before:content-[''] before:block 1xl:before:pt-[98%] xl:before:pt-[106%] md:before:pt-[122%] before:pt-[100%] w-full">
+                            <img decoding="async" src="./image/home-4_whyChoose.webp" alt="About Image"
+                                class="absolute top-0 left-0 w-full h-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== End Our Why Us Section ====== -->
+
+
+        <!-- ====== Why Full Image Section ====== -->
+        <section class="relative 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10 w-full h-full">
+            <div class="2xl:h-[680px] 1xl:h-[590px] xl:h-[550px] lg:h-[510px] md:h-[410px] sm:h-[350px] h-[272px]">
+                <div class="md:block hidden relative w-full bg-cover md:bg-center bg-right bg-no-repeat h-full"
+                    style="background-image: url('./image/trial-banner.webp')"></div>
+                <img src="./image/find-your-flow-3-mobile.webp" alt="mobile"
+                    class="w-full h-full object-cover md:hidden block" />
+            </div>
+
+            <div
+                class="md:absolute md:inset-0 relative top-0 left-0 w-full h-full max-[769px]:bg-[linear-gradient(to_right,#E0E0E0_0%,#D0D0D0_50%,#BEBEBE_75%,#B1B1AF_100%)] md:p-0 py-7">
+                <div class="container h-full flex items-center">
+                    <div
+                        class="flex flex-col my-auto items-start sm:justify-center justify-end py-10 px-[30px] text-black 1xl:max-w-[830px] xl:max-w-[570px] lg:max-w-[510px] md:max-w-[415px] w-full bg-[#FFFFFFA1] backdrop-blur-[10px] rounded-[10px]">
+                        <h3
+                            class="font-primary italic font-medium 2xl:mb-7 1xl:mb-6 xl:mb-5 sm:mb-3 mb-2.5 text-start text-thunder-100">
+                            Transform in Just 14 Days
+                        </h3>
+                        <h2 class="uppercase 1xl:mb-5 mb-3 text-start">
+                            Awaken strength and clarity.
+                        </h2>
+                        <p class="text-start text-thunder-100 max-w-[83%] w-full">
+                            Experience daily guided sessions, mindful movement, and inner stillness.
+                        </p>
+                        <a href="./classes.html" class="btn btn-secondary bg-white xl:mt-[45px] lg:mt-10 sm:mt-8 mt-6">
+                            Join the 14-Day trial</a>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- ====== End Full Image Section ====== -->
 
         <!-- ====== Weekly Class Schedule Section ====== -->

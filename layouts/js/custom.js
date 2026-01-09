@@ -322,12 +322,12 @@ jQuery(document).ready(function () {
       if (!$panel.length) {
         $panel = $(`
       <div id="${panelId}" class="mobile-drawer">
-        <div class="px-4 py-3 border-b border-[#673E2C33] flex items-center gap-3 sticky top-0 z-[9999] bg-white">
+        <div class="px-4 py-3 border-b border-[#673E2C33] flex items-center gap-3 sticky top-0 z-9999 bg-white">
           <button class="step3-back w-full flex items-center text-left gap-3 text-thunder-100">
             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
             <path d="M5.98377 11.2168L0.75 5.98302L5.98377 0.74925M1.47691 5.98302L12.0898 5.98302" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          <span class="uppercase uppercase sm:text-lg text-base">${title}</span>
+          <span class="uppercase sm:text-lg text-base">${title}</span>
           </button>
         </div>
         <div class=""><ul class="p-4 step3-content"></ul></div>

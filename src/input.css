@@ -1223,3 +1223,7 @@
 .marquee-slider-4 .marquee-track {
   @apply lg:gap-6 lt:gap-5 sm:gap-4.5 gap-2;
 }
+.home-4_testimonial .testimonial-4 {
+  position: relative;
+  z-index: 1;
+}

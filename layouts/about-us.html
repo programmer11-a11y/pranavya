@@ -29,7 +29,7 @@
     <main class="h-full">
         <!-- ====== Header ====== -->
         <div class="bg_body_box fixed inset-0 w-full h-full backdrop-blur-xl bg-primary/35 z-50"></div>
-        <header class="header-2 fixed top-0 left-0 right-0 z-50 bg-white">
+        <header class="header fixed top-0 left-0 right-0 z-50 bg-whitesmoke-100 no-toggle-color">
             <!-- ============================= -->
             <!-- WISHLIST SIDEBAR  -->
             <!-- ============================= -->
@@ -559,7 +559,7 @@
                         </div>
                         <!-- ====== Mobile Menu (Offcanvas) ====== -->
                         <aside id="mainmenu"
-                            class="mainmenu max-[1221px]:fixed max-[1221px]:h-screen max-[1221px]:inset-y-0 max-[1221px]:left-0 max-[1221px]:top-0 max-[1221px]:z-60 max-[1221px]:w-screen max-[1221px]:max-w-screen max-[1221px]:bg-white max-[1221px]:border-r max-[1221px]:border-primary/20 max-[1221px]:transition-transform max-[1221px]:duration-300 max-[1221px]:ease-in-out min-[1221px]:px-0 px-4">
+                            class="mainmenu max-[1221px]:fixed max-[1221px]:h-screen max-[1221px]:inset-y-0 left-0! top-0! max-[1221px]:z-60 max-[1221px]:w-screen max-[1221px]:max-w-screen max-[1221px]:bg-white max-[1221px]:border-r max-[1221px]:border-primary/20 max-[1221px]:transition-transform max-[1221px]:duration-300 max-[1221px]:ease-in-out min-[1221px]:px-0 px-4">
                             <div
                                 class="min-[1221px]:hidden flex items-center justify-between py-4 border-b border-primary/20">
                                 <div class="flex items-center gap-2">
@@ -2308,7 +2308,7 @@
                             </a>
                             <a href="./login.html" class="btn btn-secondary hidden min-[1221px]:inline-block">login</a>
                             <button name="mobile-menu-view" aria-label="Open menu"
-                                class="min-[1221px]:hidden text-white border-0 bg-transparent">
+                                class="min-[1221px]:hidden flex border-0 bg-transparent">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14"
                                     fill="none" class="sm:w-5 sm:h-[14px] w-[15px] h-[11px]">
                                     <path d="M0 0H20V2H0V0ZM0 6H20V8H0V6ZM0 12H20V14H0V12Z" fill="currentColor" />
@@ -2321,12 +2321,197 @@
         </header>
         <!-- ====== Header ====== -->
 
+        <!-- ====== Start Page Heading ====== -->
+        <section
+            class="relative 2xl:mt-[100px] 1xl:mt-20 xl:mt-17 lg:mt-14 md:mt-12 sm:mt-11 mt-10 2xl:mb-[120px] 1xl:mb-[100px] xl:mb-20 lg:mb-16 md:mb-12 sm:mb-11 mb-10">
+            <div class="container">
+                <div
+                    class="flex flex-col items-center justify-center 2xl:max-w-[58%] xl:max-w-[65%] lt:max-w-[70%] md:max-w-[85%] w-full text-center mx-auto">
+                    <h1 class="uppercase text-primary text-center space-y-2.5">About Us</h1>
+                    <p>
+                        Experience yoga that nurtures your body, calms your mind, and uplifts your spirit. Our mission
+                        is to make authentic, accessible yoga available to everyone.
+                    </p>
+                </div>
+
+                <!-- Decorative Flower -->
+                <div
+                    class="pointer-events-none absolute top-auto bottom-0 left-auto right-0 lg:w-[14.2%] w-[15%] hidden md:block opacity-30">
+                    <img decoding="async" src="./image/flower-shape.svg" alt="decor"
+                        class="w-full h-full object-contain" />
+                </div>
+            </div>
+        </section>
+        <!-- ====== End Page Heading ====== -->
+
+        <!-- ====== About Us Section ====== -->
+        <section class="relative bg-white 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10">
+            <div class="container">
+                <div
+                    class="flex justify-between lt:flex-row flex-col 2xl:gap-15 1xl:gap-13 lg:gap-10 md:gap-8 sm:gap-7.5 gap-5 md:items-stretch items-start">
+                    <!-- Right: Content -->
+                    <div class="w-full lt:max-w-[53.5%] xl:pb-10 lt:pb-7">
+                        <h3
+                            class="text-thunder-100 font-primary italic font-medium 2xl:mb-7.5 1xl:mb-6 xl:mb-5 md:mb-4 sm:mb-3 mb-2.5">
+                            Living the Yogic Way
+                        </h3>
+                        <h2 class="text-primary font-normal uppercase 1xl:mb-5 mb-3">
+                            Ancient Roots. Modern Harmony.
+                        </h2>
+                        <p class="1xl:mb-5 xl:mb-4 md:mb-3 mb-2.5">
+                            At Pranavya Yoga, we honor the timeless wisdom of traditional yoga while embracing the
+                            rhythm of modern life. Our mission is to create a welcoming space where individuals from all
+                            walks of life can reconnect with their breath, body, and spirit. Rooted in ancient practices
+                            and guided by compassion, we offer thoughtful classes, personalized guidance, and a
+                            supportive community. Whether you're new to yoga or deepening your journey, Pranavya Yoga
+                            provides a path toward balance, clarity, and holistic well-being—both on and off the mat.
+                        </p>
+                        <p class="1xl:mb-5 xl:mb-4 md:mb-3 mb-2.5">
+                            Our experienced and compassionate teachers lead with intention, integrity, and care. Through
+                            curated classes, workshops, retreats, and one-on-one sessions, we invite you to explore your
+                            practice at your own pace, with encouragement and community by your side.
+                        </p>
+                        <p>
+                            More than just a yoga studio, Pranavya is a sanctuary. A space where tradition meets
+                            innovation, where your journey matters, and where the ancient science of yoga.
+                        </p>
+                    </div>
+
+                    <!-- Left: Image -->
+                    <div class="lt:sticky relative lt:top-20 top-0 w-full lt:max-w-[46.5%]">
+                        <div
+                            class="overflow-hidden relative before:block before:content-[''] lt:before:pt-[98%] before:pt-[85%] h-full">
+                            <img decoding="async" src="./image/about-us_hero.webp" alt="Yoga"
+                                class="w-full h-full object-cover object-center absolute top-0 left-0" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====== End About Us Section ====== -->
+
+        <!-- ====== About Us Section ====== -->
+        <section class="relative bg-white 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10">
+            <div class="container">
+                <div
+                    class="flex justify-between md:flex-row flex-col 2xl:gap-13 1xl:gap-11.5 xl:gap-10 lt:gap-8 md:gap-7 sm:gap-6 gap-5 lt:items-center items-start">
+                    <!-- Left: Image -->
+                    <div class="md:sticky relative md:top-20 top-0 w-full md:max-w-[48.3%]">
+                        <div
+                            class="overflow-hidden relative before:block before:content-[''] 1xl:before:pt-[65%] xl:before:pt-[70%] lg:before:pt-[80%] lt:before:pt-[90%] md:before:pt-[100%] before:pt-[60%] h-full">
+                            <img decoding="async" src="./image/about-mission.webp" alt="Yoga"
+                                class="w-full h-full object-cover object-center absolute top-0 left-0" />
+                            <div class="absolute top-0 left-0 w-full h-full bg-[#AD8F6126]"></div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Content -->
+                    <div class="w-full md:max-w-[51.7%]">
+                        <h3
+                            class="text-thunder-100 font-primary italic font-medium 2xl:mb-7.5 1xl:mb-6 xl:mb-5 md:mb-4 sm:mb-3 mb-2.5">
+                            Our Mission
+                        </h3>
+                        <h3 class="text-primary font-normal uppercase 1xl:mb-5 mb-3">
+                            Making Yoga Free, Accessible &
+                            Meaningful
+                        </h3>
+                        <p class="1xl:mb-5 xl:mb-4 md:mb-3 mb-2.5">
+                            At Pranavya, we believe in one powerful idea: <span class="font-medium">Yoga should be
+                                accessible to everyone.</span> What
+                            started in 2008 as a bold vision to offer free, high-quality yoga has now grown into a
+                            global community, with over 200 free classes supporting hundreds of thousands of
+                            practitioners worldwide.
+                        </p>
+                        <p>
+                            Our mission is to stay grounded in yoga’s core principles <span
+                                class="font-medium">accessibility, generosity, and
+                                authenticity</span> while providing a modern, easy-to-navigate platform for all levels
+                            of yoga
+                            practice.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ====== End About Us Section ====== -->
+
+        <section class="relative bg-white 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10">
+            <div class="container">
+                <div class="mb-13">
+                    <h3
+                        class="text-thunder-100 font-primary italic font-medium 2xl:mb-7.5 1xl:mb-6 xl:mb-5 md:mb-4 sm:mb-3 mb-2.5">
+                        Core Values
+                    </h3>
+                    <h3 class="text-primary font-normal uppercase">
+                        Rooted in Yoga, Driven by Purpose
+                    </h3>
+                </div>
+                <div class="grid grid-cols-3 gap-6">
+                    <!-- 1st card -->
+                    <div
+                        class="group border border-primary/15 bg-transparent 2xl:p-6 sm:p-4 p-3.5 hover:bg-whitesmoke-100 hover:border-whitesmoke-100 transition-all duration-300">
+                        <div class="flex 1xl:gap-6 gap-4">
+                            <div
+                                class="2xl:w-13.5 2xl:h-13.5 1xl:w-12 1xl:h-12 lg:w-10 lg:h-10 md:w-10 md:h-10 w-9 h-9 shrink-0">
+                                <img decoding="async" src="./image/why-choose-us-icon-1.svg" alt="Personalized Yoga"
+                                    class="w-full h-full object-cover" />
+                            </div>
+                            <div>
+                                <h5
+                                    class="uppercase group-hover:text-primary text-black-100 transition-all duration-300 lg:mb-3.5 mb-3">
+                                    Personalized Yoga
+                                </h5>
+                                <p>Custom guidance that fits your body and flow.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2nd card -->
+                    <div
+                        class="group border border-primary/15 bg-transparent 2xl:p-6 sm:p-4 p-3.5 hover:bg-whitesmoke-100 hover:border-whitesmoke-100 transition-all duration-300">
+                        <div class="flex 1xl:gap-6 gap-4">
+                            <div
+                                class="2xl:w-13.5 2xl:h-13.5 1xl:w-12 1xl:h-12 lg:w-10 lg:h-10 md:w-10 md:h-10 w-9 h-9 shrink-0">
+                                <img decoding="async" src="./image/why-choose-us-icon-1.svg" alt="Personalized Yoga"
+                                    class="w-full h-full object-cover" />
+                            </div>
+                            <div>
+                                <h5
+                                    class="uppercase group-hover:text-primary text-black-100 transition-all duration-300 lg:mb-3.5 mb-3">
+                                    Personalized Yoga
+                                </h5>
+                                <p>Custom guidance that fits your body and flow.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3rd card -->
+                    <div
+                        class="group border border-primary/15 bg-transparent 2xl:p-6 sm:p-4 p-3.5 hover:bg-whitesmoke-100 hover:border-whitesmoke-100 transition-all duration-300">
+                        <div class="flex 1xl:gap-6 gap-4">
+                            <div
+                                class="2xl:w-13.5 2xl:h-13.5 1xl:w-12 1xl:h-12 lg:w-10 lg:h-10 md:w-10 md:h-10 w-9 h-9 shrink-0">
+                                <img decoding="async" src="./image/why-choose-us-icon-1.svg" alt="Personalized Yoga"
+                                    class="w-full h-full object-cover" />
+                            </div>
+                            <div>
+                                <h5
+                                    class="uppercase group-hover:text-primary text-black-100 transition-all duration-300 lg:mb-3.5 mb-3">
+                                    Personalized Yoga
+                                </h5>
+                                <p>Custom guidance that fits your body and flow.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
     <!-- ====== End-Main-Content ====== -->
 
     <!-- ====== Footer ====== -->
     <!-- Footer Section -->
-    <footer class="">
+    <footer>
         <div class="bg-thunder-100 text-white">
             <div class="container">
                 <div

@@ -416,7 +416,7 @@
   }
   h2,
   .h2 {
-    @apply 2xl:text-58 1xl:text-52 xl:text-46 lg:text-40 md:text-32 sm:text-26 text-20 2xl:leading-[80px] 1xl:leading-[72px] xl:leading-[66px] lg:leading-[56px] md:leading-[46px] sm:leading-[38px] leading-[30px];
+    @apply 2xl:text-58 1xl:text-52 xl:text-45 lg:text-40 md:text-32 sm:text-26 text-20 2xl:leading-[80px] 1xl:leading-[72px] xl:leading-[66px] lg:leading-[56px] md:leading-[46px] sm:leading-[38px] leading-[30px];
   }
   h3,
   .h3 {
@@ -571,14 +571,13 @@
     border-radius: 999px;
   }
   /* scroll end */
-
+  
   /* header */
   .all-header,
   .header-wrapper-scrolled,
   .header-container-scrolled {
     @apply transition-all duration-300 ease-in-out;
   }
-
   .header-scrolled {
     @apply rounded-none! 1xl:px-11 md:px-5 px-4;
   }
@@ -602,7 +601,7 @@
   }
   /* Make mega panel FULL SCREEN on scroll */
   .mega-panel-scrolled {
-    @apply fixed1 left-0! top-full! w-screen! max-w-full! px-0! pt-0!;
+    @apply fixed left-0! top-full! w-screen! max-w-full! px-0! pt-0!;
   }
 
   /* The inner white box also needs full width */
@@ -617,7 +616,7 @@
 
   .all-header.scrolled,
   .all-header.not_scrolled_hover {
-    @apply bg-white!;
+    @apply bg-white;
   }
   .all-header.scrolled,
   .all-header.scrolled .nav-icon,
@@ -692,17 +691,8 @@
   .all-header.scrolled .menu_link_text {
     @apply hover:text-primary! text-thunder-100! min-[1221px]:hover:border-primary border-transparent;
   }
-  .all-header aside#mainmenu {
-    @apply -left-4! -top-5.2!;
-  }
-  .header-2 .all-header aside#mainmenu {
-    @apply left-0! top-0!;
-  }
-  .all-header.scrolled aside#mainmenu {
-    @apply left-0! top-0!;
-  }
-  .header-container-scrolled {
-    @apply left-0!;
+  .header-1 .all-header aside#mainmenu {
+    @apply -left-4! -top-[22px]!;
   }
 
   .mainmenu.active nav ul li .menu_link_text {
@@ -1227,3 +1217,9 @@
   position: relative;
   z-index: 1;
 }
+
+
+/* ABOUT US */
+  .header.no-toggle-color .all-header.scrolled {
+    @apply bg-whitesmoke-100;
+  }

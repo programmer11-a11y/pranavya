@@ -513,6 +513,11 @@ jQuery(document).ready(function () {
     const cartOpen = !jQuery("#cartSidebar").hasClass("translate-x-full");
     const hasHover = jQuery(".all-header").hasClass("not_scrolled_hover");
     const mobileLogo = jQuery("#mainmenu > div img").first();
+    
+    // Check if header has no-toggle-color class
+    // When no-toggle-color is present, logo and icon colors should not toggle (stay dark/black)
+    const header = jQuery(".all-header").closest("header");
+    const hasNoToggleColor = header.length > 0 && header.hasClass("no-toggle-color");
 
     // 🔥 Condition for black UI (bg-white)
     // Show bg-white when: scrolled, mega menu open, search open, sidebar open, wishlist open, cart open, OR hover on header
@@ -526,7 +531,7 @@ jQuery(document).ready(function () {
       hasHover;
 
     if (useBlack) {
-      // LOGO
+      // LOGO - Always black when useBlack is true, regardless of no-toggle-color
       siteLogo.attr("src", BLACK_LOGO);
 
       // TEXT + ICONS → BLACK
@@ -539,18 +544,36 @@ jQuery(document).ready(function () {
       // Header BG
       jQuery(".all-header").addClass("bg-white");
     } else {
-      // LOGO
-      siteLogo.attr("src", WHITE_LOGO);
+      // LOGO - Toggle based on no-toggle-color
+      if (hasNoToggleColor) {
+        // If no-toggle-color, keep logo as dark (black) - don't toggle to white
+        siteLogo.attr("src", BLACK_LOGO);
+      } else {
+        // Normal behavior: show white logo when not scrolled/hovered
+        siteLogo.attr("src", WHITE_LOGO);
+      }
 
-      // TEXT + ICONS → WHITE
-      jQuery(
-        ".all-header > .container .menu_link_text, .all-header > .container .site-search__open, .all-header > .container .nav-icon",
-      )
-        .removeClass("text-black-100")
-        .addClass("text-white");
+      // TEXT + ICONS - Toggle based on no-toggle-color
+      if (hasNoToggleColor) {
+        // If no-toggle-color, keep icons/text as black (don't toggle to white) - ensure black everywhere
+        jQuery(
+          ".all-header > .container .menu_link_text, .all-header > .container .site-search__open, .all-header > .container .nav-icon",
+        )
+          .removeClass("text-white")
+          .addClass("text-black-100");
+      } else {
+        // Normal behavior: show white icons/text when not scrolled/hovered
+        jQuery(
+          ".all-header > .container .menu_link_text, .all-header > .container .site-search__open, .all-header > .container .nav-icon",
+        )
+          .removeClass("text-black-100")
+          .addClass("text-white");
+      }
 
-      // Header BG - Remove bg-white to make it transparent
-      jQuery(".all-header").removeClass("bg-white");
+      // Header BG - Remove bg-white to make it transparent (unless bg-color class is present)
+      if (!header.hasClass("bg-color")) {
+        jQuery(".all-header").removeClass("bg-white");
+      }
     }
 
     // 🔥 If page is scrolled → also activate scrolled header UI
@@ -562,6 +585,18 @@ jQuery(document).ready(function () {
       jQuery(".all-header").removeClass("header-scrolled");
       jQuery("header").removeClass("header-wrapper-scrolled");
       jQuery("header .container").removeClass("header-container-scrolled");
+    }
+
+    // 🔥 Handle header positioning when no-toggle-color is present
+    // When no-toggle-color is present: relative when not scrolled, fixed when scrolled
+    if (hasNoToggleColor) {
+      if (scrolled) {
+        // Page scrolled: make header fixed
+        header.removeClass("relative").addClass("fixed");
+      } else {
+        // Page not scrolled: make header relative
+        header.removeClass("fixed").addClass("relative");
+      }
     }
   }
 
@@ -903,13 +938,20 @@ jQuery(document).ready(function () {
       const isScrolled = jQuery(window).scrollTop() > 0;
       const megaOpen = jQuery(".mega-panel:visible").length > 0;
       const searchOpen = jQuery("#nav-site-search").hasClass("open");
+      
+      // Check if header has no-toggle-color class
+      const header = jQuery(".all-header").closest("header");
+      const hasNoToggleColor = header.length > 0 && header.hasClass("no-toggle-color");
 
       if (!isScrolled && !megaOpen && !searchOpen) {
         jQuery(".all-header").addClass("not_scrolled_hover");
-        jQuery(".all-header:not(.scrolled) .site-logo img").attr(
-          "src",
-          "./image/main-logo-black.svg",
-        );
+        // Only toggle logo if no-toggle-color is not present
+        if (!hasNoToggleColor) {
+          jQuery(".all-header:not(.scrolled) .site-logo img").attr(
+            "src",
+            "./image/main-logo-black.svg",
+          );
+        }
         applyScrolledState(); // Update header state when hover is added
       }
     },
@@ -921,6 +963,10 @@ jQuery(document).ready(function () {
       const sidebarOpen = jQuery("#mainmenu").hasClass("active");
       const wishlistOpen = !jQuery("#wishlistSidebar").hasClass("translate-x-full");
       const cartOpen = !jQuery("#cartSidebar").hasClass("translate-x-full");
+      
+      // Check if header has no-toggle-color class
+      const header = jQuery(".all-header").closest("header");
+      const hasNoToggleColor = header.length > 0 && header.hasClass("no-toggle-color");
 
       // Check if mouse is still over any menu item or header before removing hover
       // This prevents removing hover when moving between menu items
@@ -934,10 +980,13 @@ jQuery(document).ready(function () {
         // Also check if any sidebar is open
         if (!isScrolled && !megaOpen && !searchOpen && !sidebarOpen && !wishlistOpen && !cartOpen && !stillOnMenu && !stillOnHeader && !stillOnMegaPanel) {
           jQuery(".all-header").removeClass("not_scrolled_hover");
-          jQuery(".all-header:not(.scrolled) .site-logo img").attr(
-            "src",
-            "./image/main-logo-white.svg",
-          );
+          // Only toggle logo if no-toggle-color is not present
+          if (!hasNoToggleColor) {
+            jQuery(".all-header:not(.scrolled) .site-logo img").attr(
+              "src",
+              "./image/main-logo-white.svg",
+            );
+          }
         }
         // Always call applyScrolledState to ensure correct state
         applyScrolledState();

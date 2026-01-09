@@ -490,6 +490,8 @@ jQuery(document).ready(function () {
       }, 300);
     }
   });
+
+  
   /* ============================================================
      HEADER SCROLL — FIX LOGO + ICON COLOR TOGGLING
   ============================================================ */
@@ -692,23 +694,30 @@ jQuery(document).ready(function () {
   });
 
   // ===== Video Popup (YouTube/Vimeo/HTML5) ===== //
-  jQuery(".video-popup").magnificPopup({
-    type: "iframe",
-    iframe: {
-      patterns: {
-        youtube: {
-          index: "youtube.com/",
-          id: function (url) {
-            var m = url.match(/[\?&]v=([^&]+)/);
-            return m && m[1] ? m[1] : null;
-          },
-          src: "https://www.youtube.com/embed/%id%?autoplay=1&rel=0",
-        },
-      },
-    },
-    preloader: false,
-    fixedContentPos: false,
+  jQuery(document).ready(function ($) {
+
+    $('.video-popup').magnificPopup({
+      type: 'iframe',
+      preloader: false,
+      fixedContentPos: false,
+      closeBtnInside: true,
+  
+      iframe: {
+        patterns: {
+          youtube: {
+            index: 'youtube.com/',
+            id: function (url) {
+              const match = url.match(/[?&]v=([^&]+)/);
+              return match ? match[1] : null;
+            },
+            src: './image/yoga.mp4'
+          }
+        }
+      }
+    });
+  
   });
+  
 
   // ===== Weekly Schedule Tabs ===== //
   /* ----------------------------
@@ -1342,3 +1351,5 @@ $(document).ready(function () {
   });
 });
 // =================== END INDEX-4.HTML ========================
+
+

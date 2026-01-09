@@ -132,8 +132,8 @@
 
   /* Spacing */
   /* --spacing-30: 30px; */
-   /* ---------- KEYFRAMES ---------- */
-   @keyframes slide-left {
+  /* ---------- KEYFRAMES ---------- */
+  @keyframes slide-left {
     0% {
       transform: translateX(0);
     }
@@ -461,10 +461,10 @@
     @apply border border-primary bg-[#FBFAF9] text-primary hover:bg-primary focus:bg-primary active:bg-primary hover:text-white active:text-white focus:text-white uppercase font-medium;
   }
   .btn-secondary {
-    @apply uppercase border font-medium text-primary border-primary bg-[#FBFAF9] hover:text-white focus:text-white active:text-white hover:!bg-primary active:bg-primary focus:bg-primary;
+    @apply uppercase border font-medium text-primary border-primary bg-[#FBFAF9] hover:text-white focus:text-white active:text-white hover:bg-primary! active:bg-primary focus:bg-primary;
   }
   .btn-secondary span {
-    @apply underline decoration-[1px] hover:no-underline;
+    @apply underline decoration-1 hover:no-underline;
   }
   .btn-dark {
     @apply uppercase border font-medium text-black border-thunder-100 bg-white hover:text-white focus:text-white active:text-white hover:bg-black active:bg-black focus:bg-black;
@@ -473,20 +473,20 @@
     @apply flex items-center justify-center 2xl:gap-3 bg-white gap-[10px] text-black hover:text-primary active:text-primary focus:text-primary underline underline-offset-3;
   }
   .nav-class-arrow {
-    @apply border-white !text-white !bg-transparent hover:!bg-white focus:!bg-white active:!bg-white hover:!text-black focus:!text-black active:!text-black;
+    @apply border-white text-white! bg-transparent! hover:bg-white! focus:bg-white! active:bg-white! hover:text-black! focus:text-black! active:text-black!;
   }
   .slider-custom-arrow {
-    @apply !static !m-0 after:hidden lt:p-3 md:p-2 p-1.5 2xl:!size-12.5 lt:!size-10.5 !size-9 !rounded-full !bg-white hover:!bg-primary !text-primary hover:!text-white border !border-primary cursor-pointer flex items-center justify-center;
+    @apply static! m-0! after:hidden lt:p-3 md:p-2 p-1.5 2xl:size-12.5! lt:size-10.5! size-9! rounded-full! bg-white! hover:bg-primary! text-primary! hover:text-white! border border-primary! cursor-pointer flex items-center justify-center;
   }
   .testimonial-custom-arrow.swiper-button-next,
   .testimonial-custom-arrow.swiper-button-prev {
-    @apply !static !m-0 after:hidden p-3 2xl:!size-12.5 !size-10.5 !rounded-full border border-primary bg-primary !text-white hover:bg-white focus:bg-white active:bg-white hover:!text-primary active:!text-primary focus:!text-primary cursor-pointer flex items-center justify-center;
+    @apply static! m-0! after:hidden p-3 2xl:size-12.5! size-10.5! rounded-full! border border-primary bg-primary text-white! hover:bg-white focus:bg-white active:bg-white hover:text-primary! active:text-primary! focus:text-primary! cursor-pointer flex items-center justify-center;
   }
   .testimonial-custom-arrow.swiper-button-disabled {
-    @apply !static !m-0 after:hidden p-3 2xl:!size-12.5 !size-10.5 !rounded-full uppercase border !text-primary border-primary bg-white hover:!text-white focus:!text-white active:!text-white hover:bg-primary active:bg-primary focus:bg-primary cursor-pointer flex items-center justify-center;
+    @apply static! m-0! after:hidden p-3 2xl:size-12.5! size-10.5! rounded-full! uppercase border text-primary! border-primary bg-white hover:text-white! focus:text-white! active:text-white! hover:bg-primary active:bg-primary focus:bg-primary cursor-pointer flex items-center justify-center;
   }
   .swiper-navigation-icon {
-    @apply rotate-180 !w-5 !h-4;
+    @apply rotate-180 w-5! h-4!;
   }
 
   /* ===== KEYFRAME START =========== */
@@ -580,15 +580,15 @@
   }
 
   .header-scrolled {
-    @apply !rounded-none 1xl:px-11 md:px-5 px-4;
+    @apply rounded-none! 1xl:px-11 md:px-5 px-4;
   }
 
   .header-wrapper-scrolled {
-    @apply !top-0;
+    @apply top-0!;
   }
 
   .header-container-scrolled {
-    @apply !max-w-full !px-0;
+    @apply max-w-full! px-0!;
   }
 
   .header-1 .all-header.scrolled .mega-panel .mega-menu {
@@ -598,26 +598,26 @@
     @apply sm:max-w-[calc(100%-4%)] w-full;
   }
   .all-header.scrolled .site-search__suggestions-block {
-    @apply !w-full !max-h-[92vh];
+    @apply w-full! max-h-[92vh]!;
   }
   /* Make mega panel FULL SCREEN on scroll */
   .mega-panel-scrolled {
-    @apply !fixed !left-0 !top-full !w-screen !max-w-full !px-0 !pt-0;
+    @apply fixed1 left-0! top-full! w-screen! max-w-full! px-0! pt-0!;
   }
 
   /* The inner white box also needs full width */
   .mega-inner-scrolled {
-    @apply !w-screen !max-w-full !mx-0 !rounded-none;
+    @apply w-screen! max-w-full! mx-0! rounded-none!;
   }
 
   /* Kill the default px-4 applied by HTML */
   .mega-wrapper-scrolled {
-    @apply !px-0 !mx-0;
+    @apply px-0! mx-0!;
   }
 
   .all-header.scrolled,
   .all-header.not_scrolled_hover {
-    @apply !bg-white;
+    @apply bg-white!;
   }
   .all-header.scrolled,
   .all-header.scrolled .nav-icon,
@@ -627,13 +627,13 @@
 
   /* When header has bg-white, icons should be primary color, text and SVG should be black */
   /* .all-header.bg-white .nav-icon {
-    @apply !text-primary;
+    @apply text-primary!;
   } */
   /* .all-header.bg-white .site-search__open {
-    @apply !text-primary;
+    @apply text-primary!;
   }
   .all-header.bg-white .site-search__open .nav-icon {
-    @apply !text-primary;
+    @apply text-primary!;
   } */
   .vertical-text {
     writing-mode: vertical-rl;
@@ -647,7 +647,7 @@
   }
   .all-header.bg-white .menu_link_text svg,
   .all-header.bg-white .menu_link_text svg path {
-    @apply !text-black;
+    @apply text-black!;
   }
   /* General SVG elements in header (but not nav-icon) should be black when bg-white */
   /* .all-header.bg-white svg:not(.nav-icon) {
@@ -659,20 +659,20 @@
     @apply text-white border-b-2 border-transparent;
   }
   .has-mega.mega-open .menu_link_text {
-    @apply !text-primary border-b-2 border-primary;
+    @apply text-primary! border-b-2 border-primary;
   }
   .mega-open .menu_link_text svg {
     @apply rotate-180;
   }
 
   .all-header.not_scrolled_hover .nav-icon {
-    @apply !text-black hover:!text-primary;
+    @apply text-black! hover:text-primary!;
   }
   .all-header.not_scrolled_hover .site-search__open {
-    @apply !text-black;
+    @apply text-black!;
   }
   .all-header.not_scrolled_hover .site-search__open .nav-icon {
-    @apply !text-black hover:!text-primary;
+    @apply text-black! hover:text-primary!;
   }
   .all-header.not_scrolled_hover .menu_link_text {
     @apply text-black hover:text-primary hover:border-primary;
@@ -690,23 +690,23 @@
   .all-header.not_scrolled_hover button[name="mobile-menu-view"],
   .all-header.not_scrolled_hover .menu_link_text,
   .all-header.scrolled .menu_link_text {
-    @apply hover:!text-primary !text-thunder-100 min-[1221px]:hover:border-primary border-transparent;
+    @apply hover:text-primary! text-thunder-100! min-[1221px]:hover:border-primary border-transparent;
   }
   .all-header aside#mainmenu {
-    @apply !-left-4 !-top-[22px];
+    @apply -left-4! -top-5.2!;
   }
   .header-2 .all-header aside#mainmenu {
-    @apply !left-0 !top-0;
+    @apply left-0! top-0!;
   }
   .all-header.scrolled aside#mainmenu {
-    @apply !-left-0 !top-0;
+    @apply left-0! top-0!;
   }
   .header-container-scrolled {
-    @apply !left-0;
+    @apply left-0!;
   }
 
   .mainmenu.active nav ul li .menu_link_text {
-    @apply !text-black hover:!text-primary;
+    @apply text-black! hover:text-primary!;
   }
   li:hover .menu_link_text svg,
   li:hover .menu_link_text svg path {
@@ -766,7 +766,7 @@
   }
 
   .mobile-back-wrapper {
-    @apply sticky top-0 z-[9999] bg-white;
+    @apply sticky top-0 z-999 bg-white;
   }
 
   .mobile-back-btn {
@@ -775,7 +775,7 @@
 
   /* fallback for the mobile-drawer (step-3) if you use it */
   .mobile-drawer {
-    @apply fixed top-0 right-0 w-full h-screen bg-white z-[99999] transform translate-x-full transition-transform duration-300;
+    @apply fixed top-0 right-0 w-full h-screen bg-white z-99999 transform translate-x-full transition-transform duration-300;
   }
 
   .mobile-drawer.active,
@@ -813,9 +813,11 @@
   .site-search__suggestion-list {
     @apply m-0 p-0 ml-[18px];
   }
+  .header-1 .site-search__suggestions-block {
+    @apply sm:w-[95%] w-[93%] m-auto bg-white flex justify-between left-0 absolute right-0 top-full px-4 py-4.5 max-h-[80vh] overflow-auto rounded-b-sm rounded-[20px] rounded-t-none;
+  }
   .site-search__suggestions-block {
-    @apply m-auto bg-white flex justify-between left-0 absolute right-0 top-full px-4 py-[1.125rem] max-h-[80vh] overflow-auto rounded-b rounded-[20px] rounded-t-none;
-    /* @apply sm:w-[95%] w-[93%] m-auto bg-white flex justify-between left-0 absolute right-0 top-full px-4 py-[1.125rem] max-h-[80vh] overflow-auto rounded-b rounded-[20px] rounded-t-none; */
+    @apply m-auto bg-white flex justify-between left-0 absolute right-0 top-full px-4 py-4.5 max-h-[80vh] overflow-auto rounded-b-sm rounded-[20px] rounded-t-none;
   }
   .site-search__suggestions-block {
     display: -webkit-flex;
@@ -894,7 +896,7 @@
     }
     .all-header.scrolled .nav-icon,
     .all-header.not_scrolled_hover .nav-icon {
-      @apply hover:!text-primary text-thunder-100;
+      @apply hover:text-primary! text-thunder-100;
     }
     #mainmenu {
       @apply -translate-x-[110%];
@@ -921,7 +923,7 @@
 
   /* Star icon */
   .marquee-star {
-    @apply inline-flex items-center justify-center leading-none text-[32px];
+    @apply inline-flex items-center justify-center leading-none text-32;
   }
 
   .animate-marquee {
@@ -951,7 +953,7 @@
 
   /* thumbnail size */
   .thumb {
-    @apply relative overflow-hidden 2xl:w-[340px] 2xl:h-[205px] 1xl:w-[315px] 1xl:h-[195px] lt:w-[275px] lt:h-[175px] w-[210px] h-[150px] cursor-pointer border-2 border-transparent flex-shrink-0;
+    @apply relative overflow-hidden 2xl:w-[340px] 2xl:h-[205px] 1xl:w-[315px] 1xl:h-[195px] lt:w-[275px] lt:h-[175px] w-[210px] h-[150px] cursor-pointer border-2 border-transparent shrink-0;
   }
   .thumb.active {
     @apply border-white;
@@ -1024,7 +1026,7 @@
     @apply sm:max-w-full w-full;
   }
   .header-2 .header-container-scrolled {
-    @apply sm:!px-4;
+    @apply sm:px-4!;
   }
   .schedule-2 .schedule-panel table tr th {
     @apply 2xl:text-25 1xl:text-20 lt:text-18 md:text-17 text-16 2xl:leading-[35px] 1xl:leading-[30px] lg:leading-[28px] leading-[26px] font-normal font-secondary
@@ -1082,7 +1084,7 @@
   }
   .testimonial-slider .swiper-slide-prev .testimonial-img,
   .testimonial-slider .swiper-slide-next .testimonial-img {
-    @apply justify-end sm:h-[85%] h-[320px] !w-[37%] mb-0 mt-auto overflow-hidden;
+    @apply justify-end sm:h-[85%] h-[320px] w-[37%]! mb-0 mt-auto overflow-hidden;
   }
   .swiper-slide-prev .swiper-slide .testimonial-content {
     @apply hidden;
@@ -1092,19 +1094,19 @@
   }
   .swiper-slide-prev .swiper-slide .testimonial-content,
   .swiper-slide-next .swiper-slide .testimonial-content {
-    @apply hidden !w-0;
+    @apply hidden w-0!;
   }
 }
 
 /* index-3.html */
 .home-3-hero .swiper-wrapper .swiper-slide.swiper-slide-active {
-  @apply !scale-100 opacity-100;
+  @apply scale-100! opacity-100;
 }
 .home-3-hero .swiper-wrapper .swiper-slide .class-card {
   @apply 2xl:p-[22px] xl:p-5 sm:p-4 p-[10px];
 }
 .home-3-hero .swiper-wrapper .swiper-slide .class-card .card-title {
-  @apply font-primary italic 2xl:text-35 1xl:text-28 lg:text-23 lt:text-20 sm:text-18 text-[16px] 2xl:leading-[45px] 1xl:leading-[42px] xl:leading-[40px] lg:leading-[36px] lt:leading-[32px] sm:leading-[28px] leading-[24px];
+  @apply font-primary italic 2xl:text-35 1xl:text-28 lg:text-23 lt:text-20 sm:text-18 text-16 2xl:leading-[45px] 1xl:leading-[42px] xl:leading-[40px] lg:leading-[36px] lt:leading-[32px] sm:leading-[28px] leading-[24px];
 }
 .home-3-hero .swiper-wrapper .swiper-slide-active .class-card .title-arrow {
   @apply 2xl:w-[30px] 1xl:w-[26px] xl:w-6 lg:w-[22px] sm:w-5 w-[13px] h-full;
@@ -1113,7 +1115,7 @@
   @apply 2xl:w-[53px] 2xl:h-[53px] xl:w-[50px] xl:h-[50px] sm:w-[44px] sm:h-[44px] w-8 h-8 rounded-full border border-white;
 }
 .home-3-hero .swiper-wrapper .swiper-slide {
-  @apply !scale-86 m-auto opacity-40;
+  @apply scale-86! m-auto opacity-40;
 }
 /* .home-3-hero .swiper-wrapper .swiper-slide-next .class-card,
 .home-3-hero .swiper-wrapper .swiper-slide-prev .class-card {
@@ -1165,11 +1167,11 @@
   @apply text-center align-middle 2xl:p-7 1xl:p-6 xl:p-4.5 lt:p-4 sm:p-3.5 p-3 bg-whitesmoke-100;
 }
 .schedule-4 table tr td {
-  @apply text-center align-middle 1xl:p-[9px] xl:p-[7px] p-1.5 !pt-0 bg-whitesmoke-100 w-full flex items-center justify-center;
+  @apply text-center align-middle 1xl:p-[9px] xl:p-[7px] p-1.5 pt-0! bg-whitesmoke-100 w-full flex items-center justify-center;
 }
 .schedule-4 table thead tr td,
 .schedule-4 table tr:first-child td {
-  @apply 1xl:!p-[9px] xl:!p-[7px] !p-1.5;
+  @apply 1xl:p-[9px]! xl:p-[7px]! p-1.5!;
 }
 
 /* Default schedule */
@@ -1218,6 +1220,6 @@
 .slider-img {
   @apply 2xl:w-[411px] 2xl:h-[350px] 1xl:w-[400px] 1xl:h-[335px] xl:w-[390px] xl:h-[330px] lg:h-[300px] lg:w-[375px] lt:h-[270px] lt:w-[300px] md:h-[250px] md:w-[280px] sm:h-[210px] sm:w-[250px] w-[125px] h-[120px] object-cover rounded-sm overflow-hidden shrink-0;
 }
-.marquee-slider-4 .marquee-track{
-  @apply lg:gap-6 lt:gap-5 sm:gap-4.5 gap-2; 
+.marquee-slider-4 .marquee-track {
+  @apply lg:gap-6 lt:gap-5 sm:gap-4.5 gap-2;
 }

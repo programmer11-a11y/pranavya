@@ -859,7 +859,7 @@ jQuery(document).ready(function () {
     breakpoints: {
       640: { slidesPerView: 2, spaceBetween: 10, },
       768: { slidesPerView: 2.9, spaceBetween: 10, },
-      769: { slidesPerView: 2.9, spaceBetween: 15, },
+      769: { slidesPerView: 2.9, spaceBetween: 17, },
     },
   });
 
@@ -1259,7 +1259,7 @@ var swiper = new Swiper(".home-3-hero", {
   },
 });
 
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".home-3_classes", {
   slidesPerView: 1,
   spaceBetween: 20,
   navigation: {
@@ -1285,7 +1285,7 @@ var swiper = new Swiper(".home-3_instagram", {
   loop: true,
   autoplay: true,
   breakpoints: {
-    376: { slidesPerView: 2.2, paceBetween: 12, },
+    376: { slidesPerView: 2.2, spaceBetween: 12, },
     426: { slidesPerView: 2.7, spaceBetween: 12, },
     500: { slidesPerView: 3.3, spaceBetween: 12, },
     992: { slidesPerView: 4, spaceBetween: 12, },
@@ -1293,5 +1293,52 @@ var swiper = new Swiper(".home-3_instagram", {
   },
 });
 
-
 // =================== END INDEX-3.HTML ========================
+
+// =================== START INDEX-4.HTML ========================
+var swiper = new Swiper(".why-choose", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  navigation: {
+    nextEl: ".why-choose-home-4 .swiper-button-next",
+    prevEl: ".why-choose-home-4 .swiper-button-prev",
+  },
+  breakpoints: {
+    456: { slidesPerView: 2, spaceBetween: 20, },
+    769: { slidesPerView: 2, spaceBetween: 30, },
+    992: { slidesPerView: 1, spaceBetween: 30, },
+    1131: { slidesPerView: 2, spaceBetween: 20, },
+    1281: { slidesPerView: 2, spaceBetween: 25, },
+    1500: { slidesPerView: 2, spaceBetween: 30, },
+    1768: { slidesPerView: 2, spaceBetween: 40, },
+  },
+});
+
+var swiper = new Swiper(".home-4_testimonial", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+
+    577: { slidesPerView: 2, spaceBetween: 16, },
+    769: { slidesPerView: 2, spaceBetween: 20, },
+    992: { slidesPerView: 2, spaceBetween: 20, },
+    1131: { slidesPerView: 3, spaceBetween: 20, },
+    1281: { slidesPerView: 3, spaceBetween: 24, },
+  },
+});
+
+$(document).ready(function () {
+  $('[data-marquee]').each(function () {
+    const $track = $(this);
+    const $items = $track.children().clone();
+
+    // Append cloned items once (now total = 2x)
+    $track.append($items);
+  });
+});
+// =================== END INDEX-4.HTML ========================

@@ -132,6 +132,28 @@
 
   /* Spacing */
   /* --spacing-30: 30px; */
+   /* ---------- KEYFRAMES ---------- */
+   @keyframes slide-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes slide-right {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  /* ---------- ANIMATIONS ---------- */
+  --animate-slide-left: slide-left 35s linear infinite;
+  --animate-slide-right: slide-right 35s linear infinite;
 }
 
 /* ================== BAASKERVIILLE FONTS ====================== */
@@ -390,7 +412,7 @@
   }
   h1,
   .h1 {
-    @apply 2xl:text-90 1xl:text-80 xl:text-77 lg:text-64 md:text-48 sm:text-36 text-28 2xl:leading-[110px] 1xl:leading-[100px] xl:leading-[90px] lg:leading-[74px] md:leading-[58px] sm:leading-[46px] leading-[38px];
+    @apply 2xl:text-100 1xl:text-80 xl:text-77 lg:text-64 md:text-48 sm:text-36 text-28 2xl:leading-[110px] 1xl:leading-[100px] xl:leading-[90px] lg:leading-[74px] md:leading-[58px] sm:leading-[46px] leading-[38px];
   }
   h2,
   .h2 {
@@ -398,7 +420,7 @@
   }
   h3,
   .h3 {
-    @apply 2xl:text-35 1xl:text-28 xl:text-25 lg:text-23 lt:text-20 text-18 2xl:leading-[45px] 1xl:leading-[42px] xl:leading-[38px] lg:leading-[36px] lt:leading-[32px] sm:leading-[28px] leading-[24px];
+    @apply 2xl:text-35 1xl:text-28 xl:text-25 lg:text-23 lt:text-20 md:text-19 text-18 2xl:leading-[45px] 1xl:leading-[42px] xl:leading-[38px] lg:leading-[36px] lt:leading-[32px] sm:leading-[28px] leading-[24px];
   }
   /* h4,
   .h4 {
@@ -439,7 +461,7 @@
     @apply border border-primary bg-[#FBFAF9] text-primary hover:bg-primary focus:bg-primary active:bg-primary hover:text-white active:text-white focus:text-white uppercase font-medium;
   }
   .btn-secondary {
-    @apply uppercase border font-medium text-primary border-primary bg-[#FBFAF9] hover:text-white focus:text-white active:text-white hover:bg-primary active:bg-primary focus:bg-primary;
+    @apply uppercase border font-medium text-primary border-primary bg-[#FBFAF9] hover:text-white focus:text-white active:text-white hover:!bg-primary active:bg-primary focus:bg-primary;
   }
   .btn-secondary span {
     @apply underline decoration-[1px] hover:no-underline;
@@ -628,9 +650,9 @@
     @apply !text-black;
   }
   /* General SVG elements in header (but not nav-icon) should be black when bg-white */
-  .all-header.bg-white svg:not(.nav-icon) {
+  /* .all-header.bg-white svg:not(.nav-icon) {
     @apply text-black;
-  }
+  } */
 
   .nav-icon,
   .menu_link_text {
@@ -792,7 +814,8 @@
     @apply m-0 p-0 ml-[18px];
   }
   .site-search__suggestions-block {
-    @apply sm:w-[95%] w-[93%] m-auto bg-white flex justify-between left-0 absolute right-0 top-full px-4 py-[1.125rem] max-h-[80vh] overflow-auto rounded-b rounded-[20px] rounded-t-none;
+    @apply m-auto bg-white flex justify-between left-0 absolute right-0 top-full px-4 py-[1.125rem] max-h-[80vh] overflow-auto rounded-b rounded-[20px] rounded-t-none;
+    /* @apply sm:w-[95%] w-[93%] m-auto bg-white flex justify-between left-0 absolute right-0 top-full px-4 py-[1.125rem] max-h-[80vh] overflow-auto rounded-b rounded-[20px] rounded-t-none; */
   }
   .site-search__suggestions-block {
     display: -webkit-flex;
@@ -1118,12 +1141,19 @@
 .schedule-3 table {
   @apply border-separate w-full lg:border-spacing-3 lt:border-spacing-2 border-spacing-1.5 lt:mx-auto sm:min-w-[950px] min-w-[840px];
 }
+.schedule-4 table {
+  @apply border-separate w-full xl:border-spacing-x-3 lt:border-spacing-x-2 border-spacing-x-1.5 lt:mx-auto max-lt:min-w-[1295px] max-sm:min-w-[1000px];
+}
 
 .schedule-3 .schedule-panel table thead tr {
   @apply table-row;
 }
+.schedule-4 table tr {
+  @apply flex 1xl:gap-[11px] xl:gap-[9px] md:gap-2 gap-1.5 w-full;
+}
 
-.schedule-3 .schedule-panel table th {
+.schedule-3 .schedule-panel table th,
+.schedule-4 .schedule-panel table th {
   @apply uppercase text-primary bg-whitesmoke-100 2xl:text-25 1xl:text-20 lt:text-18 md:text-17 text-16 2xl:leading-[35px] 1xl:leading-[30px] lg:leading-[28px] leading-[26px] font-normal font-secondary text-center 2xl:p-7 1xl:p-6 xl:p-4.5 lt:p-4 sm:p-3.5 p-3;
 }
 
@@ -1133,6 +1163,13 @@
 
 .schedule-3 .schedule-panel table td {
   @apply text-center align-middle 2xl:p-7 1xl:p-6 xl:p-4.5 lt:p-4 sm:p-3.5 p-3 bg-whitesmoke-100;
+}
+.schedule-4 table tr td {
+  @apply text-center align-middle 1xl:p-[9px] xl:p-[7px] p-1.5 !pt-0 bg-whitesmoke-100 w-full flex items-center justify-center;
+}
+.schedule-4 table thead tr td,
+.schedule-4 table tr:first-child td {
+  @apply 1xl:!p-[9px] xl:!p-[7px] !p-1.5;
 }
 
 /* Default schedule */
@@ -1177,4 +1214,10 @@
 .home-3_instagram .slider-custom-arrow.swiper-button-prev::after,
 .home-3_instagram .slider-custom-arrow.swiper-button-next::after {
   @apply hidden;
+}
+.slider-img {
+  @apply 2xl:w-[411px] 2xl:h-[350px] 1xl:w-[400px] 1xl:h-[335px] xl:w-[390px] xl:h-[330px] lg:h-[300px] lg:w-[375px] lt:h-[270px] lt:w-[300px] md:h-[250px] md:w-[280px] sm:h-[210px] sm:w-[250px] w-[125px] h-[120px] object-cover rounded-sm overflow-hidden shrink-0;
+}
+.marquee-slider-4 .marquee-track{
+  @apply lg:gap-6 lt:gap-5 sm:gap-4.5 gap-2; 
 }

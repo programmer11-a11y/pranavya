@@ -6376,6 +6376,11 @@
       margin-top: calc(var(--spacing) * 5);
     }
   }
+  .lg\:mt-6 {
+    @media (width >= 1131px) {
+      margin-top: calc(var(--spacing) * 6);
+    }
+  }
   .lg\:mt-7 {
     @media (width >= 1131px) {
       margin-top: calc(var(--spacing) * 7);
@@ -8304,6 +8309,11 @@
   .\31 xl\:mt-7 {
     @media (width >= 1500px) {
       margin-top: calc(var(--spacing) * 7);
+    }
+  }
+  .\31 xl\:mt-7\.5 {
+    @media (width >= 1500px) {
+      margin-top: calc(var(--spacing) * 7.5);
     }
   }
   .\31 xl\:mt-8 {

@@ -29,7 +29,7 @@
     <main class="h-full">
         <!-- ====== Header ====== -->
         <div class="bg_body_box fixed inset-0 w-full h-full backdrop-blur-xl bg-primary/35 z-50"></div>
-        <header class="header-2 fixed top-0 left-0 right-0 z-50">
+        <header class="header fixed top-0 left-0 right-0 z-50 bg-whitesmoke-100 no-toggle-color">
             <!-- ============================= -->
             <!-- WISHLIST SIDEBAR  -->
             <!-- ============================= -->
@@ -559,7 +559,7 @@
                         </div>
                         <!-- ====== Mobile Menu (Offcanvas) ====== -->
                         <aside id="mainmenu"
-                            class="mainmenu max-[1221px]:fixed max-[1221px]:h-screen max-[1221px]:inset-y-0 max-[1221px]:left-0 max-[1221px]:top-0 max-[1221px]:z-60 max-[1221px]:w-screen max-[1221px]:max-w-screen max-[1221px]:bg-white max-[1221px]:border-r max-[1221px]:border-primary/20 max-[1221px]:transition-transform max-[1221px]:duration-300 max-[1221px]:ease-in-out min-[1221px]:px-0 px-4">
+                            class="mainmenu max-[1221px]:fixed max-[1221px]:h-screen max-[1221px]:inset-y-0 left-0! top-0! max-[1221px]:z-60 max-[1221px]:w-screen max-[1221px]:max-w-screen max-[1221px]:bg-white max-[1221px]:border-r max-[1221px]:border-primary/20 max-[1221px]:transition-transform max-[1221px]:duration-300 max-[1221px]:ease-in-out min-[1221px]:px-0 px-4">
                             <div
                                 class="min-[1221px]:hidden flex items-center justify-between py-4 border-b border-primary/20">
                                 <div class="flex items-center gap-2">
@@ -2308,7 +2308,7 @@
                             </a>
                             <a href="./login.html" class="btn btn-secondary hidden min-[1221px]:inline-block">login</a>
                             <button name="mobile-menu-view" aria-label="Open menu"
-                                class="min-[1221px]:hidden text-white border-0 bg-transparent">
+                                class="min-[1221px]:hidden flex border-0 bg-transparent">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14"
                                     fill="none" class="sm:w-5 sm:h-[14px] w-[15px] h-[11px]">
                                     <path d="M0 0H20V2H0V0ZM0 6H20V8H0V6ZM0 12H20V14H0V12Z" fill="currentColor" />
@@ -2321,1572 +2321,638 @@
         </header>
         <!-- ====== Header ====== -->
 
-        <!-- ====== Hero Section ====== -->
-        <!-- HERO SLIDER -->
-        <section
-            class="relative lg:min-h-screen lt:min-h-[90vh] sm:min-h-[78vh] min-[340px]:min-h-[80vh] min-h-screen flex items-center 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10">
-            <!-- Container -->
-            <div class="container mx-auto z-1 relative w-full px-4">
+        <!-- ====== Start Page Heading ====== -->
+        <section class="relative 1xl:pt-20 xl:pt-17 lg:pt-14 md:pt-12 sm:pt-11 pt-10 xl:mb-20 lg:mb-16 md:mb-12 sm:mb-11 mb-10
+            pb-[60px] bg-whitesmoke-100">
+            <div class="container">
+                <div class="flex flex-col items-center justify-center max-w-[70%] w-full text-center mx-auto">
+                    <h1 class="uppercase text-primary text-center space-y-2.5"> Join Your Journey</h1>
+                    <p>
+                        Experience yoga that grows with you-practice at your pace, on your path. Our thoughtfully
+                        designed memberships unlock exclusive classes, special events, and mindful perks to support your
+                        body.
+                    </p>
+                </div>
+
+                <!-- Decorative Flower -->
                 <div
-                    class="flex lt:flex-row flex-col lt:items-center items-start justify-between w-full z-1 relative xl:pt-18 lt:pt-14 sm:pt-19 pt-15 pb-5 lt:gap-10 gap-7">
-                    <!-- Left Content -->
-                    <div class="w-full 2xl:max-w-[840px] 1xl:max-w-[750px] max-w-full">
-                        <!-- Offer Badge -->
-                        <h3 class="text-white font-primary italic font-medium xl:mb-7.5 lg:mb-6 md:mb-5 sm:mb-4 mb-2.5">
-                            get to 40% Off
-                        </h3>
+                    class="pointer-events-none absolute top-0 bottom-auto left-auto right-0 lg:w-[14.2%] w-[15%] hidden md:block opacity-30">
+                    <img decoding="async" src="./image/flower-shape.svg" alt="decor"
+                        class="w-full h-full object-contain" />
+                </div>
+            </div>
+        </section>
+        <!-- ====== End Page Heading ====== -->
 
-                        <!-- Main Heading -->
-                        <h1 class="text-white font-normal uppercase md:mb-5 mb-3.5">
-                            Find Stillness in Motion
-                        </h1>
+        <!-- ====== Start Package Heading ====== -->
 
-                        <!-- Description -->
-                        <p
-                            class="font-primary font-normal text-white 1xl:max-w-[65%] lg:max-w-[80%] sm:max-w-[90%] max-w-[380px] w-full 2xl:mb-12 1xl:mb-10 xl:mb-8 lg:mb-7 mb-6">
-                            Pause the rush of life with yoga designed to ground, heal, and energize. All bodies and
-                            levels welcome.
-                        </p>
+        <section class="relative 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10 w-full">
+            <div class="container">
+                <!-- Toggle -->
+                <div
+                    class="flex bg-primary rounded-full border border-primary/50 w-fit mx-auto 1xl:mb-[50px] xl:mb-10 mb-8">
+                    <button id="monthlyBtn"
+                        class="toggle-btn 1xl:px-12 xl:px-10 px-8 1xl:py-4 xl:py-3 py-2.5 font-medium rounded-full bg-white text-primary transition">
+                        <p>MONTHLY</p>
+                    </button>
 
-                        <!-- CTA Button -->
-                        <a href="./plans.html" class="btn btn-secondary bg-white">View
-                            Plans</a>
-                    </div>
+                    <button id="yearlyBtn"
+                        class="toggle-btn 1xl:px-12 xl:px-10 px-8 1xl:py-4 xl:py-3 py-2.5 font-medium rounded-full bg-primary text-white transition">
+                        <p>ANNUALLY</p>
+                    </button>
+                </div>
 
+
+                <!-- ================= MONTHLY PLANS ================= -->
+                <!-- MONTHLY -->
+                <div class="monthly-plans grid lg:grid-cols-3 xl:gap-6 lg:gap-4.5 lt:gap-4 gap-5">
+
+                    <!-- 1st price -->
                     <div
-                        class="2xl:max-w-[690px] 1xl:max-w-[636px] xl:max-w-[535px] lt:max-w-[518px] w-full ml-auto mr-0 lg:space-y-6 space-y-4">
-                        <!-- Card 1: Bring a Friend -->
-                        <div
-                            class="bg-white rounded-[10px] shadow-xl 1xl:p-[30px] xl:p-7 lg:p-5.5 p-4 relative overflow-hidden lt:w-full md:w-[70%] sm:w-[81%] w-full">
-                            <img src="./image/card-back-banner-1.webp" alt="banner"
-                                class="w-full h-full object-cover opacity-10 absolute top-0 left-0 pointer-events-none" />
-                            <!-- Discount Badge -->
-                            <div
-                                class="absolute 1xl:top-0 1xl:right-0 lg:-top-2 lg:-right-2 lt:-top-3 lt:-right-3 -top-4 -right-4">
-                                <div class="relative">
-                                    <img src="./image/percentage-back-1.png" alt="precentage"
-                                        class="w-full h-full object-cover" />
-                                    <div
-                                        class="absolute 1xl:left-5 1xl:bottom-5 lt:left-4 lt:bottom-4 left-2 bottom-2 inset-0 flex flex-col items-center justify-center text-white">
-                                        <p class="text-center">40%
-                                            <br />off
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h3
-                                    class="uppercase text-primary sm:max-w-[80%] max-w-[75%] 1xl:mb-[17px] sm:mb-3 mb-2 max-[530px]:text-sm">
-                                    Bring a Friend, Get a Class Free
-                                </h3>
-
-                                <p
-                                    class="1xl:mb-[21px] lg:mb-[18px] max-[530px]:mb-2 mb-[15px] 1xl:max-w-[95%] lt:max-w-full sm:max-w-[90%] max-w-[85%] w-full max-[530px]:text-[11px]">
-                                    Enjoy 15% off your next membership or class pack. Whether you're dropping in or
-                                    signing up long-term, save you stretch.
-                                </p>
-
+                        class="border border-primary/30 bg-whitesmoke-100 2xl:p-7.5 1xl:p-6 lg:p-5 p-4 flex flex-col justify-between">
+                        <div>
+                            <h3 class="uppercase 1xl:mb-3.5 mb-2.5">Essence Plan</h3>
+                            <p class="1xl:mb-6 sm:mb-5 mb-2.5">
+                                Beginners or occasional yogis seeking gentle consistency and community connection.
+                            </p>
+                            <div class="border-t border-primary/50 1xl:pt-3 pt-2">
+                                <h3 class="font-primary capitalize font-medium italic 1xl:mb-2 mb-1"><span
+                                        class="h2">$39</span>
+                                    / month</h3>
+                                <p class="1xl:mb-5 mb-3.5 font-medium">What's Included:</p>
                                 <ul
-                                    class="flex flex-wrap max-[530px]:flex-col min-[530px]:items-center w-full min-[530px]:gap-3 gap-0 list-disc 1xl:mb-7 lg:mb-5 max-[530px]:mb-3.5 mb-2">
-                                    <li class="font-medium text-thunder-100 uppercase ml-4">
-                                        <p class="max-[530px]:text-[11px]">
-                                            Valid For:<span class="text-primary normal-case">
-                                                All users (one time)</span>
-                                        </p>
+                                    class="list-disc text-primary font-medium 1xl:space-y-3 xl:space-y-2 space-y-1.5 pl-5 1xl:mb-5 lt:mb-4 mb-3">
+                                    <li>
+                                        <p>4 In-Studio Group Yoga Classes per Month</p>
                                     </li>
-                                    <li class="font-medium text-thunder-100 uppercase ml-4">
-                                        <p class="max-[530px]:text-[11px]">
-                                            Expires:<span class="text-primary normal-case">
-                                                7 years</span>
-                                        </p>
+                                    <li>
+                                        <p>Access to Monthly Community Events</p>
+                                    </li>
+                                    <li>
+                                        <p>Welcome Kit with Studio Essentials</p>
+                                    </li>
+                                    <li>
+                                        <p>Basic Member Portal Access</p>
+                                    </li>
+                                    <li>
+                                        <p>1 Bonus Pass for a Friend (One-Time)</p>
                                     </li>
                                 </ul>
-
-                                <div
-                                    class="flex flex-col min-[530px]:flex-row min-[530px]:items-end items-start justify-between min-[530px]:gap-4 gap-2">
-                                    <a href="./book-class.html"
-                                        class="btn btn-secondary flex items-center justify-between gap-[17px] bg-white">
-                                        BOOK NOW
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
-                                            viewBox="0 0 14 14" fill="none">
-                                            <path
-                                                d="M1.00003 12.6234C1.00003 12.6234 8.97683 4.64654 12.2993 1.32401M12.2993 1.32401L12.624 9.83157M12.2993 1.32401L3.79115 0.999894"
-                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                        </svg>
-                                    </a>
-                                    <div class="bg-primary text-white px-4 py-2 rounded-full text-[11px] uppercase">
-                                        Coupon Code: LOYALTY50
-                                    </div>
-                                </div>
+                                <p class="flex items-center gap-3 font-medium">
+                                    <span class="shrink-0 whitespace-nowrap lg:size-6 sm:size-5 size-4">
+                                        <img src="./image/bullets-point.svg" alt="point" />
+                                    </span>
+                                    Includes 14-Day Trial
+                                </p>
                             </div>
                         </div>
-
-                        <!-- Card 2: Personal Yoga Trainer -->
-                        <div
-                            class="bg-white rounded-[10px] 1xl:p-[30px] xl:p-7 lg:p-5.5 p-4 relative overflow-hidden lt:w-full md:w-[70%] sm:w-[81%] w-full">
-                            <img src="./image/card-back-banner-1.webp" alt="banner"
-                                class="w-full h-full object-cover opacity-10 absolute top-0 left-0 pointer-events-none" />
-
-                            <!-- Discount Badge -->
-                            <div class="absolute top-0 left-auto 1xl:right-0 -right-7 h-full pointer-events-none">
-                                <div class="relative h-full pointer-events-none">
-                                    <img src="./image/percentage-back-banner-2.png" alt="percentage"
-                                        class="w-full h-full ml-auto mr-0 opacity-10 pointer-events-none" />
-                                    <div
-                                        class="absolute inset-0 1xl:right-3 right-9 left-auto flex flex-row items-center gap-2 justify-center">
-                                        <div class="flex flex-col items-end gap-[10px]">
-                                            <h3 class="font-medium italic text-primary font-primary 2xl:text-37">
-                                                50%
-                                            </h3>
-                                            <h5 class="text-thunder-100 vertical-text">Discount</h5>
-                                        </div>
-                                        <p class="p2 2xl:text-16 text-thunder-100 vertical-text pb-20">
-                                            First 100 Student
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="w-full">
-                                <h3
-                                    class="text-primary uppercase 1xl:mb-5 lg:mb-4 min-[530px]:mb-2 mb-1 max-[530px]:text-sm">
-                                    Personal Yoga Trainer
-                                </h3>
-
-                                <div
-                                    class="flex max-[530px]:items-center items-start justify-start gap-2 min-[530px]:mb-2.5 mb-1.5">
-                                    <img src="./image/bag.png" alt="bag"
-                                        class="1xl:w-auto lg:w-5.5 max-[530px]:w-4 w-5 h-auto 1xl:mt-[2px]" />
-                                    <h5 class="text-primary uppercase max-[530px]:text-sm">
-                                        TRAINER NAME:
-                                        <span class="text-thunder-100">
-                                            ANAYA R.</span>
-                                    </h5>
-                                </div>
-
-                                <div>
-                                    <div
-                                        class="flex items-start 1xl:mb-5 lg:mb-3 min-[530px]:mb-2 mb-1 gap-2.5 lg:w-full lt:w-1/2 w-full max-[530px]:w-[58%]">
-                                        <div
-                                            class="size-[5px] 2xl:mt-4 1xl:mt-3.5 lt:mt-3 mt-2.5 bg-primary rounded-full shrink-0">
-                                        </div>
-                                        <p class="text-primary font-medium max-[530px]:text-[11px]">
-                                            Certified Yoga Therapist | 10+ Years of Experience
-                                        </p>
-                                    </div>
-                                    <ul
-                                        class="min-[530px]:flex flex-wrap items-center w-full lg:gap-12 min-[530px]:gap-6 gap-0 list-disc min-[530px]:mb-2 max-[530px]:w-[80%]">
-                                        <li class="font-medium text-thunder-100 uppercase ml-4">
-                                            <p class="max-[530px]:text-[11px]">
-                                                Valid For:
-                                                <span class="text-primary normal-case">7
-                                                    years</span>
-                                            </p>
-                                        </li>
-                                        <li class="font-medium text-thunder-100 uppercase ml-4">
-                                            <p class="max-[530px]:text-[11px]">
-                                                Expires:<span class="text-primary normal-case">
-                                                    7 years</span>
-                                            </p>
-                                        </li>
-                                    </ul>
-                                    <ul class="w-full list-disc min-[530px]:mb-[18px] mb-4">
-                                        <li class="font-medium text-thunder-100 uppercase ml-4">
-                                            <p class="max-[530px]:text-[11px]">
-                                                Terms:<span class="text-primary normal-case">
-                                                    One-time use per
-                                                    user.</span>
-                                            </p>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div
-                                    class="flex flex-col min-[530px]:flex-row min-[530px]:items-end items-start justify-between min-[530px]:gap-4 gap-2">
-                                    <a href="./book-class.html"
-                                        class="btn btn-secondary flex items-center justify-between gap-[17px] bg-white">
-                                        BOOK NOW
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
-                                            viewBox="0 0 14 14" fill="none">
-                                            <path
-                                                d="M1.00003 12.6234C1.00003 12.6234 8.97683 4.64654 12.2993 1.32401M12.2993 1.32401L12.624 9.83157M12.2993 1.32401L3.79115 0.999894"
-                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                        </svg>
-                                    </a>
-                                    <div class="bg-primary text-white px-4 py-2 rounded-full text-[11px] uppercase">
-                                        Coupon Code: LOYALTY50
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <button class="btn btn-secondary 1xl:mt-11 lg:mt-9 sm:mt-7 mt-6">BOOK MONTHLY</button>
                     </div>
+
+                    <!-- 2nd price -->
+                    <div
+                        class="border border-primary/30 bg-whitesmoke-100 2xl:p-7.5 1xl:p-6 lg:p-5 p-4 flex flex-col justify-between">
+                        <div>
+                            <h3 class="uppercase 1xl:mb-3.5 mb-2.5">Balance Plan</h3>
+                            <p class="1xl:mb-6 sm:mb-5 mb-2.5">
+                                Regular practitioners looking to deepen their practice with more flexibility and perks.
+                            </p>
+                            <div class="border-t border-primary/50 1xl:pt-3 pt-2">
+                                <h3 class="font-primary capitalize font-medium italic 1xl:mb-2 mb-1"><span
+                                        class="h2">$69</span>
+                                    / month</h3>
+                                <p class="1xl:mb-5 mb-3.5 font-medium">What's Included:</p>
+                                <ul
+                                    class="list-disc text-primary font-medium 1xl:space-y-3 xl:space-y-2 space-y-1.5 pl-5 1xl:mb-5 mb-4">
+                                    <li>
+                                        <p>8 Group Yoga Classes per Month</p>
+                                    </li>
+                                    <li>
+                                        <p>Priority Class Booking</p>
+                                    </li>
+                                    <li>
+                                        <p>1 Monthly Guest Pass</p>
+                                    </li>
+                                    <li>
+                                        <p>10% Discount on Workshops & Retreats</p>
+                                    </li>
+                                    <li>
+                                        <p>Access to On-Demand Class Library</p>
+                                    </li>
+                                    <li>
+                                        <p>Member Dashboard & Progress Tracking</p>
+                                    </li>
+                                </ul>
+                                <p class="flex items-center gap-3 font-medium">
+                                    <span class="shrink-0 whitespace-nowrap lg:size-6 sm:size-5 size-4">
+                                        <img src="./image/bullets-point.svg" alt="point" class="w0" />
+                                    </span>
+                                    Includes 14-Day Trial
+                                </p>
+                            </div>
+                        </div>
+                        <button class="btn btn-secondary 1xl:mt-11 lg:mt-9 sm:mt-7 mt-6">BOOK MONTHLY</button>
+                    </div>
+
+                    <!-- 3rd price -->
+                    <div
+                        class="border border-primary/30 bg-whitesmoke-100 2xl:p-7.5 1xl:p-6 lg:p-5 p-4 flex flex-col justify-between">
+                        <div>
+                            <h3 class="uppercase 1xl:mb-3.5 mb-2.5">Elevate Plan</h3>
+                            <p class="1xl:mb-6 sm:mb-5 mb-2.5">
+                                Committed yogis ready for transformational growth and holistic integration.
+                            </p>
+                            <div class="border-t border-primary/50 1xl:pt-3 pt-2">
+                                <h3 class="font-primary capitalize font-medium italic 1xl:mb-2 mb-1"><span
+                                        class="h2">$119</span>
+                                    / month</h3>
+                                <p class="1xl:mb-5 mb-3.5 font-medium">What's Included:</p>
+                                <ul
+                                    class="list-disc text-primary font-medium 1xl:space-y-3 xl:space-y-2 space-y-1.5 pl-5 1xl:mb-5 mb-4">
+                                    <li>
+                                        <p>Unlimited Group Classes (Studio & Online)</p>
+                                    </li>
+                                    <li>
+                                        <p>1 Private Yoga Session per Month</p>
+                                    </li>
+                                    <li>
+                                        <p>Early Registration for Events & Retreats</p>
+                                    </li>
+                                    <li>
+                                        <p>15% Discount on Workshops, Courses, and Merchandise</p>
+                                    </li>
+                                    <li>
+                                        <p>Exclusive Monthly Guided Meditation Recording</p>
+                                    </li>
+                                    <li>
+                                        <p>Priority Support & Direct Instructor Access</p>
+                                    </li>
+                                </ul>
+                                <p class="flex items-center gap-3 font-medium">
+                                    <span class="shrink-0 whitespace-nowrap lg:size-6 sm:size-5 size-4">
+                                        <img src="./image/bullets-point.svg" alt="point" class="w0" />
+                                    </span>
+                                    Includes 14-Day Trial
+                                </p>
+                            </div>
+                        </div>
+                        <button class="btn btn-secondary 1xl:mt-11 lg:mt-9 sm:mt-7 mt-6">BOOK MONTHLY</button>
+                    </div>
+
                 </div>
-            </div>
 
-            <!-- center Image -->
-            <div class="absolute right-0 top-0 w-full h-full flex flex-col">
-                <!-- Image -->
-                <img decoding="async" src="./image/home-4-hero-banner.webp" alt="Hero Images"
-                    class="absolute inset-0 w-full h-full object-cover" />
+                <!-- ================= YEARLY PLANS ================= -->
+                <div class="yearly-plans grid lg:grid-cols-3 xl:gap-6 lg:gap-4.5 lt:gap-4 gap-5">
 
-                <!-- Gradient Overlay -->
-                <div
-                    class="absolute inset-0 bg-linear-to-br from-[#532D1C] to-black/0 backdrop-blur-[19px] pointer-events-none">
+                    <!-- 1st price -->
+                    <div
+                        class="border border-primary/30 bg-whitesmoke-100 2xl:p-7.5 1xl:p-6 lg:p-5 p-4 flex flex-col justify-between">
+                        <div>
+                            <h3 class="uppercase 1xl:mb-3.5 mb-2.5">Balance Plan</h3>
+                            <p class="1xl:mb-6 sm:mb-5 mb-2.5">
+                                Intermediate-level yogis who practice weekly and enjoy community perks.
+                            </p>
+                            <div class="border-t border-primary/50 1xl:pt-3 pt-2">
+                                <h3 class="font-primary capitalize font-medium italic 1xl:mb-2 mb-1"><span
+                                        class="h2">$699</span>
+                                    / month</h3>
+                                <p class="1xl:mb-5 mb-3.5 font-medium">What's Included:</p>
+                                <ul
+                                    class="list-disc text-primary font-medium 1xl:space-y-3 xl:space-y-2 space-y-1.5 pl-5 1xl:mb-5 lt:mb-4 mb-3">
+                                    <li>
+                                        <p>8 Group Classes per Month (96/year)</p>
+                                    </li>
+                                    <li>
+                                        <p>Monthly Guest Pass</p>
+                                    </li>
+                                    <li>
+                                        <p>Priority Booking Year-Round</p>
+                                    </li>
+                                    <li>
+                                        <p>10% Discount on Retreats & Products</p>
+                                    </li>
+                                    <li>
+                                        <p>Personalized Practice Progress Report (Bi-Annual)</p>
+                                    <li>
+                                        <p>Early Access to New Programs</p>
+                                    </li>
+                                </ul>
+                                <p class="flex items-center gap-3 font-medium">
+                                    <span class="shrink-0 whitespace-nowrap lg:size-6 sm:size-5 size-4">
+                                        <img src="./image/bullets-point.svg" alt="point" />
+                                    </span>
+                                    Includes 14-Day Trial
+                                </p>
+                            </div>
+                        </div>
+                        <button class="btn btn-secondary 1xl:mt-11 lg:mt-9 sm:mt-7 mt-6">BOOK MONTHLY</button>
+                    </div>
+
+                    <!-- 2nd price -->
+                    <div
+                        class="border border-primary/30 bg-whitesmoke-100 2xl:p-7.5 1xl:p-6 lg:p-5 p-4 flex flex-col justify-between">
+                        <div>
+                            <h3 class="uppercase 1xl:mb-3.5 mb-2.5">Essence Plan</h3>
+                            <p class="1xl:mb-6 sm:mb-5 mb-2.5">
+                                Casual yogis who want long-term access to yoga without a monthly hassle.
+                            </p>
+                            <div class="border-t border-primary/50 1xl:pt-3 pt-2">
+                                <h3 class="font-primary capitalize font-medium italic 1xl:mb-2 mb-1"><span
+                                        class="h2">$399</span>
+                                    / month</h3>
+                                <p class="1xl:mb-5 mb-3.5 font-medium">What's Included:</p>
+                                <ul
+                                    class="list-disc text-primary font-medium 1xl:space-y-3 xl:space-y-2 space-y-1.5 pl-5 1xl:mb-5 mb-4">
+                                    <li>
+                                        <p>4 Group Classes per Month (48/year)</p>
+                                    </li>
+                                    <li>
+                                        <p>Access to All Community Events</p>
+                                    </li>
+                                    <li>
+                                        <p>Welcome Tote Bag + Yoga Mat</p>
+                                    </li>
+                                    <li>
+                                        <p>Annual Gratitude Gift Box</p>
+                                    </li>
+                                    <li>
+                                        <p>1 Bonus Class Credit</p>
+                                    </li>
+                                </ul>
+                                <p class="flex items-center gap-3 font-medium">
+                                    <span class="shrink-0 whitespace-nowrap lg:size-6 sm:size-5 size-4">
+                                        <img src="./image/bullets-point.svg" alt="point" class="w0" />
+                                    </span>
+                                    Includes 14-Day Trial
+                                </p>
+                            </div>
+                        </div>
+                        <button class="btn btn-secondary 1xl:mt-11 lg:mt-9 sm:mt-7 mt-6">BOOK MONTHLY</button>
+                    </div>
+
+                    <!-- 3rd price -->
+                    <div
+                        class="border border-primary/30 bg-whitesmoke-100 2xl:p-7.5 1xl:p-6 lg:p-5 p-4 flex flex-col justify-between">
+                        <div>
+                            <h3 class="uppercase 1xl:mb-3.5 mb-2.5">Elevate Plan</h3>
+                            <p class="1xl:mb-6 sm:mb-5 mb-2.5">
+                                Dedicated yogis seeking a fully immersive and supported experience all year.
+                            </p>
+                            <div class="border-t border-primary/50 1xl:pt-3 pt-2">
+                                <h3 class="font-primary capitalize font-medium italic 1xl:mb-2 mb-1"><span
+                                        class="h2">$1199</span>
+                                    / month</h3>
+                                <p class="1xl:mb-5 mb-3.5 font-medium">What's Included:</p>
+                                <ul
+                                    class="list-disc text-primary font-medium 1xl:space-y-3 xl:space-y-2 space-y-1.5 pl-5 1xl:mb-5 mb-4">
+                                    <li>
+                                        <p>Unlimited Classes (In-Studio & Online)</p>
+                                    </li>
+                                    <li>
+                                        <p>12 Private Sessions (1/Month)</p>
+                                    </li>
+                                    <li>
+                                        <p>Monthly Wellness Coaching Check-In</p>
+                                    </li>
+                                    <li>
+                                        <p>VIP Invitations to All Special Events</p>
+                                    </li>
+                                    <li>
+                                        <p>15% Discount on Workshops, Programs & Products</p>
+                                    </li>
+                                    <li>
+                                        <p>Year-End Reflection & Goal-Setting Session</p>
+                                    </li>
+                                </ul>
+                                <p class="flex items-center gap-3 font-medium">
+                                    <span class="shrink-0 whitespace-nowrap lg:size-6 sm:size-5 size-4">
+                                        <img src="./image/bullets-point.svg" alt="point" class="w0" />
+                                    </span>
+                                    Includes 14-Day Trial
+                                </p>
+                            </div>
+                        </div>
+                        <button class="btn btn-secondary 1xl:mt-11 lg:mt-9 sm:mt-7 mt-6">BOOK MONTHLY</button>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- ====== End Hero Section ====== -->
+        <!-- ====== End Package Heading ====== -->
 
-        <!-- ====== About Us Section ====== -->
-        <section class="relative bg-white 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10">
-            <div class="container">
-                <div
-                    class="grid lt:grid-cols-2 grid-cols-1 items-center 2xl:gap-[135px] 1xl:gap-[80px] lg:gap-[50px] gap-[30px]">
-                    <!-- Right: Content -->
-                    <div class="w-full">
-                        <h3
-                            class="text-thunder-100 font-primary italic font-medium 1xl:mb-[30px] xl:mb-6 md:mb-[18px] sm:mb-4 mb-2.5">
-                            Breathe In. Begin Again.
-                        </h3>
-                        <h2 class="text-primary font-normal uppercase 1xl:mb-[25px] mb-3">
-                            Ancient Practice. Present Moment.
-                        </h2>
-                        <p class="text-thunder-100 xl:mb-5 mb-4">
-                            At Pranavya Yoga, we believe yoga is more than movement — it's a mindful journey toward
-                            balance, clarity, and inner peace. Our studio blends ancient yogic wisdom with a modern,
-                            inclusive approach, offering a safe space for every body and every level. Whether you're
-                            joining us in-studio or online, our certified instructors guide you through personalized.
-                        </p>
-                        <p class="font-medium">
-                            We don’t just teach poses — we teach presence, breath, and connection.
-                        </p>
-
-                        <!-- Bullets -->
-                        <ul
-                            class="1xl:mt-7 sm:mt-5 mt-4 flex flex-col items-start justify-center 2xl:gap-5 1xl:gap-4 gap-3">
-                            <li class="flex items-center md:gap-[11px] gap-2">
-                                <span class="shrink-0 whitespace-nowrap 1xl:w-7.5 xl:w-7 lg:w-6 md:w-5 w-4 h-full">
-                                    <img decoding="async" src="./image/bullets-point.svg" alt="Bullets Point" />
-                                </span>
-                                <p class="text-primary font-medium p2">
-                                    Small class sizes for personal attention
-                                </p>
-                            </li>
-                            <li class="flex items-center md:gap-[11px] gap-2">
-                                <span class="shrink-0 whitespace-nowrap 1xl:w-7.5 xl:w-7 lg:w-6 md:w-5 w-4 h-full">
-                                    <img decoding="async" src="./image/bullets-point.svg" alt="Bullets Point" />
-                                </span>
-                                <p class="text-primary font-medium p2">
-                                    Certified, compassionate instructors
-                                </p>
-                            </li>
-                            <li class="flex items-center md:gap-[11px] gap-2">
-                                <span class="shrink-0 whitespace-nowrap 1xl:w-7.5 xl:w-7 lg:w-6 md:w-5 w-4 h-full">
-                                    <img decoding="async" src="./image/bullets-point.svg" alt="Bullets Point" />
-                                </span>
-                                <p class="text-primary font-medium p2">
-                                    Options for group, private, and virtual
-                                    sessions
-                                </p>
-                            </li>
-                        </ul>
-
-                        <div class="2xl:mt-11 1xl:mt-10 md:mt-8 sm:mt-7 mt-5">
-                            <a href="./about-us.html" class="btn btn-secondary">Discover the
-                                Space</a>
-                        </div>
-                    </div>
-
-                    <!-- Left: Image -->
-                    <div class="w-full">
-                        <div
-                            class="overflow-hidden relative before:content-[''] before:block 2xl:before:pt-[96%] xl:before:pt-[100%] lg:before:pt-[116%] lt:before:pt-[125%] sm:before:pt-[65%] before:pt-[89%] w-full">
-                            <img decoding="async" src="./image/home-4_about-us.webp" alt="About Image"
-                                class="absolute top-0 left-0 w-full h-full object-cover" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ====== End About Us Section ====== -->
-
-        <!-- ====== Find Your Flow Section ====== -->
         <section
-            class="relative bg-whitesmoke-100 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10 2xl:py-20 1xl:py-17 lg:py-14 md:py-12 sm:py-11 py-10 overflow-hidden">
-            <div class="container">
-                <div class="text-start max-w-full w-full 2xl:mb-[50px] 1xl:mb-11 md:mb-9 mb-7">
-                    <h3 class="font-primary italic font-medium 2xl:mb-7 1xl:mb-6 xl:mb-5 sm:mb-3 mb-2.5">
-                        Practice Tailored to Your Path
-                    </h3>
-                    <h2 class="text-primary uppercase 1xl:mb-5 mb-3">
-                        Move with Purpose and Ease
-                    </h2>
-                    <p
-                        class="text-thunder-100 2xl:max-w-[45%] xl:max-w-[50%] lg:max-w-[60%] lt:max-w-[65%] md:max-w-[85%] max-w-full w-full">
-                        Join classes that honor your pace—whether you’re building strength, restoring balance, or
-                        deepening awareness.
-                    </p>
-                </div>
-
-                <!-- Featured Post Row -->
-                <div class="flex flex-col 1xl:gap-[30px] md:gap-[26px] sm:gap-5.5 gap-4">
-                    <!-- 1st practice -->
-                    <div
-                        class="flex md:flex-row flex-col justify-between border-y border-primary/40 bg-white group/blog lg:gap-6 lt:gap-4 md:gap-2 gap-1">
-                        <!-- Left: Content -->
-                        <div class="w-full 1xl:p-[30px] lt:p-[26px] sm:p-5 p-4">
-                            <div class="flex flex-col justify-center h-full">
-                                <h3 class="text-primary hover:text-thunder-100 uppercase sm:max-w-[80%] mb-2.5">
-                                    <a href="./blog-detail-1.html" class="text-current">
-                                        Power Yoga
-                                    </a>
-                                </h3>
-
-                                <p class="font-medium 1xl:mb-[14px] mb-2.5">
-                                    Strong Body, Clear Mind.
-                                </p>
-                                <p class="1xl:mb-[26px] lt:mb-5.5 mb-4.5">
-                                    High-energy, fitness-based yoga that boosts stamina and builds full-body strength.
-                                </p>
-
-                                <a href="./blog-detail-1.html" class="btn btn-secondary">
-                                    Join class
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Right: Image -->
-                        <div
-                            class="overflow-hidden block w-full md:h-auto h-full relative before:content-[''] before:block md:before:pt-[48%] before:pt-[44%] lg:max-w-[32.5%] md:max-w-[38%] max-w-full">
-                            <img decoding="async" src="./image/home-4_class-1.webp" alt="Blog Images"
-                                class="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" />
-                        </div>
-                    </div>
-
-                    <!-- 2nd practice -->
-                    <div
-                        class="flex md:flex-row flex-col justify-between border-y border-primary/40 bg-white group/blog lg:gap-6 lt:gap-4 md:gap-2 gap-1">
-                        <!-- Left: Content -->
-                        <div class="w-full 1xl:p-[30px] lt:p-[26px] sm:p-5 p-4">
-                            <div class="flex flex-col justify-center h-full">
-                                <h3 class="text-primary hover:text-thunder-100 uppercase sm:max-w-[80%] mb-2.5">
-                                    <a href="./blog-detail-1.html" class="text-current">
-                                        Restore & Recharge
-                                    </a>
-                                </h3>
-
-                                <p class="font-medium 1xl:mb-[14px] mb-2.5">
-                                    Deep rest meets gentle stretch.
-                                </p>
-                                <p class="1xl:mb-[26px] lt:mb-5.5 mb-4.5">
-                                    Perfect for stress relief and healing slow-paced with props, guided stillness, and
-                                    mindful recovery.
-                                </p>
-
-                                <a href="./blog-detail-1.html" class="btn btn-secondary">
-                                    Join class
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Right: Image -->
-                        <div
-                            class="overflow-hidden block w-full md:h-auto h-full relative before:content-[''] before:block md:before:pt-[48%] before:pt-[44%] lg:max-w-[32.5%] md:max-w-[38%] max-w-full">
-                            <img decoding="async" src="./image/home-4_class-2.webp" alt="Blog Images"
-                                class="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" />
-                        </div>
-                    </div>
-
-                    <!-- 3rd practice -->
-                    <div
-                        class="flex md:flex-row flex-col justify-between border-y border-primary/40 bg-white group/blog lg:gap-6 lt:gap-4 md:gap-2 gap-1">
-                        <!-- Left: Content -->
-                        <div class="w-full 1xl:p-[30px] lt:p-[26px] sm:p-5 p-4">
-                            <div class="flex flex-col justify-center h-full">
-                                <h3 class="text-primary hover:text-thunder-100 uppercase sm:max-w-[80%] mb-2.5">
-                                    <a href="./blog-detail-1.html" class="text-current">
-                                        Core Balance
-                                    </a>
-                                </h3>
-
-                                <p class="font-medium 1xl:mb-[14px] mb-2.5">
-                                    Stability. Focus. Functional strength.
-                                </p>
-                                <p class="1xl:mb-[26px] lt:mb-5.5 mb-4.5">
-                                    A core-focused class that fuses yoga alignment, mobility, and body awareness for
-                                    real-life support.
-                                </p>
-
-                                <a href="./blog-detail-1.html" class="btn btn-secondary">
-                                    Join class
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Right: Image -->
-                        <div
-                            class="overflow-hidden block w-full md:h-auto h-full relative before:content-[''] before:block md:before:pt-[48%] before:pt-[44%] lg:max-w-[32.5%] md:max-w-[38%] max-w-full">
-                            <img decoding="async" src="./image/home-4_class-3.webp" alt="Blog Images"
-                                class="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" />
-                        </div>
-                    </div>
-                </div>
-
-                <a href="./classes.html" class="btn btn-secondary 2xl:mt-[50px] 1xl:mt-11 md:mt-9 mt-7 mx-auto">
-                    view more classes
-                </a>
-            </div>
-        </section>
-        <!-- ====== End Find Your Flow Section ====== -->
-
-        <!-- ====== Our Why Us Section ====== -->
-        <section
-            class="relative 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10 w-full bg-white border-t border-b border-primary/20 overflow-hidden 2xl:py-6 1xl:py-5 xl:py-4.5 lg:py-4 md:py-3.5 sm:py-3 py-2.5">
-            <div>
-                <ul class="flex items-center justify-center 2xl:gap-10 1xl:gap-9 xl:gap-8 lg:gap-6 sm:gap-4 gap-1">
-                    <li class="flex items-center 2xl:gap-10 1xl:gap-9 xl:gap-8 lg:gap-6 sm:gap-4 gap-1">
-                        <svg class="lt:w-5 lt:h-5 md:w-4.5 md:h-4.5 dm:w-4 sm:h-4 w-1 h-1 shrink-0 text-primary/70"
-                            viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M16.2 10.2L12.72 10.44L14.82 12.72L16.68 15.48L11.1 19.08L9.84 15.78L9.24 12.6L7.38 15.66L4.86 18.96L0.6 15.54L3.6 12.66L6.48 10.44L3.18 10.26L0 9.66L2.82 4.08L5.76 5.34L8.52 7.02L8.4 3.72L8.76 0H15L13.8 3.72L12.3 7.02L15.66 5.28L19.02 3.96L19.68 9.54L16.2 10.2Z" />
-                        </svg>
-                        <h5
-                            class="uppercase text-primary/80 italic underline underline-offset-4 sm:decoration-1 decoration-0.5 2xl:text-25 1xl:text-20 lt:text-18 md:text-15 sm:text-xs text-[7px]">
-                            Studio & Online Classes
-                        </h5>
-                    </li>
-                    <li class="flex items-center 2xl:gap-10 1xl:gap-9 xl:gap-8 lg:gap-6 sm:gap-4 gap-1">
-                        <svg class="lt:w-5 lt:h-5 md:w-4.5 md:h-4.5 dm:w-4 sm:h-4 w-1 h-1 shrink-0 text-primary/70"
-                            viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M16.2 10.2L12.72 10.44L14.82 12.72L16.68 15.48L11.1 19.08L9.84 15.78L9.24 12.6L7.38 15.66L4.86 18.96L0.6 15.54L3.6 12.66L6.48 10.44L3.18 10.26L0 9.66L2.82 4.08L5.76 5.34L8.52 7.02L8.4 3.72L8.76 0H15L13.8 3.72L12.3 7.02L15.66 5.28L19.02 3.96L19.68 9.54L16.2 10.2Z" />
-                        </svg>
-                        <h5
-                            class="uppercase text-primary/80 italic underline underline-offset-4 sm:decoration-1 decoration-0.5 2xl:text-25 1xl:text-20 lt:text-18 md:text-15 sm:text-xs text-[7px]">
-                            Drop-In or Membership
-                        </h5>
-                    </li>
-                    <li class="flex items-center 2xl:gap-10 1xl:gap-9 xl:gap-8 lg:gap-6 sm:gap-4 gap-1">
-                        <svg class="lt:w-5 lt:h-5 md:w-4.5 md:h-4.5 dm:w-4 sm:h-4 w-1 h-1 shrink-0 text-primary/70"
-                            viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M16.2 10.2L12.72 10.44L14.82 12.72L16.68 15.48L11.1 19.08L9.84 15.78L9.24 12.6L7.38 15.66L4.86 18.96L0.6 15.54L3.6 12.66L6.48 10.44L3.18 10.26L0 9.66L2.82 4.08L5.76 5.34L8.52 7.02L8.4 3.72L8.76 0H15L13.8 3.72L12.3 7.02L15.66 5.28L19.02 3.96L19.68 9.54L16.2 10.2Z" />
-                        </svg>
-                        <h5
-                            class="uppercase text-primary/80 italic underline underline-offset-4 sm:decoration-1 decoration-0.5 2xl:text-25 1xl:text-20 lt:text-18 md:text-15 sm:text-xs text-[7px]">
-                            All Levels Welcome
-                        </h5>
-                    </li>
-                    <li class="flex items-center 2xl:gap-10 1xl:gap-9 xl:gap-8 lg:gap-6 sm:gap-4 gap-1">
-                        <svg class="lt:w-5 lt:h-5 md:w-4.5 md:h-4.5 dm:w-4 sm:h-4 w-1 h-1 shrink-0 text-primary/70"
-                            viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M16.2 10.2L12.72 10.44L14.82 12.72L16.68 15.48L11.1 19.08L9.84 15.78L9.24 12.6L7.38 15.66L4.86 18.96L0.6 15.54L3.6 12.66L6.48 10.44L3.18 10.26L0 9.66L2.82 4.08L5.76 5.34L8.52 7.02L8.4 3.72L8.76 0H15L13.8 3.72L12.3 7.02L15.66 5.28L19.02 3.96L19.68 9.54L16.2 10.2Z" />
-                        </svg>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <!-- ====== End Our Why Us Section ====== -->
-
-        <!-- ====== Start Why choose slider Section ====== -->
-        <section class="relative bg-white 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10">
+            class="relative 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10 w-full 2xl:py-20 1xl:py-17 lg:py-14 md:py-12 sm:py-11 py-10 bg-whitesmoke-100">
             <div class="container">
                 <div
-                    class="flex lt:flex-row flex-col 2xl:gap-20 1xl:gap-14 xl:gap-12 lg:gap-11 md:gap-9 sm:gap-7 gap-5">
-                    <!-- Right: Content -->
-                    <div class="lt:w-[52%] w-full">
-                        <h3
-                            class="text-thunder-100 font-primary italic font-medium 1xl:mb-7 xl:mb-6 md:mb-5 sm:mb-4 mb-2.5">
-                            WHY CHOOSE
-                        </h3>
-                        <h2 class="text-primary font-normal uppercase 1xl:mb-5 mb-3">
-                            Holistic Wellness, Designed Around You
-                        </h2>
-                        <p class="text-thunder-100 max-w-[890px]">
-                            At Pranavya Yoga, we offer more than just classes — we offer a space to grow, heal, and
-                            thrive. Explore our full range of services, crafted to meet every body, lifestyle, and
-                            intention.
-                        </p>
-
-                        <div class="2xl:mt-11.5 1xl:mt-10 xl:mt-8 mt-6">
-                            <a href="./schedule.html" class="btn btn-secondary">Explore Class
-                                Schedule</a>
-                        </div>
-                        <!-- after md -->
-                        <div class="lt:w-[48%] w-full md:hidden block mt-7.5">
-                            <div
-                                class="rounded overflow-hidden relative before:content-[''] before:block 1xl:before:pt-[98%] xl:before:pt-[106%] lt:before:pt-[122%] before:pt-[82%] w-full h-full">
-                                <img decoding="async" src="./image/home-4_whyChoose.webp" alt="About Image"
-                                    class="absolute top-0 left-0 w-full h-full object-cover" />
-                            </div>
-                        </div>
-
-                        <div class="relative 2xl:mt-[50px] 1xl:mt-11 xl:mt-9 mt-7.5 why-choose-home-4">
-                            <div class="1xl:px-6 sm:px-5 sm:m-0 mb-6">
-                                <div class="swiper why-choose">
-                                    <div class="swiper-wrapper">
-                                        <!-- 1st slide -->
-                                        <div class="swiper-slide h-auto! bg-whitesmoke-100">
-                                            <div class="bg-[#F7F5F4] 2xl:p-[33px] 1xl:p-[30px] p-6 rounded-sm h-full">
-                                                <div
-                                                    class="bg-white rounded-[10px] 2xl:w-[84px] 2xl:h-[84px] 1xl:w-[80px] 1xl:h-[80px] md:w-[70px] md:h-[70x] sm:h-[65px] sm:w-[65px] w-[60px] h-[60px] 1xl:mb-10 md:mb-8 sm:mb-6 mb-4 p-2">
-                                                    <img src="./image/group-yoga.svg" alt="group yoga"
-                                                        class="w-hull h-full" />
-                                                </div>
-                                                <h5 class="uppercase text-primary 1xl:mb-5 mb-3">
-                                                    Group Yoga Classes
-                                                </h5>
-                                                <p>
-                                                    Flow, restore, energize — choose from a variety of yoga styles for
-                                                    all levels, both in-studio and online.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <!-- 2nd slide -->
-                                        <div class="swiper-slide h-auto! bg-whitesmoke-100">
-                                            <div class="bg-[#F7F5F4] 2xl:p-[33px] 1xl:p-[30px] p-6 rounded-sm h-full">
-                                                <div
-                                                    class="bg-white rounded-[10px] 2xl:w-[84px] 2xl:h-[84px] 1xl:w-[80px] 1xl:h-[80px] md:w-[70px] md:h-[70x] sm:h-[65px] sm:w-[65px] w-[60px] h-[60px] 1xl:mb-10 md:mb-8 sm:mb-6 mb-4 p-2">
-                                                    <img src="./image/membership.svg" alt="group yoga"
-                                                        class="w-hull h-full" />
-                                                </div>
-                                                <h5 class="uppercase text-primary 1xl:mb-5 mb-3">
-                                                    Online Membership
-                                                </h5>
-                                                <p>
-                                                    Practice anytime, anywhere. Get unlimited access to live-streamed
-                                                    and on-demand yoga classes.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <!-- 3rd slide -->
-                                        <div class="swiper-slide h-auto! bg-whitesmoke-100">
-                                            <div class="bg-[#F7F5F4] 2xl:p-[33px] 1xl:p-[30px] p-6 rounded-sm h-full">
-                                                <div
-                                                    class="bg-white rounded-[10px] 2xl:w-[84px] 2xl:h-[84px] 1xl:w-[80px] 1xl:h-[80px] md:w-[70px] md:h-[70x] sm:h-[65px] sm:w-[65px] w-[60px] h-[60px] 1xl:mb-10 md:mb-8 sm:mb-6 mb-4 p-2">
-                                                    <img src="./image/group-yoga.svg" alt="group yoga"
-                                                        class="w-hull h-full" />
-                                                </div>
-                                                <h5 class="uppercase text-primary 1xl:mb-5 mb-3">
-                                                    Group Yoga Classes
-                                                </h5>
-                                                <p>
-                                                    Flow, restore, energize — choose from a variety of yoga styles for
-                                                    all levels, both in-studio and online.
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <!-- 4th slide -->
-                                        <div class="swiper-slide h-auto! bg-whitesmoke-100">
-                                            <div class="bg-[#F7F5F4] 2xl:p-[33px] 1xl:p-[30px] p-6 rounded-sm h-full">
-                                                <div
-                                                    class="bg-white rounded-[10px] 2xl:w-[84px] 2xl:h-[84px] 1xl:w-[80px] 1xl:h-[80px] md:w-[70px] md:h-[70x] sm:h-[65px] sm:w-[65px] w-[60px] h-[60px] 1xl:mb-10 md:mb-8 sm:mb-6 mb-4 p-2">
-                                                    <img src="./image/membership.svg" alt="group yoga"
-                                                        class="w-hull h-full" />
-                                                </div>
-                                                <h5 class="uppercase text-primary 1xl:mb-5 mb-3">
-                                                    Online Membership
-                                                </h5>
-                                                <p>
-                                                    Practice anytime, anywhere. Get unlimited access to live-streamed
-                                                    and on-demand yoga classes.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                class="relative sm:absolute sm:top-1/2 top-0 sm:-translate-y-1/2 sm:w-full w-[84px] flex items-center justify-between mx-auto z-1">
-                                <div class="slider-custom-arrow swiper-button-prev">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18"
-                                        fill="none" class="swiper-navigation-icon">
-                                        <path
-                                            d="M20.9741 8.80684C20.9741 8.80684 6.87288 8.80675 0.999486 8.80669M0.999486 8.80669L8.23218 16.6134M0.999486 8.80669L8.23321 1"
-                                            fill="currentColor" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                                <div class="slider-custom-arrow swiper-button-next">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18"
-                                        fill="none" class="swiper-navigation-icon">
-                                        <path
-                                            d="M20.9741 8.80684C20.9741 8.80684 6.87288 8.80675 0.999486 8.80669M0.999486 8.80669L8.23218 16.6134M0.999486 8.80669L8.23321 1"
-                                            fill="currentColor" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Left: Image -->
-                    <div class="lt:w-[48%] w-full md:block hidden rounded-sm overflow-hidden">
-                        <div
-                            class="rounded overflow-hidden relative before:content-[''] before:block 1xl:before:pt-[98%] xl:before:pt-[106%] lt:before:pt-[122%] before:pt-[82%] w-full h-full">
-                            <img decoding="async" src="./image/home-4_whyChoose.webp" alt="About Image"
-                                class="absolute top-0 left-0 w-full h-full object-cover" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ====== End Why choose slider Section ====== -->
-
-        <!-- ====== Why Full Image Section ====== -->
-        <section class="relative 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10 w-full h-full">
-            <div
-                class="md:absolute md:inset-0 relative top-0 left-0 w-full h-full max-md:shadow-[0_35px_10px_2px_#e4e4e4ab] max-sm:shadow-[0_24px_10px_0px_#e4e4e4ab] md:bg-transparent bg-[#DFDFE0] md:p-0 sm:pt-7 pt-[14px] z-1">
-                <div class="container h-full flex items-center">
-                    <div
-                        class="flex flex-col my-auto items-start sm:justify-center justify-end 1xl:py-10 1xl:px-[30px] xl:py-9 sm:py-6 sm:px-[26px] p-5 text-black 2xl:max-w-[862px] 1xl:max-w-[775px] xl:max-w-[710px] lg:max-w-[610px] lt:max-w-[518px] md:max-w-[490px] w-full bg-[#FFFFFFA1] sm:backdrop-blur-[10px] backdrop-blur-sm rounded-[10px]">
-                        <h3
-                            class="font-primary italic font-medium 2xl:mb-7 1xl:mb-6 xl:mb-5 sm:mb-3 mb-2.5 text-start text-primary">
-                            Transform in Just 14 Days
-                        </h3>
-                        <h2 class="uppercase 1xl:mb-5 sm:mb-3 mb-2.5 text-start text-primary">
-                            Awaken strength and clarity.
-                        </h2>
-                        <p class="text-start text-thunder-100 xl:max-w-[83%] max-w-full w-full">
-                            Experience daily guided sessions, mindful movement, and inner stillness.
-                        </p>
-                        <a href="./classes.html" class="btn btn-secondary bg-white 1xl:mt-[45px] xl:mt-8 sm:mt-6 mt-4">
-                            Join the 14-Day trial</a>
-                    </div>
-                </div>
-            </div>
-            <div class="2xl:h-[680px] 1xl:h-[590px] xl:h-[550px] lg:h-[510px] md:h-[410px] sm:h-[350px] h-[272px]">
-                <div class="relative w-full bg-cover md:bg-center sm:bg-right bg-position-[80%] bg-no-repeat h-full"
-                    style="background-image: url('./image/trial-banner.webp')"></div>
-                <!-- <img src="./image/find-your-flow-3-mobile.webp" alt="mobile"
-                    class="w-full h-full object-cover md:hidden block" /> -->
-            </div>
-        </section>
-        <!-- ====== End Full Image Section ====== -->
-
-        <!-- ====== Weekly Class Schedule Section ====== -->
-        <section id="schedule"
-            class="schedule-4 relative 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10 bg-white">
-            <div class="container relative z-10">
-                <div
-                    class="flex md:flex-row flex-col md:items-center items-start md:justify-between 2xl:gap-10 1xl:gap-9 xl:gap-8 lg:gap-7 md:gap-6 sm:gap-5 gap-4 2xl:mb-[50px] 1xl:mb-11 xl:mb-[38px] sm:mb-8 mb-5">
-                    <div>
-                        <h3 class="text-thunder-100 font-primary italic font-medium 1xl:mb-6 sm:mb-4 mb-2.5">
-                            Weekly Practice Calendar
-                        </h3>
-                        <h2 class="text-primary font-normal uppercase 1xl:mb-5 sm:mb-3 mb-2.5 ">
-                            Balance Every Day
-                        </h2>
-                        <p class="text-thunder-100 max-w-[890px]">
-                            Stay consistent without pressure. Our flexible schedule offers a mix of dynamic,
-                            restorative, and mindful practices to match your energy throughout the week.
-                        </p>
-                    </div>
-                    <div class="md:max-w-[842px] md:mr-0 md:ml-auto">
-                        <a href="./classes.html" class="btn btn-secondary">Book a Class</a>
-                    </div>
-                </div>
-
-                <!-- Tables by Day -->
-                <div class="xl:mt-[11px] mt-[9px] lt:-mx-3">
-                    <!-- Sunday Table -->
-                    <div class="custom-scroll-2 overflow-auto">
-                        <table class="w-full table">
-                            <thead>
-                                <tr
-                                    class="1xl:mb-[11px] xl:mb-[9px] mb-1.5 1xl:h-[88px] xl:h-[75px] lg:h-[64px] sm:h-[58px] h-[53px]">
-                                    <td class="w-1/7 pb-[9px]">
-                                        <p class="text-primary text-center uppercase">
-                                            Monday
-                                        </p>
-                                    </td>
-                                    <td class="w-1/7 pb-[9px]">
-                                        <p class="text-primary text-center uppercase">
-                                            Tuesday
-                                        </p>
-                                    </td>
-                                    <td class="w-1/7 pb-[9px]">
-                                        <p class="text-primary text-center uppercase">
-                                            Wednesday
-                                        </p>
-                                    </td>
-                                    <td class="w-1/7 pb-[9px]">
-                                        <p class="text-primary text-center uppercase">
-                                            Thursday
-                                        </p>
-                                    </td>
-                                    <td class="w-1/7 pb-[9px]">
-                                        <p class="text-primary text-center uppercase">
-                                            Friday
-                                        </p>
-                                    </td>
-                                    <td class="w-1/7 pb-[9px]">
-                                        <p class="text-primary text-center uppercase">
-                                            Saturday
-                                        </p>
-                                    </td>
-                                    <td class="w-1/7 pb-[9px]">
-                                        <p class="text-primary text-center uppercase">
-                                            Sunday
-                                        </p>
-                                    </td>
-                                </tr>
-                            </thead>
-                            <tbody class="table-row-group">
-                                <!-- schedule time 6 - 7 -->
-                                <tr>
-                                    <td>
-                                        <div
-                                            class="1xl:p-[14px] xl:p-2 p-1.5 bg-[#673E2C0D] 2xl:space-y-4 1xl:space-y-3.5 xl:space-y-2 space-y-1.5 text-center w-full">
-                                            <p class="text-primary font-medium">Meditation</p>
-                                            <p>Beginner</p>
-                                            <p>6:00 AM to 7:00 AM</p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div
-                                            class="1xl:p-[14px] xl:p-2 p-1.5 bg-[#673E2C0D] 2xl:space-y-4 1xl:space-y-3.5 xl:space-y-2 space-y-1.5 text-center w-full">
-                                            <p class="text-primary font-medium">Meditation</p>
-                                            <p>Beginner</p>
-                                            <p>6:00 AM to 7:00 AM</p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div
-                                            class="1xl:p-[14px] xl:p-2 p-1.5 bg-[#673E2C0D] 2xl:space-y-4 1xl:space-y-3.5 xl:space-y-2 space-y-1.5 text-center w-full">
-                                            <p class="text-primary font-medium">Meditation</p>
-                                            <p>Beginner</p>
-                                            <p>6:00 AM to 7:00 AM</p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <p class="text-primary text-center">Rest</p>
-                                    </td>
-                                    <td>
-                                        <div
-                                            class="1xl:p-[14px] xl:p-2 p-1.5 bg-[#673E2C0D] 2xl:space-y-4 1xl:space-y-3.5 xl:space-y-2 space-y-1.5 text-center w-full">
-                                            <p class="text-primary font-medium">Meditation</p>
-                                            <p>Beginner</p>
-                                            <p>6:00 AM to 7:00 AM</p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div
-                                            class="1xl:p-[14px] xl:p-2 p-1.5 bg-[#673E2C0D] 2xl:space-y-4 1xl:space-y-3.5 xl:space-y-2 space-y-1.5 text-center w-full">
-                                            <p class="text-primary font-medium">Meditation</p>
-                                            <p>Beginner</p>
-                                            <p>6:00 AM to 7:00 AM</p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div
-                                            class="1xl:p-[14px] xl:p-2 p-1.5 bg-[#673E2C0D] 2xl:space-y-4 1xl:space-y-3.5 xl:space-y-2 space-y-1.5 text-center w-full">
-                                            <p class="text-primary font-medium">Meditation</p>
-                                            <p>Beginner</p>
-                                            <p>6:00 AM to 7:00 AM</p>
-                                        </div>
-                                    </td>
-                                </tr>
-
-                                <!-- schedule time 7 - 8 -->
-                                <tr>
-                                    <td class="group-hover:text-primary">
-                                        <p class="text-primary text-center">Rest</p>
-                                    </td>
-                                    <td>
-                                        <div
-                                            class="1xl:p-[14px] xl:p-2 p-1.5 bg-[#673E2C0D] 2xl:space-y-4 1xl:space-y-3.5 xl:space-y-2 space-y-1.5 text-center w-full">
-                                            <p class="text-primary font-medium">Meditation</p>
-                                            <p>Beginner</p>
-                                            <p>7:00 AM to 8:00 AM</p>
-                                        </div>
-                                    </td>
-                                    <td class="group-hover:text-primary">
-                                        <p class="text-primary text-center">Rest</p>
-                                    </td>
-                                    <td>
-                                        <div
-                                            class="1xl:p-[14px] xl:p-2 p-1.5 bg-[#673E2C0D] 2xl:space-y-4 1xl:space-y-3.5 xl:space-y-2 space-y-1.5 text-center w-full">
-                                            <p class="text-primary font-medium">Meditation</p>
-                                            <p>Beginner</p>
-                                            <p>7:00 AM to 8:00 AM</p>
-                                        </div>
-                                    </td>
-                                    <td class="group-hover:text-primary">
-                                        <p class="text-primary text-center">Rest</p>
-                                    </td>
-                                    <td>
-                                        <div
-                                            class="1xl:p-[14px] xl:p-2 p-1.5 bg-[#673E2C0D] 2xl:space-y-4 1xl:space-y-3.5 xl:space-y-2 space-y-1.5 text-center w-full">
-                                            <p class="text-primary font-medium">Meditation</p>
-                                            <p>Beginner</p>
-                                            <p>7:00 AM to 8:00 AM</p>
-                                        </div>
-                                    </td>
-                                    <td class="group-hover:text-primary">
-                                        <p class="text-primary text-center">Rest</p>
-                                    </td>
-                                </tr>
-
-                                <!-- schedule time 8 - 9 -->
-                                <tr>
-                                    <td>
-                                        <div
-                                            class="1xl:p-[14px] xl:p-2 p-1.5 bg-[#673E2C0D] 2xl:space-y-4 1xl:space-y-3.5 xl:space-y-2 space-y-1.5 text-center w-full">
-                                            <p class="text-primary font-medium">Meditation</p>
-                                            <p>Beginner</p>
-                                            <p>8:00 AM to 9:00 AM</p>
-                                        </div>
-                                    </td>
-                                    <td class="group-hover:text-primary">
-                                        <p class="text-primary text-center">Rest</p>
-                                    </td>
-                                    <td>
-                                        <div
-                                            class="1xl:p-[14px] xl:p-2 p-1.5 bg-[#673E2C0D] 2xl:space-y-4 1xl:space-y-3.5 xl:space-y-2 space-y-1.5 text-center w-full">
-                                            <p class="text-primary font-medium">Meditation</p>
-                                            <p>Beginner</p>
-                                            <p>8:00 AM to 9:00 AM</p>
-                                        </div>
-                                    </td>
-                                    <td class="group-hover:text-primary">
-                                        <p class="text-primary text-center">Rest</p>
-                                    </td>
-                                    <td>
-                                        <div
-                                            class="1xl:p-[14px] xl:p-2 p-1.5 bg-[#673E2C0D] 2xl:space-y-4 1xl:space-y-3.5 xl:space-y-2 space-y-1.5 text-center w-full">
-                                            <p class="text-primary font-medium">Meditation</p>
-                                            <p>Beginner</p>
-                                            <p>8:00 AM to 9:00 AM</p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div
-                                            class="1xl:p-[14px] xl:p-2 p-1.5 bg-[#673E2C0D] 2xl:space-y-4 1xl:space-y-3.5 xl:space-y-2 space-y-1.5 text-center w-full">
-                                            <p class="text-primary font-medium">Meditation</p>
-                                            <p>Beginner</p>
-                                            <p>8:00 AM to 9:00 AM</p>
-                                        </div>
-                                    </td>
-                                    <td class="group-hover:text-primary">
-                                        <p class="text-primary text-center">Rest</p>
-                                    </td>
-                                </tr>
-
-                                <!-- schedule time 9 - 10 -->
-                                <tr>
-                                    <td>
-                                        <div
-                                            class="1xl:p-[14px] xl:p-2 p-1.5 bg-[#673E2C0D] 2xl:space-y-4 1xl:space-y-3.5 xl:space-y-2 space-y-1.5 text-center w-full">
-                                            <p class="text-primary font-medium">Meditation</p>
-                                            <p>Beginner</p>
-                                            <p>9:00 AM to 10:00 AM</p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div
-                                            class="1xl:p-[14px] xl:p-2 p-1.5 bg-[#673E2C0D] 2xl:space-y-4 1xl:space-y-3.5 xl:space-y-2 space-y-1.5 text-center w-full">
-                                            <p class="text-primary font-medium">Meditation</p>
-                                            <p>Beginner</p>
-                                            <p>9:00 AM to 10:00 AM</p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div
-                                            class="1xl:p-[14px] xl:p-2 p-1.5 bg-[#673E2C0D] 2xl:space-y-4 1xl:space-y-3.5 xl:space-y-2 space-y-1.5 text-center w-full">
-                                            <p class="text-primary font-medium">Meditation</p>
-                                            <p>Beginner</p>
-                                            <p>9:00 AM to 10:00 AM</p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div
-                                            class="1xl:p-[14px] xl:p-2 p-1.5 bg-[#673E2C0D] 2xl:space-y-4 1xl:space-y-3.5 xl:space-y-2 space-y-1.5 text-center w-full">
-                                            <p class="text-primary font-medium">Meditation</p>
-                                            <p>Beginner</p>
-                                            <p>9:00 AM to 10:00 AM</p>
-                                        </div>
-                                    </td>
-                                    <td class="group-hover:text-primary">
-                                        <p class="text-primary text-center">Rest</p>
-                                    </td>
-                                    <td>
-                                        <div
-                                            class="1xl:p-[14px] xl:p-2 p-1.5 bg-[#673E2C0D] 2xl:space-y-4 1xl:space-y-3.5 xl:space-y-2 space-y-1.5 text-center w-full">
-                                            <p class="text-primary font-medium">Meditation</p>
-                                            <p>Beginner</p>
-                                            <p>9:00 AM to 10:00 AM</p>
-                                        </div>
-                                    </td>
-                                    <td class="group-hover:text-primary">
-                                        <p class="text-primary text-center">Rest</p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ====== End Weekly Class Schedule Section ====== -->
-
-        <!-- ====== Class Stories Section ====== -->
-        <section
-            class="relative bg-whitesmoke-100 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10 2xl:py-20 1xl:py-17 lg:py-14 md:py-12 sm:py-11 py-10 overflow-hidden">
-            <div class="container">
-                <div
-                    class="text-center 2xl:max-w-[63%] xl:max-w-[70%] lt:max-w-[80%] max-w-full w-full mx-auto 1xl:mb-10 lt:mb-8 md:mb-7 mb-6.5">
+                    class="text-center 2xl:max-w-[75%] lg:max-w-[80%] lt:max-w-[90% ] max-w-full w-full mx-auto 1xl:mb-10 lt:mb-8 md:mb-7 mb-6.5">
                     <h3 class="font-primary italic font-medium 2xl:mb-7 1xl:mb-6 xl:mb-5 sm:mb-3 mb-2.5 text-center">
-                        Insights & Inspiration
+                        Why Join a Membership?
                     </h3>
                     <h2 class="text-primary uppercase 1xl:mb-5 mb-3 text-center">
-                        Your journey elevated.
+                        Your Practice, Supported Every Step
                     </h2>
                     <p>
-                        Dive into powerful stories, practical tips, and ancient wisdom reimagined for today. Whether
-                        you're a beginner on the mat or a seasoned yogi, our blog offers something to guide your
-                        journey.
+                        At Pranavya Yoga, a membership is more than just a pricing plan — it's your pathway to deeper
+                        wellness, personal growth, and a connected lifestyle. Whether you're just starting or deepening
+                        your journey,
                     </p>
                 </div>
 
-                <div class="grid lt:grid-cols-3 sm:grid-cols-2 grid-cols-1 1xl:gap-6 xl:gap-5 lt:gap-4 md:gap-6 gap-5">
-                    <!-- 1st card -->
-                    <div class="bg-white rounded-sm overflow-hidden h-auto">
-                        <!-- Image Wrapper -->
-                        <div
-                            class="relative overflow-hidden 2xl:h-[323px] 1xl:h-[270px] xl:h-[230px] lg:h-[205px] sm:h-[185px] h-[165px]">
-                            <img src="./image/home-4_inspiration-1.webp" alt="Personalized Yoga"
-                                class="w-full h-full object-cover" />
-                        </div>
-
-                        <!-- Content -->
-                        <div class="1xl:py-[30px] xl:py-5 sm:py-4 sm:px-5 p-4 text-left h-auto">
-                            <!-- Title -->
-                            <h5
-                                class="uppercase text-primary 1xl:mb-3.5 mb-2.5 xl:max-w-[87%] lt:max-w-full md:max-w-[97%] w-full">
-                                Evening Flow for Better Sleep
-                            </h5>
-
-                            <!-- Description -->
-                            <p class="1xl:mb-6 xl:mb-5 mb-4 xl:max-w-[95%] w-full">
-                                Unwind with calming flows to ease body and mind.
-                            </p>
-                            <div class="flex items-center justify-between w-full flex-wrap">
-                                <div class="flex items-center lg:gap-3 gap-2">
-                                    <img src="./image/dark-calendor.svg" alt="calendor"
-                                        class="2xl:w-8 2xl:h-8 1xl:w-7.5 1xl:h-7.5 xl:w-7 xl:h-7 lg:w-6.5 lg:h-6.5 md:w-6 md:h-6 sm:w-5.5 sm:h-5.5 w-4.5 h-4.5 object-contain" />
-                                    <p class="uppercase p2">July 15, 2025</p>
+                <div class="relative 2xl:mt-[50px] 1xl:mt-11 xl:mt-9 mt-7.5 join-membership">
+                    <div class="1xl:px-6 sm:px-5 sm:m-0 mb-6">
+                        <div class="swiper membership-step">
+                            <div class="swiper-wrapper">
+                                <!-- 1st slide -->
+                                <div class="swiper-slide h-auto! bg-white">
+                                    <div class="2xl:p-[33px] 1xl:p-[30px] sm:p-6 p-4 rounded-sm h-full">
+                                        <div
+                                            class="bg-whitesmoke-100 border border-primary/15 overflow-hidden rounded-[10px] 2xl:w-[84px] 2xl:h-[84px] 1xl:w-[80px] 1xl:h-[80px] md:w-[70px] md:h-[70px] sm:h-[65px] sm:w-[65px] w-[60px] h-[60px] 1xl:mb-10 md:mb-8 sm:mb-6 mb-4 1xl:p-4 p-3.5">
+                                            <img src="./image/progress.svg" alt="group yoga" class="w-hull h-full" />
+                                        </div>
+                                        <h5 class="uppercase text-primary 1xl:mb-5 mb-3">
+                                            Consistent Progress
+                                        </h5>
+                                        <p>
+                                            Stay on track with your goals through regular classes that promote steady
+                                            growth and mindfulness.
+                                        </p>
+                                    </div>
                                 </div>
-                                <a href="./blog.html"
-                                    class="btn btn-secondary bg-white md:text-13 text-[10px] xl:py-2 xl:px-5 py-1.5 md:px-4.5 px-4">Read
-                                    More</a>
+
+                                <!-- 2nd slide -->
+                                <div class="swiper-slide h-auto! bg-white">
+                                    <div class="2xl:p-[33px] 1xl:p-[30px] sm:p-6 p-4 rounded-sm h-full">
+                                        <div
+                                            class="bg-whitesmoke-100 border border-primary/15 overflow-hidden rounded-[10px] 2xl:w-[84px] 2xl:h-[84px] 1xl:w-[80px] 1xl:h-[80px] md:w-[70px] md:h-[70px] sm:h-[65px] sm:w-[65px] w-[60px] h-[60px] 1xl:mb-10 md:mb-8 sm:mb-6 mb-4 1xl:p-4 p-3.5">
+                                            <img src="./image/value.svg" alt="group yoga" class="w-hull h-full" />
+                                        </div>
+                                        <h5 class="uppercase text-primary 1xl:mb-5 mb-3">
+                                            Greater Value
+                                        </h5>
+                                        <p>
+                                            Enjoy significant savings compared to single class rates, along with
+                                            exclusive member discounts.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- 3rd slide -->
+                                <div class="swiper-slide h-auto! bg-white">
+                                    <div class="2xl:p-[33px] 1xl:p-[30px] sm:p-6 p-4 rounded-sm h-full">
+                                        <div
+                                            class="bg-whitesmoke-100 border border-primary/15 overflow-hidden rounded-[10px] 2xl:w-[84px] 2xl:h-[84px] 1xl:w-[80px] 1xl:h-[80px] md:w-[70px] md:h-[70px] sm:h-[65px] sm:w-[65px] w-[60px] h-[60px] 1xl:mb-10 md:mb-8 sm:mb-6 mb-4 1xl:p-4 p-3.5">
+                                            <img src="./image/deeper.svg" alt="group yoga" class="w-hull h-full" />
+                                        </div>
+                                        <h5 class="uppercase text-primary 1xl:mb-5 mb-3">
+                                            Deeper Engagement
+                                        </h5>
+                                        <p>
+                                            Build a meaningful connection with your body, breath, and mind through
+                                            structured sessions.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- 4th slide -->
+                                <div class="swiper-slide h-auto! bg-white">
+                                    <div class="2xl:p-[33px] 1xl:p-[30px] sm:p-6 p-4 rounded-sm h-full">
+                                        <div
+                                            class="bg-whitesmoke-100 border border-primary/15 overflow-hidden rounded-[10px] 2xl:w-[84px] 2xl:h-[84px] 1xl:w-[80px] 1xl:h-[80px] md:w-[70px] md:h-[70px] sm:h-[65px] sm:w-[65px] w-[60px] h-[60px] 1xl:mb-10 md:mb-8 sm:mb-6 mb-4 1xl:p-4 p-3.5">
+                                            <img src="./image/access.svg" alt="group yoga" class="w-hull h-full" />
+                                        </div>
+                                        <h5 class="uppercase text-primary 1xl:mb-5 mb-3">
+                                            Priority Access
+                                        </h5>
+                                        <p>
+                                            Get early registration for workshops, events, and retreats before they open
+                                            to the public.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- 5th slide -->
+                                <div class="swiper-slide h-auto! bg-white">
+                                    <div class="2xl:p-[33px] 1xl:p-[30px] sm:p-6 p-4 rounded-sm h-full">
+                                        <div
+                                            class="bg-whitesmoke-100 border border-primary/15 overflow-hidden rounded-[10px] 2xl:w-[84px] 2xl:h-[84px] 1xl:w-[80px] 1xl:h-[80px] md:w-[70px] md:h-[70px] sm:h-[65px] sm:w-[65px] w-[60px] h-[60px] 1xl:mb-10 md:mb-8 sm:mb-6 mb-4 1xl:p-4 p-3.5">
+                                            <img src="./image/community.svg" alt="group yoga" class="w-hull h-full" />
+                                        </div>
+                                        <h5 class="uppercase text-primary 1xl:mb-5 mb-3">
+                                            Community
+                                        </h5>
+                                        <p>
+                                            Be part of a supportive and inclusive community of fellow yoga practitioners
+                                            and instructors.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- 6th slide -->
+                                <div class="swiper-slide h-auto! bg-white">
+                                    <div class="2xl:p-[33px] 1xl:p-[30px] sm:p-6 p-4 rounded-sm h-full">
+                                        <div
+                                            class="bg-whitesmoke-100 border border-primary/15 overflow-hidden rounded-[10px] 2xl:w-[84px] 2xl:h-[84px] 1xl:w-[80px] 1xl:h-[80px] md:w-[70px] md:h-[70px] sm:h-[65px] sm:w-[65px] w-[60px] h-[60px] 1xl:mb-10 md:mb-8 sm:mb-6 mb-4 1xl:p-4 p-3.5">
+                                            <img src="./image/member.svg" alt="group yoga" class="w-hull h-full" />
+                                        </div>
+                                        <h5 class="uppercase text-primary 1xl:mb-5 mb-3">
+                                            Member Tools & Perks
+                                        </h5>
+                                        <p>
+                                            Access on-demand classes, track your progress, and enjoy simple booking
+                                            through our member portal.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- 2nd card -->
-                    <div class="bg-white rounded-sm overflow-hidden h-auto">
-                        <!-- Image Wrapper -->
-                        <div
-                            class="relative overflow-hidden 2xl:h-[323px] 1xl:h-[270px] xl:h-[230px] lg:h-[205px] sm:h-[185px] h-[165px]">
-                            <img src="./image/home-4_inspiration-2.webp" alt="Personalized Yoga"
-                                class="w-full h-full object-cover" />
+                    <div
+                        class="relative sm:absolute sm:top-1/2 top-0 sm:-translate-y-1/2 sm:w-full w-[84px] flex items-center justify-between mx-auto z-1">
+                        <div class="slider-custom-arrow swiper-button-prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18"
+                                fill="none" class="swiper-navigation-icon">
+                                <path
+                                    d="M20.9741 8.80684C20.9741 8.80684 6.87288 8.80675 0.999486 8.80669M0.999486 8.80669L8.23218 16.6134M0.999486 8.80669L8.23321 1"
+                                    fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
                         </div>
-
-                        <!-- Content -->
-                        <div class="1xl:py-[30px] xl:py-5 sm:py-4 sm:px-5 p-4 text-left h-auto">
-                            <!-- Title -->
-                            <h5
-                                class="uppercase text-primary 1xl:mb-3.5 mb-2.5 xl:max-w-[87%] lt:max-w-full md:max-w-[97%] w-full">
-                                Morning Yoga Flow You Can Do Anywhere
-                            </h5>
-
-                            <!-- Description -->
-                            <p class="1xl:mb-6 xl:mb-5 mb-4 xl:max-w-[95%] w-full">
-                                A refreshing sequence perfect for busy mornings or travel.
-                            </p>
-                            <div class="flex items-center justify-between w-full flex-wrap">
-                                <div class="flex items-center lg:gap-3 gap-2">
-                                    <img src="./image/dark-calendor.svg" alt="calendor"
-                                        class="2xl:w-8 2xl:h-8 1xl:w-7.5 1xl:h-7.5 xl:w-7 xl:h-7 lg:w-6.5 lg:h-6.5 md:w-6 md:h-6 sm:w-5.5 sm:h-5.5 w-4.5 h-4.5 object-contain" />
-                                    <p class="uppercase p2">July 15, 2025</p>
-                                </div>
-                                <a href="./blog.html"
-                                    class="btn btn-secondary bg-white md:text-13 text-[10px] xl:py-2 xl:px-5 py-1.5 md:px-4.5 px-4">Read
-                                    More</a>
-                            </div>
+                        <div class="slider-custom-arrow swiper-button-next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18"
+                                fill="none" class="swiper-navigation-icon">
+                                <path
+                                    d="M20.9741 8.80684C20.9741 8.80684 6.87288 8.80675 0.999486 8.80669M0.999486 8.80669L8.23218 16.6134M0.999486 8.80669L8.23321 1"
+                                    fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <!-- 3rd card -->
-                    <div class="bg-white rounded-sm overflow-hidden h-auto">
-                        <!-- Image Wrapper -->
-                        <div
-                            class="relative overflow-hidden 2xl:h-[323px] 1xl:h-[270px] xl:h-[230px] lg:h-[205px] sm:h-[185px] h-[165px]">
-                            <img src="./image/home-4_inspiration-3.webp" alt="Personalized Yoga"
-                                class="w-full h-full object-cover" />
-                        </div>
-
-                        <!-- Content -->
-                        <div class="1xl:py-[30px] xl:py-5 sm:py-4 sm:px-5 p-4 text-left h-auto">
-                            <!-- Title -->
-                            <h5
-                                class="uppercase text-primary 1xl:mb-3.5 mb-2.5 xl:max-w-[87%] lt:max-w-full md:max-w-[97%] w-full">
-                                How to Build a
-                                Daily
-                                Yoga Routine</h5>
-
-                            <!-- Description -->
-                            <p class="1xl:mb-6 xl:mb-5 mb-4 xl:max-w-[95%] w-full">
-                                Create a consistent, energizing practice that fits your lifestyle.
-                            </p>
-                            <div class="flex items-center justify-between w-full flex-wrap">
-                                <div class="flex items-center lg:gap-3 gap-2">
-                                    <img src="./image/dark-calendor.svg" alt="calendor"
-                                        class="2xl:w-8 2xl:h-8 1xl:w-7.5 1xl:h-7.5 xl:w-7 xl:h-7 lg:w-6.5 lg:h-6.5 md:w-6 md:h-6 sm:w-5.5 sm:h-5.5 w-4.5 h-4.5 object-contain" />
-                                    <p class="uppercase p2">July 15, 2025</p>
+        <section class="relative 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10 w-full">
+            <div class="container">
+                <div class="w-full relative">
+                    <img src="./image/gift-card-banner.webp" alt="Find Your Flow"
+                        class="w-full h-full object-cover absolute top-0 left-0 poinet-events-none" />
+                    <div class="w-full h-full relative">
+                        <div class="flex lt:flex-row flex-col items-stretch 1xl:gap-12 lt:gap-9.5 sm:gap-5.5 gap-4.5">
+                            <div class="lt:h-auto lt:w-[36%] w-full h-[420px]">
+                                <img src="./image/gift-card-side.webp" alt="gift card"
+                                    class="w-full h-full object-cover" />
+                            </div>
+                            <div class="lt:w-[64%] w-full sm:p-6 p-4 1xl:pt-12.5 lt:pt-8.5 pt-0 lt:pl-0">
+                                <div class="text-center 2xl:max-w-[86%] 1xl:max-w-[95%] max-w-full w-full mx-auto">
+                                    <h3
+                                        class="font-primary italic font-medium 2xl:mb-7 1xl:mb-6 xl:mb-3.5 mb-2.5 text-center">
+                                        Gift Cards
+                                    </h3>
+                                    <h2 class="text-primary uppercase 1xl:mb-5 mb-3 text-center">
+                                        wellness. Gift flexibility.
+                                    </h2>
+                                    <p class="text-center 1xl:mb-10 xl:mb-8 mb-6">
+                                        Give the gift of balance — yoga sessions, wellness gear, or class passes for
+                                        every level.Perfect for birthdays, celebrations, or a simple “thinking of
+                                        you.”
+                                    </p>
+                                    <a href="./gift-card.html" class="btn btn-secondary mx-auto">BUY GIFT CARDS</a>
                                 </div>
-                                <a href="./blog.html"
-                                    class="btn btn-secondary bg-white md:text-13 text-[10px] xl:py-2 xl:px-5 py-1.5 md:px-4.5 px-4">Read
-                                    More</a>
+                                <div
+                                    class="flex sm:flex-row flex-col sm:items-end items-center sm:justify-between w-full sm:mt-0 mt-5 sm:gap-0 gap-3">
+                                    <div>
+                                        <div class="flex items-center gap-1.5 mb-2">
+                                            <div class="1xl:size-9 xl:size-8 lg:size-7.5 size-6.5">
+                                                <img src="./image/gift-box.svg" alt="box-open"
+                                                    classs="w-full h-full object-contain" />
+                                            </div>
+                                            <p class="font-medium">Redeemable for:</p>
+                                        </div>
+                                        <ul class="list-disc pl-5 space-y-1 text-primary">
+                                            <li>
+                                                <p>Studio & Online Classes</p>
+                                            </li>
+                                            <li>
+                                                <p>Private Sessions</p>
+                                            </li>
+                                            <li>
+                                                <p>Wellness Merchandise</p>
+                                            </li>
+                                            <li>
+                                                <p>Retreats & Workshops</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p>Non-refundable. Terms apply.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <a href="./classes.html" class="btn btn-secondary 2xl:mt-[50px] 1xl:mt-11 md:mt-9 mt-7 mx-auto">
-                    View All Blogs
-                </a>
+                <div class="w-full flex items-center justify-end">
+                    <p class="font-medium">Gift Card Code: TM-5827-YG</p>
+                    <img src="./image/copy.svg" alt="copy" class="w-full h-full"/>
+                </div>
             </div>
         </section>
-        <!-- ====== End Class Stories Section ====== -->
 
-        <!-- ====== Blog & Insights Section ====== -->
-        <section class="relative 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10 overflow-hidden">
-            <div class="container relative">
-                <!-- Intro -->
+
+
+        <section class="relative 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10 w-full">
+            <div class="container">
                 <div
-                    class="flex flex-row justify-between items-center w-full sm:gap-8 gap-5 2xl:mb-[50px] 1xl:mb-11 xl:mb-[38px] sm:mb-8 mb-5">
-                    <div>
-                        <h3
-                            class="text-thunder-100 font-primary italic font-medium 2xl:mb-7.5 1xl:mb-6 xl:mb-5 md:mb-4 sm:mb-3 mb-2.5">
-                            What Our Members Say
-                        </h3>
-                        <h2 class="text-primary font-normal uppercase 1xl:mb-5 mb-3.5">
-                            Inspired by Experience.
-                        </h2>
-                        <p class="text-thunder-100 lt:max-w-[90%] w-full">
-                            Every testimonial is a testament to personal growth, emotional healing, and inner strength.
+                    class="text-center 2xl:max-w-[75%] lg:max-w-[80%] lt:max-w-[90% ] max-w-full w-full mx-auto 1xl:mb-10 lt:mb-8 md:mb-7 mb-6.5">
+                    <h3 class="font-primary italic font-medium 2xl:mb-7 1xl:mb-6 xl:mb-5 sm:mb-3 mb-2.5 text-center">
+                        Membership FAQs
+                    </h3>
+                    <h2 class="text-primary uppercase 1xl:mb-5 mb-3 text-center">
+                        Answers to Common Questions
+                    </h2>
+                    <p>
+                        Whether you're just getting started or upgrading your plan, here’s everything you need to know.
+                    </p>
+                </div>
+
+                <!-- 1- FAQ ITEM -->
+                <div class="faq-item border-b border-primary/50">
+                    <button class="faq-question flex justify-between items-center w-full py-6 text-left">
+                        <h5 class="text-primary uppercase">o1. Which membership should I choose ? </h5>
+                        <span class="faq-icon text-44 font-light leading-none">+</span>
+                    </button>
+
+                    <div class="faq-answer hidden pb-7 max-w-[63%] w-full pl-10">
+                        <p class="text-black">
+                            If you're just starting, the Essence Plan is a great fit. For more frequent practice,
+                            Balance or Elevate offer more flexibility and perks.
                         </p>
                     </div>
-                    <div
-                        class="2xl:w-[123px] xl:w-[105px] lt:w-[95px] md:w-[85px] w-[80px] shrink-0 relative md:flex hidden items-center justify-between right-0 z-1">
-                        <div class="slider-custom-arrow swiper-button-prev">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18"
-                                fill="none" class="swiper-navigation-icon">
-                                <path
-                                    d="M20.9741 8.80684C20.9741 8.80684 6.87288 8.80675 0.999486 8.80669M0.999486 8.80669L8.23218 16.6134M0.999486 8.80669L8.23321 1"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <div class="slider-custom-arrow swiper-button-next">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18"
-                                fill="none" class="swiper-navigation-icon">
-                                <path
-                                    d="M20.9741 8.80684C20.9741 8.80684 6.87288 8.80675 0.999486 8.80669M0.999486 8.80669L8.23218 16.6134M0.999486 8.80669L8.23321 1"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </div>
+                </div>
+
+                <!-- 2- FAQ ITEM -->
+                <div class="faq-item border-b border-primary/50">
+
+                    <button class="faq-question flex justify-between items-center w-full py-6 text-left">
+                        <h5 class="text-primary uppercase">02. Do unused classes roll over?</h5>
+                        <span class="faq-icon text-44 font-light leading-none">+</span>
+                    </button>
+
+                    <div class="faq-answer hidden pb-7 max-w-[63%] w-full pl-10">
+                        <p class="text-black">
+                            Yes, we offer special pricing for students and seniors with valid ID.
+                        </p>
                     </div>
                 </div>
 
-                <div>
-                    <div class="swiper home-4_testimonial">
-                        <div class="swiper-wrapper">
-                            <!-- 1st slide -->
-                            <div class="swiper-slide h-auto! bg-whitesmoke-100">
-                                <div class="2xl:p-10 1xl:p-8 xl:p-7 lt:p-6 p-5">
-                                    <div class="1xl:mb-10 xl:mb-8 sm:mb-6 mb-5">
-                                        <h3
-                                            class="italic font-medium 1xl:mb-11.5 xl:mb-8.5 md:mb-7 sm:mb-6 mb-4 font-primary text-primary">
-                                            “A life-changing space.”
-                                        </h3>
-                                        <p class="md:mb-3 sm:mb-2 mb-1 font-medium">
-                                            Pranavya Yoga has been my sanctuary. The instructors are incredibly
-                                            nurturing, and each class feels like a reset button.
-                                        </p>
-                                        <svg width="39" height="31" viewBox="0 0 39 31" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            class="ml-auto mr-0 lt:w-10 lt:h-7.5 md:w-9 md:h-6.5 sm:w-7 sm:h-5.5 w-5 h-4">
-                                            <path
-                                                d="M14.8967 0C16.2954 0.349687 17.2046 1.46868 17.6242 3.35699C15.596 4.47599 13.5329 6.15449 11.4348 8.39249C9.33665 10.6305 7.86796 13.0783 7.02871 15.7359H7.34343C10.0011 15.7359 12.0642 16.4353 13.5329 17.834C15.0715 19.1628 15.8408 20.9113 15.8408 23.0793C15.8408 25.1075 15.0715 26.821 13.5329 28.2198C12.0642 29.6185 10.2808 30.3179 8.18268 30.3179C5.66493 30.3179 3.67171 29.4437 2.20303 27.6952C0.734343 25.8768 0 23.7088 0 21.191C0 16.9249 1.36378 13.1133 4.09134 9.75627C6.8189 6.39927 10.4207 3.14718 14.8967 0ZM35.8779 0C37.2766 0.349687 38.1858 1.46868 38.6055 3.35699C36.5773 4.47599 34.5141 6.15449 32.416 8.39249C30.3179 10.6305 28.8492 13.0783 28.0099 15.7359H28.3247C30.9823 15.7359 33.0454 16.4353 34.5141 17.834C36.0527 19.1628 36.8221 20.9113 36.8221 23.0793C36.8221 25.1075 36.0527 26.821 34.5141 28.2198C33.0454 29.6185 31.262 30.3179 29.1639 30.3179C26.6462 30.3179 24.6529 29.4437 23.1843 27.6952C21.7156 25.8768 20.9812 23.7088 20.9812 21.191C20.9812 16.9249 22.345 13.1133 25.0726 9.75627C27.8001 6.39927 31.4019 3.14718 35.8779 0Z"
-                                                fill="#673E2C" />
-                                        </svg>
+                <!-- 3- FAQ ITEM -->
+                <div class="faq-item border-b border-primary/50">
 
-                                    </div>
-                                    <div
-                                        class="border-t-2 border-[#673e2c2b] 1xl:pt-7.5 xl:pt-6 sm:pt-5 pt-4 flex items-center justify-between w-full flex-wrap xl:gap-3 gap-2.5">
-                                        <div class="flex items-center 1xl:gap-4 md:gap-2.5 sm:gap-2 gap-1.5">
-                                            <div
-                                                class="1xl:w-12.5 1xl:h-12.5 xl:w-11.5 xl:h-11.5 md:w-10 md:h-10 sm:w-[35px] sm:h-[35px] w-7 h-7 rounded-full overflow-hidden">
-                                                <img src="./image/home-4_client-1.webp" alt="client"
-                                                    class="w-full h-full object-cover" />
-                                            </div>
-                                            <p class="p2 text-black uppercase">– Sarah L.</p>
-                                        </div>
-                                        <div class="flex items-center 1xl:gap-2.5 md:gap-2 gap-1">
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <button class="faq-question flex justify-between items-center w-full py-6 text-left">
+                        <h5 class="text-primary uppercase">03. Do you offer student or senior discounts?</h5>
+                        <span class="faq-icon text-44 font-light leading-none">+</span>
+                    </button>
 
-                            <!-- 2nd slide -->
-                            <div class="swiper-slide h-auto! bg-whitesmoke-100">
-                                <div class="2xl:p-10 1xl:p-8 xl:p-7 lt:p-6 p-5">
-                                    <div class="1xl:mb-10 xl:mb-8 sm:mb-6 mb-5">
-                                        <h3
-                                            class="italic font-medium 1xl:mb-11.5 xl:mb-8.5 md:mb-7 sm:mb-6 mb-4 font-primary text-primary">
-                                            “Exactly what I needed.”
-                                        </h3>
-                                        <p class="md:mb-3 sm:mb-2 mb-1 font-medium">
-                                            “I joined just looking to stretch and move more, but I found so much
-                                            more—peace, strength, and a beautiful community.”
-                                        </p>
-                                        <svg width="39" height="31" viewBox="0 0 39 31" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            class="ml-auto mr-0 lt:w-10 lt:h-7.5 md:w-9 md:h-6.5 sm:w-7 sm:h-5.5 w-5 h-4">
-                                            <path
-                                                d="M14.8967 0C16.2954 0.349687 17.2046 1.46868 17.6242 3.35699C15.596 4.47599 13.5329 6.15449 11.4348 8.39249C9.33665 10.6305 7.86796 13.0783 7.02871 15.7359H7.34343C10.0011 15.7359 12.0642 16.4353 13.5329 17.834C15.0715 19.1628 15.8408 20.9113 15.8408 23.0793C15.8408 25.1075 15.0715 26.821 13.5329 28.2198C12.0642 29.6185 10.2808 30.3179 8.18268 30.3179C5.66493 30.3179 3.67171 29.4437 2.20303 27.6952C0.734343 25.8768 0 23.7088 0 21.191C0 16.9249 1.36378 13.1133 4.09134 9.75627C6.8189 6.39927 10.4207 3.14718 14.8967 0ZM35.8779 0C37.2766 0.349687 38.1858 1.46868 38.6055 3.35699C36.5773 4.47599 34.5141 6.15449 32.416 8.39249C30.3179 10.6305 28.8492 13.0783 28.0099 15.7359H28.3247C30.9823 15.7359 33.0454 16.4353 34.5141 17.834C36.0527 19.1628 36.8221 20.9113 36.8221 23.0793C36.8221 25.1075 36.0527 26.821 34.5141 28.2198C33.0454 29.6185 31.262 30.3179 29.1639 30.3179C26.6462 30.3179 24.6529 29.4437 23.1843 27.6952C21.7156 25.8768 20.9812 23.7088 20.9812 21.191C20.9812 16.9249 22.345 13.1133 25.0726 9.75627C27.8001 6.39927 31.4019 3.14718 35.8779 0Z"
-                                                fill="#673E2C" />
-                                        </svg>
-
-                                    </div>
-                                    <div
-                                        class="border-t-2 border-[#673e2c2b] 1xl:pt-7.5 xl:pt-6 sm:pt-5 pt-4 flex items-center justify-between w-full flex-wrap xl:gap-3 gap-2.5">
-                                        <div class="flex items-center 1xl:gap-4 md:gap-2.5 sm:gap-2 gap-1.5">
-                                            <div
-                                                class="1xl:w-12.5 1xl:h-12.5 xl:w-11.5 xl:h-11.5 md:w-10 md:h-10 sm:w-[35px] sm:h-[35px] w-7 h-7 rounded-full overflow-hidden">
-                                                <img src="./image/home-4_client-2.webp" alt="client"
-                                                    class="w-full h-full object-cover" />
-                                            </div>
-                                            <p class="p2 text-black uppercase">– Lauren T.</p>
-                                        </div>
-                                        <div class="flex items-center 1xl:gap-2.5 md:gap-2 gap-1">
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 3rd slide -->
-                            <div class="swiper-slide h-auto! bg-whitesmoke-100">
-                                <div class="2xl:p-10 1xl:p-8 xl:p-7 lt:p-6 p-5">
-                                    <div class="1xl:mb-10 xl:mb-8 sm:mb-6 mb-5">
-                                        <h3
-                                            class="italic font-medium 1xl:mb-11.5 xl:mb-8.5 md:mb-7 sm:mb-6 mb-4 font-primary text-primary">
-                                            “My weekly reset.”
-                                        </h3>
-                                        <p class="md:mb-3 sm:mb-2 mb-1 font-medium">
-                                            “No matter how stressful the week gets, I always look forward to my time at
-                                            Pranavya. It’s the highlight of my schedule.”
-                                        </p>
-                                        <svg width="39" height="31" viewBox="0 0 39 31" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            class="ml-auto mr-0 lt:w-10 lt:h-7.5 md:w-9 md:h-6.5 sm:w-7 sm:h-5.5 w-5 h-4">
-                                            <path
-                                                d="M14.8967 0C16.2954 0.349687 17.2046 1.46868 17.6242 3.35699C15.596 4.47599 13.5329 6.15449 11.4348 8.39249C9.33665 10.6305 7.86796 13.0783 7.02871 15.7359H7.34343C10.0011 15.7359 12.0642 16.4353 13.5329 17.834C15.0715 19.1628 15.8408 20.9113 15.8408 23.0793C15.8408 25.1075 15.0715 26.821 13.5329 28.2198C12.0642 29.6185 10.2808 30.3179 8.18268 30.3179C5.66493 30.3179 3.67171 29.4437 2.20303 27.6952C0.734343 25.8768 0 23.7088 0 21.191C0 16.9249 1.36378 13.1133 4.09134 9.75627C6.8189 6.39927 10.4207 3.14718 14.8967 0ZM35.8779 0C37.2766 0.349687 38.1858 1.46868 38.6055 3.35699C36.5773 4.47599 34.5141 6.15449 32.416 8.39249C30.3179 10.6305 28.8492 13.0783 28.0099 15.7359H28.3247C30.9823 15.7359 33.0454 16.4353 34.5141 17.834C36.0527 19.1628 36.8221 20.9113 36.8221 23.0793C36.8221 25.1075 36.0527 26.821 34.5141 28.2198C33.0454 29.6185 31.262 30.3179 29.1639 30.3179C26.6462 30.3179 24.6529 29.4437 23.1843 27.6952C21.7156 25.8768 20.9812 23.7088 20.9812 21.191C20.9812 16.9249 22.345 13.1133 25.0726 9.75627C27.8001 6.39927 31.4019 3.14718 35.8779 0Z"
-                                                fill="#673E2C" />
-                                        </svg>
-
-                                    </div>
-                                    <div
-                                        class="border-t-2 border-[#673e2c2b] 1xl:pt-7.5 xl:pt-6 sm:pt-5 pt-4 flex items-center justify-between w-full flex-wrap xl:gap-3 gap-2.5">
-                                        <div class="flex items-center 1xl:gap-4 md:gap-2.5 sm:gap-2 gap-1.5">
-                                            <div
-                                                class="1xl:w-12.5 1xl:h-12.5 xl:w-11.5 xl:h-11.5 md:w-10 md:h-10 sm:w-[35px] sm:h-[35px] w-7 h-7 rounded-full overflow-hidden">
-                                                <img src="./image/home-4_client-3.webp" alt="client"
-                                                    class="w-full h-full object-cover" />
-                                            </div>
-                                            <p class="p2 text-black uppercase">– Chris D.</p>
-                                        </div>
-                                        <div class="flex items-center 1xl:gap-2.5 md:gap-2 gap-1">
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 4th slide -->
-                            <div class="swiper-slide h-auto! bg-whitesmoke-100">
-                                <div class="2xl:p-10 1xl:p-8 xl:p-7 lt:p-6 p-5">
-                                    <div class="1xl:mb-10 xl:mb-8 sm:mb-6 mb-5">
-                                        <h3
-                                            class="italic font-medium 1xl:mb-11.5 xl:mb-8.5 md:mb-7 sm:mb-6 mb-4 font-primary text-primary">
-                                            “A
-                                            life-changing space.”</h3>
-                                        <p class="md:mb-3 sm:mb-2 mb-1 font-medium">
-                                            Pranavya Yoga has been my sanctuary. The instructors are incredibly
-                                            nurturing, and each class feels like a reset button.
-                                        </p>
-                                        <svg width="39" height="31" viewBox="0 0 39 31" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            class="ml-auto mr-0 lt:w-10 lt:h-7.5 md:w-9 md:h-6.5 sm:w-7 sm:h-5.5 w-5 h-4">
-                                            <path
-                                                d="M14.8967 0C16.2954 0.349687 17.2046 1.46868 17.6242 3.35699C15.596 4.47599 13.5329 6.15449 11.4348 8.39249C9.33665 10.6305 7.86796 13.0783 7.02871 15.7359H7.34343C10.0011 15.7359 12.0642 16.4353 13.5329 17.834C15.0715 19.1628 15.8408 20.9113 15.8408 23.0793C15.8408 25.1075 15.0715 26.821 13.5329 28.2198C12.0642 29.6185 10.2808 30.3179 8.18268 30.3179C5.66493 30.3179 3.67171 29.4437 2.20303 27.6952C0.734343 25.8768 0 23.7088 0 21.191C0 16.9249 1.36378 13.1133 4.09134 9.75627C6.8189 6.39927 10.4207 3.14718 14.8967 0ZM35.8779 0C37.2766 0.349687 38.1858 1.46868 38.6055 3.35699C36.5773 4.47599 34.5141 6.15449 32.416 8.39249C30.3179 10.6305 28.8492 13.0783 28.0099 15.7359H28.3247C30.9823 15.7359 33.0454 16.4353 34.5141 17.834C36.0527 19.1628 36.8221 20.9113 36.8221 23.0793C36.8221 25.1075 36.0527 26.821 34.5141 28.2198C33.0454 29.6185 31.262 30.3179 29.1639 30.3179C26.6462 30.3179 24.6529 29.4437 23.1843 27.6952C21.7156 25.8768 20.9812 23.7088 20.9812 21.191C20.9812 16.9249 22.345 13.1133 25.0726 9.75627C27.8001 6.39927 31.4019 3.14718 35.8779 0Z"
-                                                fill="#673E2C" />
-                                        </svg>
-
-                                    </div>
-                                    <div
-                                        class="border-t-2 border-[#673e2c2b] 1xl:pt-7.5 xl:pt-6 sm:pt-5 pt-4 flex items-center justify-between w-full flex-wrap xl:gap-3 gap-2.5">
-                                        <div class="flex items-center 1xl:gap-4 md:gap-2.5 sm:gap-2 gap-1.5">
-                                            <div
-                                                class="1xl:w-12.5 1xl:h-12.5 xl:w-11.5 xl:h-11.5 md:w-10 md:h-10 sm:w-[35px] sm:h-[35px] w-7 h-7 rounded-full overflow-hidden">
-                                                <img src="./image/home-4_client-1.webp" alt="client"
-                                                    class="w-full h-full object-cover" />
-                                            </div>
-                                            <p class="p2 text-black uppercase">– Sarah L.</p>
-                                        </div>
-                                        <div class="flex items-center 1xl:gap-2.5 md:gap-2 gap-1">
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 5th slide -->
-                            <div class="swiper-slide h-auto! bg-whitesmoke-100">
-                                <div class="2xl:p-10 1xl:p-8 xl:p-7 lt:p-6 p-5">
-                                    <div class="1xl:mb-10 xl:mb-8 sm:mb-6 mb-5">
-                                        <h3
-                                            class="italic font-medium 1xl:mb-11.5 xl:mb-8.5 md:mb-7 sm:mb-6 mb-4 font-primary text-primary">
-                                            “Exactly what I needed.”
-                                        </h3>
-                                        <p class="md:mb-3 sm:mb-2 mb-1 font-medium">
-                                            “I joined just looking to stretch and move more, but I found so much
-                                            more—peace, strength, and a beautiful community.”
-                                        </p>
-                                        <svg width="39" height="31" viewBox="0 0 39 31" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            class="ml-auto mr-0 lt:w-10 lt:h-7.5 md:w-9 md:h-6.5 sm:w-7 sm:h-5.5 w-5 h-4">
-                                            <path
-                                                d="M14.8967 0C16.2954 0.349687 17.2046 1.46868 17.6242 3.35699C15.596 4.47599 13.5329 6.15449 11.4348 8.39249C9.33665 10.6305 7.86796 13.0783 7.02871 15.7359H7.34343C10.0011 15.7359 12.0642 16.4353 13.5329 17.834C15.0715 19.1628 15.8408 20.9113 15.8408 23.0793C15.8408 25.1075 15.0715 26.821 13.5329 28.2198C12.0642 29.6185 10.2808 30.3179 8.18268 30.3179C5.66493 30.3179 3.67171 29.4437 2.20303 27.6952C0.734343 25.8768 0 23.7088 0 21.191C0 16.9249 1.36378 13.1133 4.09134 9.75627C6.8189 6.39927 10.4207 3.14718 14.8967 0ZM35.8779 0C37.2766 0.349687 38.1858 1.46868 38.6055 3.35699C36.5773 4.47599 34.5141 6.15449 32.416 8.39249C30.3179 10.6305 28.8492 13.0783 28.0099 15.7359H28.3247C30.9823 15.7359 33.0454 16.4353 34.5141 17.834C36.0527 19.1628 36.8221 20.9113 36.8221 23.0793C36.8221 25.1075 36.0527 26.821 34.5141 28.2198C33.0454 29.6185 31.262 30.3179 29.1639 30.3179C26.6462 30.3179 24.6529 29.4437 23.1843 27.6952C21.7156 25.8768 20.9812 23.7088 20.9812 21.191C20.9812 16.9249 22.345 13.1133 25.0726 9.75627C27.8001 6.39927 31.4019 3.14718 35.8779 0Z"
-                                                fill="#673E2C" />
-                                        </svg>
-
-                                    </div>
-                                    <div
-                                        class="border-t-2 border-[#673e2c2b] 1xl:pt-7.5 xl:pt-6 sm:pt-5 pt-4 flex items-center justify-between w-full flex-wrap xl:gap-3 gap-2.5">
-                                        <div class="flex items-center 1xl:gap-4 md:gap-2.5 sm:gap-2 gap-1.5">
-                                            <div
-                                                class="1xl:w-12.5 1xl:h-12.5 xl:w-11.5 xl:h-11.5 md:w-10 md:h-10 sm:w-[35px] sm:h-[35px] w-7 h-7 rounded-full overflow-hidden">
-                                                <img src="./image/home-4_client-2.webp" alt="client"
-                                                    class="w-full h-full object-cover" />
-                                            </div>
-                                            <p class="p2 text-black uppercase">– Lauren T.</p>
-                                        </div>
-                                        <div class="flex items-center 1xl:gap-2.5 md:gap-2 gap-1">
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                            <img src="./image/yellow-star.svg" alt="star"
-                                                class="1xl:w-5.5 xl:w-5 sm:w-4 w-3.5 h-full object-contain" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="faq-answer hidden pb-7 max-w-[63%] w-full pl-10">
+                        <p class="text-black">
+                            Yes, we offer special pricing for students and seniors with valid ID.
+                        </p>
                     </div>
-                    <div
-                        class="w-[80px] shrink-0 relative mx-auto mt-6 flex md:hidden items-center justify-between right-0 z-1">
-                        <div class="slider-custom-arrow swiper-button-prev">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18"
-                                fill="none" class="swiper-navigation-icon">
-                                <path
-                                    d="M20.9741 8.80684C20.9741 8.80684 6.87288 8.80675 0.999486 8.80669M0.999486 8.80669L8.23218 16.6134M0.999486 8.80669L8.23321 1"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <div class="slider-custom-arrow swiper-button-next">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="18" viewBox="0 0 22 18"
-                                fill="none" class="swiper-navigation-icon">
-                                <path
-                                    d="M20.9741 8.80684C20.9741 8.80684 6.87288 8.80675 0.999486 8.80669M0.999486 8.80669L8.23218 16.6134M0.999486 8.80669L8.23321 1"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
-                        </div>
+                </div>
+
+                <!-- 4- FAQ ITEM -->
+                <div class="faq-item border-b border-primary/50">
+
+                    <button class="faq-question flex justify-between items-center w-full py-6 text-left">
+                        <h5 class="text-primary uppercase">04. What’s included in a membership?</h5>
+                        <span class="faq-icon text-44 font-light leading-none">+</span>
+                    </button>
+
+                    <div class="faq-answer hidden pb-7 max-w-[63%] w-full pl-10">
+                        <p class="text-black">
+                            Yes, we offer special pricing for students and seniors with valid ID.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 5- FAQ ITEM -->
+                <div class="faq-item border-b border-primary/50">
+
+                    <button class="faq-question flex justify-between items-center w-full py-6 text-left">
+                        <h5 class="text-primary uppercase">05. Can I cancel anytime?</h5>
+                        <span class="faq-icon text-44 font-light leading-none">+</span>
+                    </button>
+
+                    <div class="faq-answer hidden pb-7 max-w-[63%] w-full pl-10">
+                        <p class="text-black">
+                            Yes, we offer special pricing for students and seniors with valid ID.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- ====== End Blog & Insights Section ====== -->
 
-        <!-- ====== Start Blog & Insights Section ====== -->
-        <section
-            class="relative 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10 overflow-hidden marquee-slider-4">
-            <div class="2xl:space-y-[50px] 1xl:space-y-11 xl:space-y-[38px] sm:space-y-8 md:space-y-5 space-y-3.5">
 
-                <!-- TOP SLIDER -->
-                <div class="overflow-hidden">
-                    <div class="marquee-track animate-slide-left" data-marquee>
-                        <div class="slider-img">
-                            <a href="https://www.instagram.com/" target="_blank" class="relative group cursor-pointer">
-
-                                <img decoding="async" src="./image/home-4_instagram-1.webp"
-                                    alt="instagram_style_1_images_1" class="w-full h-full object-cover object-center" />
-                                <div
-                                    class="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <div
-                                        class="bg-white rounded-full overflow-hidden sm:size-12 size-10 flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" class="sm:w-6 sm:h-6 w-5 h-5" fill="none">
-                                            <path
-                                                d="M6.76667 0H16.5667C20.3 0 23.3333 3.03333 23.3333 6.76667V16.5667C23.3333 18.3613 22.6204 20.0824 21.3514 21.3514C20.0824 22.6204 18.3613 23.3333 16.5667 23.3333H6.76667C3.03333 23.3333 0 20.3 0 16.5667V6.76667C0 4.97203 0.712915 3.25091 1.98191 1.98191C3.25091 0.712915 4.97203 0 6.76667 0ZM6.53333 2.33333C5.41942 2.33333 4.35114 2.77583 3.56348 3.56348C2.77583 4.35114 2.33333 5.41942 2.33333 6.53333V16.8C2.33333 19.1217 4.21167 21 6.53333 21H16.8C17.9139 21 18.9822 20.5575 19.7698 19.7698C20.5575 18.9822 21 17.9139 21 16.8V6.53333C21 4.21167 19.1217 2.33333 16.8 2.33333H6.53333ZM17.7917 4.08333C18.1784 4.08333 18.5494 4.23698 18.8229 4.51047C19.0964 4.78396 19.25 5.15489 19.25 5.54167C19.25 5.92844 19.0964 6.29937 18.8229 6.57286C18.5494 6.84635 18.1784 7 17.7917 7C17.4049 7 17.034 6.84635 16.7605 6.57286C16.487 6.29937 16.3333 5.92844 16.3333 5.54167C16.3333 5.15489 16.487 4.78396 16.7605 4.51047C17.034 4.23698 17.4049 4.08333 17.7917 4.08333ZM11.6667 5.83333C13.2138 5.83333 14.6975 6.44791 15.7915 7.54188C16.8854 8.63584 17.5 10.1196 17.5 11.6667C17.5 13.2138 16.8854 14.6975 15.7915 15.7915C14.6975 16.8854 13.2138 17.5 11.6667 17.5C10.1196 17.5 8.63584 16.8854 7.54188 15.7915C6.44791 14.6975 5.83333 13.2138 5.83333 11.6667C5.83333 10.1196 6.44791 8.63584 7.54188 7.54188C8.63584 6.44791 10.1196 5.83333 11.6667 5.83333ZM11.6667 8.16667C10.7384 8.16667 9.84817 8.53541 9.19179 9.19179C8.53541 9.84817 8.16667 10.7384 8.16667 11.6667C8.16667 12.5949 8.53541 13.4852 9.19179 14.1415C9.84817 14.7979 10.7384 15.1667 11.6667 15.1667C12.5949 15.1667 13.4852 14.7979 14.1415 14.1415C14.7979 13.4852 15.1667 12.5949 15.1667 11.6667C15.1667 10.7384 14.7979 9.84817 14.1415 9.19179C13.4852 8.53541 12.5949 8.16667 11.6667 8.16667Z"
-                                                fill="#673e2c" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slider-img">
-                            <a href="https://www.instagram.com/" target="_blank" class="relative group cursor-pointer">
-
-                                <img decoding="async" src="./image/home-4_instagram-2.webp"
-                                    alt="instagram_style_1_images_1" class="w-full h-full object-cover object-center" />
-                                <div
-                                    class="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <div
-                                        class="bg-white rounded-full overflow-hidden sm:size-12 size-10 flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" class="sm:w-6 sm:h-6 w-5 h-5" fill="none">
-                                            <path
-                                                d="M6.76667 0H16.5667C20.3 0 23.3333 3.03333 23.3333 6.76667V16.5667C23.3333 18.3613 22.6204 20.0824 21.3514 21.3514C20.0824 22.6204 18.3613 23.3333 16.5667 23.3333H6.76667C3.03333 23.3333 0 20.3 0 16.5667V6.76667C0 4.97203 0.712915 3.25091 1.98191 1.98191C3.25091 0.712915 4.97203 0 6.76667 0ZM6.53333 2.33333C5.41942 2.33333 4.35114 2.77583 3.56348 3.56348C2.77583 4.35114 2.33333 5.41942 2.33333 6.53333V16.8C2.33333 19.1217 4.21167 21 6.53333 21H16.8C17.9139 21 18.9822 20.5575 19.7698 19.7698C20.5575 18.9822 21 17.9139 21 16.8V6.53333C21 4.21167 19.1217 2.33333 16.8 2.33333H6.53333ZM17.7917 4.08333C18.1784 4.08333 18.5494 4.23698 18.8229 4.51047C19.0964 4.78396 19.25 5.15489 19.25 5.54167C19.25 5.92844 19.0964 6.29937 18.8229 6.57286C18.5494 6.84635 18.1784 7 17.7917 7C17.4049 7 17.034 6.84635 16.7605 6.57286C16.487 6.29937 16.3333 5.92844 16.3333 5.54167C16.3333 5.15489 16.487 4.78396 16.7605 4.51047C17.034 4.23698 17.4049 4.08333 17.7917 4.08333ZM11.6667 5.83333C13.2138 5.83333 14.6975 6.44791 15.7915 7.54188C16.8854 8.63584 17.5 10.1196 17.5 11.6667C17.5 13.2138 16.8854 14.6975 15.7915 15.7915C14.6975 16.8854 13.2138 17.5 11.6667 17.5C10.1196 17.5 8.63584 16.8854 7.54188 15.7915C6.44791 14.6975 5.83333 13.2138 5.83333 11.6667C5.83333 10.1196 6.44791 8.63584 7.54188 7.54188C8.63584 6.44791 10.1196 5.83333 11.6667 5.83333ZM11.6667 8.16667C10.7384 8.16667 9.84817 8.53541 9.19179 9.19179C8.53541 9.84817 8.16667 10.7384 8.16667 11.6667C8.16667 12.5949 8.53541 13.4852 9.19179 14.1415C9.84817 14.7979 10.7384 15.1667 11.6667 15.1667C12.5949 15.1667 13.4852 14.7979 14.1415 14.1415C14.7979 13.4852 15.1667 12.5949 15.1667 11.6667C15.1667 10.7384 14.7979 9.84817 14.1415 9.19179C13.4852 8.53541 12.5949 8.16667 11.6667 8.16667Z"
-                                                fill="#673e2c" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slider-img">
-                            <a href="https://www.instagram.com/" target="_blank" class="relative group cursor-pointer">
-
-                                <img decoding="async" src="./image/home-4_instagram-3.webp"
-                                    alt="instagram_style_1_images_1" class="w-full h-full object-cover object-center" />
-                                <div
-                                    class="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <div
-                                        class="bg-white rounded-full overflow-hidden sm:size-12 size-10 flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" class="sm:w-6 sm:h-6 w-5 h-5" fill="none">
-                                            <path
-                                                d="M6.76667 0H16.5667C20.3 0 23.3333 3.03333 23.3333 6.76667V16.5667C23.3333 18.3613 22.6204 20.0824 21.3514 21.3514C20.0824 22.6204 18.3613 23.3333 16.5667 23.3333H6.76667C3.03333 23.3333 0 20.3 0 16.5667V6.76667C0 4.97203 0.712915 3.25091 1.98191 1.98191C3.25091 0.712915 4.97203 0 6.76667 0ZM6.53333 2.33333C5.41942 2.33333 4.35114 2.77583 3.56348 3.56348C2.77583 4.35114 2.33333 5.41942 2.33333 6.53333V16.8C2.33333 19.1217 4.21167 21 6.53333 21H16.8C17.9139 21 18.9822 20.5575 19.7698 19.7698C20.5575 18.9822 21 17.9139 21 16.8V6.53333C21 4.21167 19.1217 2.33333 16.8 2.33333H6.53333ZM17.7917 4.08333C18.1784 4.08333 18.5494 4.23698 18.8229 4.51047C19.0964 4.78396 19.25 5.15489 19.25 5.54167C19.25 5.92844 19.0964 6.29937 18.8229 6.57286C18.5494 6.84635 18.1784 7 17.7917 7C17.4049 7 17.034 6.84635 16.7605 6.57286C16.487 6.29937 16.3333 5.92844 16.3333 5.54167C16.3333 5.15489 16.487 4.78396 16.7605 4.51047C17.034 4.23698 17.4049 4.08333 17.7917 4.08333ZM11.6667 5.83333C13.2138 5.83333 14.6975 6.44791 15.7915 7.54188C16.8854 8.63584 17.5 10.1196 17.5 11.6667C17.5 13.2138 16.8854 14.6975 15.7915 15.7915C14.6975 16.8854 13.2138 17.5 11.6667 17.5C10.1196 17.5 8.63584 16.8854 7.54188 15.7915C6.44791 14.6975 5.83333 13.2138 5.83333 11.6667C5.83333 10.1196 6.44791 8.63584 7.54188 7.54188C8.63584 6.44791 10.1196 5.83333 11.6667 5.83333ZM11.6667 8.16667C10.7384 8.16667 9.84817 8.53541 9.19179 9.19179C8.53541 9.84817 8.16667 10.7384 8.16667 11.6667C8.16667 12.5949 8.53541 13.4852 9.19179 14.1415C9.84817 14.7979 10.7384 15.1667 11.6667 15.1667C12.5949 15.1667 13.4852 14.7979 14.1415 14.1415C14.7979 13.4852 15.1667 12.5949 15.1667 11.6667C15.1667 10.7384 14.7979 9.84817 14.1415 9.19179C13.4852 8.53541 12.5949 8.16667 11.6667 8.16667Z"
-                                                fill="#673e2c" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slider-img">
-                            <a href="https://www.instagram.com/" target="_blank" class="relative group cursor-pointer">
-
-                                <img decoding="async" src="./image/home-4_instagram-4.webp"
-                                    alt="instagram_style_1_images_1" class="w-full h-full object-cover object-center" />
-                                <div
-                                    class="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <div
-                                        class="bg-white rounded-full overflow-hidden sm:size-12 size-10 flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" class="sm:w-6 sm:h-6 w-5 h-5" fill="none">
-                                            <path
-                                                d="M6.76667 0H16.5667C20.3 0 23.3333 3.03333 23.3333 6.76667V16.5667C23.3333 18.3613 22.6204 20.0824 21.3514 21.3514C20.0824 22.6204 18.3613 23.3333 16.5667 23.3333H6.76667C3.03333 23.3333 0 20.3 0 16.5667V6.76667C0 4.97203 0.712915 3.25091 1.98191 1.98191C3.25091 0.712915 4.97203 0 6.76667 0ZM6.53333 2.33333C5.41942 2.33333 4.35114 2.77583 3.56348 3.56348C2.77583 4.35114 2.33333 5.41942 2.33333 6.53333V16.8C2.33333 19.1217 4.21167 21 6.53333 21H16.8C17.9139 21 18.9822 20.5575 19.7698 19.7698C20.5575 18.9822 21 17.9139 21 16.8V6.53333C21 4.21167 19.1217 2.33333 16.8 2.33333H6.53333ZM17.7917 4.08333C18.1784 4.08333 18.5494 4.23698 18.8229 4.51047C19.0964 4.78396 19.25 5.15489 19.25 5.54167C19.25 5.92844 19.0964 6.29937 18.8229 6.57286C18.5494 6.84635 18.1784 7 17.7917 7C17.4049 7 17.034 6.84635 16.7605 6.57286C16.487 6.29937 16.3333 5.92844 16.3333 5.54167C16.3333 5.15489 16.487 4.78396 16.7605 4.51047C17.034 4.23698 17.4049 4.08333 17.7917 4.08333ZM11.6667 5.83333C13.2138 5.83333 14.6975 6.44791 15.7915 7.54188C16.8854 8.63584 17.5 10.1196 17.5 11.6667C17.5 13.2138 16.8854 14.6975 15.7915 15.7915C14.6975 16.8854 13.2138 17.5 11.6667 17.5C10.1196 17.5 8.63584 16.8854 7.54188 15.7915C6.44791 14.6975 5.83333 13.2138 5.83333 11.6667C5.83333 10.1196 6.44791 8.63584 7.54188 7.54188C8.63584 6.44791 10.1196 5.83333 11.6667 5.83333ZM11.6667 8.16667C10.7384 8.16667 9.84817 8.53541 9.19179 9.19179C8.53541 9.84817 8.16667 10.7384 8.16667 11.6667C8.16667 12.5949 8.53541 13.4852 9.19179 14.1415C9.84817 14.7979 10.7384 15.1667 11.6667 15.1667C12.5949 15.1667 13.4852 14.7979 14.1415 14.1415C14.7979 13.4852 15.1667 12.5949 15.1667 11.6667C15.1667 10.7384 14.7979 9.84817 14.1415 9.19179C13.4852 8.53541 12.5949 8.16667 11.6667 8.16667Z"
-                                                fill="#673e2c" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slider-img">
-                            <a href="https://www.instagram.com/" target="_blank" class="relative group cursor-pointer">
-
-                                <img decoding="async" src="./image/home-4_instagram-5.webp"
-                                    alt="instagram_style_1_images_1" class="w-full h-full object-cover object-center" />
-                                <div
-                                    class="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <div
-                                        class="bg-white rounded-full overflow-hidden sm:size-12 size-10 flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" class="sm:w-6 sm:h-6 w-5 h-5" fill="none">
-                                            <path
-                                                d="M6.76667 0H16.5667C20.3 0 23.3333 3.03333 23.3333 6.76667V16.5667C23.3333 18.3613 22.6204 20.0824 21.3514 21.3514C20.0824 22.6204 18.3613 23.3333 16.5667 23.3333H6.76667C3.03333 23.3333 0 20.3 0 16.5667V6.76667C0 4.97203 0.712915 3.25091 1.98191 1.98191C3.25091 0.712915 4.97203 0 6.76667 0ZM6.53333 2.33333C5.41942 2.33333 4.35114 2.77583 3.56348 3.56348C2.77583 4.35114 2.33333 5.41942 2.33333 6.53333V16.8C2.33333 19.1217 4.21167 21 6.53333 21H16.8C17.9139 21 18.9822 20.5575 19.7698 19.7698C20.5575 18.9822 21 17.9139 21 16.8V6.53333C21 4.21167 19.1217 2.33333 16.8 2.33333H6.53333ZM17.7917 4.08333C18.1784 4.08333 18.5494 4.23698 18.8229 4.51047C19.0964 4.78396 19.25 5.15489 19.25 5.54167C19.25 5.92844 19.0964 6.29937 18.8229 6.57286C18.5494 6.84635 18.1784 7 17.7917 7C17.4049 7 17.034 6.84635 16.7605 6.57286C16.487 6.29937 16.3333 5.92844 16.3333 5.54167C16.3333 5.15489 16.487 4.78396 16.7605 4.51047C17.034 4.23698 17.4049 4.08333 17.7917 4.08333ZM11.6667 5.83333C13.2138 5.83333 14.6975 6.44791 15.7915 7.54188C16.8854 8.63584 17.5 10.1196 17.5 11.6667C17.5 13.2138 16.8854 14.6975 15.7915 15.7915C14.6975 16.8854 13.2138 17.5 11.6667 17.5C10.1196 17.5 8.63584 16.8854 7.54188 15.7915C6.44791 14.6975 5.83333 13.2138 5.83333 11.6667C5.83333 10.1196 6.44791 8.63584 7.54188 7.54188C8.63584 6.44791 10.1196 5.83333 11.6667 5.83333ZM11.6667 8.16667C10.7384 8.16667 9.84817 8.53541 9.19179 9.19179C8.53541 9.84817 8.16667 10.7384 8.16667 11.6667C8.16667 12.5949 8.53541 13.4852 9.19179 14.1415C9.84817 14.7979 10.7384 15.1667 11.6667 15.1667C12.5949 15.1667 13.4852 14.7979 14.1415 14.1415C14.7979 13.4852 15.1667 12.5949 15.1667 11.6667C15.1667 10.7384 14.7979 9.84817 14.1415 9.19179C13.4852 8.53541 12.5949 8.16667 11.6667 8.16667Z"
-                                                fill="#673e2c" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- BOTTOM SLIDER -->
-                <div class="overflow-hidden">
-                    <div class="marquee-track animate-slide-right" data-marquee>
-                        <div class="slider-img">
-                            <a href="https://www.instagram.com/" target="_blank" class="relative group cursor-pointer">
-
-                                <img decoding="async" src="./image/home-4_instagram-6.webp"
-                                    alt="instagram_style_1_images_1" class="w-full h-full object-cover object-center" />
-                                <div
-                                    class="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <div
-                                        class="bg-white rounded-full overflow-hidden sm:size-12 size-10 flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" class="sm:w-6 sm:h-6 w-5 h-5" fill="none">
-                                            <path
-                                                d="M6.76667 0H16.5667C20.3 0 23.3333 3.03333 23.3333 6.76667V16.5667C23.3333 18.3613 22.6204 20.0824 21.3514 21.3514C20.0824 22.6204 18.3613 23.3333 16.5667 23.3333H6.76667C3.03333 23.3333 0 20.3 0 16.5667V6.76667C0 4.97203 0.712915 3.25091 1.98191 1.98191C3.25091 0.712915 4.97203 0 6.76667 0ZM6.53333 2.33333C5.41942 2.33333 4.35114 2.77583 3.56348 3.56348C2.77583 4.35114 2.33333 5.41942 2.33333 6.53333V16.8C2.33333 19.1217 4.21167 21 6.53333 21H16.8C17.9139 21 18.9822 20.5575 19.7698 19.7698C20.5575 18.9822 21 17.9139 21 16.8V6.53333C21 4.21167 19.1217 2.33333 16.8 2.33333H6.53333ZM17.7917 4.08333C18.1784 4.08333 18.5494 4.23698 18.8229 4.51047C19.0964 4.78396 19.25 5.15489 19.25 5.54167C19.25 5.92844 19.0964 6.29937 18.8229 6.57286C18.5494 6.84635 18.1784 7 17.7917 7C17.4049 7 17.034 6.84635 16.7605 6.57286C16.487 6.29937 16.3333 5.92844 16.3333 5.54167C16.3333 5.15489 16.487 4.78396 16.7605 4.51047C17.034 4.23698 17.4049 4.08333 17.7917 4.08333ZM11.6667 5.83333C13.2138 5.83333 14.6975 6.44791 15.7915 7.54188C16.8854 8.63584 17.5 10.1196 17.5 11.6667C17.5 13.2138 16.8854 14.6975 15.7915 15.7915C14.6975 16.8854 13.2138 17.5 11.6667 17.5C10.1196 17.5 8.63584 16.8854 7.54188 15.7915C6.44791 14.6975 5.83333 13.2138 5.83333 11.6667C5.83333 10.1196 6.44791 8.63584 7.54188 7.54188C8.63584 6.44791 10.1196 5.83333 11.6667 5.83333ZM11.6667 8.16667C10.7384 8.16667 9.84817 8.53541 9.19179 9.19179C8.53541 9.84817 8.16667 10.7384 8.16667 11.6667C8.16667 12.5949 8.53541 13.4852 9.19179 14.1415C9.84817 14.7979 10.7384 15.1667 11.6667 15.1667C12.5949 15.1667 13.4852 14.7979 14.1415 14.1415C14.7979 13.4852 15.1667 12.5949 15.1667 11.6667C15.1667 10.7384 14.7979 9.84817 14.1415 9.19179C13.4852 8.53541 12.5949 8.16667 11.6667 8.16667Z"
-                                                fill="#673e2c" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slider-img">
-                            <a href="https://www.instagram.com/" target="_blank" class="relative group cursor-pointer">
-
-                                <img decoding="async" src="./image/home-4_instagram-7.webp"
-                                    alt="instagram_style_1_images_1" class="w-full h-full object-cover object-center" />
-                                <div
-                                    class="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <div
-                                        class="bg-white rounded-full overflow-hidden sm:size-12 size-10 flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" class="sm:w-6 sm:h-6 w-5 h-5" fill="none">
-                                            <path
-                                                d="M6.76667 0H16.5667C20.3 0 23.3333 3.03333 23.3333 6.76667V16.5667C23.3333 18.3613 22.6204 20.0824 21.3514 21.3514C20.0824 22.6204 18.3613 23.3333 16.5667 23.3333H6.76667C3.03333 23.3333 0 20.3 0 16.5667V6.76667C0 4.97203 0.712915 3.25091 1.98191 1.98191C3.25091 0.712915 4.97203 0 6.76667 0ZM6.53333 2.33333C5.41942 2.33333 4.35114 2.77583 3.56348 3.56348C2.77583 4.35114 2.33333 5.41942 2.33333 6.53333V16.8C2.33333 19.1217 4.21167 21 6.53333 21H16.8C17.9139 21 18.9822 20.5575 19.7698 19.7698C20.5575 18.9822 21 17.9139 21 16.8V6.53333C21 4.21167 19.1217 2.33333 16.8 2.33333H6.53333ZM17.7917 4.08333C18.1784 4.08333 18.5494 4.23698 18.8229 4.51047C19.0964 4.78396 19.25 5.15489 19.25 5.54167C19.25 5.92844 19.0964 6.29937 18.8229 6.57286C18.5494 6.84635 18.1784 7 17.7917 7C17.4049 7 17.034 6.84635 16.7605 6.57286C16.487 6.29937 16.3333 5.92844 16.3333 5.54167C16.3333 5.15489 16.487 4.78396 16.7605 4.51047C17.034 4.23698 17.4049 4.08333 17.7917 4.08333ZM11.6667 5.83333C13.2138 5.83333 14.6975 6.44791 15.7915 7.54188C16.8854 8.63584 17.5 10.1196 17.5 11.6667C17.5 13.2138 16.8854 14.6975 15.7915 15.7915C14.6975 16.8854 13.2138 17.5 11.6667 17.5C10.1196 17.5 8.63584 16.8854 7.54188 15.7915C6.44791 14.6975 5.83333 13.2138 5.83333 11.6667C5.83333 10.1196 6.44791 8.63584 7.54188 7.54188C8.63584 6.44791 10.1196 5.83333 11.6667 5.83333ZM11.6667 8.16667C10.7384 8.16667 9.84817 8.53541 9.19179 9.19179C8.53541 9.84817 8.16667 10.7384 8.16667 11.6667C8.16667 12.5949 8.53541 13.4852 9.19179 14.1415C9.84817 14.7979 10.7384 15.1667 11.6667 15.1667C12.5949 15.1667 13.4852 14.7979 14.1415 14.1415C14.7979 13.4852 15.1667 12.5949 15.1667 11.6667C15.1667 10.7384 14.7979 9.84817 14.1415 9.19179C13.4852 8.53541 12.5949 8.16667 11.6667 8.16667Z"
-                                                fill="#673e2c" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slider-img">
-                            <a href="https://www.instagram.com/" target="_blank" class="relative group cursor-pointer">
-
-                                <img decoding="async" src="./image/home-4_instagram-8.webp"
-                                    alt="instagram_style_1_images_1" class="w-full h-full object-cover object-center" />
-                                <div
-                                    class="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <div
-                                        class="bg-white rounded-full overflow-hidden sm:size-12 size-10 flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" class="sm:w-6 sm:h-6 w-5 h-5" fill="none">
-                                            <path
-                                                d="M6.76667 0H16.5667C20.3 0 23.3333 3.03333 23.3333 6.76667V16.5667C23.3333 18.3613 22.6204 20.0824 21.3514 21.3514C20.0824 22.6204 18.3613 23.3333 16.5667 23.3333H6.76667C3.03333 23.3333 0 20.3 0 16.5667V6.76667C0 4.97203 0.712915 3.25091 1.98191 1.98191C3.25091 0.712915 4.97203 0 6.76667 0ZM6.53333 2.33333C5.41942 2.33333 4.35114 2.77583 3.56348 3.56348C2.77583 4.35114 2.33333 5.41942 2.33333 6.53333V16.8C2.33333 19.1217 4.21167 21 6.53333 21H16.8C17.9139 21 18.9822 20.5575 19.7698 19.7698C20.5575 18.9822 21 17.9139 21 16.8V6.53333C21 4.21167 19.1217 2.33333 16.8 2.33333H6.53333ZM17.7917 4.08333C18.1784 4.08333 18.5494 4.23698 18.8229 4.51047C19.0964 4.78396 19.25 5.15489 19.25 5.54167C19.25 5.92844 19.0964 6.29937 18.8229 6.57286C18.5494 6.84635 18.1784 7 17.7917 7C17.4049 7 17.034 6.84635 16.7605 6.57286C16.487 6.29937 16.3333 5.92844 16.3333 5.54167C16.3333 5.15489 16.487 4.78396 16.7605 4.51047C17.034 4.23698 17.4049 4.08333 17.7917 4.08333ZM11.6667 5.83333C13.2138 5.83333 14.6975 6.44791 15.7915 7.54188C16.8854 8.63584 17.5 10.1196 17.5 11.6667C17.5 13.2138 16.8854 14.6975 15.7915 15.7915C14.6975 16.8854 13.2138 17.5 11.6667 17.5C10.1196 17.5 8.63584 16.8854 7.54188 15.7915C6.44791 14.6975 5.83333 13.2138 5.83333 11.6667C5.83333 10.1196 6.44791 8.63584 7.54188 7.54188C8.63584 6.44791 10.1196 5.83333 11.6667 5.83333ZM11.6667 8.16667C10.7384 8.16667 9.84817 8.53541 9.19179 9.19179C8.53541 9.84817 8.16667 10.7384 8.16667 11.6667C8.16667 12.5949 8.53541 13.4852 9.19179 14.1415C9.84817 14.7979 10.7384 15.1667 11.6667 15.1667C12.5949 15.1667 13.4852 14.7979 14.1415 14.1415C14.7979 13.4852 15.1667 12.5949 15.1667 11.6667C15.1667 10.7384 14.7979 9.84817 14.1415 9.19179C13.4852 8.53541 12.5949 8.16667 11.6667 8.16667Z"
-                                                fill="#673e2c" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slider-img">
-                            <a href="https://www.instagram.com/" target="_blank" class="relative group cursor-pointer">
-
-                                <img decoding="async" src="./image/home-4_instagram-9.webp"
-                                    alt="instagram_style_1_images_1" class="w-full h-full object-cover object-center" />
-                                <div
-                                    class="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <div
-                                        class="bg-white rounded-full overflow-hidden sm:size-12 size-10 flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" class="sm:w-6 sm:h-6 w-5 h-5" fill="none">
-                                            <path
-                                                d="M6.76667 0H16.5667C20.3 0 23.3333 3.03333 23.3333 6.76667V16.5667C23.3333 18.3613 22.6204 20.0824 21.3514 21.3514C20.0824 22.6204 18.3613 23.3333 16.5667 23.3333H6.76667C3.03333 23.3333 0 20.3 0 16.5667V6.76667C0 4.97203 0.712915 3.25091 1.98191 1.98191C3.25091 0.712915 4.97203 0 6.76667 0ZM6.53333 2.33333C5.41942 2.33333 4.35114 2.77583 3.56348 3.56348C2.77583 4.35114 2.33333 5.41942 2.33333 6.53333V16.8C2.33333 19.1217 4.21167 21 6.53333 21H16.8C17.9139 21 18.9822 20.5575 19.7698 19.7698C20.5575 18.9822 21 17.9139 21 16.8V6.53333C21 4.21167 19.1217 2.33333 16.8 2.33333H6.53333ZM17.7917 4.08333C18.1784 4.08333 18.5494 4.23698 18.8229 4.51047C19.0964 4.78396 19.25 5.15489 19.25 5.54167C19.25 5.92844 19.0964 6.29937 18.8229 6.57286C18.5494 6.84635 18.1784 7 17.7917 7C17.4049 7 17.034 6.84635 16.7605 6.57286C16.487 6.29937 16.3333 5.92844 16.3333 5.54167C16.3333 5.15489 16.487 4.78396 16.7605 4.51047C17.034 4.23698 17.4049 4.08333 17.7917 4.08333ZM11.6667 5.83333C13.2138 5.83333 14.6975 6.44791 15.7915 7.54188C16.8854 8.63584 17.5 10.1196 17.5 11.6667C17.5 13.2138 16.8854 14.6975 15.7915 15.7915C14.6975 16.8854 13.2138 17.5 11.6667 17.5C10.1196 17.5 8.63584 16.8854 7.54188 15.7915C6.44791 14.6975 5.83333 13.2138 5.83333 11.6667C5.83333 10.1196 6.44791 8.63584 7.54188 7.54188C8.63584 6.44791 10.1196 5.83333 11.6667 5.83333ZM11.6667 8.16667C10.7384 8.16667 9.84817 8.53541 9.19179 9.19179C8.53541 9.84817 8.16667 10.7384 8.16667 11.6667C8.16667 12.5949 8.53541 13.4852 9.19179 14.1415C9.84817 14.7979 10.7384 15.1667 11.6667 15.1667C12.5949 15.1667 13.4852 14.7979 14.1415 14.1415C14.7979 13.4852 15.1667 12.5949 15.1667 11.6667C15.1667 10.7384 14.7979 9.84817 14.1415 9.19179C13.4852 8.53541 12.5949 8.16667 11.6667 8.16667Z"
-                                                fill="#673e2c" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slider-img">
-                            <a href="https://www.instagram.com/" target="_blank" class="relative group cursor-pointer">
-
-                                <img decoding="async" src="./image/home-4_instagram-10.webp"
-                                    alt="instagram_style_1_images_1" class="w-full h-full object-cover object-center" />
-                                <div
-                                    class="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <div
-                                        class="bg-white rounded-full overflow-hidden sm:size-12 size-10 flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" class="sm:w-6 sm:h-6 w-5 h-5" fill="none">
-                                            <path
-                                                d="M6.76667 0H16.5667C20.3 0 23.3333 3.03333 23.3333 6.76667V16.5667C23.3333 18.3613 22.6204 20.0824 21.3514 21.3514C20.0824 22.6204 18.3613 23.3333 16.5667 23.3333H6.76667C3.03333 23.3333 0 20.3 0 16.5667V6.76667C0 4.97203 0.712915 3.25091 1.98191 1.98191C3.25091 0.712915 4.97203 0 6.76667 0ZM6.53333 2.33333C5.41942 2.33333 4.35114 2.77583 3.56348 3.56348C2.77583 4.35114 2.33333 5.41942 2.33333 6.53333V16.8C2.33333 19.1217 4.21167 21 6.53333 21H16.8C17.9139 21 18.9822 20.5575 19.7698 19.7698C20.5575 18.9822 21 17.9139 21 16.8V6.53333C21 4.21167 19.1217 2.33333 16.8 2.33333H6.53333ZM17.7917 4.08333C18.1784 4.08333 18.5494 4.23698 18.8229 4.51047C19.0964 4.78396 19.25 5.15489 19.25 5.54167C19.25 5.92844 19.0964 6.29937 18.8229 6.57286C18.5494 6.84635 18.1784 7 17.7917 7C17.4049 7 17.034 6.84635 16.7605 6.57286C16.487 6.29937 16.3333 5.92844 16.3333 5.54167C16.3333 5.15489 16.487 4.78396 16.7605 4.51047C17.034 4.23698 17.4049 4.08333 17.7917 4.08333ZM11.6667 5.83333C13.2138 5.83333 14.6975 6.44791 15.7915 7.54188C16.8854 8.63584 17.5 10.1196 17.5 11.6667C17.5 13.2138 16.8854 14.6975 15.7915 15.7915C14.6975 16.8854 13.2138 17.5 11.6667 17.5C10.1196 17.5 8.63584 16.8854 7.54188 15.7915C6.44791 14.6975 5.83333 13.2138 5.83333 11.6667C5.83333 10.1196 6.44791 8.63584 7.54188 7.54188C8.63584 6.44791 10.1196 5.83333 11.6667 5.83333ZM11.6667 8.16667C10.7384 8.16667 9.84817 8.53541 9.19179 9.19179C8.53541 9.84817 8.16667 10.7384 8.16667 11.6667C8.16667 12.5949 8.53541 13.4852 9.19179 14.1415C9.84817 14.7979 10.7384 15.1667 11.6667 15.1667C12.5949 15.1667 13.4852 14.7979 14.1415 14.1415C14.7979 13.4852 15.1667 12.5949 15.1667 11.6667C15.1667 10.7384 14.7979 9.84817 14.1415 9.19179C13.4852 8.53541 12.5949 8.16667 11.6667 8.16667Z"
-                                                fill="#673e2c" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ====== End Blog & Insights Section ====== -->
-
-        <!-- ====== Instagram Section ====== -->
     </main>
     <!-- ====== End-Main-Content ====== -->
 

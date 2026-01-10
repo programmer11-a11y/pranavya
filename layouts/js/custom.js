@@ -491,7 +491,7 @@ jQuery(document).ready(function () {
     }
   });
 
-  
+
   /* ============================================================
      HEADER SCROLL — FIX LOGO + ICON COLOR TOGGLING
   ============================================================ */
@@ -513,7 +513,7 @@ jQuery(document).ready(function () {
     const cartOpen = !jQuery("#cartSidebar").hasClass("translate-x-full");
     const hasHover = jQuery(".all-header").hasClass("not_scrolled_hover");
     const mobileLogo = jQuery("#mainmenu > div img").first();
-    
+
     // Check if header has no-toggle-color class
     // When no-toggle-color is present, logo and icon colors should not toggle (stay dark/black)
     const header = jQuery(".all-header").closest("header");
@@ -736,7 +736,7 @@ jQuery(document).ready(function () {
       preloader: false,
       fixedContentPos: false,
       closeBtnInside: true,
-  
+
       iframe: {
         patterns: {
           youtube: {
@@ -750,9 +750,9 @@ jQuery(document).ready(function () {
         }
       }
     });
-  
+
   });
-  
+
 
   // ===== Weekly Schedule Tabs ===== //
   /* ----------------------------
@@ -938,7 +938,7 @@ jQuery(document).ready(function () {
       const isScrolled = jQuery(window).scrollTop() > 0;
       const megaOpen = jQuery(".mega-panel:visible").length > 0;
       const searchOpen = jQuery("#nav-site-search").hasClass("open");
-      
+
       // Check if header has no-toggle-color class
       const header = jQuery(".all-header").closest("header");
       const hasNoToggleColor = header.length > 0 && header.hasClass("no-toggle-color");
@@ -963,7 +963,7 @@ jQuery(document).ready(function () {
       const sidebarOpen = jQuery("#mainmenu").hasClass("active");
       const wishlistOpen = !jQuery("#wishlistSidebar").hasClass("translate-x-full");
       const cartOpen = !jQuery("#cartSidebar").hasClass("translate-x-full");
-      
+
       // Check if header has no-toggle-color class
       const header = jQuery(".all-header").closest("header");
       const hasNoToggleColor = header.length > 0 && header.hasClass("no-toggle-color");
@@ -1402,3 +1402,79 @@ $(document).ready(function () {
 // =================== END INDEX-4.HTML ========================
 
 
+// =============== START MEMBERSHIP =================================
+$(document).ready(function () {
+
+  // Initial state
+  $('.yearly-plans').hide();
+  $('.monthly-plans').show();
+
+  function setActive(btn) {
+    $('.toggle-btn')
+      .removeClass('bg-white text-primary')
+      .addClass('bg-primary text-white');
+
+    btn
+      .removeClass('bg-primary text-white')
+      .addClass('bg-white text-primary');
+  }
+
+  $('#monthlyBtn').on('click', function () {
+    setActive($(this));
+
+    $('.yearly-plans').hide();
+    $('.monthly-plans').fadeIn(200);
+  });
+
+  $('#yearlyBtn').on('click', function () {
+    setActive($(this));
+
+    $('.monthly-plans').hide();
+    $('.yearly-plans').fadeIn(200);
+  });
+
+});
+
+var swiper = new Swiper(".membership-step", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  navigation: {
+    nextEl: ".join-membership .swiper-button-next",
+    prevEl: ".join-membership .swiper-button-prev",
+  },
+  breakpoints: {
+    456: { slidesPerView: 2, spaceBetween: 20, },
+    769: { slidesPerView: 2, spaceBetween: 20, },
+    992: { slidesPerView: 3, spaceBetween: 20, },
+    1131: { slidesPerView: 3, spaceBetween: 20, },
+    1281: { slidesPerView: 4, spaceBetween: 25, },
+    1500: { slidesPerView: 4, spaceBetween: 30, },
+    1768: { slidesPerView: 4, spaceBetween: 40, },
+  },
+});
+
+
+
+$(document).ready(function () {
+
+  // Open first FAQ by default
+  $(".faq-item:first .faq-answer").slideDown(400);
+  $(".faq-item:first .faq-icon").text("−");
+
+  $(".faq-question").on("click", function () {
+    const parent = $(this).closest(".faq-item");
+    const answer = parent.find(".faq-answer");
+    const icon = parent.find(".faq-icon");
+
+    // Close others
+    $(".faq-item").not(parent).find(".faq-answer").slideUp(400);
+    $(".faq-item").not(parent).find(".faq-icon").text("+");
+
+    // Toggle current
+    answer.stop(true, true).slideToggle(400);
+    icon.text(icon.text() === "+" ? "−" : "+");
+  });
+
+});
+// =============== END MEMBERSHIP =================================

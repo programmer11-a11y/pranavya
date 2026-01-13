@@ -1005,6 +1005,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const viewBtn = document.querySelector(".slide-button");
   const navBtns = document.querySelectorAll(".nav-btn");
 
+  // ✅ STOP if slider markup does not exist
+  if (!slideId || !slideTitle || !slideDesc || !slideImg || !slideIcon || !viewBtn || !navBtns.length) {
+    return;
+  }
+
   const slides = [
     {
       id: "01",
@@ -1067,43 +1072,68 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// validation form logic
+// ========validation form logic===============
 (function ($) {
-  $(document).on(
-    "submit.newsletterValidation",
-    "#newsletter-form",
-    function (e) {
-      e.preventDefault();
-      e.stopImmediatePropagation(); // 🔥 prevents other submit handlers
 
-      var $form = $(this);
-      var valid = true;
+  $(document).on("submit", ".validate-form", function (e) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
 
-      $form.find("input[required]").each(function () {
-        var $input = $(this);
-        removeError($input);
+    var $form = $(this);
+    var valid = true;
 
-        if (!$input.val().trim()) {
-          showError($input, $input.attr("placeholder") + " is required.");
-          valid = false;
-        } else if ($input.attr("type") === "email" && !this.validity.valid) {
-          showError($input, "Please enter a valid email address.");
-          valid = false;
-        }
-      });
+    // Remove old success
+    var $successMsg = $form.find(".form-success-msg");
+    $successMsg.addClass("hidden").text("");
 
-      if (!valid) return;
+    $form.find("input[required], textarea[required], select[required]").each(function () {
+      var $input = $(this);
+      removeError($input);
 
-      // ✅ SUCCESS (AJAX / message / reset)
-      $form[0].reset();
-      alert("Subscribed successfully!");
-    },
-  );
+      if (!$input.val().trim()) {
+        showError($input, ($input.attr("placeholder") || "This field") + " is required.");
+        valid = false;
+      }
+      else if ($input.attr("type") === "email" && !this.validity.valid) {
+        showError($input, "Please enter a valid email address.");
+        valid = false;
+      }
+    });
 
-  // Live remove error
-  $(document).on("input", "#newsletter-form input", function () {
-    removeError($(this));
+    if (!valid) return;
+
+    // ✅ SUCCESS MESSAGE BELOW BUTTON
+    // Get custom success message from form
+    var successText = $form.data("success") || "Form submitted successfully!";
+
+    $successMsg
+      .removeClass("hidden")
+      .html(`
+    <span class="success-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none">
+        <path d="M20 6L9 17L4 12"
+          stroke="#16A34A"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+      </svg>
+    </span>
+    <span>${successText}</span>
+  `);
+
+
+    $form[0].reset();
   });
+
+  // Live remove error + success
+  $(document).on(
+    "input change",
+    ".validate-form input, .validate-form textarea, .validate-form select",
+    function () {
+      removeError($(this));
+      $(this).closest("form").find(".form-success-msg").addClass("hidden").text("");
+    }
+  );
 
   function showError($input, message) {
     $input.addClass("input-error");
@@ -1111,14 +1141,15 @@ document.addEventListener("DOMContentLoaded", () => {
     if ($input.next(".error-msg").length) return;
 
     $input.after(`
-      <div class="error-msg">
-        <span class="error-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
-<path d="M9.35 9.35H7.65V4.25H9.35M9.35 12.75H7.65V11.05H9.35M8.5 0C7.38376 0 6.27846 0.219859 5.24719 0.647024C4.21592 1.07419 3.27889 1.70029 2.48959 2.48959C0.895533 4.08365 0 6.24566 0 8.5C0 10.7543 0.895533 12.9163 2.48959 14.5104C3.27889 15.2997 4.21592 15.9258 5.24719 16.353C6.27846 16.7801 7.38376 17 8.5 17C10.7543 17 12.9163 16.1045 14.5104 14.5104C16.1045 12.9163 17 10.7543 17 8.5C17 7.38376 16.7801 6.27846 16.353 5.24719C15.9258 4.21592 15.2997 3.27889 14.5104 2.48959C13.7211 1.70029 12.7841 1.07419 11.7528 0.647024C10.7215 0.219859 9.61624 0 8.5 0Z" fill="#D21C1C"/>
-</svg>
-        </span>
-        <span>${message}</span>
-      </div>
+       <div class="error-msg">
+      <span class="error-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 17 17" fill="none">
+          <path d="M9.35 9.35H7.65V4.25H9.35M9.35 12.75H7.65V11.05H9.35M8.5 0C3.81 0 0 3.81 0 8.5S3.81 17 8.5 17 17 13.19 17 8.5 13.19 0 8.5 0Z"
+            fill="#D21C1C"/>
+        </svg>
+      </span>
+      <span>${message}</span>
+    </div>
     `);
   }
 
@@ -1126,7 +1157,9 @@ document.addEventListener("DOMContentLoaded", () => {
     $input.removeClass("input-error");
     $input.next(".error-msg").remove();
   }
+
 })(jQuery);
+
 
 // =================== INDEX-2.HTML ========================
 // ==== HERO SLIDER ====
@@ -1455,26 +1488,77 @@ var swiper = new Swiper(".membership-step", {
 });
 
 
-
 $(document).ready(function () {
+  // Ensure headings start with default color & transition
+  $(".faq-item h5").removeClass("text-primary").addClass("text-thuder-100 transition-colors duration-300");
 
-  // Open first FAQ by default
-  $(".faq-item:first .faq-answer").slideDown(400);
-  $(".faq-item:first .faq-icon").text("−");
+  // Open first FAQ by default and set its title color
+  const $first = $(".faq-item:first");
+  $first.addClass("active");
+  $first.find(".faq-answer").slideDown(400);
+  $first.find(".faq-icon").text("−");
+  $first.find("h5").removeClass("text-thuder-100").addClass("text-primary");
+  $first.find(".faq-question").attr("aria-expanded", "true");
 
   $(".faq-question").on("click", function () {
     const parent = $(this).closest(".faq-item");
     const answer = parent.find(".faq-answer");
     const icon = parent.find(".faq-icon");
+    const btn = $(this);
 
-    // Close others
-    $(".faq-item").not(parent).find(".faq-answer").slideUp(400);
+    // Close others: hide answers, reset icons & title color & aria
+    $(".faq-item").not(parent).removeClass("active").find(".faq-answer").stop(true, true).slideUp(400);
     $(".faq-item").not(parent).find(".faq-icon").text("+");
+    $(".faq-item").not(parent).find("h5").removeClass("text-primary").addClass("text-thuder-100");
+    $(".faq-item").not(parent).find(".faq-question").attr("aria-expanded", "false");
 
     // Toggle current
-    answer.stop(true, true).slideToggle(400);
-    icon.text(icon.text() === "+" ? "−" : "+");
+    const isOpen = parent.hasClass("active");
+    if (isOpen) {
+      parent.removeClass("active");
+      answer.stop(true, true).slideUp(400);
+      icon.text("+");
+      parent.find("h5").removeClass("text-primary").addClass("text-thuder-100");
+      btn.attr("aria-expanded", "false");
+    } else {
+      parent.addClass("active");
+      answer.stop(true, true).slideDown(400);
+      icon.text("−");
+      parent.find("h5").removeClass("text-thuder-100").addClass("text-primary");
+      btn.attr("aria-expanded", "true");
+    }
+  });
+});
+
+// =============== END MEMBERSHIP =================================
+
+$(document).ready(function () {
+
+  $('.dropdown-btn').on('click', function (e) {
+    e.stopPropagation();
+
+    const dropdown = $(this).closest('.dropdown');
+    const menu = dropdown.find('.dropdown-menu');
+    const arrow = dropdown.find('.dropdown-arrow');
+
+    $('.dropdown-menu').not(menu).removeClass('open');
+    $('.dropdown-arrow').not(arrow).removeClass('rotate-180');
+
+    menu.toggleClass('open');
+    arrow.toggleClass('rotate-180');
+  });
+
+  $('.dropdown-item').on('click', function () {
+    const dropdown = $(this).closest('.dropdown');
+
+    dropdown.find('.dropdown-text').text($(this).text());
+    dropdown.find('.dropdown-menu').removeClass('open');
+    dropdown.find('.dropdown-arrow').removeClass('rotate-180');
+  });
+
+  $(document).on('click', function () {
+    $('.dropdown-menu').removeClass('open');
+    $('.dropdown-arrow').removeClass('rotate-180');
   });
 
 });
-// =============== END MEMBERSHIP =================================

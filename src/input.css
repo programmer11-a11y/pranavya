@@ -151,9 +151,16 @@
     }
   }
 
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
   /* ---------- ANIMATIONS ---------- */
   --animate-slide-left: slide-left 35s linear infinite;
   --animate-slide-right: slide-right 35s linear infinite;
+  --animate-spin: spin 1.5s linear infinite;
 }
 
 /* ================== BAASKERVIILLE FONTS ====================== */
@@ -432,7 +439,7 @@
   }
   h5,
   .h5 {
-    @apply 2xl:text-25 1xl:text-20 lt:text-18 md:text-17 text-16 2xl:leading-[35px] 1xl:leading-[30px] lg:leading-[28px] leading-[26px];
+    @apply 2xl:text-25 1xl:text-22 md:text-20 text-16 2xl:leading-[35px] 1xl:leading-[30px] lg:leading-[28px] leading-[26px];
   }
   h6,
   .h6 {
@@ -472,6 +479,9 @@
   .btn-link {
     @apply flex items-center justify-center 2xl:gap-3 bg-white gap-[10px] text-black hover:text-primary active:text-primary focus:text-primary underline underline-offset-3;
   }
+  .reveal-more {
+    @apply uppercase border font-medium text-primary border-primary bg-[#FBFAF9];
+  }
   .nav-class-arrow {
     @apply border-white text-white! bg-transparent! hover:bg-white! focus:bg-white! active:bg-white! hover:text-black! focus:text-black! active:text-black!;
   }
@@ -488,7 +498,17 @@
   .swiper-navigation-icon {
     @apply rotate-180 w-5! h-4!;
   }
+.form-success-msg{
+  @apply text-green-600 flex items-center gap-2 mt-2 text-sm;
+}
+.newsletter .error-msg,
+.newsletter .form-success-msg{
+  @apply absolute top-12;
+}
 
+.error-msg {
+  @apply flex items-center gap-2 mt-2 text-red-600 text-sm ml-6;
+}
   /* ===== KEYFRAME START =========== */
   /* Animation */
   @keyframes marquee {
@@ -774,10 +794,6 @@
   }
   .input-error {
     @apply border-red-500;
-  }
-
-  .error-msg {
-    @apply flex items-center gap-2 mt-2 text-red-600 text-sm ml-6;
   }
 
   #nav-site-search.open {
@@ -1218,8 +1234,128 @@
   z-index: 1;
 }
 
-/* ABOUT US */
+/* ==============ABOUT US=============== */
 .header.no-toggle-color .all-header.scrolled,
 .all-header.not_scrolled_hover {
   @apply bg-whitesmoke-100;
+}
+
+/* ===========MEMBERSHIP=========== */
+.faqs .faq-item {
+  @apply border-b border-primary/50 2xl:py-7.5 1xl:py-7 lg:py-5.5 py-4.5;
+}
+.faqs .faq-item:first-child {
+  @apply pt-0;
+}
+.faqs .faq-question {
+  @apply flex justify-between items-center w-full text-left gap-3;
+}
+.faqs .faq-icon {
+  @apply 1xl:text-44 lg:text-34 lt:text-28 text-26 font-light leading-none;
+}
+.faqs .faq-answer {
+  @apply 1xl:max-w-[1130px] max-w-[930px] w-full 1xl:pl-10 lt:pl-9 sm:pl-8 pl-6.5 2xl:pt-5.5 1xl:pt-5 lg:pt-3 sm:pt-2.5 pt-1.5 lt:pr-10 md:pr-7.5 sm:pr-5 pr-0;
+}
+.dropdown-btn {
+  @apply border border-[#673E2C80] rounded-full w-full 1xl:px-7.5 xl:px-5 px-4 xl:py-3 md:py-2.5 py-2 flex items-center justify-between gap-3 text-primary font-medium relative bg-white z-3;
+}
+.dropdown-menu {
+  @apply z-0 pt-6.5 lt:px-5 px-4 w-full -mt-6.5 rounded-b-md bg-white border border-t-0 border-[#673E2C33] shadow-[0px_1px_20px_0px_#0000001A];
+}
+.dropdown-menu.open {
+  @apply max-h-fit overflow-auto opacity-100 z-2;
+}
+.dropdown-item {
+  @apply border-b border-whitesmoke-100 xl:py-3 py-2.5 cursor-pointer hover:text-primary hover:font-medium active:text-primary focus:text-primary;
+}
+
+/* Card Wrapper */
+.yoga-card {
+  @apply bg-whitesmoke-100 rounded-sm overflow-hidden pointer-events-auto;
+}
+
+/* Image Section */
+.yoga-card-image {
+  @apply relative w-full 2xl:h-86.5 1xl:h-72 xl:h-62 lg:h-55 lt:h-62 md:h-52 h-44;
+}
+
+.yoga-card-image img {
+  @apply w-full h-full object-cover;
+}
+
+/* Intensity Badge */
+.yoga-card-badge {
+  @apply absolute 1xl:top-4 1xl:right-4 md:top-3 md:right-3 top-2 right-2 bg-[#FFFFFF96] backdrop-blur-sm rounded-full 1xl:px-5 md:px-4 px-3 1xl:py-2 py-[7px] flex items-center gap-2 md:text-14 sm:text-xs text-[10px] italic font-medium text-black;
+}
+
+.badge-dot {
+  @apply 1xl:size-6 xl:size-5 md:size-4 size-3 border border-white rounded-full;
+}
+
+.badge-gentle {
+  @apply bg-green-500;
+}
+
+.badge-moderate {
+  @apply bg-yellow-400;
+}
+
+.badge-high {
+  @apply bg-red-500;
+}
+
+/* Content */
+.yoga-card-content {
+  @apply 2xl:p-7.5 1xl:p-6.5 xl:p-6 md:p-5 sm:p-3.5 py-3 p-2;
+}
+
+.yoga-card-category {
+  @apply font-medium 2xl:mb-6.5 1xl:mb-5 xl:mb-3.5 mb-2.5;
+}
+
+.yoga-card-title {
+  @apply text-primary uppercase 1xl:mb-5 xl:mb-3 mb-2;
+}
+
+.yoga-card-desc {
+  @apply 1xl:mb-6 sm:mb-4.5 mb-3;
+}
+
+/* Footer */
+.yoga-card-footer {
+  @apply flex sm:items-center items-start sm:flex-row flex-col justify-between 1xl:gap-4 gap-2;
+}
+.yoga-card-footer .btn-link {
+  @apply uppercase bg-transparent shrink-0 p-1 font-medium text-primary hover:text-black leading-[100%];
+}
+.yoga-card-instructor {
+  @apply flex items-center gap-2;
+}
+
+.yoga-card-instructor img {
+  @apply w-full h-full rounded-full object-cover;
+}
+.yoga-card-instructor .instructor-img {
+  @apply 2xl:size-10 1xl:size-9 sm:size-8 size-7 rounded-full shrink-0 object-cover;
+}
+
+.yoga-card-instructor p {
+  @apply font-medium italic text-black;
+}
+
+.yoga-card-instructor span {
+  @apply font-medium;
+}
+
+/* View Now */
+.yoga-card-link {
+  @apply flex items-center gap-2 text-sm font-medium text-[#6b3e2e] transition-all duration-300;
+}
+
+.yoga-card-link span {
+  @apply transition-transform duration-300;
+}
+
+.yoga-card-link:hover span {
+  @apply translate-x-1;
 }

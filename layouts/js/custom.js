@@ -1624,7 +1624,8 @@ $(document).ready(function () {
     const speedBtn = player.find(".speed-btn");
     const progressBar = player.find(".progress-bar");
     const progressFill = player.find(".progress-fill");
-    /* PLAY / PAUSE */ playBtn.on("click", function () {
+    /* PLAY / PAUSE */
+    playBtn.on("click", function () {
       const isPaused = audio.paused;
       $("audio").each(function () {
         this.pause();
@@ -1642,7 +1643,9 @@ $(document).ready(function () {
         playBtn.find(".icon-pause").removeClass("hidden");
       }
     });
-    /* REWIND / FORWARD */ player
+
+    /* REWIND / FORWARD */
+    player
       .find(".rewind-btn")
       .on("click", () => (audio.currentTime -= 10));
     player.find(".forward-btn").on("click", () => (audio.currentTime += 10));
@@ -1651,13 +1654,27 @@ $(document).ready(function () {
       muteBtn.find(".icon-volume").toggleClass("hidden");
       muteBtn.find(".icon-muted").toggleClass("hidden");
     });
-    /* SPEED */ $(".speed-btn").on("click", function () {
-      const player = $(this).closest(".podcast-player");
-      const audio = player.find("audio")[0];
-      let speed = audio.playbackRate;
-      audio.playbackRate = speed === 1 ? 1.5 : speed === 1.5 ? 2 : 1;
-    });
-    /* PROGRESS */ audio.addEventListener("timeupdate", function () {
+
+    /* SPEED */
+    /* SPEED */
+speedBtn.on("click", function () {
+  let speed = audio.playbackRate;
+
+  if (speed === 1) {
+    audio.playbackRate = 1.5;
+  } else if (speed === 1.5) {
+    audio.playbackRate = 2;
+  } else {
+    audio.playbackRate = 1;
+  }
+
+  // optional: console check
+  console.log("Playback speed:", audio.playbackRate);
+});
+
+
+    /* PROGRESS */
+    audio.addEventListener("timeupdate", function () {
       progressFill.css(
         "width",
         (audio.currentTime / audio.duration) * 100 + "%",
@@ -1693,36 +1710,46 @@ $(document).ready(function () {
   const $featuredSection = $("#featuredEpisode");
   const $video = $("#featuredVideo")[0];
 
-  $(".episode-card").on("click", function () {
+  function loadEpisode($card, autoplay = false) {
+    const episode = $card.data("episode");
+    const title = $card.data("title");
+    const desc = $card.data("desc");
+    const time = $card.data("time");
+    const name = $card.data("name");
+    const video = $card.data("video");
 
-    const episode = $(this).data("episode");
-    const title   = $(this).data("title");
-    const desc    = $(this).data("desc");
-    const video   = $(this).data("video");
-
-    // Update text
     $("#featuredEpisodeNo").text(episode);
     $("#featuredTitle").text(title);
     $("#featuredDesc").text(desc);
+    $("#featuredTime").text(time || "");
+    $("#featuredName").text(name || "");
 
-    // Update video
     $video.pause();
     $video.src = video;
     $video.load();
 
-    // Autoplay after load
-    $video.play().catch(() => {});
+    if (autoplay) {
+      $video.play().catch(() => {});
+    }
+  }
 
-    // Scroll ONLY to featured episode (header-safe)
+  /* 🔹 LOAD FIRST EPISODE FROM LIST ON PAGE LOAD */
+  const $firstEpisode = $(".episode-card").first();
+  if ($firstEpisode.length) {
+    loadEpisode($firstEpisode, false); // no autoplay on reload
+  }
+
+  /* 🔹 CLICK HANDLER (unchanged behavior) */
+  $(".episode-card").on("click", function () {
+    loadEpisode($(this), true);
+
     const scrollTop =
       $featuredSection.offset().top - headerHeight - 10;
 
-    $("html, body").animate(
-      { scrollTop: scrollTop },
-      600
-    );
+    $("html, body").animate({ scrollTop }, 600);
   });
 
 });
+
 
 

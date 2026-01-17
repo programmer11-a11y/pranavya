@@ -404,7 +404,7 @@
 /* Then your font and layer definitions */
 @layer base {
   body {
-    @apply font-primary font-normal text-thunder-100 m-0;
+    @apply font-primary font-normal m-0;
   }
   .container {
     @apply w-full mx-auto px-4;
@@ -415,7 +415,7 @@
   h4,
   h5,
   h6 {
-    @apply font-secondary m-0;
+    @apply font-secondary m-0 text-thunder-100;
   }
   h1,
   .h1 {
@@ -447,10 +447,10 @@
   }
   p,
   .p {
-    @apply 2xl:text-20 1xl:text-19 md:text-16 sm:text-15 text-14 2xl:leading-[34px] 1xl:leading-[30px] lg:leading-[28px] lt:leading-[26px] sm:leading-[24px] leading-[20px] font-primary m-0;
+    @apply text-thunder-100 2xl:text-20 1xl:text-19 md:text-16 sm:text-15 text-14 2xl:leading-[34px] 1xl:leading-[30px] lg:leading-[28px] lt:leading-[26px] sm:leading-[24px] leading-[20px] font-primary m-0;
   }
   .p2 {
-    @apply 2xl:text-18 md:text-15 text-14 1xl:leading-[28px] xl:leading-[25px] leading-6 m-0;
+    @apply text-thunder-100 2xl:text-18 md:text-15 text-14 1xl:leading-[28px] xl:leading-[25px] leading-6 m-0;
   }
   button {
     @apply cursor-pointer;
@@ -498,17 +498,17 @@
   .swiper-navigation-icon {
     @apply rotate-180 w-5! h-4!;
   }
-.form-success-msg{
-  @apply text-green-600 flex items-center gap-2 mt-2 text-sm;
-}
-.newsletter .error-msg,
-.newsletter .form-success-msg{
-  @apply absolute top-12;
-}
+  .form-success-msg {
+    @apply text-green-600 flex items-center gap-2 mt-2 text-sm;
+  }
+  .newsletter .error-msg,
+  .newsletter .form-success-msg {
+    @apply absolute top-12;
+  }
 
-.error-msg {
-  @apply flex items-center gap-2 mt-2 text-red-600 text-sm ml-6;
-}
+  .error-msg {
+    @apply flex items-center gap-2 mt-2 text-red-600 text-sm ml-6;
+  }
   /* ===== KEYFRAME START =========== */
   /* Animation */
   @keyframes marquee {
@@ -664,10 +664,10 @@
   .all-header.bg-white .menu_link_text {
     @apply text-black;
   }
-  .all-header.bg-white .menu_link_text svg,
+  /* .all-header.bg-white .menu_link_text svg,
   .all-header.bg-white .menu_link_text svg path {
     @apply text-black!;
-  }
+  } */
   /* General SVG elements in header (but not nav-icon) should be black when bg-white */
   /* .all-header.bg-white svg:not(.nav-icon) {
     @apply text-black;
@@ -1233,6 +1233,9 @@
   position: relative;
   z-index: 1;
 }
+.newsletter .error-msg {
+  @apply ml-0 mt-1;
+}
 
 /* ==============ABOUT US=============== */
 .header.no-toggle-color .all-header.scrolled,
@@ -1271,21 +1274,30 @@
 
 /* Card Wrapper */
 .yoga-card {
-  @apply bg-whitesmoke-100 rounded-sm overflow-hidden pointer-events-auto;
+  @apply bg-whitesmoke-200 rounded-sm overflow-hidden pointer-events-auto;
+}
+
+.podcast-card {
+  @apply bg-white rounded-sm overflow-hidden pointer-events-auto;
 }
 
 /* Image Section */
-.yoga-card-image {
+.yoga-card-image,
+.podcast-image {
   @apply relative w-full 2xl:h-86.5 1xl:h-72 xl:h-62 lg:h-55 lt:h-62 md:h-52 h-44;
 }
 
-.yoga-card-image img {
+.yoga-card-image img,
+.podcast-image img {
   @apply w-full h-full object-cover;
 }
 
 /* Intensity Badge */
 .yoga-card-badge {
   @apply absolute 1xl:top-4 1xl:right-4 md:top-3 md:right-3 top-2 right-2 bg-[#FFFFFF96] backdrop-blur-sm rounded-full 1xl:px-5 md:px-4 px-3 1xl:py-2 py-[7px] flex items-center gap-2 md:text-14 sm:text-xs text-[10px] italic font-medium text-black;
+}
+.classes-details {
+  @apply relative flex items-center gap-2 italic font-medium;
 }
 
 .badge-dot {
@@ -1305,8 +1317,9 @@
 }
 
 /* Content */
-.yoga-card-content {
-  @apply 2xl:p-7.5 1xl:p-6.5 xl:p-6 md:p-5 sm:p-3.5 py-3 p-2;
+.yoga-card-content,
+.podcast-content {
+  @apply 2xl:p-7.5 1xl:p-6.5 xl:p-6 md:p-5 sm:p-3.5 py-3 p-3;
 }
 
 .yoga-card-category {
@@ -1314,10 +1327,15 @@
 }
 
 .yoga-card-title {
+  @apply text-primary hover:text-thunder-100 uppercase 1xl:mb-5 xl:mb-3 mb-2;
+}
+.yoga-card-title,
+.podcast-title {
   @apply text-primary uppercase 1xl:mb-5 xl:mb-3 mb-2;
 }
 
-.yoga-card-desc {
+.yoga-card-desc,
+.podcast-desc {
   @apply 1xl:mb-6 sm:mb-4.5 mb-3;
 }
 
@@ -1325,25 +1343,50 @@
 .yoga-card-footer {
   @apply flex sm:items-center items-start sm:flex-row flex-col justify-between 1xl:gap-4 gap-2;
 }
+
+.podcast-footer {
+  @apply flex sm:items-center items-start flex-row divide-x divide-thunder-100 1xl:gap-5 xl:gap-4 md:gap-2.5 gap-1;
+}
 .yoga-card-footer .btn-link {
   @apply uppercase bg-transparent shrink-0 p-1 font-medium text-primary hover:text-black leading-[100%];
 }
+
 .yoga-card-instructor {
   @apply flex items-center gap-2;
 }
 
-.yoga-card-instructor img {
+.podcast-time {
+  @apply flex items-center 1xl:gap-2 sm:gap-1.5 gap-1 1xl:pr-5 xl:pr-4 md:pr-3 pr-1.5;
+}
+.podcast-artist {
+  @apply flex items-center 1xl:gap-2 sm:gap-1.5 gap-1;
+}
+
+.yoga-card-instructor img,
+.podcast-instructor img {
   @apply w-full h-full rounded-full object-cover;
 }
 .yoga-card-instructor .instructor-img {
   @apply 2xl:size-10 1xl:size-9 sm:size-8 size-7 rounded-full shrink-0 object-cover;
 }
 
+.podcast-time .time-img,
+.podcast-artist .person-name {
+  @apply 1xl:size-8.5 xl:size-7 lt:size-6 size-5.5 rounded-full shrink-0 object-cover;
+}
+.rewind, .forward{
+  @apply 1xl:w-4 1xl:h-3 w-3.5 h-2.5;
+}
 .yoga-card-instructor p {
   @apply font-medium italic text-black;
 }
 
-.yoga-card-instructor span {
+.podcast-instructor p {
+  @apply text-black;
+}
+
+.yoga-card-instructor span,
+.podcast-instructor span {
   @apply font-medium;
 }
 
@@ -1358,4 +1401,23 @@
 
 .yoga-card-link:hover span {
   @apply translate-x-1;
+}
+
+/* podcast */
+.play-btn {
+  @apply border-3 1xl:size-12.5 xl:size-11.5 size-10 flex items-center justify-center p-1.5 border-[#D9D9D969] rounded-full shrink-0;
+}
+.icon-volume, .icon-muted, .speed-playback-btn{
+  @apply 1xl:size-7 xl:size-6 size-5;
+}
+.podcast-player {
+  @apply w-full border-t border-primary/15 1xl:mt-6 1xl:pt-5 xl:mt-4.5 xl:pt-5 mt-4 sm:pt-4 pt-3;
+}
+
+.progress-bar {
+  @apply relative w-full h-1 bg-[#E8E2DF] cursor-pointer rounded-full;
+}
+
+.progress-fill {
+  @apply absolute left-0 top-0 h-full w-0 bg-primary/50 rounded-sm;
 }

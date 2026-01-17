@@ -97,29 +97,42 @@ jQuery(document).ready(function () {
 
       item.on("mouseleave", function () {
         item.removeClass("mega-open");
-        item.find(".mega-panel").stop(true, true).fadeOut(150, function () {
-          // Call after fadeOut animation completes
-          const isScrolled = jQuery(window).scrollTop() === 0;
-          const megaOpen = jQuery(".mega-panel:visible").length > 0;
-          const sidebarOpen = jQuery("#mainmenu").hasClass("active");
-          const searchOpen = jQuery("#nav-site-search").hasClass("open");
+        item
+          .find(".mega-panel")
+          .stop(true, true)
+          .fadeOut(150, function () {
+            // Call after fadeOut animation completes
+            const isScrolled = jQuery(window).scrollTop() === 0;
+            const megaOpen = jQuery(".mega-panel:visible").length > 0;
+            const sidebarOpen = jQuery("#mainmenu").hasClass("active");
+            const searchOpen = jQuery("#nav-site-search").hasClass("open");
 
-          // Check if mouse moved to another menu item or overlay before removing hover
-          // Use a small delay to allow other menu item's mouseenter to fire first
-          setTimeout(function () {
-            const stillOnMenu = jQuery("#mainmenu > ul > li:hover").length > 0;
-            const stillOnHeader = jQuery(".all-header:hover").length > 0;
-            const overlayVisible = !jQuery(".bg_body_box").hasClass("hidden") && jQuery(".bg_body_box").css("display") !== "none";
+            // Check if mouse moved to another menu item or overlay before removing hover
+            // Use a small delay to allow other menu item's mouseenter to fire first
+            setTimeout(function () {
+              const stillOnMenu =
+                jQuery("#mainmenu > ul > li:hover").length > 0;
+              const stillOnHeader = jQuery(".all-header:hover").length > 0;
+              const overlayVisible =
+                !jQuery(".bg_body_box").hasClass("hidden") &&
+                jQuery(".bg_body_box").css("display") !== "none";
 
-            // Only remove hover if mouse is not on any menu item AND not on header
-            // If mouse moved to overlay (overlay is visible but mouse not on header), remove hover
-            if (isScrolled === false && !megaOpen && !sidebarOpen && !searchOpen && !stillOnMenu && !stillOnHeader) {
-              // If overlay is visible but mouse is not on header, it means mouse moved to overlay - remove hover
-              jQuery(".all-header").removeClass("not_scrolled_hover");
-            }
-            applyScrolledState();
-          }, 100);
-        });
+              // Only remove hover if mouse is not on any menu item AND not on header
+              // If mouse moved to overlay (overlay is visible but mouse not on header), remove hover
+              if (
+                isScrolled === false &&
+                !megaOpen &&
+                !sidebarOpen &&
+                !searchOpen &&
+                !stillOnMenu &&
+                !stillOnHeader
+              ) {
+                // If overlay is visible but mouse is not on header, it means mouse moved to overlay - remove hover
+                jQuery(".all-header").removeClass("not_scrolled_hover");
+              }
+              applyScrolledState();
+            }, 100);
+          });
         jQuery(".bg_body_box").addClass("hidden").css("display", "none");
       });
     });
@@ -137,10 +150,12 @@ jQuery(document).ready(function () {
         }
 
         jQuery("#mainmenu .has-mega").removeClass("mega-open");
-        jQuery("#mainmenu .mega-panel").stop(true, true).fadeOut(150, function () {
-          // After mega menu closes, update header state
-          applyScrolledState();
-        });
+        jQuery("#mainmenu .mega-panel")
+          .stop(true, true)
+          .fadeOut(150, function () {
+            // After mega menu closes, update header state
+            applyScrolledState();
+          });
 
         jQuery(".bg_body_box").addClass("hidden").css("display", "none");
       } else {
@@ -167,7 +182,6 @@ jQuery(document).ready(function () {
     );
 
     if (jQuery(window).width() >= 1220) return;
-
 
     // OPEN SUBMENU
     jQuery(document).on(
@@ -204,7 +218,7 @@ jQuery(document).ready(function () {
           transform: "translateX(100%)", // Off-screen to the right
           opacity: "0",
           visibility: "hidden",
-          display: "block"
+          display: "block",
         });
 
         fixInnerTextWhite();
@@ -214,7 +228,7 @@ jQuery(document).ready(function () {
           // Make panel visible but still off-screen
           panel.css({
             visibility: "visible",
-            opacity: "1"
+            opacity: "1",
           });
 
           // Use another frame to ensure visibility change is rendered
@@ -229,7 +243,7 @@ jQuery(document).ready(function () {
                 const anim = panel[0].animate(
                   [
                     { transform: "translateX(100%)" }, // Start from right (off-screen)
-                    { transform: "translateX(0)" },     // End at center (on-screen)
+                    { transform: "translateX(0)" }, // End at center (on-screen)
                   ],
                   { duration: 260, easing: "ease", fill: "forwards" },
                 );
@@ -272,36 +286,29 @@ jQuery(document).ready(function () {
     );
 
     // CLOSE SUBMENU
-    jQuery(document).on(
-      "click.mobileBackBtn",
-      ".mobile-back-btn",
-      function () {
-        const panel = jQuery(this).closest(".mega-panel");
-        const wrap = panel.closest(".has-mega");
+    jQuery(document).on("click.mobileBackBtn", ".mobile-back-btn", function () {
+      const panel = jQuery(this).closest(".mega-panel");
+      const wrap = panel.closest(".has-mega");
 
-        if (panel[0] && panel[0].animate) {
-          const anim = panel[0].animate(
-            [
-              { transform: "translateX(0)" },
-              { transform: "translateX(110%)" },
-            ],
-            { duration: 220, easing: "ease", fill: "forwards" },
-          );
-          anim.onfinish = function () {
-            panel.removeClass("mobile-step in").hide().css("transform", "");
-          };
-        }
+      if (panel[0] && panel[0].animate) {
+        const anim = panel[0].animate(
+          [{ transform: "translateX(0)" }, { transform: "translateX(110%)" }],
+          { duration: 220, easing: "ease", fill: "forwards" },
+        );
+        anim.onfinish = function () {
+          panel.removeClass("mobile-step in").hide().css("transform", "");
+        };
+      }
 
-        wrap.removeClass("mobile-open");
+      wrap.removeClass("mobile-open");
 
-        if (!jQuery("#mainmenu .has-mega.mobile-open").length) {
-          jQuery("#mainmenu").removeClass("in-submenu");
-        }
+      if (!jQuery("#mainmenu .has-mega.mobile-open").length) {
+        jQuery("#mainmenu").removeClass("in-submenu");
+      }
 
-        // Always hide Pages > Events third-step panel when going back to root
-        jQuery("#mobile-pages-events-panel").addClass("hidden");
-      },
-    );
+      // Always hide Pages > Events third-step panel when going back to root
+      jQuery("#mobile-pages-events-panel").addClass("hidden");
+    });
 
     // THIRD-LEVEL: Nested menu items (mobile only, step 3)
     // STEP 3 OPEN
@@ -359,8 +366,6 @@ jQuery(document).ready(function () {
         panel.remove();
       }, 350);
     });
-
-
   }
 
   initMobileMenu();
@@ -399,7 +404,14 @@ jQuery(document).ready(function () {
         const sidebarOpen = jQuery("#mainmenu").hasClass("active");
 
         // If mouse is not on header or menu, and page is not scrolled, and nothing else is open, remove hover
-        if (!isScrolled && !megaOpen && !searchOpen && !sidebarOpen && !stillOnHeader && !stillOnMenu) {
+        if (
+          !isScrolled &&
+          !megaOpen &&
+          !searchOpen &&
+          !sidebarOpen &&
+          !stillOnHeader &&
+          !stillOnMenu
+        ) {
           jQuery(".all-header").removeClass("not_scrolled_hover");
           applyScrolledState();
         }
@@ -424,7 +436,14 @@ jQuery(document).ready(function () {
       const stillOnMenu = jQuery("#mainmenu > ul > li:hover").length > 0;
 
       // If mouse is on overlay (not on header or menu) and page is not scrolled, remove hover
-      if (!isScrolled && !megaOpen && !searchOpen && !sidebarOpen && !stillOnHeader && !stillOnMenu) {
+      if (
+        !isScrolled &&
+        !megaOpen &&
+        !searchOpen &&
+        !sidebarOpen &&
+        !stillOnHeader &&
+        !stillOnMenu
+      ) {
         jQuery(".all-header").removeClass("not_scrolled_hover");
         applyScrolledState();
       }
@@ -491,7 +510,6 @@ jQuery(document).ready(function () {
     }
   });
 
-
   /* ============================================================
      HEADER SCROLL — FIX LOGO + ICON COLOR TOGGLING
   ============================================================ */
@@ -517,7 +535,8 @@ jQuery(document).ready(function () {
     // Check if header has no-toggle-color class
     // When no-toggle-color is present, logo and icon colors should not toggle (stay dark/black)
     const header = jQuery(".all-header").closest("header");
-    const hasNoToggleColor = header.length > 0 && header.hasClass("no-toggle-color");
+    const hasNoToggleColor =
+      header.length > 0 && header.hasClass("no-toggle-color");
 
     // 🔥 Condition for black UI (bg-white)
     // Show bg-white when: scrolled, mega menu open, search open, sidebar open, wishlist open, cart open, OR hover on header
@@ -606,10 +625,17 @@ jQuery(document).ready(function () {
     const megaOpen = jQuery(".mega-panel:visible").length > 0;
     const sidebarOpen = jQuery("#mainmenu").hasClass("active");
     const searchOpen = jQuery("#nav-site-search").hasClass("open");
-    const wishlistOpen = !jQuery("#wishlistSidebar").hasClass("translate-x-full");
+    const wishlistOpen =
+      !jQuery("#wishlistSidebar").hasClass("translate-x-full");
     const cartOpen = !jQuery("#cartSidebar").hasClass("translate-x-full");
 
-    if (!megaOpen && !sidebarOpen && !searchOpen && !wishlistOpen && !cartOpen) {
+    if (
+      !megaOpen &&
+      !sidebarOpen &&
+      !searchOpen &&
+      !wishlistOpen &&
+      !cartOpen
+    ) {
       jQuery(".all-header").removeClass("not_scrolled_hover");
     }
   }
@@ -627,7 +653,8 @@ jQuery(document).ready(function () {
     const megaOpen = jQuery(".mega-panel:visible").length > 0;
     const sidebarOpen = jQuery("#mainmenu").hasClass("active");
     const searchOpen = jQuery("#nav-site-search").hasClass("open");
-    const wishlistOpen = !jQuery("#wishlistSidebar").hasClass("translate-x-full");
+    const wishlistOpen =
+      !jQuery("#wishlistSidebar").hasClass("translate-x-full");
     const cartOpen = !jQuery("#cartSidebar").hasClass("translate-x-full");
     const hasHover = jQuery(".all-header").hasClass("not_scrolled_hover");
     const stillOnHeader = jQuery(".all-header:hover").length > 0;
@@ -635,12 +662,22 @@ jQuery(document).ready(function () {
     const stillOnMegaPanel = jQuery(".mega-panel:hover").length > 0;
 
     // If hover class is active but mouse is not on header/menu/mega panel and nothing else is open, remove it
-    if (hasHover && !isScrolled && !megaOpen && !sidebarOpen && !searchOpen && !wishlistOpen && !cartOpen && !stillOnHeader && !stillOnMenu && !stillOnMegaPanel) {
+    if (
+      hasHover &&
+      !isScrolled &&
+      !megaOpen &&
+      !sidebarOpen &&
+      !searchOpen &&
+      !wishlistOpen &&
+      !cartOpen &&
+      !stillOnHeader &&
+      !stillOnMenu &&
+      !stillOnMegaPanel
+    ) {
       jQuery(".all-header").removeClass("not_scrolled_hover");
       applyScrolledState();
     }
   }, 200);
-
 
   /* ============================================================
  FIX: Remove text-white only inside mega menu + search
@@ -656,14 +693,10 @@ jQuery(document).ready(function () {
   }
 
   // MENU JS
-  jQuery(document).on(
-    "click",
-    "button[name='mobile-menu-view']",
-    function () {
-      jQuery("#mainmenu").addClass("active");
-      jQuery("html,body").addClass("overflow-hidden");
-    },
-  );
+  jQuery(document).on("click", "button[name='mobile-menu-view']", function () {
+    jQuery("#mainmenu").addClass("active");
+    jQuery("html,body").addClass("overflow-hidden");
+  });
 
   jQuery(document).on("click", "button[name='close']", function () {
     jQuery("#mainmenu").removeClass("active");
@@ -730,9 +763,8 @@ jQuery(document).ready(function () {
 
   // ===== Video Popup (YouTube/Vimeo/HTML5) ===== //
   jQuery(document).ready(function ($) {
-
-    $('.video-popup').magnificPopup({
-      type: 'iframe',
+    $(".video-popup").magnificPopup({
+      type: "iframe",
       preloader: false,
       fixedContentPos: false,
       closeBtnInside: true,
@@ -740,26 +772,23 @@ jQuery(document).ready(function () {
       iframe: {
         patterns: {
           youtube: {
-            index: 'youtube.com/',
+            index: "youtube.com/",
             id: function (url) {
               const match = url.match(/[?&]v=([^&]+)/);
               return match ? match[1] : null;
             },
-            src: './image/yoga.mp4'
-          }
-        }
-      }
+            src: "./image/yoga.mp4",
+          },
+        },
+      },
     });
-
   });
-
 
   // ===== Weekly Schedule Tabs ===== //
   /* ----------------------------
      TAB CLICK (EXISTING LOGIC)
   -----------------------------*/
   jQuery(document).ready(function () {
-
     const $schedule = $("#schedule");
 
     if (!$schedule.length) return;
@@ -800,20 +829,14 @@ jQuery(document).ready(function () {
       const target = $(this).val();
 
       $tabs.removeClass("is-active");
-      $schedule.find(`.schedule-tab[data-target="${target}"]`).addClass("is-active");
+      $schedule
+        .find(`.schedule-tab[data-target="${target}"]`)
+        .addClass("is-active");
 
       $panels.addClass("hidden");
       $schedule.find(target).removeClass("hidden");
     });
-
   });
-
-
-
-
-
-
-
 
   // Content slider (fade in/out)
   const contentSwiper = new Swiper(".testimonials-content-swiper", {
@@ -901,9 +924,9 @@ jQuery(document).ready(function () {
       prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-      640: { slidesPerView: 2, spaceBetween: 10, },
-      768: { slidesPerView: 2.9, spaceBetween: 10, },
-      769: { slidesPerView: 2.9, spaceBetween: 17, },
+      640: { slidesPerView: 2, spaceBetween: 10 },
+      768: { slidesPerView: 2.9, spaceBetween: 10 },
+      769: { slidesPerView: 2.9, spaceBetween: 17 },
     },
   });
 
@@ -941,7 +964,8 @@ jQuery(document).ready(function () {
 
       // Check if header has no-toggle-color class
       const header = jQuery(".all-header").closest("header");
-      const hasNoToggleColor = header.length > 0 && header.hasClass("no-toggle-color");
+      const hasNoToggleColor =
+        header.length > 0 && header.hasClass("no-toggle-color");
 
       if (!isScrolled && !megaOpen && !searchOpen) {
         jQuery(".all-header").addClass("not_scrolled_hover");
@@ -961,12 +985,14 @@ jQuery(document).ready(function () {
       const megaOpen = jQuery(".mega-panel:visible").length > 0;
       const searchOpen = jQuery("#nav-site-search").hasClass("open");
       const sidebarOpen = jQuery("#mainmenu").hasClass("active");
-      const wishlistOpen = !jQuery("#wishlistSidebar").hasClass("translate-x-full");
+      const wishlistOpen =
+        !jQuery("#wishlistSidebar").hasClass("translate-x-full");
       const cartOpen = !jQuery("#cartSidebar").hasClass("translate-x-full");
 
       // Check if header has no-toggle-color class
       const header = jQuery(".all-header").closest("header");
-      const hasNoToggleColor = header.length > 0 && header.hasClass("no-toggle-color");
+      const hasNoToggleColor =
+        header.length > 0 && header.hasClass("no-toggle-color");
 
       // Check if mouse is still over any menu item or header before removing hover
       // This prevents removing hover when moving between menu items
@@ -978,7 +1004,17 @@ jQuery(document).ready(function () {
 
         // Don't remove hover if mega menu is open, mouse is still on menu, header, or mega panel
         // Also check if any sidebar is open
-        if (!isScrolled && !megaOpen && !searchOpen && !sidebarOpen && !wishlistOpen && !cartOpen && !stillOnMenu && !stillOnHeader && !stillOnMegaPanel) {
+        if (
+          !isScrolled &&
+          !megaOpen &&
+          !searchOpen &&
+          !sidebarOpen &&
+          !wishlistOpen &&
+          !cartOpen &&
+          !stillOnMenu &&
+          !stillOnHeader &&
+          !stillOnMegaPanel
+        ) {
           jQuery(".all-header").removeClass("not_scrolled_hover");
           // Only toggle logo if no-toggle-color is not present
           if (!hasNoToggleColor) {
@@ -1006,7 +1042,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const navBtns = document.querySelectorAll(".nav-btn");
 
   // ✅ STOP if slider markup does not exist
-  if (!slideId || !slideTitle || !slideDesc || !slideImg || !slideIcon || !viewBtn || !navBtns.length) {
+  if (
+    !slideId ||
+    !slideTitle ||
+    !slideDesc ||
+    !slideImg ||
+    !slideIcon ||
+    !viewBtn ||
+    !navBtns.length
+  ) {
     return;
   }
 
@@ -1074,7 +1118,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // ========validation form logic===============
 (function ($) {
-
   $(document).on("submit", ".validate-form", function (e) {
     e.preventDefault();
     e.stopImmediatePropagation();
@@ -1086,19 +1129,23 @@ document.addEventListener("DOMContentLoaded", () => {
     var $successMsg = $form.find(".form-success-msg");
     $successMsg.addClass("hidden").text("");
 
-    $form.find("input[required], textarea[required], select[required]").each(function () {
-      var $input = $(this);
-      removeError($input);
+    $form
+      .find("input[required], textarea[required], select[required]")
+      .each(function () {
+        var $input = $(this);
+        removeError($input);
 
-      if (!$input.val().trim()) {
-        showError($input, ($input.attr("placeholder") || "This field") + " is required.");
-        valid = false;
-      }
-      else if ($input.attr("type") === "email" && !this.validity.valid) {
-        showError($input, "Please enter a valid email address.");
-        valid = false;
-      }
-    });
+        if (!$input.val().trim()) {
+          showError(
+            $input,
+            ($input.attr("name") || "This field") + " is required.",
+          );
+          valid = false;
+        } else if ($input.attr("type") === "email" && !this.validity.valid) {
+          showError($input, "Please enter a valid email address.");
+          valid = false;
+        }
+      });
 
     if (!valid) return;
 
@@ -1106,9 +1153,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Get custom success message from form
     var successText = $form.data("success") || "Form submitted successfully!";
 
-    $successMsg
-      .removeClass("hidden")
-      .html(`
+    $successMsg.removeClass("hidden").html(`
     <span class="success-icon">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none">
         <path d="M20 6L9 17L4 12"
@@ -1121,7 +1166,6 @@ document.addEventListener("DOMContentLoaded", () => {
     <span>${successText}</span>
   `);
 
-
     $form[0].reset();
   });
 
@@ -1131,8 +1175,12 @@ document.addEventListener("DOMContentLoaded", () => {
     ".validate-form input, .validate-form textarea, .validate-form select",
     function () {
       removeError($(this));
-      $(this).closest("form").find(".form-success-msg").addClass("hidden").text("");
-    }
+      $(this)
+        .closest("form")
+        .find(".form-success-msg")
+        .addClass("hidden")
+        .text("");
+    },
   );
 
   function showError($input, message) {
@@ -1157,9 +1205,7 @@ document.addEventListener("DOMContentLoaded", () => {
     $input.removeClass("input-error");
     $input.next(".error-msg").remove();
   }
-
 })(jQuery);
-
 
 // =================== INDEX-2.HTML ========================
 // ==== HERO SLIDER ====
@@ -1341,12 +1387,12 @@ var swiper = new Swiper(".home-3-hero", {
   centeredSlides: true,
   loop: true,
   breakpoints: {
-    640: { slidesPerView: 2, spaceBetween: 2, direction: "horizontal", },
-    769: { slidesPerView: 2.5, spaceBetween: 6, direction: "horizontal", },
-    992: { slidesPerView: 3, spaceBetween: 6, direction: "vertical", },
-    1131: { slidesPerView: 3, spaceBetween: 6, direction: "vertical", },
-    1281: { slidesPerView: 3, spaceBetween: 6, direction: "vertical", },
-    1500: { slidesPerView: 3, spaceBetween: 9, direction: "vertical", },
+    640: { slidesPerView: 2, spaceBetween: 2, direction: "horizontal" },
+    769: { slidesPerView: 2.5, spaceBetween: 6, direction: "horizontal" },
+    992: { slidesPerView: 3, spaceBetween: 6, direction: "vertical" },
+    1131: { slidesPerView: 3, spaceBetween: 6, direction: "vertical" },
+    1281: { slidesPerView: 3, spaceBetween: 6, direction: "vertical" },
+    1500: { slidesPerView: 3, spaceBetween: 9, direction: "vertical" },
   },
 });
 
@@ -1358,13 +1404,12 @@ var swiper = new Swiper(".home-3_classes", {
     prevEl: ".swiper-button-prev",
   },
   breakpoints: {
-
-    500: { slidesPerView: 1.4, spaceBetween: 25, },
-    769: { slidesPerView: 1.5, spaceBetween: 30, },
-    992: { slidesPerView: 2.05, spaceBetween: 30, },
-    1131: { slidesPerView: 2.10, spaceBetween: 40, },
-    1281: { slidesPerView: 2.15, spaceBetween: 40, },
-    1500: { slidesPerView: 2.23, spaceBetween: 50, },
+    500: { slidesPerView: 1.4, spaceBetween: 25 },
+    769: { slidesPerView: 1.5, spaceBetween: 30 },
+    992: { slidesPerView: 2.05, spaceBetween: 30 },
+    1131: { slidesPerView: 2.1, spaceBetween: 40 },
+    1281: { slidesPerView: 2.15, spaceBetween: 40 },
+    1500: { slidesPerView: 2.23, spaceBetween: 50 },
   },
 });
 
@@ -1376,11 +1421,11 @@ var swiper = new Swiper(".home-3_instagram", {
   loop: true,
   autoplay: true,
   breakpoints: {
-    376: { slidesPerView: 2.2, spaceBetween: 12, },
-    426: { slidesPerView: 2.7, spaceBetween: 12, },
-    500: { slidesPerView: 3.3, spaceBetween: 12, },
-    992: { slidesPerView: 4, spaceBetween: 12, },
-    1131: { slidesPerView: 5, spaceBetween: 12, },
+    376: { slidesPerView: 2.2, spaceBetween: 12 },
+    426: { slidesPerView: 2.7, spaceBetween: 12 },
+    500: { slidesPerView: 3.3, spaceBetween: 12 },
+    992: { slidesPerView: 4, spaceBetween: 12 },
+    1131: { slidesPerView: 5, spaceBetween: 12 },
   },
 });
 
@@ -1396,13 +1441,13 @@ var swiper = new Swiper(".why-choose", {
     prevEl: ".why-choose-home-4 .swiper-button-prev",
   },
   breakpoints: {
-    456: { slidesPerView: 2, spaceBetween: 20, },
-    769: { slidesPerView: 2, spaceBetween: 30, },
-    992: { slidesPerView: 1, spaceBetween: 30, },
-    1131: { slidesPerView: 2, spaceBetween: 20, },
-    1281: { slidesPerView: 2, spaceBetween: 25, },
-    1500: { slidesPerView: 2, spaceBetween: 30, },
-    1768: { slidesPerView: 2, spaceBetween: 40, },
+    456: { slidesPerView: 2, spaceBetween: 20 },
+    769: { slidesPerView: 2, spaceBetween: 30 },
+    992: { slidesPerView: 1, spaceBetween: 30 },
+    1131: { slidesPerView: 2, spaceBetween: 20 },
+    1281: { slidesPerView: 2, spaceBetween: 25 },
+    1500: { slidesPerView: 2, spaceBetween: 30 },
+    1768: { slidesPerView: 2, spaceBetween: 40 },
   },
 });
 
@@ -1414,17 +1459,16 @@ var swiper = new Swiper(".home-4_testimonial", {
     prevEl: ".swiper-button-prev",
   },
   breakpoints: {
-
-    577: { slidesPerView: 2, spaceBetween: 16, },
-    769: { slidesPerView: 2, spaceBetween: 20, },
-    992: { slidesPerView: 2, spaceBetween: 20, },
-    1131: { slidesPerView: 3, spaceBetween: 20, },
-    1281: { slidesPerView: 3, spaceBetween: 24, },
+    577: { slidesPerView: 2, spaceBetween: 16 },
+    769: { slidesPerView: 2, spaceBetween: 20 },
+    992: { slidesPerView: 2, spaceBetween: 20 },
+    1131: { slidesPerView: 3, spaceBetween: 20 },
+    1281: { slidesPerView: 3, spaceBetween: 24 },
   },
 });
 
 $(document).ready(function () {
-  $('[data-marquee]').each(function () {
+  $("[data-marquee]").each(function () {
     const $track = $(this);
     const $items = $track.children().clone();
 
@@ -1434,38 +1478,33 @@ $(document).ready(function () {
 });
 // =================== END INDEX-4.HTML ========================
 
-
 // =============== START MEMBERSHIP =================================
 $(document).ready(function () {
-
   // Initial state
-  $('.yearly-plans').hide();
-  $('.monthly-plans').show();
+  $(".yearly-plans").hide();
+  $(".monthly-plans").show();
 
   function setActive(btn) {
-    $('.toggle-btn')
-      .removeClass('bg-white text-primary')
-      .addClass('bg-primary text-white');
+    $(".toggle-btn")
+      .removeClass("bg-white text-primary")
+      .addClass("bg-primary text-white");
 
-    btn
-      .removeClass('bg-primary text-white')
-      .addClass('bg-white text-primary');
+    btn.removeClass("bg-primary text-white").addClass("bg-white text-primary");
   }
 
-  $('#monthlyBtn').on('click', function () {
+  $("#monthlyBtn").on("click", function () {
     setActive($(this));
 
-    $('.yearly-plans').hide();
-    $('.monthly-plans').fadeIn(200);
+    $(".yearly-plans").hide();
+    $(".monthly-plans").fadeIn(200);
   });
 
-  $('#yearlyBtn').on('click', function () {
+  $("#yearlyBtn").on("click", function () {
     setActive($(this));
 
-    $('.monthly-plans').hide();
-    $('.yearly-plans').fadeIn(200);
+    $(".monthly-plans").hide();
+    $(".yearly-plans").fadeIn(200);
   });
-
 });
 
 var swiper = new Swiper(".membership-step", {
@@ -1477,20 +1516,21 @@ var swiper = new Swiper(".membership-step", {
     prevEl: ".join-membership .swiper-button-prev",
   },
   breakpoints: {
-    456: { slidesPerView: 2, spaceBetween: 20, },
-    769: { slidesPerView: 2, spaceBetween: 20, },
-    992: { slidesPerView: 3, spaceBetween: 20, },
-    1131: { slidesPerView: 3, spaceBetween: 20, },
-    1281: { slidesPerView: 4, spaceBetween: 25, },
-    1500: { slidesPerView: 4, spaceBetween: 30, },
-    1768: { slidesPerView: 4, spaceBetween: 40, },
+    456: { slidesPerView: 2, spaceBetween: 20 },
+    769: { slidesPerView: 2, spaceBetween: 20 },
+    992: { slidesPerView: 3, spaceBetween: 20 },
+    1131: { slidesPerView: 3, spaceBetween: 20 },
+    1281: { slidesPerView: 4, spaceBetween: 25 },
+    1500: { slidesPerView: 4, spaceBetween: 30 },
+    1768: { slidesPerView: 4, spaceBetween: 40 },
   },
 });
 
-
 $(document).ready(function () {
   // Ensure headings start with default color & transition
-  $(".faq-item h5").removeClass("text-primary").addClass("text-thuder-100 transition-colors duration-300");
+  $(".faq-item h5")
+    .removeClass("text-primary")
+    .addClass("text-thuder-100 transition-colors duration-300");
 
   // Open first FAQ by default and set its title color
   const $first = $(".faq-item:first");
@@ -1507,10 +1547,22 @@ $(document).ready(function () {
     const btn = $(this);
 
     // Close others: hide answers, reset icons & title color & aria
-    $(".faq-item").not(parent).removeClass("active").find(".faq-answer").stop(true, true).slideUp(400);
+    $(".faq-item")
+      .not(parent)
+      .removeClass("active")
+      .find(".faq-answer")
+      .stop(true, true)
+      .slideUp(400);
     $(".faq-item").not(parent).find(".faq-icon").text("+");
-    $(".faq-item").not(parent).find("h5").removeClass("text-primary").addClass("text-thuder-100");
-    $(".faq-item").not(parent).find(".faq-question").attr("aria-expanded", "false");
+    $(".faq-item")
+      .not(parent)
+      .find("h5")
+      .removeClass("text-primary")
+      .addClass("text-thuder-100");
+    $(".faq-item")
+      .not(parent)
+      .find(".faq-question")
+      .attr("aria-expanded", "false");
 
     // Toggle current
     const isOpen = parent.hasClass("active");
@@ -1533,32 +1585,144 @@ $(document).ready(function () {
 // =============== END MEMBERSHIP =================================
 
 $(document).ready(function () {
-
-  $('.dropdown-btn').on('click', function (e) {
+  $(".dropdown-btn").on("click", function (e) {
     e.stopPropagation();
 
-    const dropdown = $(this).closest('.dropdown');
-    const menu = dropdown.find('.dropdown-menu');
-    const arrow = dropdown.find('.dropdown-arrow');
+    const dropdown = $(this).closest(".dropdown");
+    const menu = dropdown.find(".dropdown-menu");
+    const arrow = dropdown.find(".dropdown-arrow");
 
-    $('.dropdown-menu').not(menu).removeClass('open');
-    $('.dropdown-arrow').not(arrow).removeClass('rotate-180');
+    $(".dropdown-menu").not(menu).removeClass("open");
+    $(".dropdown-arrow").not(arrow).removeClass("rotate-180");
 
-    menu.toggleClass('open');
-    arrow.toggleClass('rotate-180');
+    menu.toggleClass("open");
+    arrow.toggleClass("rotate-180");
   });
 
-  $('.dropdown-item').on('click', function () {
-    const dropdown = $(this).closest('.dropdown');
+  $(".dropdown-item").on("click", function () {
+    const dropdown = $(this).closest(".dropdown");
 
-    dropdown.find('.dropdown-text').text($(this).text());
-    dropdown.find('.dropdown-menu').removeClass('open');
-    dropdown.find('.dropdown-arrow').removeClass('rotate-180');
+    dropdown.find(".dropdown-text").text($(this).text());
+    dropdown.find(".dropdown-menu").removeClass("open");
+    dropdown.find(".dropdown-arrow").removeClass("rotate-180");
   });
 
-  $(document).on('click', function () {
-    $('.dropdown-menu').removeClass('open');
-    $('.dropdown-arrow').removeClass('rotate-180');
+  $(document).on("click", function () {
+    $(".dropdown-menu").removeClass("open");
+    $(".dropdown-arrow").removeClass("rotate-180");
+  });
+});
+
+// ============== Podcast music player =================
+$(document).ready(function () {
+  $(".podcast-player").each(function () {
+    const player = $(this);
+    const audio = player.find("audio")[0];
+    audio.src = player.data("audio");
+    const playBtn = player.find(".play-btn");
+    const muteBtn = player.find(".mute-btn");
+    const speedBtn = player.find(".speed-btn");
+    const progressBar = player.find(".progress-bar");
+    const progressFill = player.find(".progress-fill");
+    /* PLAY / PAUSE */ playBtn.on("click", function () {
+      const isPaused = audio.paused;
+      $("audio").each(function () {
+        this.pause();
+        $(this)
+          .closest(".podcast-player")
+          .find(".icon-play")
+          .removeClass("hidden")
+          .end()
+          .find(".icon-pause")
+          .addClass("hidden");
+      });
+      if (isPaused) {
+        audio.play();
+        playBtn.find(".icon-play").addClass("hidden");
+        playBtn.find(".icon-pause").removeClass("hidden");
+      }
+    });
+    /* REWIND / FORWARD */ player
+      .find(".rewind-btn")
+      .on("click", () => (audio.currentTime -= 10));
+    player.find(".forward-btn").on("click", () => (audio.currentTime += 10));
+    /* MUTE */ muteBtn.on("click", function () {
+      audio.muted = !audio.muted;
+      muteBtn.find(".icon-volume").toggleClass("hidden");
+      muteBtn.find(".icon-muted").toggleClass("hidden");
+    });
+    /* SPEED */ $(".speed-btn").on("click", function () {
+      const player = $(this).closest(".podcast-player");
+      const audio = player.find("audio")[0];
+      let speed = audio.playbackRate;
+      audio.playbackRate = speed === 1 ? 1.5 : speed === 1.5 ? 2 : 1;
+    });
+    /* PROGRESS */ audio.addEventListener("timeupdate", function () {
+      progressFill.css(
+        "width",
+        (audio.currentTime / audio.duration) * 100 + "%",
+      );
+      player.find(".current-time").text(format(audio.currentTime));
+    });
+    progressBar.on("click", function (e) {
+      audio.currentTime = (e.offsetX / $(this).width()) * audio.duration;
+      audio.play();
+      playBtn.find(".icon-play").addClass("hidden");
+      playBtn.find(".icon-pause").removeClass("hidden");
+    });
+    audio.addEventListener("loadedmetadata", () =>
+      player.find(".duration").text(format(audio.duration)),
+    );
+    audio.addEventListener("ended", function () {
+      playBtn.find(".icon-play").removeClass("hidden");
+      playBtn.find(".icon-pause").addClass("hidden");
+      progressFill.css("width", "0%");
+    });
+  });
+  function format(t) {
+    return (
+      Math.floor(t / 60) + ":" + String(Math.floor(t % 60)).padStart(2, "0")
+    );
+  }
+});
+
+
+$(document).ready(function () {
+
+  const headerHeight = $("header").outerHeight();
+  const $featuredSection = $("#featuredEpisode");
+  const $video = $("#featuredVideo")[0];
+
+  $(".episode-card").on("click", function () {
+
+    const episode = $(this).data("episode");
+    const title   = $(this).data("title");
+    const desc    = $(this).data("desc");
+    const video   = $(this).data("video");
+
+    // Update text
+    $("#featuredEpisodeNo").text(episode);
+    $("#featuredTitle").text(title);
+    $("#featuredDesc").text(desc);
+
+    // Update video
+    $video.pause();
+    $video.src = video;
+    $video.load();
+
+    // Autoplay after load
+    $video.play().catch(() => {});
+
+    // Scroll ONLY to featured episode (header-safe)
+    const scrollTop =
+      $featuredSection.offset().top - headerHeight - 10;
+
+    $("html, body").animate(
+      { scrollTop: scrollTop },
+      600
+    );
   });
 
 });
+
+

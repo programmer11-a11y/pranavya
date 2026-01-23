@@ -777,7 +777,6 @@ jQuery(document).ready(function () {
               const match = url.match(/[?&]v=([^&]+)/);
               return match ? match[1] : null;
             },
-            src: "./image/yoga.mp4",
           },
         },
       },
@@ -1584,6 +1583,7 @@ $(document).ready(function () {
 
 // =============== END MEMBERSHIP =================================
 
+// =============== START CLASSES =================================
 $(document).ready(function () {
   $(".dropdown-btn").on("click", function (e) {
     e.stopPropagation();
@@ -1612,8 +1612,9 @@ $(document).ready(function () {
     $(".dropdown-arrow").removeClass("rotate-180");
   });
 });
+// =============== END CLASSES =================================
 
-// ============== Podcast music player =================
+// ============== PODCAST MUSIC PLAYER =================
 $(document).ready(function () {
   $(".podcast-player").each(function () {
     const player = $(this);
@@ -1655,22 +1656,22 @@ $(document).ready(function () {
       muteBtn.find(".icon-muted").toggleClass("hidden");
     });
 
-    /* SPEED */
-    /* SPEED */
-speedBtn.on("click", function () {
-  let speed = audio.playbackRate;
 
-  if (speed === 1) {
-    audio.playbackRate = 1.5;
-  } else if (speed === 1.5) {
-    audio.playbackRate = 2;
-  } else {
-    audio.playbackRate = 1;
-  }
+    /* SPEED */
+    speedBtn.on("click", function () {
+      let speed = audio.playbackRate;
 
-  // optional: console check
-  console.log("Playback speed:", audio.playbackRate);
-});
+      if (speed === 1) {
+        audio.playbackRate = 1.5;
+      } else if (speed === 1.5) {
+        audio.playbackRate = 2;
+      } else {
+        audio.playbackRate = 1;
+      }
+
+      // optional: console check
+      console.log("Playback speed:", audio.playbackRate);
+    });
 
 
     /* PROGRESS */
@@ -1703,53 +1704,74 @@ speedBtn.on("click", function () {
   }
 });
 
-
+// ============== PODCAST VIDEO PLAYER =================
 $(document).ready(function () {
 
   const headerHeight = $("header").outerHeight();
   const $featuredSection = $("#featuredEpisode");
-  const $video = $("#featuredVideo")[0];
+  const videoEl = $("#featuredVideo")[0];
 
   function loadEpisode($card, autoplay = false) {
-    const episode = $card.data("episode");
-    const title = $card.data("title");
-    const desc = $card.data("desc");
-    const time = $card.data("time");
-    const name = $card.data("name");
-    const video = $card.data("video");
+
+    const episode = $card.find(".episode-no").text().trim();
+    const title = $card.find(".episode-title").text().trim();
+    const desc = $card.find(".episode-desc").text().trim();
+    const time = $card.find(".episode-time").text().trim();
+    const name = $card.find(".episode-name").text().trim();
+    const video = $card.find(".episode-video-src source").attr("src");
 
     $("#featuredEpisodeNo").text(episode);
     $("#featuredTitle").text(title);
     $("#featuredDesc").text(desc);
-    $("#featuredTime").text(time || "");
-    $("#featuredName").text(name || "");
+    $("#featuredTime").text(time);
+    $("#featuredName").text(name);
 
-    $video.pause();
-    $video.src = video;
-    $video.load();
+    videoEl.pause();
+    videoEl.src = video;
+    videoEl.load();
+
 
     if (autoplay) {
-      $video.play().catch(() => {});
+      videoEl.play().catch(() => { });
     }
   }
 
-  /* 🔹 LOAD FIRST EPISODE FROM LIST ON PAGE LOAD */
+  /* 🔹 LOAD FIRST EPISODE FROM LIST (NO AUTOPLAY) */
   const $firstEpisode = $(".episode-card").first();
   if ($firstEpisode.length) {
-    loadEpisode($firstEpisode, false); // no autoplay on reload
+    loadEpisode($firstEpisode, false);
   }
-
-  /* 🔹 CLICK HANDLER (unchanged behavior) */
+  /* 🔹 CLICK HANDLER */
   $(".episode-card").on("click", function () {
     loadEpisode($(this), true);
 
     const scrollTop =
       $featuredSection.offset().top - headerHeight - 10;
 
-    $("html, body").animate({ scrollTop }, 600);
+    $("html, body").animate({ scrollTop }, 700);
   });
 
 });
 
+// ============== EVENTS DETAIL VIDEO BUTTON =================
+jQuery(document).ready(function ($) {
 
+  const $video = $("#eventVideo");
+  const $playBtn = $(".video-play");
 
+  // Play video on center button click
+  $playBtn.on("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    $video.get(0).play();
+    $video.attr("controls", true);
+    $playBtn.fadeOut(200);
+  });
+
+  // Show button again on pause
+  $video.on("pause ended", function () {
+    $playBtn.fadeIn(200);
+  });
+
+});

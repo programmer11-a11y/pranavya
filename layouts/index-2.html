@@ -562,9 +562,9 @@
                             class="mainmenu max-[1221px]:fixed max-[1221px]:h-screen max-[1221px]:inset-y-0 max-[1221px]:left-0 max-[1221px]:top-0 max-[1221px]:z-60 max-[1221px]:w-screen max-[1221px]:max-w-screen max-[1221px]:bg-white max-[1221px]:border-r max-[1221px]:border-primary/20 max-[1221px]:transition-transform max-[1221px]:duration-300 max-[1221px]:ease-in-out min-[1221px]:px-0 px-4">
                             <div
                                 class="min-[1221px]:hidden flex items-center justify-between py-4 border-b border-primary/20">
-                                <div class="flex items-center gap-2">
+                                <div class="w-fit h-9">
                                     <img decoding="async" src="image/main-logo-black.svg" alt="Pranavya"
-                                        class="w-full h-9" />
+                                    class="h-full w-auto object-contain" />
                                 </div>
                                 <button name="close" aria-label="Close menu" class="text-thunder-100">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
@@ -1667,9 +1667,9 @@
                                                                 <!-- Content Section -->
                                                                 <div class="1xl:p-5 p-4">
                                                                     <!-- Title -->
-                                                                    <p class="text-[#714c3a] mb-2">
-                                                                        NATIONAL YOGA CHAMPIONSHIP
-                                                                    </p>
+                                                                    <p
+                                                                        class="text-[#714c3a] mb-2 uppercase font-secondary">
+                                                                        NATIONAL YOGA CHAMPIONSHIP</p>
 
                                                                     <!-- Description -->
                                                                     <p
@@ -1734,7 +1734,7 @@
                                                                     <!--  -->
                                                                     <div
                                                                         class="flex items-center justify-between border-t border-primary/15 2xl:pt-[11px] pt-2">
-                                                                        <a href="./event-detail.html"
+                                                                        <a href="./events-detail-1.html"
                                                                             class="btn-link uppercase 2xl:text-14 text-[12px] font-medium text-primary hover:text-black leading-[100%]">
                                                                             book now
                                                                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -1882,7 +1882,7 @@
                                                                     </li>
                                                                     <li>
                                                                         <p>
-                                                                            <a href="./event-detail.html"
+                                                                            <a href="./events-detail-1.html"
                                                                                 class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
                                                                                 Class Detail
                                                                             </a>
@@ -1911,7 +1911,7 @@
                                                                 <ul class="bg-white 2xl:p-4 p-2 rounded-[10px]">
                                                                     <li>
                                                                         <p>
-                                                                            <a href="./event-1.html"
+                                                                            <a href="./events-1.html"
                                                                                 class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
                                                                                 Event 01
                                                                             </a>
@@ -1919,7 +1919,7 @@
                                                                     </li>
                                                                     <li>
                                                                         <p>
-                                                                            <a href="./event-2.html"
+                                                                            <a href="./events-2.html"
                                                                                 class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
                                                                                 Event 02
                                                                             </a>
@@ -1927,7 +1927,7 @@
                                                                     </li>
                                                                     <li>
                                                                         <p>
-                                                                            <a href="./event-detail.html"
+                                                                            <a href="./events-detail-1.html"
                                                                                 class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
                                                                                 Event Detail
                                                                             </a>
@@ -1956,7 +1956,7 @@
                                                                 <ul class="bg-white p-4 rounded-[10px]">
                                                                     <li>
                                                                         <p>
-                                                                            <a href="./retreat.html"
+                                                                            <a href="./retreats.html"
                                                                                 class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
                                                                                 Retreat 01
                                                                             </a>
@@ -4926,13 +4926,17 @@
                             </div>
 
                             <!-- Right Image -->
-                            <div class="relative lt:w-[45%] sm:w-[38%] w-full h-auto rounded-sm overflow-hidden">
-                                <img src="./image/class-stories-1.webp" alt="Yoga" class="w-full h-full object-cover" />
-                                <!-- Badge -->
-                                <p
-                                    class="absolute xl:top-4 xl:right-4 top-2.5 right-2.5 bg-white text-[#6b3f2b] 1xl:px-[18px] xl:px-[14px] px-3 xl:py-[3px] py-[2px] rounded-full">
-                                    Yoga Tips
-                                </p>
+                            <div class="relative lt:w-[45%] sm:w-[38%] block overflow-hidden rounded-sm">
+                                <div
+                                    class="relative shrink-0 before:content-[''] before:pt-[100%] before:block h-full overflow-hidden">
+                                    <img src="./image/class-stories-1.webp" alt="Yoga"
+                                        class="w-full h-full object-cover absolute top-0 left-0" />
+                                    <!-- Badge -->
+                                    <p
+                                        class="absolute xl:top-4 xl:right-4 top-2.5 right-2.5 bg-white text-[#6b3f2b] 1xl:px-[18px] xl:px-[14px] px-3 xl:py-[3px] py-[2px] rounded-full">
+                                        Yoga Tips
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -4980,14 +4984,17 @@
                             </div>
 
                             <!-- Right Image -->
-                            <div class="relative lt:w-[45%] sm:w-[38%] w-full h-auto rounded-sm overflow-hidden">
-                                <img src="./image/class-stories-2.webp" alt="Yoga" class="w-full h-full object-cover" />
-
-                                <!-- Badge -->
-                                <p
-                                    class="absolute xl:top-4 xl:right-4 top-2.5 right-2.5 bg-white text-[#6b3f2b] 1xl:px-[18px] xl:px-[14px] px-3 xl:py-[3px] py-[2px] rounded-full">
-                                    Yoga Tips
-                                </p>
+                            <div class="relative lt:w-[45%] sm:w-[38%] block overflow-hidden rounded-sm">
+                                <div
+                                    class="relative shrink-0 before:content-[''] before:pt-[100%] before:block h-full overflow-hidden">
+                                    <img src="./image/class-stories-2.webp" alt="Yoga"
+                                        class="w-full h-full object-cover absolute top-0 left-0" />
+                                    <!-- Badge -->
+                                    <p
+                                        class="absolute xl:top-4 xl:right-4 top-2.5 right-2.5 bg-white text-[#6b3f2b] 1xl:px-[18px] xl:px-[14px] px-3 xl:py-[3px] py-[2px] rounded-full">
+                                        Yoga Tips
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -5503,35 +5510,40 @@
                         <ul class="1xl:space-y-4.5 xl:space-y-2.5 space-y-2">
                             <li>
                                 <p>
-                                    <a href="./classes.html" class="hover:underline underline-offset-1 transition-all text-white">
+                                    <a href="./classes.html"
+                                        class="hover:underline underline-offset-1 transition-all text-white">
                                         Yoga Classes
                                     </a>
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    <a href="./classes.html" class="hover:underline underline-offset-1 transition-all text-white">
+                                    <a href="./classes.html"
+                                        class="hover:underline underline-offset-1 transition-all text-white">
                                         Personal Yoga Sessions
                                     </a>
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    <a href="./classes.html" class="hover:underline underline-offset-1 transition-all text-white">
+                                    <a href="./classes.html"
+                                        class="hover:underline underline-offset-1 transition-all text-white">
                                         Wellness Programs
                                     </a>
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    <a href="./retreats.html" class="hover:underline underline-offset-1 transition-all text-white">
+                                    <a href="./retreats.html"
+                                        class="hover:underline underline-offset-1 transition-all text-white">
                                         Retreats & Getaways
                                     </a>
                                 </p>
                             </li>
                             <li>
                                 <p>
-                                    <a href="./events.html" class="hover:underline underline-offset-1 transition-all text-white">
+                                    <a href="./events.html"
+                                        class="hover:underline underline-offset-1 transition-all text-white">
                                         Events & Workshops
                                     </a>
                                 </p>
@@ -5547,7 +5559,8 @@
                         <ul class="1xl:space-y-4.5 xl:space-y-2.5 space-y-2">
                             <li>
                                 <p>
-                                    <a href="./blog.html" class="hover:underline underline-offset-1 transition-all text-white">
+                                    <a href="./blog.html"
+                                        class="hover:underline underline-offset-1 transition-all text-white">
                                         Blog & Insights
                                     </a>
                                 </p>
@@ -5562,7 +5575,8 @@
                             </li>
                             <li>
                                 <p>
-                                    <a href="./schedule.html" class="hover:underline underline-offset-1 transition-all text-white">
+                                    <a href="./schedule.html"
+                                        class="hover:underline underline-offset-1 transition-all text-white">
                                         Schedule a Consultation
                                     </a>
                                 </p>
@@ -5577,7 +5591,8 @@
                             </li>
                             <li>
                                 <p>
-                                    <a href="./retreat.html" class="hover:underline underline-offset-1 transition-all text-white">
+                                    <a href="./retreats.html"
+                                        class="hover:underline underline-offset-1 transition-all text-white">
                                         Join a Retreat
                                     </a>
                                 </p>

@@ -562,9 +562,9 @@
                             class="mainmenu max-[1221px]:fixed max-[1221px]:h-screen max-[1221px]:inset-y-0 left-0! top-0! max-[1221px]:z-60 max-[1221px]:w-screen max-[1221px]:max-w-screen max-[1221px]:bg-white max-[1221px]:border-r max-[1221px]:border-primary/20 max-[1221px]:transition-transform max-[1221px]:duration-300 max-[1221px]:ease-in-out min-[1221px]:px-0 px-4">
                             <div
                                 class="min-[1221px]:hidden flex items-center justify-between py-4 border-b border-primary/20">
-                                <div class="flex items-center gap-2">
+                                 <div class="w-full h-9">
                                     <img decoding="async" src="image/main-logo-black.svg" alt="Pranavya"
-                                        class="w-full h-9" />
+                                        class="h-full w-auto object-contain" />
                                 </div>
                                 <button name="close" aria-label="Close menu" class="text-thunder-100">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
@@ -1667,9 +1667,9 @@
                                                                 <!-- Content Section -->
                                                                 <div class="1xl:p-5 p-4">
                                                                     <!-- Title -->
-                                                                    <p class="text-[#714c3a] mb-2">
-                                                                        NATIONAL YOGA CHAMPIONSHIP
-                                                                    </p>
+                                                                    <p
+                                                                        class="text-[#714c3a] mb-2 uppercase font-secondary">
+                                                                        NATIONAL YOGA CHAMPIONSHIP</p>
 
                                                                     <!-- Description -->
                                                                     <p
@@ -1734,7 +1734,7 @@
                                                                     <!--  -->
                                                                     <div
                                                                         class="flex items-center justify-between border-t border-primary/15 2xl:pt-[11px] pt-2">
-                                                                        <a href="./event-detail.html"
+                                                                        <a href="./events-detail-1.html"
                                                                             class="btn-link uppercase 2xl:text-14 text-[12px] font-medium text-primary hover:text-black leading-[100%]">
                                                                             book now
                                                                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -1882,7 +1882,7 @@
                                                                     </li>
                                                                     <li>
                                                                         <p>
-                                                                            <a href="./event-detail.html"
+                                                                            <a href="./events-detail-1.html"
                                                                                 class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
                                                                                 Class Detail
                                                                             </a>
@@ -1911,7 +1911,7 @@
                                                                 <ul class="bg-white 2xl:p-4 p-2 rounded-[10px]">
                                                                     <li>
                                                                         <p>
-                                                                            <a href="./event-1.html"
+                                                                            <a href="./events-1.html"
                                                                                 class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
                                                                                 Event 01
                                                                             </a>
@@ -1919,7 +1919,7 @@
                                                                     </li>
                                                                     <li>
                                                                         <p>
-                                                                            <a href="./event-2.html"
+                                                                            <a href="./events-2.html"
                                                                                 class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
                                                                                 Event 02
                                                                             </a>
@@ -1927,7 +1927,7 @@
                                                                     </li>
                                                                     <li>
                                                                         <p>
-                                                                            <a href="./event-detail.html"
+                                                                            <a href="./events-detail-1.html"
                                                                                 class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
                                                                                 Event Detail
                                                                             </a>
@@ -1956,7 +1956,7 @@
                                                                 <ul class="bg-white p-4 rounded-[10px]">
                                                                     <li>
                                                                         <p>
-                                                                            <a href="./retreat.html"
+                                                                            <a href="./retreats.html"
                                                                                 class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
                                                                                 Retreat 01
                                                                             </a>
@@ -2472,21 +2472,23 @@
 
                 <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 1xl:gap-6 gap-5">
                     <!-- 1st card -->
-                    <div class="yoga-card">
+                    <div class="yoga-card group">
                         <!-- Image -->
-                        <div class="yoga-card-image">
+                        <a href="class-detail-1.html" class="yoga-card-image">
+
                             <img src="./image/class-1.webp" alt="Yoga Class" />
                             <div class="yoga-card-badge">
                                 <span class="badge-dot badge-gentle"></span>
                                 <span>Intensity : Gentle</span>
                             </div>
-                        </div>
+
+                        </a>
 
                         <!-- Content -->
                         <div class="yoga-card-content">
                             <p class="yoga-card-category">Balance | Traditional Practice</p>
                             <a href="class-detail-1.html">
-                                <h3 class="yoga-card-title">Hatha Yoga</h3>
+                                <h3 class="yoga-card-title group-hover:text-black">Hatha Yoga</h3>
                             </a>
                             <p class="yoga-card-desc">
                                 A steady-paced class focused on classical postures and mindful breathing.
@@ -2515,21 +2517,21 @@
                     </div>
 
                     <!-- 2nd card -->
-                    <div class="yoga-card">
+                    <div class="yoga-card group">
                         <!-- Image -->
-                        <div class="yoga-card-image">
+                        <a href="class-detail-2.html" class="yoga-card-image">
                             <img src="./image/class-2.webp" alt="Yoga Class" />
                             <div class="yoga-card-badge">
                                 <span class="badge-dot badge-moderate"></span>
                                 <span>Intensity : Moderate to High</span>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- Content -->
                         <div class="yoga-card-content">
                             <p class="yoga-card-category">Fluid Motion | Breath Connection</p>
                             <a href="class-detail-2.html">
-                                <h3 class="yoga-card-title">Vinyasa Flow</h3>
+                                <h3 class="yoga-card-title group-hover:text-black">Vinyasa Flow</h3>
                             </a>
                             <p class="yoga-card-desc">
                                 Dynamic sequences that link breath with movement.
@@ -2558,21 +2560,21 @@
                     </div>
 
                     <!-- 3rd card -->
-                    <div class="yoga-card">
+                    <div class="yoga-card group">
                         <!-- Image -->
-                        <div class="yoga-card-image">
+                        <a href="class-detail-3.html" class="yoga-card-image">
                             <img src="./image/class-3.webp" alt="Yoga Class" />
                             <div class="yoga-card-badge">
                                 <span class="badge-dot badge-gentle"></span>
                                 <span>Intensity : Very Gentle</span>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- Content -->
                         <div class="yoga-card-content">
                             <p class="yoga-card-category">Stillness | Deep Rest</p>
                             <a href="class-detail-3.html">
-                                <h3 class="yoga-card-title">Restorative Yoga</h3>
+                                <h3 class="yoga-card-title group-hover:text-black">Restorative Yoga</h3>
                             </a>
                             <p class="yoga-card-desc">
                                 Restorative Yoga A healing class using props for complete relaxation.
@@ -2601,21 +2603,21 @@
                     </div>
 
                     <!-- 4th card -->
-                    <div class="yoga-card">
+                    <div class="yoga-card group">
                         <!-- Image -->
-                        <div class="yoga-card-image">
+                        <a href="class-detail-4.html" class="yoga-card-image">
                             <img src="./image/class-4.webp" alt="Yoga Class" />
                             <div class="yoga-card-badge">
                                 <span class="badge-dot badge-gentle"></span>
                                 <span>Intensity : Gentle</span>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- Content -->
                         <div class="yoga-card-content">
                             <p class="yoga-card-category">Deep Stretch | Fascia Release | Calm Mind</p>
                             <a href="class-detail-4.html">
-                                <h3 class="yoga-card-title">Yin Yoga</h3>
+                                <h3 class="yoga-card-title group-hover:text-black">Yin Yoga</h3>
                             </a>
                             <p class="yoga-card-desc">
                                 Targets joints and deep connective tissues with slow holds.
@@ -2644,21 +2646,21 @@
                     </div>
 
                     <!-- 5th card -->
-                    <div class="yoga-card">
+                    <div class="yoga-card group">
                         <!-- Image -->
-                        <div class="yoga-card-image">
+                        <a href="class-detail-5.html" class="yoga-card-image">
                             <img src="./image/class-5.webp" alt="Yoga Class" />
                             <div class="yoga-card-badge">
                                 <span class="badge-dot badge-high"></span>
                                 <span>Intensity : High</span>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- Content -->
                         <div class="yoga-card-content">
                             <p class="yoga-card-category">Strength | Flow | High Intensity</p>
                             <a href="class-detail-5.html">
-                                <h3 class="yoga-card-title">Power Yoga</h3>
+                                <h3 class="yoga-card-title group-hover:text-black">Power Yoga</h3>
                             </a>
                             <p class="yoga-card-desc">
                                 An energetic class combining yoga flow with fitness elements.
@@ -2687,21 +2689,21 @@
                     </div>
 
                     <!-- 6th card -->
-                    <div class="yoga-card">
+                    <div class="yoga-card group">
                         <!-- Image -->
-                        <div class="yoga-card-image">
+                        <a href="class-detail-6.html" class="yoga-card-image">
                             <img src="./image/class-6.webp" alt="Yoga Class" />
                             <div class="yoga-card-badge">
                                 <span class="badge-dot badge-gentle"></span>
                                 <span>Intensity : Gentle</span>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- Content -->
                         <div class="yoga-card-content">
                             <p class="yoga-card-category">Gentle Movement | Pregnancy Support | Breath</p>
                             <a href="class-detail-6.html">
-                                <h3 class="yoga-card-title">Prenatal Yoga</h3>
+                                <h3 class="yoga-card-title group-hover:text-black">Prenatal Yoga</h3>
                             </a>
                             <p class="yoga-card-desc">
                                 Safe and supportive movement for expecting mothers.
@@ -2730,21 +2732,21 @@
                     </div>
 
                     <!-- 7th card -->
-                    <div class="yoga-card">
+                    <div class="yoga-card group">
                         <!-- Image -->
-                        <div class="yoga-card-image">
+                        <a href="class-detail-7.html" class="yoga-card-image">
                             <img src="./image/class-7.webp" alt="Yoga Class" />
                             <div class="yoga-card-badge">
                                 <span class="badge-dot badge-moderate"></span>
                                 <span>Intensity : Moderate</span>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- Content -->
                         <div class="yoga-card-content">
                             <p class="yoga-card-category">Weightless Flow | Balance | Core Strength</p>
                             <a href="class-detail-7.html">
-                                <h3 class="yoga-card-title">Aerial Yoga</h3>
+                                <h3 class="yoga-card-title group-hover:text-black">Aerial Yoga</h3>
                             </a>
                             <p class="yoga-card-desc">
                                 Use of silk hammocks for support, stretch, and fun in the air.
@@ -2773,21 +2775,21 @@
                     </div>
 
                     <!-- 8th card -->
-                    <div class="yoga-card">
+                    <div class="yoga-card group">
                         <!-- Image -->
-                        <div class="yoga-card-image">
+                        <a href="class-detail-8.html" class="yoga-card-image">
                             <img src="./image/class-8.webp" alt="Yoga Class" />
                             <div class="yoga-card-badge">
                                 <span class="badge-dot badge-high"></span>
                                 <span>Intensity : High</span>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- Content -->
                         <div class="yoga-card-content">
                             <p class="yoga-card-category">Detox | Endurance | Strength</p>
                             <a href="class-detail-8.html">
-                                <h3 class="yoga-card-title">Hot Yoga</h3>
+                                <h3 class="yoga-card-title group-hover:text-black">Hot Yoga</h3>
                             </a>
                             <p class="yoga-card-desc">
                                 A powerful flow class in a heated room—amplifies flexibility and focus.
@@ -2816,21 +2818,21 @@
                     </div>
 
                     <!-- 9th card -->
-                    <div class="yoga-card">
+                    <div class="yoga-card group">
                         <!-- Image -->
-                        <div class="yoga-card-image">
+                        <a href="class-detail-9.html" class="yoga-card-image">
                             <img src="./image/class-9.webp" alt="Yoga Class" />
                             <div class="yoga-card-badge">
                                 <span class="badge-dot badge-gentle"></span>
                                 <span>Intensity : Light</span>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- Content -->
                         <div class="yoga-card-content">
                             <p class="yoga-card-category">Playful Learning | Focus | Flexibility</p>
                             <a href="class-detail-9.html">
-                                <h3 class="yoga-card-title">Kids Yoga</h3>
+                                <h3 class="yoga-card-title group-hover:text-black">Kids Yoga</h3>
                             </a>
                             <p class="yoga-card-desc">
                                 Yoga through stories, games, and movement for young minds.
@@ -2859,21 +2861,21 @@
                     </div>
 
                     <!-- 10th card -->
-                    <div class="yoga-card">
+                    <div class="yoga-card group">
                         <!-- Image -->
-                        <div class="yoga-card-image">
+                        <a href="class-detail-10.html" class="yoga-card-image">
                             <img src="./image/class-10.webp" alt="Yoga Class" />
                             <div class="yoga-card-badge">
                                 <span class="badge-dot badge-gentle"></span>
                                 <span>Intensity : Gentle</span>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- Content -->
                         <div class="yoga-card-content">
                             <p class="yoga-card-category">Deep Rest | Guided Stillness | Inner Calm</p>
                             <a href="class-detail-10.html">
-                                <h3 class="yoga-card-title">Yoga Nidra</h3>
+                                <h3 class="yoga-card-title group-hover:text-black">Yoga Nidra</h3>
                             </a>
                             <p class="yoga-card-desc">
                                 A meditative journey in stillness—releases stress and mental fatigue.
@@ -2902,21 +2904,21 @@
                     </div>
 
                     <!-- 11th card -->
-                    <div class="yoga-card">
+                    <div class="yoga-card group">
                         <!-- Image -->
-                        <div class="yoga-card-image">
+                        <a href="class-detail-11.html" class="yoga-card-image">
                             <img src="./image/class-11.webp" alt="Yoga Class" />
                             <div class="yoga-card-badge">
                                 <span class="badge-dot badge-gentle"></span>
                                 <span>Intensity : Gentle</span>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- Content -->
                         <div class="yoga-card-content">
                             <p class="yoga-card-category">Accessible Movement | Stability | Gentle Strength</p>
                             <a href="class-detail-11.html">
-                                <h3 class="yoga-card-title">Chair Yoga</h3>
+                                <h3 class="yoga-card-title group-hover:text-black">Chair Yoga</h3>
                             </a>
                             <p class="yoga-card-desc">
                                 Supportive yoga using a chair—ideal for seniors and all abilities.
@@ -2945,21 +2947,21 @@
                     </div>
 
                     <!-- 12th card -->
-                    <div class="yoga-card">
+                    <div class="yoga-card group">
                         <!-- Image -->
-                        <div class="yoga-card-image">
+                        <a href="class-detail-12.html" class="yoga-card-image">
                             <img src="./image/class-12.webp" alt="Yoga Class" />
                             <div class="yoga-card-badge">
                                 <span class="badge-dot badge-gentle"></span>
                                 <span>Intensity : Moderate</span>
                             </div>
-                        </div>
+                        </a>
 
                         <!-- Content -->
                         <div class="yoga-card-content">
                             <p class="yoga-card-category">Precision | Alignment | Postural Awareness</p>
                             <a href="class-detail-12.html">
-                                <h3 class="yoga-card-title">Iyengar Yoga</h3>
+                                <h3 class="yoga-card-title group-hover:text-black">Iyengar Yoga</h3>
                             </a>
                             <p class="yoga-card-desc">
                                 A methodical practice focusing on alignment and form using props like blocks and straps.
@@ -3240,11 +3242,11 @@
                             </p>
                         </div>
                         <div class="lg:w-auto md:w-[45%] sm:w-1/2 w-full">
-                            <form
-                                class="w-full max-w-full bg-white flex items-center gap-2 px-4 py-0 border-b border-[#673E2C33]">
-                                <input type="email" placeholder="Enter your Email"
+                            <!-- <form id="validate-form" data-endpoint novalidate data-endpoint
+                            class="validate-form w-full max-w-full bg-white flex items-center gap-2 px-4 py-0 border-b border-[#673E2C33] newsletter">
+                                <input type="email" placeholder="Enter your Email" name="email" required
                                     class="p2 lt:py-3 md:py-2.5 py-2 flex-1 w-full text-gray-800 placeholder-gray-500 focus:outline-none" />
-                                <button
+                                <button type="submit"
                                     class="text-black hover:text-primary focus:text-primary active:text-primary h-full">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="31" viewBox="0 0 20 31"
                                         fill="none">
@@ -3256,11 +3258,34 @@
                                         </g>
                                     </svg>
                                 </button>
-                            </form>
+                            </form> -->
+                            <div class="relative mb-6 ">
+                                <form id="validate-form" novalidate
+                                    class="validate-form w-full max-w-full bg-white flex items-center gap-2 px-4 py-0 border-b border-[#673E2C33] newsletter home-4_newsletter">
+
+                                    <input type="email" name="email" required placeholder="Enter your Email"
+                                        class="p2 lt:py-3 md:py-2.5 py-2 flex-1 w-full text-gray-800 placeholder-gray-500 focus:outline-none" />
+
+                                    <button type="submit"
+                                        class="text-black hover:text-primary focus:text-primary active:text-primary h-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="31"
+                                            viewBox="0 0 20 31" fill="none">
+                                            <g clip-path="url(#clip0_5521_369)">
+                                                <path
+                                                    d="M2.8667 20.6157C2.8667 20.6157 10.8435 12.6388 14.166 9.31624M14.166 9.31624L14.4907 17.8238M14.166 9.31624L5.65782 8.99212"
+                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </g>
+                                        </svg>
+                                    </button>
+
+                                    <!-- REQUIRED for success message -->
+                                    <p class="form-success-msg hidden" aria-live="polite"></p>
+                                </form>
+                            </div>
 
                             <!-- Social Media Icons -->
-                            <div
-                                class="flex items-center flex-wrap 1xl:gap-9 xl:gap-7 md:gap-5 gap-3 1xl:mt-6 sm:mt-5 mt-4">
+                            <div class="flex items-center flex-wrap 1xl:gap-9 xl:gap-7 md:gap-5 gap-3">
                                 <a href="https://www.instagram.com/" target="_blank"
                                     class="1xl:size-12 md:size-11 size-9.5 md:p-[10px] sm:p-[9px] p-2 btn-secondary rounded-full flex items-center justify-center transition-all decoration-1000">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px"
@@ -3314,7 +3339,7 @@
                             </li>
                             <li>
                                 <p>
-                                    <a href="./retreat.html" class="hover:text-primary">
+                                    <a href="./retreats.html" class="hover:text-primary">
                                         Retreats
                                     </a>
                                 </p>
@@ -3363,7 +3388,7 @@
                     <!-- Contact Us Section -->
                     <!-- <div class="lg:w-[21%] lt:w-[31%] sm:w-[45%] w-full"> -->
                     <div class="lg:w-auto sm:w-[35%] w-full">
-                        <h5 class="uppercase 2xl:mb-8 1xl:mb-5 xl:mb-4.5 lg:mb-4 md:mb-3.5 mb-2.5 text-primary">
+                        <h5 class="uppercase 2xl:mb-5.5 1xl:mb-5 xl:mb-4.5 lg:mb-4 md:mb-3.5 mb-2.5 text-primary">
                             Say Hello to Calm
                         </h5>
                         <ul class="1xl:space-y-6 lg:space-y-5 md:space-y-4 space-y-3">

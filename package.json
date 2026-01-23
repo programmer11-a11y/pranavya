@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "main": "postcss.config.js",
   "scripts": {
-    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
-  },
+  "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+  "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
+}
+,
   "keywords": [],
   "author": "",
   "license": "ISC",

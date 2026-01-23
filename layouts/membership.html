@@ -562,9 +562,9 @@
                             class="mainmenu max-[1221px]:fixed max-[1221px]:h-screen max-[1221px]:inset-y-0 left-0! top-0! max-[1221px]:z-60 max-[1221px]:w-screen max-[1221px]:max-w-screen max-[1221px]:bg-white max-[1221px]:border-r max-[1221px]:border-primary/20 max-[1221px]:transition-transform max-[1221px]:duration-300 max-[1221px]:ease-in-out min-[1221px]:px-0 px-4">
                             <div
                                 class="min-[1221px]:hidden flex items-center justify-between py-4 border-b border-primary/20">
-                                <div class="flex items-center gap-2">
+                                 <div class="w-full h-9">
                                     <img decoding="async" src="image/main-logo-black.svg" alt="Pranavya"
-                                        class="w-full h-9" />
+                                        class="h-full w-auto object-contain" />
                                 </div>
                                 <button name="close" aria-label="Close menu" class="text-thunder-100">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
@@ -1667,9 +1667,7 @@
                                                                 <!-- Content Section -->
                                                                 <div class="1xl:p-5 p-4">
                                                                     <!-- Title -->
-                                                                    <p class="text-[#714c3a] mb-2">
-                                                                        NATIONAL YOGA CHAMPIONSHIP
-                                                                    </p>
+                                                                     <p class="text-[#714c3a] mb-2 uppercase font-secondary">NATIONAL YOGA CHAMPIONSHIP</p>
 
                                                                     <!-- Description -->
                                                                     <p
@@ -1734,7 +1732,7 @@
                                                                     <!--  -->
                                                                     <div
                                                                         class="flex items-center justify-between border-t border-primary/15 2xl:pt-[11px] pt-2">
-                                                                        <a href="./event-detail.html"
+                                                                        <a href="./events-detail-1.html"
                                                                             class="btn-link uppercase 2xl:text-14 text-[12px] font-medium text-primary hover:text-black leading-[100%]">
                                                                             book now
                                                                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -1882,7 +1880,7 @@
                                                                     </li>
                                                                     <li>
                                                                         <p>
-                                                                            <a href="./event-detail.html"
+                                                                            <a href="./events-detail-1.html"
                                                                                 class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
                                                                                 Class Detail
                                                                             </a>
@@ -1911,7 +1909,7 @@
                                                                 <ul class="bg-white 2xl:p-4 p-2 rounded-[10px]">
                                                                     <li>
                                                                         <p>
-                                                                            <a href="./event-1.html"
+                                                                            <a href="./events-1.html"
                                                                                 class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
                                                                                 Event 01
                                                                             </a>
@@ -1919,7 +1917,7 @@
                                                                     </li>
                                                                     <li>
                                                                         <p>
-                                                                            <a href="./event-2.html"
+                                                                            <a href="./events-2.html"
                                                                                 class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
                                                                                 Event 02
                                                                             </a>
@@ -1927,7 +1925,7 @@
                                                                     </li>
                                                                     <li>
                                                                         <p>
-                                                                            <a href="./event-detail.html"
+                                                                            <a href="./events-detail-1.html"
                                                                                 class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
                                                                                 Event Detail
                                                                             </a>
@@ -1956,7 +1954,7 @@
                                                                 <ul class="bg-white p-4 rounded-[10px]">
                                                                     <li>
                                                                         <p>
-                                                                            <a href="./retreat.html"
+                                                                            <a href="./retreats.html"
                                                                                 class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
                                                                                 Retreat 01
                                                                             </a>
@@ -3070,11 +3068,11 @@
                             </p>
                         </div>
                         <div class="lg:w-auto md:w-[45%] sm:w-1/2 w-full">
-                            <form
-                                class="w-full max-w-full bg-white flex items-center gap-2 px-4 py-0 border-b border-[#673E2C33]">
-                                <input type="email" placeholder="Enter your Email"
+                            <!-- <form id="validate-form" data-endpoint novalidate data-endpoint
+                            class="validate-form w-full max-w-full bg-white flex items-center gap-2 px-4 py-0 border-b border-[#673E2C33] newsletter">
+                                <input type="email" placeholder="Enter your Email" name="email" required
                                     class="p2 lt:py-3 md:py-2.5 py-2 flex-1 w-full text-gray-800 placeholder-gray-500 focus:outline-none" />
-                                <button
+                                <button type="submit"
                                     class="text-black hover:text-primary focus:text-primary active:text-primary h-full">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="31" viewBox="0 0 20 31"
                                         fill="none">
@@ -3086,11 +3084,34 @@
                                         </g>
                                     </svg>
                                 </button>
-                            </form>
+                            </form> -->
+                            <div class="relative mb-6 ">
+                                <form id="validate-form" novalidate
+                                    class="validate-form w-full max-w-full bg-white flex items-center gap-2 px-4 py-0 border-b border-[#673E2C33] newsletter home-4_newsletter">
+
+                                    <input type="email" name="email" required placeholder="Enter your Email"
+                                        class="p2 lt:py-3 md:py-2.5 py-2 flex-1 w-full text-gray-800 placeholder-gray-500 focus:outline-none" />
+
+                                    <button type="submit"
+                                        class="text-black hover:text-primary focus:text-primary active:text-primary h-full">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="31"
+                                            viewBox="0 0 20 31" fill="none">
+                                            <g clip-path="url(#clip0_5521_369)">
+                                                <path
+                                                    d="M2.8667 20.6157C2.8667 20.6157 10.8435 12.6388 14.166 9.31624M14.166 9.31624L14.4907 17.8238M14.166 9.31624L5.65782 8.99212"
+                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </g>
+                                        </svg>
+                                    </button>
+
+                                    <!-- REQUIRED for success message -->
+                                    <p class="form-success-msg hidden" aria-live="polite"></p>
+                                </form>
+                            </div>
 
                             <!-- Social Media Icons -->
-                            <div
-                                class="flex items-center flex-wrap 1xl:gap-9 xl:gap-7 md:gap-5 gap-3 1xl:mt-6 sm:mt-5 mt-4">
+                            <div class="flex items-center flex-wrap 1xl:gap-9 xl:gap-7 md:gap-5 gap-3">
                                 <a href="https://www.instagram.com/" target="_blank"
                                     class="1xl:size-12 md:size-11 size-9.5 md:p-[10px] sm:p-[9px] p-2 btn-secondary rounded-full flex items-center justify-center transition-all decoration-1000">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px"
@@ -3144,7 +3165,7 @@
                             </li>
                             <li>
                                 <p>
-                                    <a href="./retreat.html" class="hover:text-primary">
+                                    <a href="./retreats.html" class="hover:text-primary">
                                         Retreats
                                     </a>
                                 </p>
@@ -3193,7 +3214,7 @@
                     <!-- Contact Us Section -->
                     <!-- <div class="lg:w-[21%] lt:w-[31%] sm:w-[45%] w-full"> -->
                     <div class="lg:w-auto sm:w-[35%] w-full">
-                        <h5 class="uppercase 2xl:mb-8 1xl:mb-5 xl:mb-4.5 lg:mb-4 md:mb-3.5 mb-2.5 text-primary">
+                        <h5 class="uppercase 2xl:mb-5.5 1xl:mb-5 xl:mb-4.5 lg:mb-4 md:mb-3.5 mb-2.5 text-primary">
                             Say Hello to Calm
                         </h5>
                         <ul class="1xl:space-y-6 lg:space-y-5 md:space-y-4 space-y-3">

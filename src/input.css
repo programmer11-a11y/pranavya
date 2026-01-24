@@ -427,7 +427,7 @@
   }
   h3,
   .h3 {
-    @apply 2xl:text-35 1xl:text-28 lg:text-23 lt:text-20 text-18 2xl:leading-[45px] 1xl:leading-[42px] xl:leading-[38px] lg:leading-[36px] lt:leading-[30px] sm:leading-[28px] leading-[24px];
+    @apply 2xl:text-35 1xl:text-28 lg:text-23 md:text-20 text-18 2xl:leading-[45px] 1xl:leading-[42px] xl:leading-[38px] lg:leading-[36px] lt:leading-[30px] sm:leading-[28px] leading-[24px];
   }
   /* h4,
   .h4 {
@@ -1375,7 +1375,7 @@
 
 .podcast-time .time-img,
 .podcast-artist .person-name {
-  @apply 1xl:size-8.5 xl:size-7 lt:size-6 size-5.5 rounded-full shrink-0 object-cover;
+  @apply 1xl:size-8.5 xl:size-7 lt:size-6 size-5.5 rounded-full shrink-0 object-cover flex items-center justify-center;
 }
 .rewind,
 .forward {

@@ -464,9 +464,6 @@
   .btn-primary {
     @apply border border-primary bg-primary text-white hover:bg-white focus:bg-white active:bg-white hover:text-primary active:text-primary focus:text-primary uppercase font-medium;
   }
-  .btn-primary-second {
-    @apply border border-primary bg-[#FBFAF9] text-primary hover:bg-primary focus:bg-primary active:bg-primary hover:text-white active:text-white focus:text-white uppercase font-medium;
-  }
   .btn-secondary {
     @apply uppercase border font-medium text-primary border-primary bg-[#FBFAF9] hover:text-white focus:text-white active:text-white hover:bg-primary! active:bg-primary focus:bg-primary;
   }
@@ -481,6 +478,9 @@
   }
   .reveal-more {
     @apply uppercase border font-medium text-primary border-primary bg-[#FBFAF9];
+  }
+  .shop-btn {
+    @apply border font-medium text-thunder-100 border-thunder-100 bg-white hover:text-white focus:text-white active:text-white hover:bg-primary! active:bg-primary focus:bg-primary transition-all ease-in-out;
   }
   .nav-class-arrow {
     @apply border-white text-white! bg-transparent! hover:bg-white! focus:bg-white! active:bg-white! hover:text-black! focus:text-black! active:text-black!;
@@ -505,9 +505,10 @@
   .newsletter .form-success-msg {
     @apply absolute lt:top-12 top-10;
   }
+  /* 1273 */
 
   .error-msg {
-    @apply flex items-center gap-2 sm:mt-2 mt-1 text-red-600 text-sm sm:ml-6 ml-3;
+    @apply flex items-center gap-2 sm:mt-2 mt-1 text-red-600 text-sm 1xl:ml-6 xl:ml-5 ml-4.5;
   }
   /* ===== KEYFRAME START =========== */
   /* Animation */
@@ -711,7 +712,7 @@
   .all-header.scrolled .menu_link_text {
     @apply hover:text-primary! text-thunder-100! min-[1221px]:hover:border-primary border-transparent;
   }
-  .header-1 .all-header.header-scrolled  aside#mainmenu {
+  .header-1 .all-header.header-scrolled aside#mainmenu {
     @apply left-0! top-0!;
   }
   .header-1 .all-header aside#mainmenu {
@@ -796,7 +797,10 @@
     @apply translate-x-0;
   }
   .input-error {
-    @apply border-red-500;
+    border-color: #ef4444 !important;
+  }
+  .dropdown-btn.input-error {
+    border-color: #ef4444 !important;
   }
 
   #nav-site-search.open {
@@ -1265,11 +1269,32 @@
 .dropdown-btn {
   @apply border border-[#673E2C80] rounded-full w-full 1xl:px-7.5 xl:px-5 px-4 xl:py-3 md:py-2.5 py-2 flex items-center justify-between gap-3 text-primary font-medium relative bg-white z-3;
 }
+.shop-dropdown .dropdown-btn {
+  @apply w-full py-1 px-3 flex items-center justify-between md:gap-6 gap-4 text-thunder-100 bg-whitesmoke-100 rounded-none border-0;
+}
+.book-class-form .dropdown-btn {
+  @apply 1xl:px-6 px-4 1xl:py-3 lg:py-[11px] py-2;
+}
+.type-filed {
+  @apply text-thunder-100 w-full rounded-full border border-primary/50 1xl:px-6 px-4 1xl:py-3 lg:py-[11px] py-2 outline-none focus:border-primary;
+}
 .dropdown-menu {
-  @apply z-0 pt-6.5 lt:px-5 px-4 w-full -mt-6.5 rounded-b-md bg-white border border-t-0 border-[#673E2C33] shadow-[0px_1px_20px_0px_#0000001A];
+  @apply z-0 pt-6.5 w-full rounded-b-md -mt-6.5 border border-t-0 border-[#673E2C33] shadow-[0px_10px_20px_0px_#0000001A] pointer-events-none;
+}
+.shop-dropdown .dropdown-menu {
+  @apply 1xl:w-[250px] lg:w-[220px] sm:w-[205px] w-[175px] right-0 mt-0 1xl:pt-5 sm:pt-4.5 pt-3 border-0 shadow-none;
+}
+
+/* Triangle */
+.shop-dropdown .dropdown-menu::before {
+  @apply content-[''] absolute 1xl:top-3.5 sm:top-2.5 top-1.5 right-6 sm:w-3.5 sm:h-3.5 w-3 h-3 bg-whitesmoke-100 rotate-45 -z-1;
+}
+
+.dropdown-menu .dropdown-list {
+  @apply z-0 lt:px-5 px-4 w-full bg-white;
 }
 .dropdown-menu.open {
-  @apply max-h-fit overflow-auto opacity-100 z-2;
+  @apply max-h-fit overflow-auto opacity-100 z-5 pointer-events-auto;
 }
 .dropdown-item {
   @apply border-b border-whitesmoke-100 xl:py-3 py-2.5 cursor-pointer hover:text-primary hover:font-medium active:text-primary focus:text-primary;
@@ -1426,4 +1451,51 @@
 
 .progress-fill {
   @apply absolute left-0 top-0 h-full w-0 bg-primary/50 rounded-sm;
+}
+
+/* ===== book a Class ===== */
+.book-class-form .error-msg,
+.book-class-form .form-success-msg {
+  @apply absolute;
+}
+
+/* SHOP */
+.view-hidden {
+  @apply hidden;
+}
+
+.view-toggle-btn {
+  @apply bg-primary/20 text-primary transition-all ease-in-out rounded-sm overflow-hidden 1xl:size-12.5 lg:size-11 lt:size-10 size-9 flex items-center justify-center;
+}
+.view-toggle-btn.active {
+  @apply text-white bg-primary transition-all ease-in-out;
+}
+.price-checkbox {
+  @apply flex items-center justify-between cursor-pointer relative;
+}
+
+.price-checkbox-input {
+  @apply absolute opacity-0 w-0 h-0;
+}
+
+.price-checkbox-box {
+  @apply relative flex 1xl:size-5 size-4.5 p-[3px] items-center justify-center rounded-sm border border-[#d7c9bf] bg-white transition-all duration-200 peer-checked:[&>svg]:opacity-100;
+}
+
+.price-checkbox-icon {
+  @apply text-[#5b3a2e] opacity-0 transition-opacity duration-200;
+}
+
+.product-card-wrapper {
+  @apply bg-primary/5 p-2.5 rounded-sm overflow-hidden;
+}
+
+.filled {
+  @apply hidden;
+}
+.cart-btn.active .stroke {
+  @apply hidden;
+}
+.cart-btn.active .filled {
+  @apply block;
 }

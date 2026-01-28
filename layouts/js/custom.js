@@ -1117,6 +1117,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // ========validation form logic===============
 (function ($) {
+  // Phone input - only allow digits and max 10 characters
+  $(document).on("input", ".phone-input", function (e) {
+    var value = $(this).val();
+    // Remove any non-digit characters
+    value = value.replace(/\D/g, "");
+    // Limit to 10 digits
+    if (value.length > 10) {
+      value = value.substring(0, 10);
+    }
+    $(this).val(value);
+  });
+
+  // Prevent paste of non-numeric characters in phone input
+  $(document).on("paste", ".phone-input", function (e) {
+    e.preventDefault();
+    var pastedText = (e.originalEvent.clipboardData || window.clipboardData).getData("text");
+    // Remove any non-digit characters from pasted text
+    var cleanText = pastedText.replace(/\D/g, "").substring(0, 10);
+    $(this).val(cleanText);
+  });
+
+  // Prevent non-numeric keypress in phone input
+  $(document).on("keypress", ".phone-input", function (e) {
+    // Allow only digits (0-9)
+    if (e.which < 48 || e.which > 57) {
+      e.preventDefault();
+    }
+    // Prevent if already 10 digits
+    if ($(this).val().length >= 10) {
+      e.preventDefault();
+    }
+  });
+
   $(document).on("submit", ".validate-form", function (e) {
     e.preventDefault();
     e.stopImmediatePropagation();
@@ -1124,7 +1157,6 @@ document.addEventListener("DOMContentLoaded", () => {
     var $form = $(this);
     var valid = true;
 
-    // Remove old success
     var $successMsg = $form.find(".form-success-msg");
     $successMsg.addClass("hidden").text("");
 
@@ -1134,41 +1166,64 @@ document.addEventListener("DOMContentLoaded", () => {
         var $input = $(this);
         removeError($input);
 
-        if (!$input.val().trim()) {
-          showError(
-            $input,
-            ($input.attr("name") || "This field") + " is required.",
-          );
+        if ($input.attr("type") === "checkbox" && !$input.is(":checked")) {
+          showError($input, "This field is required.");
           valid = false;
-        } else if ($input.attr("type") === "email" && !this.validity.valid) {
+        } else if (!$input.val() || !$input.val().trim()) {
+          var fieldName = $input.attr("name") || "This field";
+          // Format field name for display
+          fieldName = fieldName.replace(/_/g, " ").replace(/\b\w/g, function (l) {
+            return l.toUpperCase();
+          });
+          showError($input, fieldName + " is required.");
+          valid = false;
+        } else if (
+          $input.attr("type") === "email" &&
+          !this.validity.valid
+        ) {
           showError($input, "Please enter a valid email address.");
+          valid = false;
+        } else if (
+          $input.hasClass("phone-input") &&
+          $input.val().length !== 10
+        ) {
+          showError($input, "Please enter a valid 10-digit phone number.");
           valid = false;
         }
       });
 
     if (!valid) return;
 
-    // ✅ SUCCESS MESSAGE BELOW BUTTON
-    // Get custom success message from form
-    var successText = $form.data("success") || "Form submitted successfully!";
+    var successText =
+      $form.data("success") || "Form submitted successfully!";
 
-    $successMsg.removeClass("hidden").html(`
-    <span class="success-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none">
-        <path d="M20 6L9 17L4 12"
-          stroke="#16A34A"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"/>
-      </svg>
-    </span>
-    <span>${successText}</span>
-  `);
+    $successMsg.removeClass("hidden").html(successText);
+
+    // 🔔 POPUP AFTER 5 SECONDS (ONLY IF DATA-POPUP EXISTS)
+    var popupId = $form.data("popup");
+    if (popupId) {
+      setTimeout(function () {
+        $("#" + popupId)
+          .removeClass("hidden")
+          .addClass("flex");
+      }, 1000);
+    }
 
     $form[0].reset();
+
+    // Reset dropdown texts back to placeholder
+    $form.find(".dropdown").each(function () {
+      var $dropdown = $(this);
+      var $dropdownText = $dropdown.find(".dropdown-text");
+      var placeholderText = $dropdownText.data("placeholder") || $dropdownText.text();
+      $dropdownText.addClass("text-thunder-100/50");
+    });
   });
 
-  // Live remove error + success
+  $(document).on("click", ".popup-close", function () {
+    $(this).closest(".fixed").addClass("hidden").removeClass("flex");
+  });
+
   $(document).on(
     "input change",
     ".validate-form input, .validate-form textarea, .validate-form select",
@@ -1179,32 +1234,72 @@ document.addEventListener("DOMContentLoaded", () => {
         .find(".form-success-msg")
         .addClass("hidden")
         .text("");
-    },
+    }
+  );
+
+  // Show error on blur for inputs and dropdowns
+  $(document).on(
+    "blur",
+    ".validate-form input[required]:not([type='hidden']), .validate-form textarea[required], .validate-form select[required]",
+    function () {
+      var $input = $(this);
+      if (!$input.val() || !$input.val().trim()) {
+        var fieldName = $input.attr("name") || "This field";
+        fieldName = fieldName.replace(/_/g, " ").replace(/\b\w/g, function (l) {
+          return l.toUpperCase();
+        });
+        showError($input, fieldName + " is required.");
+      } else if ($input.hasClass("phone-input") && $input.val().length !== 10) {
+        showError($input, "Please enter a valid 10-digit phone number.");
+      } else if ($input.attr("type") === "email" && !$input[0].validity.valid) {
+        showError($input, "Please enter a valid email address.");
+      }
+    }
   );
 
   function showError($input, message) {
-    $input.addClass("input-error");
+    var $target;
 
-    if ($input.next(".error-msg").length) return;
+    // 🔥 If hidden input (dropdown)
+    if ($input.attr("type") === "hidden") {
+      $target = $input.closest(".dropdown").find(".dropdown-btn");
+    } else {
+      $target = $input;
+    }
 
-    $input.after(`
-       <div class="error-msg">
-      <span class="error-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 17 17" fill="none">
-          <path d="M9.35 9.35H7.65V4.25H9.35M9.35 12.75H7.65V11.05H9.35M8.5 0C3.81 0 0 3.81 0 8.5S3.81 17 8.5 17 17 13.19 17 8.5 13.19 0 8.5 0Z"
-            fill="#D21C1C"/>
-        </svg>
-      </span>
-      <span>${message}</span>
-    </div>
+    $target.addClass("input-error");
+
+    if ($target.next(".error-msg").length) return;
+
+    $target.after(`
+      <div class="error-msg text-red-600 text-sm mt-1">
+        ${message}
+      </div>
     `);
   }
 
+
   function removeError($input) {
-    $input.removeClass("input-error");
-    $input.next(".error-msg").remove();
+    var $target =
+      $input.attr("type") === "hidden"
+        ? $input.closest(".dropdown").find(".dropdown-btn")
+        : $input;
+
+    $target.removeClass("input-error");
+    $target.next(".error-msg").remove();
   }
+
+  $(document).on("click", ".dropdown-item", function () {
+    var value = $(this).text().trim();
+    var $dropdown = $(this).closest(".dropdown");
+
+    $dropdown.find("input[type='hidden']").val(value).trigger("change");
+    $dropdown.find(".dropdown-text").text(value).removeClass("text-thunder-100/50");
+  });
+
+
 })(jQuery);
+
 
 // =================== INDEX-2.HTML ========================
 // ==== HERO SLIDER ====
@@ -1601,8 +1696,30 @@ $(document).ready(function () {
 
   $(".dropdown-item").on("click", function () {
     const dropdown = $(this).closest(".dropdown");
+    const textEl = dropdown.find(".dropdown-text");
+    const hiddenInput = dropdown.find("input[type='hidden']");
+    const selectedText = $(this).text().trim();
 
-    dropdown.find(".dropdown-text").text($(this).text());
+    // set UI text
+    textEl.text(selectedText)
+      .removeClass("text-thunder-100/50")
+      .addClass("text-thunder-100");
+
+    // 🔥 set real value for validation
+    hiddenInput.val(selectedText).trigger("change");
+
+
+    // 🔥 Color logic
+    if (selectedText === "All Category") {
+      textEl
+        .removeClass("text-thunder-100")
+        .addClass("text-thunder-100/50");
+    } else {
+      textEl
+        .removeClass("text-thunder-100/50")
+        .addClass("text-thunder-100");
+    }
+
     dropdown.find(".dropdown-menu").removeClass("open");
     dropdown.find(".dropdown-arrow").removeClass("rotate-180");
   });
@@ -1612,6 +1729,7 @@ $(document).ready(function () {
     $(".dropdown-arrow").removeClass("rotate-180");
   });
 });
+
 // =============== END CLASSES =================================
 
 // ============== PODCAST MUSIC PLAYER =================
@@ -1775,3 +1893,92 @@ jQuery(document).ready(function ($) {
   });
 
 });
+
+// ============== SHOP GRID-LIST VIEW CHANGE BUTTON =================
+$(document).ready(function () {
+  // ✅ Grid/List Toggle Function (Your Existing)
+  window.toggleView = function (viewType) {
+    const $gridView = $('#grid-view');
+    const $listView = $('#list-view');
+    const $gridBtn = $('#grid-btn');
+    const $listBtn = $('#list-btn');
+
+    if (viewType === 'grid') {
+      $gridView.removeClass('hidden');
+      $listView.addClass('hidden');
+      $gridBtn.addClass('active');
+      $listBtn.removeClass('active');
+    } else {
+      $gridView.addClass('hidden');
+      $listView.removeClass('hidden');
+      $gridBtn.removeClass('active');
+      $listBtn.addClass('active');
+    }
+  };
+
+  // ✅ Shop sidebar filters
+  // Mobile (<lg): whole FILTER is one dropdown (full section)
+  // Desktop (>=lg): keep sidebar open as-is
+  $(document).ready(function () {
+    const LG_BREAKPOINT = 1024; // Tailwind 'lg' default
+
+    function isMobileFilterMode() {
+      return window.innerWidth < LG_BREAKPOINT;
+    }
+
+    function syncShopFilterUI() {
+      const mobileMode = isMobileFilterMode();
+
+      const $panel = $(".shop-filter-panel");
+      const $panelIcon = $(".shop-filter-mobile-icon");
+
+      // Keep inner sections open (no per-section dropdown)
+      $(".filter-box").each(function () {
+        const $box = $(this);
+        $box.find(".filter-content").show();
+        $box.find(".toggle-icon").text("−");
+      });
+
+      if (mobileMode) {
+        // Closed by default on mobile
+        $panel.hide();
+        $panelIcon.text("+");
+      } else {
+        // Always open on desktop
+        $panel.show();
+        $panelIcon.text("−");
+      }
+    }
+
+    // Initial sync + on resize
+    syncShopFilterUI();
+    $(window).on("resize", function () {
+      syncShopFilterUI();
+    });
+
+    // Mobile: toggle whole filter panel
+    $(".shop-filter-mobile-toggle").on("click", function () {
+      if (!isMobileFilterMode()) return;
+
+      const $panel = $(".shop-filter-panel");
+      const $icon = $(".shop-filter-mobile-icon");
+
+      $panel.stop(true, true).slideToggle(200, function () {
+        $icon.text($panel.is(":visible") ? "−" : "+");
+      });
+    });
+
+    // Disable per-section toggles (full section dropdown per design)
+    $(".filter-toggle").on("click", function (e) {
+      e.preventDefault();
+      return false;
+    });
+  });
+});
+
+document.querySelectorAll('.cart-btn').forEach(btn => {
+  btn.addEventListener('click', function () {
+    this.classList.toggle('active');
+  });
+});
+

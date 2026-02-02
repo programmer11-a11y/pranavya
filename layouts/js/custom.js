@@ -611,10 +611,10 @@ jQuery(document).ready(function () {
     if (hasNoToggleColor) {
       if (scrolled) {
         // Page scrolled: make header fixed
-        header.removeClass("relative").addClass("fixed");
+        header.removeClass("fixed").addClass("fixed");
       } else {
         // Page not scrolled: make header relative
-        header.removeClass("fixed").addClass("relative");
+        header.removeClass("fixed").addClass("fixed");
       }
     }
   }
@@ -1976,9 +1976,76 @@ $(document).ready(function () {
   });
 });
 
-document.querySelectorAll('.cart-btn').forEach(btn => {
-  btn.addEventListener('click', function () {
-    this.classList.toggle('active');
+// SHOP.HTML for toggle cart and wishlist icon toggle
+$('.cart-btn').on('click', function () {
+  $(this).toggleClass('active');
+});
+
+// SHOP-DETAIL
+var swiper = new Swiper(".product-thumb", {
+  spaceBetween: 10,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+var swiper2 = new Swiper(".product", {
+  spaceBetween: 10,
+  thumbs: {
+    swiper: swiper,
+  },
+});
+
+// quantity counter
+$(document).ready(function () {
+
+  // PLUS
+  $(document).on("click", "#increase", function () {
+    const counter = $(this).closest("div").find("#quantity");
+
+    let qty = parseInt(counter.text()) || 1;
+    qty++;
+
+    counter.text(qty);
+  });
+
+  // MINUS
+  $(document).on("click", "#decrease", function () {
+    const counter = $(this).closest("div").find("#quantity");
+
+    let qty = parseInt(counter.text()) || 1;
+
+    if (qty > 1) {
+      qty--;
+      counter.text(qty);
+    }
+  });
+
+});
+
+
+
+/* TOGGLE SHIPPING DETAI ON CHECKMARK */
+$(document).ready(function () {
+  // remove required initially
+  $('.shipping-detail :input').prop('required', false);
+  $('#different-address').on('change', function () {
+    if (this.checked) {
+      $('.shipping-detail')
+        .removeClass('hidden')
+        .hide()
+        .stop(true, true)
+        .slideDown(400);
+      $('.shipping-detail :input').prop('required', true);
+    } else {
+      $('.shipping-detail')
+        .stop(true, true)
+        .slideUp(400, function () {
+          $(this).addClass('hidden');
+        });
+      $('.shipping-detail :input').prop('required', false);
+    }
   });
 });
+
+
 

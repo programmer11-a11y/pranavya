@@ -166,13 +166,13 @@
 /* ================== BAASKERVIILLE FONTS ====================== */
 @font-face {
   font-family: 'Baskervville';
-  src: url('../layouts/font/Baskervville/Baskervville-Regular.eot');
-  src: url('../layouts/font/Baskervville/Baskervville-Regular.eot?#iefix')
+  src: url('../assets/font/Baskervville/Baskervville-Regular.eot');
+  src: url('../assets/font/Baskervville/Baskervville-Regular.eot?#iefix')
       format('embedded-opentype'),
-    url('../layouts/font/Baskervville/Baskervville-Regular.woff2')
+    url('../assets/font/Baskervville/Baskervville-Regular.woff2')
       format('woff2'),
-    url('../layouts/font/Baskervville/Baskervville-Regular.woff') format('woff'),
-    url('../layouts/font/Baskervville/Baskervville-Regular.ttf')
+    url('../assets/font/Baskervville/Baskervville-Regular.woff') format('woff'),
+    url('../assets/font/Baskervville/Baskervville-Regular.ttf')
       format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -180,13 +180,13 @@
 }
 @font-face {
   font-family: 'Baskervville';
-  src: url('../layouts/font/Baskervville/Baskervville-Medium.eot');
-  src: url('../layouts/font/Baskervville/Baskervville-Medium.eot?#iefix')
+  src: url('../assets/font/Baskervville/Baskervville-Medium.eot');
+  src: url('../assets/font/Baskervville/Baskervville-Medium.eot?#iefix')
       format('embedded-opentype'),
-    url('../layouts/font/Baskervville/Baskervville-Medium.woff2')
+    url('../assets/font/Baskervville/Baskervville-Medium.woff2')
       format('woff2'),
-    url('../layouts/font/Baskervville/Baskervville-Medium.woff') format('woff'),
-    url('../layouts/font/Baskervville/Baskervville-Medium.ttf')
+    url('../assets/font/Baskervville/Baskervville-Medium.woff') format('woff'),
+    url('../assets/font/Baskervville/Baskervville-Medium.ttf')
       format('truetype');
   font-weight: 500;
   font-style: normal;
@@ -194,14 +194,14 @@
 }
 @font-face {
   font-family: 'Baskervville';
-  src: url('../layouts/font/Baskervville/Baskervville-SemiBold.eot');
-  src: url('../layouts/font/Baskervville/Baskervville-SemiBold.eot?#iefix')
+  src: url('../assets/font/Baskervville/Baskervville-SemiBold.eot');
+  src: url('../assets/font/Baskervville/Baskervville-SemiBold.eot?#iefix')
       format('embedded-opentype'),
-    url('../layouts/font/Baskervville/Baskervville-SemiBold.woff2')
+    url('../assets/font/Baskervville/Baskervville-SemiBold.woff2')
       format('woff2'),
-    url('../layouts/font/Baskervville/Baskervville-SemiBold.woff')
+    url('../assets/font/Baskervville/Baskervville-SemiBold.woff')
       format('woff'),
-    url('../layouts/font/Baskervville/Baskervville-SemiBold.ttf')
+    url('../assets/font/Baskervville/Baskervville-SemiBold.ttf')
       format('truetype');
   font-weight: 600;
   font-style: normal;
@@ -209,12 +209,12 @@
 }
 @font-face {
   font-family: 'Baskervville';
-  src: url('../layouts/font/Baskervville/Baskervville-Bold.eot');
-  src: url('../layouts/font/Baskervville/Baskervville-Bold.eot?#iefix')
+  src: url('../assets/font/Baskervville/Baskervville-Bold.eot');
+  src: url('../assets/font/Baskervville/Baskervville-Bold.eot?#iefix')
       format('embedded-opentype'),
-    url('../layouts/font/Baskervville/Baskervville-Bold.woff2') format('woff2'),
-    url('../layouts/font/Baskervville/Baskervville-Bold.woff') format('woff'),
-    url('../layouts/font/Baskervville/Baskervville-Bold.ttf') format('truetype');
+    url('../assets/font/Baskervville/Baskervville-Bold.woff2') format('woff2'),
+    url('../assets/font/Baskervville/Baskervville-Bold.woff') format('woff'),
+    url('../assets/font/Baskervville/Baskervville-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -223,108 +223,108 @@
 /* ======================= WORK SANS FONT ============================= */
 @font-face {
   font-family: 'Work Sans';
-  src: url('../layouts/font/WorkSans/WorkSans-Bold.eot');
-  src: url('../layouts/font/WorkSans/WorkSans-Bold.eot?#iefix')
+  src: url('../assets/font/WorkSans/WorkSans-Bold.eot');
+  src: url('../assets/font/WorkSans/WorkSans-Bold.eot?#iefix')
       format('embedded-opentype'),
-    url('../layouts/font/WorkSans/WorkSans-Bold.woff2') format('woff2'),
-    url('../layouts/font/WorkSans/WorkSans-Bold.woff') format('woff'),
-    url('../layouts/font/WorkSans/WorkSans-Bold.ttf') format('truetype');
+    url('../assets/font/WorkSans/WorkSans-Bold.woff2') format('woff2'),
+    url('../assets/font/WorkSans/WorkSans-Bold.woff') format('woff'),
+    url('../assets/font/WorkSans/WorkSans-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Work Sans';
-  src: url('../layouts/font/WorkSans/WorkSans-Black.eot');
-  src: url('../layouts/font/WorkSans/WorkSans-Black.eot?#iefix')
+  src: url('../assets/font/WorkSans/WorkSans-Black.eot');
+  src: url('../assets/font/WorkSans/WorkSans-Black.eot?#iefix')
       format('embedded-opentype'),
-    url('../layouts/font/WorkSans/WorkSans-Black.woff2') format('woff2'),
-    url('../layouts/font/WorkSans/WorkSans-Black.woff') format('woff'),
-    url('../layouts/font/WorkSans/WorkSans-Black.ttf') format('truetype');
+    url('../assets/font/WorkSans/WorkSans-Black.woff2') format('woff2'),
+    url('../assets/font/WorkSans/WorkSans-Black.woff') format('woff'),
+    url('../assets/font/WorkSans/WorkSans-Black.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Work Sans';
-  src: url('../layouts/font/WorkSans/WorkSans-ExtraBold.eot');
-  src: url('../layouts/font/WorkSans/WorkSans-ExtraBold.eot?#iefix')
+  src: url('../assets/font/WorkSans/WorkSans-ExtraBold.eot');
+  src: url('../assets/font/WorkSans/WorkSans-ExtraBold.eot?#iefix')
       format('embedded-opentype'),
-    url('../layouts/font/WorkSans/WorkSans-ExtraBold.woff2') format('woff2'),
-    url('../layouts/font/WorkSans/WorkSans-ExtraBold.woff') format('woff'),
-    url('../layouts/font/WorkSans/WorkSans-ExtraBold.ttf') format('truetype');
+    url('../assets/font/WorkSans/WorkSans-ExtraBold.woff2') format('woff2'),
+    url('../assets/font/WorkSans/WorkSans-ExtraBold.woff') format('woff'),
+    url('../assets/font/WorkSans/WorkSans-ExtraBold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Work Sans';
-  src: url('../layouts/font/WorkSans/WorkSans-ExtraLight.eot');
-  src: url('../layouts/font/WorkSans/WorkSans-ExtraLight.eot?#iefix')
+  src: url('../assets/font/WorkSans/WorkSans-ExtraLight.eot');
+  src: url('../assets/font/WorkSans/WorkSans-ExtraLight.eot?#iefix')
       format('embedded-opentype'),
-    url('../layouts/font/WorkSans/WorkSans-ExtraLight.woff2') format('woff2'),
-    url('../layouts/font/WorkSans/WorkSans-ExtraLight.woff') format('woff'),
-    url('../layouts/font/WorkSans/WorkSans-ExtraLight.ttf') format('truetype');
+    url('../assets/font/WorkSans/WorkSans-ExtraLight.woff2') format('woff2'),
+    url('../assets/font/WorkSans/WorkSans-ExtraLight.woff') format('woff'),
+    url('../assets/font/WorkSans/WorkSans-ExtraLight.ttf') format('truetype');
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Work Sans';
-  src: url('../layouts/font/WorkSans/WorkSans-Light.eot');
-  src: url('../layouts/font/WorkSans/WorkSans-Light.eot?#iefix')
+  src: url('../assets/font/WorkSans/WorkSans-Light.eot');
+  src: url('../assets/font/WorkSans/WorkSans-Light.eot?#iefix')
       format('embedded-opentype'),
-    url('../layouts/font/WorkSans/WorkSans-Light.woff2') format('woff2'),
-    url('../layouts/font/WorkSans/WorkSans-Light.woff') format('woff'),
-    url('../layouts/font/WorkSans/WorkSans-Light.ttf') format('truetype');
+    url('../assets/font/WorkSans/WorkSans-Light.woff2') format('woff2'),
+    url('../assets/font/WorkSans/WorkSans-Light.woff') format('woff'),
+    url('../assets/font/WorkSans/WorkSans-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Work Sans';
-  src: url('../layouts/font/WorkSans/WorkSans-SemiBold.eot');
-  src: url('../layouts/font/WorkSans/WorkSans-SemiBold.eot?#iefix')
+  src: url('../assets/font/WorkSans/WorkSans-SemiBold.eot');
+  src: url('../assets/font/WorkSans/WorkSans-SemiBold.eot?#iefix')
       format('embedded-opentype'),
-    url('../layouts/font/WorkSans/WorkSans-SemiBold.woff2') format('woff2'),
-    url('../layouts/font/WorkSans/WorkSans-SemiBold.woff') format('woff'),
-    url('../layouts/font/WorkSans/WorkSans-SemiBold.ttf') format('truetype');
+    url('../assets/font/WorkSans/WorkSans-SemiBold.woff2') format('woff2'),
+    url('../assets/font/WorkSans/WorkSans-SemiBold.woff') format('woff'),
+    url('../assets/font/WorkSans/WorkSans-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Work Sans';
-  src: url('../layouts/font/WorkSans/WorkSans-Medium.eot');
-  src: url('../layouts/font/WorkSans/WorkSans-Medium.eot?#iefix')
+  src: url('../assets/font/WorkSans/WorkSans-Medium.eot');
+  src: url('../assets/font/WorkSans/WorkSans-Medium.eot?#iefix')
       format('embedded-opentype'),
-    url('../layouts/font/WorkSans/WorkSans-Medium.woff2') format('woff2'),
-    url('../layouts/font/WorkSans/WorkSans-Medium.woff') format('woff'),
-    url('../layouts/font/WorkSans/WorkSans-Medium.ttf') format('truetype');
+    url('../assets/font/WorkSans/WorkSans-Medium.woff2') format('woff2'),
+    url('../assets/font/WorkSans/WorkSans-Medium.woff') format('woff'),
+    url('../assets/font/WorkSans/WorkSans-Medium.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Work Sans';
-  src: url('../layouts/font/WorkSans/WorkSans-Regular.eot');
-  src: url('../layouts/font/WorkSans/WorkSans-Regular.eot?#iefix')
+  src: url('../assets/font/WorkSans/WorkSans-Regular.eot');
+  src: url('../assets/font/WorkSans/WorkSans-Regular.eot?#iefix')
       format('embedded-opentype'),
-    url('../layouts/font/WorkSans/WorkSans-Regular.woff2') format('woff2'),
-    url('../layouts/font/WorkSans/WorkSans-Regular.woff') format('woff'),
-    url('../layouts/font/WorkSans/WorkSans-Regular.ttf') format('truetype');
+    url('../assets/font/WorkSans/WorkSans-Regular.woff2') format('woff2'),
+    url('../assets/font/WorkSans/WorkSans-Regular.woff') format('woff'),
+    url('../assets/font/WorkSans/WorkSans-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Work Sans';
-  src: url('../layouts/font/WorkSans/WorkSans-Thin.eot');
-  src: url('../layouts/font/WorkSans/WorkSans-Thin.eot?#iefix')
+  src: url('../assets/font/WorkSans/WorkSans-Thin.eot');
+  src: url('../assets/font/WorkSans/WorkSans-Thin.eot?#iefix')
       format('embedded-opentype'),
-    url('../layouts/font/WorkSans/WorkSans-Thin.woff2') format('woff2'),
-    url('../layouts/font/WorkSans/WorkSans-Thin.woff') format('woff'),
-    url('../layouts/font/WorkSans/WorkSans-Thin.ttf') format('truetype');
+    url('../assets/font/WorkSans/WorkSans-Thin.woff2') format('woff2'),
+    url('../assets/font/WorkSans/WorkSans-Thin.woff') format('woff'),
+    url('../assets/font/WorkSans/WorkSans-Thin.ttf') format('truetype');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -334,7 +334,7 @@
 /* Creato Display – Thin */
 @font-face {
   font-family: 'Creato Display';
-  src: url('../layouts/font/Creato Display/CreatoDisplay-Thin.otf')
+  src: url('../assets/font/Creato Display/CreatoDisplay-Thin.otf')
     format('opentype');
   font-weight: 100;
   font-style: normal;
@@ -344,7 +344,7 @@
 /* Creato Display – Light */
 @font-face {
   font-family: 'Creato Display';
-  src: url('../layouts/font/Creato Display/CreatoDisplay-Light.otf')
+  src: url('../assets/font/Creato Display/CreatoDisplay-Light.otf')
     format('opentype');
   font-weight: 300;
   font-style: normal;
@@ -354,7 +354,7 @@
 /* Creato Display – Regular */
 @font-face {
   font-family: 'Creato Display';
-  src: url('../layouts/font/Creato Display/CreatoDisplay-Regular.otf')
+  src: url('../assets/font/Creato Display/CreatoDisplay-Regular.otf')
     format('opentype');
   font-weight: 400;
   font-style: normal;
@@ -364,7 +364,7 @@
 /* Creato Display – Medium */
 @font-face {
   font-family: 'Creato Display';
-  src: url('../layouts/font/Creato Display/CreatoDisplay-Medium.otf')
+  src: url('../assets/font/Creato Display/CreatoDisplay-Medium.otf')
     format('opentype');
   font-weight: 500;
   font-style: normal;
@@ -374,7 +374,7 @@
 /* Creato Display – Bold */
 @font-face {
   font-family: 'Creato Display';
-  src: url('../layouts/font/Creato Display/CreatoDisplay-Bold.otf')
+  src: url('../assets/font/Creato Display/CreatoDisplay-Bold.otf')
     format('opentype');
   font-weight: 700;
   font-style: normal;
@@ -384,7 +384,7 @@
 /* Creato Display – ExtraBold */
 @font-face {
   font-family: 'Creato Display';
-  src: url('../layouts/font/Creato Display/CreatoDisplay-ExtraBold.otf')
+  src: url('../assets/font/Creato Display/CreatoDisplay-ExtraBold.otf')
     format('opentype');
   font-weight: 800;
   font-style: normal;
@@ -394,7 +394,7 @@
 /* Creato Display – Black */
 @font-face {
   font-family: 'Creato Display';
-  src: url('../layouts/font/Creato Display/CreatoDisplay-Black.otf')
+  src: url('../assets/font/Creato Display/CreatoDisplay-Black.otf')
     format('opentype');
   font-weight: 900;
   font-style: normal;

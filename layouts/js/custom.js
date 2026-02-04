@@ -337,7 +337,7 @@ jQuery(document).ready(function () {
           <span class="uppercase sm:text-lg text-base">${title}</span>
           </button>
         </div>
-        <div class=""><ul class="p-4 step3-content"></ul></div>
+        <div ><ul class="p-4 step3-content"></ul></div>
       </div>
 
     `);
@@ -1545,12 +1545,12 @@ var swiper = new Swiper(".why-choose", {
   },
 });
 
-var swiper = new Swiper(".home-4_testimonial", {
+var swiper = new Swiper(".home-4_reviews .home-4_testimonial", {
   slidesPerView: 1,
   spaceBetween: 20,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".home-4_reviews .swiper-button-next",
+    prevEl: ".home-4_reviews .swiper-button-prev",
   },
   breakpoints: {
     577: { slidesPerView: 2, spaceBetween: 16 },

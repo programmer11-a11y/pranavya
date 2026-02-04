@@ -1249,7 +1249,7 @@
 
 /* ==============ABOUT US=============== */
 .header.no-toggle-color .all-header.scrolled,
-.all-header.not_scrolled_hover {
+.no-toggle-color .all-header.not_scrolled_hover {
   @apply bg-whitesmoke-100;
 }
 
@@ -1545,4 +1545,52 @@
 
 .custom-radio:checked::after {
   @apply content-[''] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-full bg-primary rounded-full;
+}
+
+/* order-view */
+.order-detail table thead tr th {
+  @apply md:table-cell hidden;
+}
+.order-detail table tbody tr td {
+  @apply md:table-cell flex items-center justify-between gap-3;
+}
+.order-view tbody .gift-card td {
+  @apply 1xl:px-5 lg:px-4 px-3 xl:py-6 lg:py-5 sm:py-4 py-2;
+}
+.order-view tbody tr td {
+  @apply 1xl:px-5 lg:px-4 px-3 1xl:pb-7.5 xl:pb-6 lg:pb-5 sm:py-4 py-2 md:pt-0;
+}
+.order-view tbody tr td:first-child {
+  @apply 1xl:pl-5 lg:pl-4 pl-3 md:pr-0;
+}
+.order-view tbody tr:first-child td {
+  @apply 1xl:pt-7.5 xl:pt-6 lg:pt-5 sm:pt-4.5;
+}
+.order-view tfoot {
+  @apply md:table-footer-group block;
+}
+.order-view tfoot tr {
+  @apply md:table-row flex;
+}
+.order-view tfoot tr td {
+  @apply sm:py-3 py-2.5 1xl:px-5 px-4 md:table-cell flex;
+}
+.order-view tfoot tr:first-child td {
+  @apply pb-0;
+}
+
+.cms-content p {
+  @apply pt-2.5 pl-7.5;
+}
+.cms-content h5 {
+  @apply uppercase text-primary pt-7.5 pb-2.5;
+}
+.cms-content ul {
+  @apply list-disc space-y-2 pl-12 pt-5 text-thunder-100 2xl:text-20 1xl:text-19 md:text-16 sm:text-15 text-14 2xl:leading-[34px] 1xl:leading-[30px] lg:leading-[28px] lt:leading-[26px] sm:leading-[24px] leading-[20px] font-primary m-0;
+}
+.cms-content h3 {
+  @apply uppercase text-primary pb-2.5 pt-15;
+}
+.cms-content a {
+  @apply w-full font-normal text-thunder-100 hover:text-primary cursor-pointer 2xl:text-20 1xl:text-19 md:text-16 sm:text-15 text-14 2xl:leading-[34px] 1xl:leading-[30px] lg:leading-[28px] lt:leading-[26px] sm:leading-[24px] leading-[20px] font-primary m-0;
 }

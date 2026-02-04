@@ -2390,7 +2390,16 @@
         <!-- ====== Start Page Heading ====== -->
         <section class="relative 1xl:mt-20 xl:mt-17 lg:mt-14 lt:mt-12 sm:mt-9 mt-6 1xl:mb-11 xl:mb-8 sm:mb-7 mb-6">
             <div class="container">
-                <h1 class="h3 text-primary uppercase">Your Shopping Cart</h1>
+                <div
+                    class="flex flex-col items-center justify-center max-w-full w-full text-center mx-auto space-y-2.5">
+                    <h1 class="uppercase text-primary text-center">
+                        Thank You! Your Order Has Been Placed.
+                    </h1>
+                    <p class="2xl:max-w-[55%] xl:max-w-[64%] lg:max-w-[70%] lt:max-w-4/5 max-w-full">
+                        Your order has been successfully received and is now being processed. A confirmation email has
+                        been sent to your registered email address.
+                    </p>
+                </div>
             </div>
         </section>
         <!-- ====== End Page Heading ====== -->
@@ -2398,551 +2407,362 @@
         <!-- ====== Start Gift Cards ====== -->
         <section class="relative 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10 w-full">
             <div class="container">
-                <div
-                    class="flex items-start lt:flex-row flex-col 2xl:gap-20 1xl:gap-15 xl:gap-12 lt:gap-6 md:gap-10 sm:gap-8 gap-5">
-                    <div class="lt:w-[73%] w-full 2xl:space-y-12.5 1xl:space-y-11 md:space-y-7 space-y-4">
-                        <table
-                            class="cart-detail w-full bg-white md:border-separate border-collapse md:border-spacing-x-3 md:border-b border-[#EDEDED]">
-                            <thead>
-                                <tr class="mb-10">
-                                    <th class="text-left py-2.5 p2 font-medium 1xl:w-[11%]"><span>Product</span>
-                                    </th>
-                                    <th class="text-left py-2.5 p2 font-medium 1xl:w-[37%] xl:w-[38%] w-[42%]">
-                                        <span class="sm:hidden flex">Name</span>
-                                    </th>
-                                    <th class="text-left py-2.5 p2 font-medium 1xl:w-[10%] w-[11%]"><span>Price</span>
-                                    </th>
-                                    <th class="text-left py-2.5 p2 font-medium 1xl:w-[20%] xl:w-[18%] w-[16%]">
-                                        <span>Quantity</span>
-                                    </th>
-                                    <th class="text-left py-2.5 p2 font-medium xl:w-[12%] w-[10%]"><span>Total</span>
-                                    </th>
-                                    <th class="text-left py-2.5 p2 font-medium w-[10%]"></th>
-                                </tr>
-                                <!-- ✅ divider row -->
-                                <tr class="md:table-row! hidden!">
-                                    <th colspan="6" class="p-0">
-                                        <div class="h-px bg-[#EDEDED] w-full"></div>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody class="md:border-t border-[#EDEDED]">
-                                <!-- product-1 -->
-                                <tr>
-                                    <!-- Product Column -->
-                                    <td>
-                                        <p class="font-medium md:hidden block">Product</p>
-                                        <!-- Product Image -->
-                                        <a href="./product-detail-1.html"
-                                            class="xl:w-30 lg:w-26 sm:w-24 w-20 lg:h-25 sm:h-22 h-18 bg-[#E0E0E0] p-2 rounded-sm flex items-center justify-center shrink-0">
-                                            <img src="./image/product-1.webp" alt="product"
-                                                class="w-full h-full object-contain" />
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <p class="font-medium md:hidden block">Name</p>
-                                        <!-- Product Details -->
-                                        <div>
-                                            <a href="./product-detail-1.html">
-                                                <p class="font-medium">Manduka PRO Yoga Mat 6mm</p>
-                                            </a>
-                                            <div class="flex items-center md:justify-start justify-end gap-2 mt-0.5">
-                                                <p class="p2 texrt-thunder-100/80">Color:</p>
-                                                <span
-                                                    class="inline-block sm:size-5 size-4 bg-[#B4C7E2] rounded-full"></span>
-                                            </div>
-                                        </div>
-                                    </td>
-
-                                    <!-- Price Column -->
-                                    <td>
-                                        <p class="font-medium md:hidden block">Price</p>
-                                        <p class="p2 text-thunder-100/80">$138.00</p>
-                                    </td>
-
-                                    <!-- Quantity Column -->
-                                    <td>
-                                        <p class="font-medium md:hidden block">Quantity</p>
-                                        <!-- quntity counter -->
-                                        <div class="flex items-center justify-start">
-                                            <div
-                                                class="flex items-center justify-between 1xl:w-38 xl:w-30 lg:w-26 sm:w-24 w-22 py-[5px] h-full rounded-full border border-bronco-100 xl:px-2.5 sm:px-1.5 px-0.5">
-                                                <!-- Minus -->
-                                                <button type="button" id="decrease"
-                                                    class="text-[#6B3F2A] hover:opacity-70">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41"
-                                                        viewBox="0 0 41 41" fill="none"
-                                                        class="1xl:size-10 xl:size-8 w-8 lg:h-7 sm:h-6 h-5">
-                                                        <path
-                                                            d="M27.8332 19.4985C27.8332 19.4985 16.5523 19.4984 11.8536 19.4983"
-                                                            stroke="#673E2C" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg>
-                                                </button>
-
-                                                <!-- Quantity -->
-                                                <p id="quantity" class="text-black font-medium select-none">1</p>
-
-                                                <!-- Plus -->
-                                                <button type="button" id="increase"
-                                                    class="text-[#6B3F2A] hover:opacity-70">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41"
-                                                        viewBox="0 0 41 41" fill="none"
-                                                        class="1xl:size-10 xl:size-8 w-8 lg:h-7 sm:h-6 h-5">
-                                                        <path
-                                                            d="M12.2266 19.4985C12.2266 19.4985 23.5075 19.4984 28.2063 19.4983"
-                                                            stroke="#673E2C" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                        <path
-                                                            d="M20.215 27.4886C20.215 27.4886 20.2149 16.2076 20.2148 11.5089"
-                                                            stroke="#673E2C" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </td>
-
-                                    <!-- Total Column -->
-                                    <td>
-                                        <p class="font-medium md:hidden block">Total</p>
-                                        <p class="p2 text-thunder-100/80">$138.00</p>
-                                    </td>
-
-                                    <!-- Remove Column -->
-                                    <td>
-                                        <button
-                                            class="text-gray-400 hover:text-red-500 transition duration-200 flex items-center xl:gap-2 gap-1.5 ml-auto mr-0"
-                                            onclick="removeProduct(this)">
-                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16"
-                                                viewBox="0 0 16 16" fill="none" class="xl:size-5 size-4">
-                                                <mask id="mask0_4001_12375" style="mask-type:alpha"
-                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
-                                                    <rect width="16" height="16" fill="url(#pattern0_4001_12375)" />
-                                                </mask>
-                                                <g mask="url(#mask0_4001_12375)">
-                                                    <rect width="16" height="16" fill="#673E2C" />
-                                                </g>
-                                                <defs>
-                                                    <pattern id="pattern0_4001_12375"
-                                                        patternContentUnits="objectBoundingBox" width="1" height="1">
-                                                        <use xlink:href="#image0_4001_12375"
-                                                            transform="scale(0.0078125)" />
-                                                    </pattern>
-                                                    <image id="image0_4001_12375" width="128" height="128"
-                                                        preserveAspectRatio="none"
-                                                        xlink:href="data:image/png;base64,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" />
-                                                </defs>
-                                            </svg>
-                                            <p>Remove</p>
-                                        </button>
-                                    </td>
-                                </tr>
-
-                                <!-- product-2 -->
-                                <tr>
-                                    <!-- Product Column -->
-                                    <td>
-                                        <p class="font-medium md:hidden block">Product</p>
-                                        <!-- Product Image -->
-                                        <a href="./product-detail-2.html"
-                                            class="xl:w-30 lg:w-26 sm:w-24 w-20 lg:h-25 sm:h-22 h-18 bg-[#E0E0E0] p-2 rounded-sm flex items-center justify-center shrink-0">
-                                            <img src="./image/product-2.webp" alt="product"
-                                                class="w-full h-full object-contain" />
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <p class="font-medium md:hidden block">Name</p>
-                                        <!-- Product Details -->
-                                        <a href="./product-detail-2.html">
-                                            <p class="font-medium">Buddha Teas Organic Calm Tea</p>
-                                        </a>
-                                    </td>
-
-                                    <!-- Price Column -->
-                                    <td>
-                                        <p class="font-medium md:hidden block">Price</p>
-                                        <p class="p2 text-thunder-100/80">$49.98</p>
-                                    </td>
-
-                                    <!-- Quantity Column -->
-                                    <td>
-                                        <p class="font-medium md:hidden block">Quantity</p>
-                                        <!-- quntity counter -->
-                                        <div class="flex items-center justify-start">
-                                            <div
-                                                class="flex items-center justify-between 1xl:w-38 xl:w-30 lg:w-26 sm:w-24 w-22 py-[5px] h-full rounded-full border border-bronco-100 xl:px-2.5 sm:px-1.5 px-0.5">
-                                                <!-- Minus -->
-                                                <button type="button" id="decrease"
-                                                    class="text-[#6B3F2A] hover:opacity-70">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41"
-                                                        viewBox="0 0 41 41" fill="none"
-                                                        class="1xl:size-10 xl:size-8 w-8 lg:h-7 sm:h-6 h-5">
-                                                        <path
-                                                            d="M27.8332 19.4985C27.8332 19.4985 16.5523 19.4984 11.8536 19.4983"
-                                                            stroke="#673E2C" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg>
-                                                </button>
-
-                                                <!-- Quantity -->
-                                                <p id="quantity" class="text-black font-medium select-none">1</p>
-
-                                                <!-- Plus -->
-                                                <button type="button" id="increase"
-                                                    class="text-[#6B3F2A] hover:opacity-70">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41"
-                                                        viewBox="0 0 41 41" fill="none"
-                                                        class="1xl:size-10 xl:size-8 w-8 lg:h-7 sm:h-6 h-5">
-                                                        <path
-                                                            d="M12.2266 19.4985C12.2266 19.4985 23.5075 19.4984 28.2063 19.4983"
-                                                            stroke="#673E2C" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                        <path
-                                                            d="M20.215 27.4886C20.215 27.4886 20.2149 16.2076 20.2148 11.5089"
-                                                            stroke="#673E2C" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </td>
-
-                                    <!-- Total Column -->
-                                    <td>
-                                        <p class="font-medium md:hidden block">Total</p>
-                                        <p class="p2 text-thunder-100/80">$49.98</p>
-                                    </td>
-
-                                    <!-- Remove Column -->
-                                    <td>
-                                        <button
-                                            class="text-gray-400 hover:text-red-500 transition duration-200 flex items-center xl:gap-2 gap-1.5 ml-auto mr-0"
-                                            onclick="removeProduct(this)">
-                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16"
-                                                viewBox="0 0 16 16" fill="none" class="xl:size-5 size-4">
-                                                <mask id="mask0_4001_12375" style="mask-type:alpha"
-                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
-                                                    <rect width="16" height="16" fill="url(#pattern0_4001_12375)" />
-                                                </mask>
-                                                <g mask="url(#mask0_4001_12375)">
-                                                    <rect width="16" height="16" fill="#673E2C" />
-                                                </g>
-                                                <defs>
-                                                    <pattern id="pattern0_4001_12375"
-                                                        patternContentUnits="objectBoundingBox" width="1" height="1">
-                                                        <use xlink:href="#image0_4001_12375"
-                                                            transform="scale(0.0078125)" />
-                                                    </pattern>
-                                                    <image id="image0_4001_12375" width="128" height="128"
-                                                        preserveAspectRatio="none"
-                                                        xlink:href="data:image/png;base64,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" />
-                                                </defs>
-                                            </svg>
-                                            <p>Remove</p>
-                                        </button>
-                                    </td>
-                                </tr>
-
-                                <!-- product-3 -->
-                                <tr>
-                                    <!-- Product Column -->
-                                    <td>
-                                        <p class="font-medium md:hidden block">Product</p>
-                                        <!-- Product Image -->
-                                        <a href="./product-detail-3.html"
-                                            class="xl:w-30 lg:w-26 sm:w-24 w-20 lg:h-25 sm:h-22 h-18 bg-[#E0E0E0] p-2 rounded-sm flex items-center justify-center shrink-0">
-                                            <img src="./image/product-3.webp" alt="product"
-                                                class="w-full h-full object-contain" />
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <p class="font-medium md:hidden block">Name</p>
-                                        <!-- Product Details -->
-                                        <div>
-                                            <a href="./product-detail-3.html">
-                                                <p class="font-medium">Gaiam Yoga Starter Kit</p>
-                                            </a>
-                                            <div class="flex items-center md:justify-start justify-end gap-2 mt-0.5">
-                                                <p class="p2 texrt-thunder-100/80">Color:</p>
-                                                <span
-                                                    class="inline-block sm:size-5 size-4 bg-[#AC99CE] rounded-full"></span>
-                                            </div>
-                                        </div>
-                                    </td>
-
-                                    <!-- Price Column -->
-                                    <td>
-                                        <p class="font-medium md:hidden block">Price</p>
-                                        <p class="p2 text-thunder-100/80">$49.98</p>
-                                    </td>
-
-                                    <!-- Quantity Column -->
-                                    <td>
-                                        <p class="font-medium md:hidden block">Quantity</p>
-                                        <!-- quntity counter -->
-                                        <div class="flex items-center justify-start">
-                                            <div
-                                                class="flex items-center justify-between 1xl:w-38 xl:w-30 lg:w-26 sm:w-24 w-22 py-[5px] h-full rounded-full border border-bronco-100 xl:px-2.5 sm:px-1.5 px-0.5">
-                                                <!-- Minus -->
-                                                <button type="button" id="decrease"
-                                                    class="text-[#6B3F2A] hover:opacity-70">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41"
-                                                        viewBox="0 0 41 41" fill="none"
-                                                        class="1xl:size-10 xl:size-8 w-8 lg:h-7 sm:h-6 h-5">
-                                                        <path
-                                                            d="M27.8332 19.4985C27.8332 19.4985 16.5523 19.4984 11.8536 19.4983"
-                                                            stroke="#673E2C" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg>
-                                                </button>
-
-                                                <!-- Quantity -->
-                                                <p id="quantity" class="text-black font-medium select-none">1</p>
-
-                                                <!-- Plus -->
-                                                <button type="button" id="increase"
-                                                    class="text-[#6B3F2A] hover:opacity-70">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41"
-                                                        viewBox="0 0 41 41" fill="none"
-                                                        class="1xl:size-10 xl:size-8 w-8 lg:h-7 sm:h-6 h-5">
-                                                        <path
-                                                            d="M12.2266 19.4985C12.2266 19.4985 23.5075 19.4984 28.2063 19.4983"
-                                                            stroke="#673E2C" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                        <path
-                                                            d="M20.215 27.4886C20.215 27.4886 20.2149 16.2076 20.2148 11.5089"
-                                                            stroke="#673E2C" stroke-width="2" stroke-linecap="round"
-                                                            stroke-linejoin="round" />
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </td>
-
-                                    <!-- Total Column -->
-                                    <td>
-                                        <p class="font-medium md:hidden block">Total</p>
-                                        <p class="p2 text-thunder-100/80">$49.98</p>
-                                    </td>
-
-                                    <!-- Remove Column -->
-                                    <td>
-                                        <button
-                                            class="text-gray-400 hover:text-red-500 transition duration-200 flex items-center xl:gap-2 gap-1.5 ml-auto mr-0"
-                                            onclick="removeProduct(this)">
-                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16"
-                                                viewBox="0 0 16 16" fill="none" class="xl:size-5 size-4">
-                                                <mask id="mask0_4001_12375" style="mask-type:alpha"
-                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
-                                                    <rect width="16" height="16" fill="url(#pattern0_4001_12375)" />
-                                                </mask>
-                                                <g mask="url(#mask0_4001_12375)">
-                                                    <rect width="16" height="16" fill="#673E2C" />
-                                                </g>
-                                                <defs>
-                                                    <pattern id="pattern0_4001_12375"
-                                                        patternContentUnits="objectBoundingBox" width="1" height="1">
-                                                        <use xlink:href="#image0_4001_12375"
-                                                            transform="scale(0.0078125)" />
-                                                    </pattern>
-                                                    <image id="image0_4001_12375" width="128" height="128"
-                                                        preserveAspectRatio="none"
-                                                        xlink:href="data:image/png;base64,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" />
-                                                </defs>
-                                            </svg>
-                                            <p>Remove</p>
-                                        </button>
-                                    </td>
-                                </tr>
-
-                                <!-- ✅ divider row -->
-                                <tr class="md:table-row! hidden!">
-                                    <th colspan="6" class="1xl:pt-6 xl:pt-5 pt-4">
-                                        <div class="h-px bg-[#EDEDED] w-full"></div>
-                                    </th>
-                                </tr>
-
-                                <!-- product exclusive accesss -->
-                                <tr>
-                                    <!-- Product Column -->
-                                    <td class="xl:pt-6 pt-4 align-top" colspan="6">
-                                        <p class="font-medium text-[#1A1A1A]">Exclusive Access</p>
-                                    </td>
-                                </tr>
-
-                                <!-- wellness gift card -->
-                                <tr class="gift-card">
-                                    <!-- Product Column -->
-                                    <td>
-                                        <p class="font-medium md:hidden block">Product</p>
-                                        <!-- Product Image -->
-                                        <a href="./gift-card.html"
-                                            class="xl:w-30 lg:w-26 sm:w-24 w-20 lg:h-25 sm:h-23 h-18 bg-[#E0E0E0] sm:p-4 p-3 rounded-sm flex items-center justify-center shrink-0">
-                                            <img src="./image/gift-card.webp" alt="product"
-                                                class="w-full h-full object-contain" />
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <p class="font-medium md:hidden block">Name</p>
-                                        <!-- Product Details -->
-                                        <div>
-                                            <a href="./gift-card.html">
-                                                <p class="font-medium">Wellness Gift Card</p>
-                                            </a>
-                                            <p class="p2 text-thunder-100/80 mt-0.5">
-                                                Code: (YOGA20)
-                                            </p>
-                                        </div>
-                                    </td>
-
-                                    <!-- Price Column -->
-                                    <td>
-                                        <p class="font-medium md:hidden block">Price</p>
-                                        <p class="p2 text-thunder-100/80">$138.00</p>
-                                    </td>
-
-                                    <!-- Quantity Column -->
-                                    <td class="md:table-cell! hidden!">
-                                    </td>
-
-                                    <!-- Total Column -->
-                                    <td>
-                                        <p class="font-medium md:hidden block">Total</p>
-                                        <p class="p2 text-thunder-100/80">$138.00</p>
-                                    </td>
-
-                                    <!-- Remove Column -->
-                                    <td>
-                                        <button
-                                            class="text-gray-400 hover:text-red-500 transition duration-200 flex items-center xl:gap-2 gap-1.5 ml-auto mr-0"
-                                            onclick="removeProduct(this)">
-                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16"
-                                                viewBox="0 0 16 16" fill="none" class="xl:size-5 size-4">
-                                                <mask id="mask0_4001_12375" style="mask-type:alpha"
-                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
-                                                    <rect width="16" height="16" fill="url(#pattern0_4001_12375)" />
-                                                </mask>
-                                                <g mask="url(#mask0_4001_12375)">
-                                                    <rect width="16" height="16" fill="#673E2C" />
-                                                </g>
-                                                <defs>
-                                                    <pattern id="pattern0_4001_12375"
-                                                        patternContentUnits="objectBoundingBox" width="1" height="1">
-                                                        <use xlink:href="#image0_4001_12375"
-                                                            transform="scale(0.0078125)" />
-                                                    </pattern>
-                                                    <image id="image0_4001_12375" width="128" height="128"
-                                                        preserveAspectRatio="none"
-                                                        xlink:href="data:image/png;base64,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" />
-                                                </defs>
-                                            </svg>
-                                            <p>Remove</p>
-                                        </button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <button
-                            class="1xl:mt-12 xl:mt-11 lg:mt-10 md:mt-9 sm:mt-8 mt-5 btn reveal-more flex items-center justify-start gap-2.5 capitalize">
-                            Update Cart
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
-                                fill="none" class="1xl:size-4.5 size-4 animate-spin">
-                                <g clip-path="url(#clip0_4001_12489)">
-                                    <circle opacity="0.4" cx="9" cy="9" r="8" stroke="#673E2C" stroke-width="2" />
-                                    <mask id="path-2-inside-1_4001_12489" fill="white">
-                                        <path
-                                            d="M16.282 3.71107C15.3051 2.36606 13.9748 1.31789 12.4386 0.682769C10.9023 0.0476537 9.22022 -0.149583 7.57874 0.11293C5.93726 0.375443 4.40056 1.08745 3.13903 2.16999C1.8775 3.25254 0.940433 4.66332 0.431743 6.24592C-0.0769475 7.82851 -0.137388 9.52107 0.257124 11.1359C0.651636 12.7508 1.48568 14.2248 2.66679 15.3946C3.84789 16.5643 5.32989 17.3841 6.94846 17.7631C8.56704 18.142 10.2589 18.0652 11.8365 17.5413L11.2078 15.6479C9.97986 16.0557 8.66301 16.1154 7.40324 15.8205C6.14347 15.5256 4.98999 14.8875 4.07071 13.977C3.15143 13.0666 2.50227 11.9193 2.19521 10.6624C1.88816 9.40556 1.9352 8.0882 2.33112 6.85643C2.72705 5.62466 3.45639 4.52661 4.43827 3.68404C5.42015 2.84147 6.6162 2.2873 7.8938 2.08298C9.1714 1.87866 10.4806 2.03218 11.6763 2.5265C12.872 3.02083 13.9074 3.83665 14.6677 4.8835L16.282 3.71107Z" />
-                                    </mask>
-                                    <path
-                                        d="M16.282 3.71107C15.3051 2.36606 13.9748 1.31789 12.4386 0.682769C10.9023 0.0476537 9.22022 -0.149583 7.57874 0.11293C5.93726 0.375443 4.40056 1.08745 3.13903 2.16999C1.8775 3.25254 0.940433 4.66332 0.431743 6.24592C-0.0769475 7.82851 -0.137388 9.52107 0.257124 11.1359C0.651636 12.7508 1.48568 14.2248 2.66679 15.3946C3.84789 16.5643 5.32989 17.3841 6.94846 17.7631C8.56704 18.142 10.2589 18.0652 11.8365 17.5413L11.2078 15.6479C9.97986 16.0557 8.66301 16.1154 7.40324 15.8205C6.14347 15.5256 4.98999 14.8875 4.07071 13.977C3.15143 13.0666 2.50227 11.9193 2.19521 10.6624C1.88816 9.40556 1.9352 8.0882 2.33112 6.85643C2.72705 5.62466 3.45639 4.52661 4.43827 3.68404C5.42015 2.84147 6.6162 2.2873 7.8938 2.08298C9.1714 1.87866 10.4806 2.03218 11.6763 2.5265C12.872 3.02083 13.9074 3.83665 14.6677 4.8835L16.282 3.71107Z"
-                                        fill="#673E2C" stroke="#673E2C" stroke-width="3"
-                                        mask="url(#path-2-inside-1_4001_12489)" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_4001_12489">
-                                        <rect width="18" height="18" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </button>
+                <div class="2xl:space-y-12.5 1xl:space-y-11 xl:space-y-10 md:space-y-8 sm:space-y-7 space-y-5">
+                    <div>
+                        <h3 class="uppercase text-primary 1xl:mb-10 md:mb-5.5 mb-4">Order Details</h3>
+                        <div class="order-detail">
+                            <table class="border-collapse border border-[#EBEBEB] w-full">
+                                <thead>
+                                    <tr>
+                                        <th
+                                            class="p font-medium text-thunder-100 border-2 border-[#EBEBEB] w-1/5 px-1 1xl:py-3 py-2.5">
+                                            Order Number</th>
+                                        <th
+                                            class="p font-medium text-thunder-100 border-2 border-[#EBEBEB] w-1/5 px-1 1xl:py-3 py-2.5">
+                                            Order Date</th>
+                                        <th
+                                            class="p font-medium text-thunder-100 border-2 border-[#EBEBEB] w-1/5 px-1 1xl:py-3 py-2.5">
+                                            Payment Method</th>
+                                        <th
+                                            class="p font-medium text-thunder-100 border-2 border-[#EBEBEB] w-1/5 px-1 1xl:py-3 py-2.5">
+                                            Total Amount</th>
+                                        <th
+                                            class="p font-medium text-thunder-100 border-2 border-[#EBEBEB] w-1/5 px-1 1xl:py-3 py-2.5">
+                                            Order Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td
+                                            class="p text-center lt:border-2 border border-[#EBEBEB] lt:px-1 sm:px-4 px-3 1xl:py-6 xl:py-5 lt:py-4 py-3">
+                                            <p class="text-left font-medium md:hidden block">Order Number</p>
+                                            <p class="md:text-center text-right">#1045</p>
+                                        </td>
+                                        <td
+                                            class="p text-center lt:border-2 border border-[#EBEBEB] lt:px-1 sm:px-4 px-3 1xl:py-6 xl:py-5 lt:py-4 py-3">
+                                            <p class="text-left font-medium md:hidden block">Order Date</p>
+                                            <p class="md:text-center text-right">03 December 2025</p>
+                                        </td>
+                                        <td
+                                            class="p text-center lt:border-2 border border-[#EBEBEB] lt:px-1 sm:px-4 px-3 1xl:py-6 xl:py-5 lt:py-4 py-3">
+                                            <p class="text-left font-medium md:hidden block">Payment Method</p>
+                                            <p class="md:text-center text-right">Credit Card (** 3271)**</p>
+                                        </td>
+                                        <td
+                                            class="p text-center lt:border-2 border border-[#EBEBEB] lt:px-1 sm:px-4 px-3 1xl:py-6 xl:py-5 lt:py-4 py-3">
+                                            <p class="text-left font-medium md:hidden block">Total Amount</p>
+                                            <p class="md:text-center text-right">$476.00</p>
+                                        </td>
+                                        <td
+                                            class="p text-center lt:border-2 border border-[#EBEBEB] lt:px-1 sm:px-4 px-3 1xl:py-6 xl:py-5 lt:py-4 py-3">
+                                            <p class="text-left font-medium md:hidden block">Order Status</p>
+                                            <p class="md:text-center text-right">Confirmed</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
 
                     <div
-                        class="lt:w-[27%] w-full bg-whitesmoke-100 rounded-sm overflow-hidden sm:p-5 p-4 sticky xl:top-25 top-22 divide-y divide-primary/20">
-                        <p class="text-[#1A1A1A] font-medium pb-2.5">Cart Total</p>
-                        <div class="xl:py-5.5 sm:py-4 py-3.5 xl:space-y-4 sm:space-y-2.5 space-y-2">
-                            <div class="flex items-center justify-between w-full gap-3">
-                                <p class="class-[#1A1A1A]">Subtotal:</p>
-                                <p class="p2">$474.85</p>
-                            </div>
-                            <div class="flex items-center justify-between w-full gap-3">
-                                <p class="class-[#1A1A1A]">Shipping:</p>
-                                <p class="p2">Free</p>
-                            </div>
-                            <div class="flex items-center justify-between w-full gap-3">
-                                <p class="class-[#1A1A1A]">Tax (5%):</p>
-                                <p class="p2">$23.74</p>
-                            </div>
-                        </div>
-
-                        <div class="xl:py-3 py-2.5">
-                            <div class="flex items-center justify-between w-full gap-4">
-                                <p class="class-[#1A1A1A] font-medium">Sub Total</p>
-                                <p class="p2 class-[#1A1A1A] font-medium">$498.59</p>
+                        class="border border-primary/20 grid md:grid-cols-2 grid-cols-1 md:divide-x divide-y divide-primary/20 overflow-hidden">
+                        <div class="divide-y divide-primary/20">
+                            <h3
+                                class="text-primary uppercase 1xl:py-6 1xl:px-7.5 lg:py-4 lg:px-6 sm:py-3.5 py-3 sm:px-4.5 px-3.5">
+                                BILLING
+                                ADDRESS</h3>
+                            <div class="bg-whitesmoke-100 1xl:p-7.5 lg:p-6 sm:p-4.5 p-4 md:h-full">
+                                <p class="text-black"><span class="font-medium">Street Address: </span>108 Serenity
+                                    Street</p>
+                                <p class="text-black"><span class="font-medium">City: </span>Bliss City</p>
+                                <p class="text-black"><span class="font-medium">State: </span>New York</p>
+                                <p class="text-black"><span class="font-medium">Country: </span>USA</p>
+                                <p class="text-black"><span class="font-medium">Pin Code: </span>10001</p>
                             </div>
                         </div>
 
-                        <div class="xl:py-4.5 py-3.5">
-                            <div class="flex flex-col justify-between w-full sm:gap-4 gap-3">
-                                <div
-                                    class="xl:p-2 p-1.5 border border-primary/20 rounded-full w-full flex items-center flex-wrap gap-1">
-                                    <div
-                                        class="bg-primary/20 px-3 divide-x divide-[#C3B3AC] flex items-center rounded-full space-x-2.5 w-fit">
-                                        <p class="text-15 pr-2.5">YOGA20</p>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
-                                            viewBox="0 0 11 11" fill="none" class="shrink-0 cursor-pointer">
-                                            <path
-                                                d="M0.599609 9.59961L9.59961 0.599609M9.59961 9.59961L0.599609 0.599609"
-                                                stroke="black" stroke-width="1.2" stroke-miterlimit="10"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </div>
+                        <div class="divide-y divide-primary/20">
+                            <h3
+                                class="text-primary uppercase 1xl:py-6 1xl:px-7.5 lg:py-4 lg:px-6 sm:py-3.5 py-3 sm:px-4.5 px-3.5">
+                                SHIPPING ADDRESS</h3>
+                            <div class="bg-whitesmoke-100 1xl:p-7.5 lg:p-6 sm:p-4.5 p-4 md:h-full">
+                                <p class="text-black"><span class="font-medium">Street Address: </span>204, Greenwoods
+                                    Residency, Andheri West</p>
+                                <p class="text-black"><span class="font-medium">City: </span>Mumbai</p>
+                                <p class="text-black"><span class="font-medium">State: </span>Maharashtra</p>
+                                <p class="text-black"><span class="font-medium">Country: </span>India</p>
+                                <p class="text-black"><span class="font-medium">Pin Code: </span>400053</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start lt:flex-row flex-col xl:gap-10 lt:gap-6 md:gap-10 sm:gap-8 gap-4">
+                        <div class="lt:w-1/2 w-full 2xl:space-y-12.5 1xl:space-y-11 md:space-y-7 space-y-4">
+                            <table class="cart-detail order-view w-full bg-white border-collapse">
+                                <thead>
+                                    <tr class="mb-10">
+                                        <th class="text-left py-2.5 px-5 p2 font-medium 1xl:w-[8%] xl:w-[15%] w-[10%]">
+                                            <span>Product</span>
+                                        </th>
+                                        <th class="text-left py-2.5 px-5 p2 font-medium 1xl:w-[62%] xl:w-[60%] w-[71%]">
+
+                                        </th>
+                                        <th class="text-left py-2.5 px-5 p2 font-medium 1xl:w-[20%] xl:w-[15%] w-[12%]">
+                                            <span>Price</span>
+                                        </th>
+                                        <th class="text-left py-2.5 px-5 p2 font-medium xl:w-[10%] w-[7%]">
+                                            <span>Total</span>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="md:border border-[#EDEDED]">
+                                    <!-- product-1 -->
+                                    <tr class="w-full">
+                                        <!-- Product Column -->
+                                        <td>
+                                            <div class="flex items-center justify-between w-full gap-3">
+                                                <p class="font-medium md:hidden block">Product</p>
+                                                <!-- Product Image -->
+                                                <a href="./product-detail-1.html"
+                                                    class="1xl:w-30 xl:w-27 lg:w-25 sm:w-24 w-20 xl:h-25 lg:h-23 sm:h-22 h-18 bg-[#E0E0E0] p-2 rounded-sm flex items-center justify-center shrink-0">
+                                                    <img src="./image/product-1.webp" alt="product"
+                                                        class="w-full h-full object-contain" />
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="font-medium md:hidden block">Name</p>
+                                            <!-- Product Details -->
+                                            <div>
+                                                <a href="./product-detail-1.html">
+                                                    <p class="font-medium">Manduka PRO Yoga Mat 6mm</p>
+                                                </a>
+                                                <div
+                                                    class="flex items-center md:justify-start justify-end gap-2 mt-0.5">
+                                                    <p class="p2 texrt-thunder-100/80">Color:</p>
+                                                    <span
+                                                        class="inline-block xl:size-5 size-4 bg-[#B4C7E2] rounded-full"></span>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <!-- Price Column -->
+                                        <td>
+                                            <p class="font-medium md:hidden block">Price</p>
+                                            <p class="p2 text-thunder-100/80">$138.00</p>
+                                        </td>
+
+                                        <!-- Total Column -->
+                                        <td>
+                                            <p class="font-medium md:hidden block">Total</p>
+                                            <p class="p2 text-thunder-100/80">$138.00</p>
+                                        </td>
+                                    </tr>
+
+                                    <!-- product-2 -->
+                                    <tr>
+                                        <!-- Product Column -->
+                                        <td>
+                                            <div class="flex items-center justify-between w-full gap-3">
+                                                <p class="font-medium md:hidden block">Product</p>
+                                                <!-- Product Image -->
+                                                <a href="./product-detail-2.html"
+                                                    class="1xl:w-30 xl:w-27 lg:w-25 sm:w-24 w-20 xl:h-25 lg:h-23 sm:h-22 h-18 bg-[#E0E0E0] p-2 rounded-sm flex items-center justify-center shrink-0">
+                                                    <img src="./image/product-2.webp" alt="product"
+                                                        class="w-full h-full object-contain" />
+                                                </a>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <p class="font-medium md:hidden block">Name</p>
+                                            <!-- Product Details -->
+                                            <a href="./product-detail-2.html">
+                                                <p class="font-medium">Buddha Teas Organic Calm Tea</p>
+                                            </a>
+                                        </td>
+                                        <!-- Price Column -->
+                                        <td>
+                                            <p class="font-medium md:hidden block">Price</p>
+                                            <p class="p2 text-thunder-100/80">$49.98</p>
+                                        </td>
+
+                                        <!-- Total Column -->
+                                        <td>
+                                            <p class="font-medium md:hidden block">Total</p>
+                                            <p class="p2 text-thunder-100/80">$49.98</p>
+                                        </td>
+                                    </tr>
+
+                                    <!-- product-3 -->
+                                    <tr>
+                                        <!-- Product Column -->
+                                        <td>
+                                            <div class="flex items-center justify-between w-full gap-3">
+                                                <p class="font-medium md:hidden block">Product</p>
+                                                <!-- Product Image -->
+                                                <a href="./product-detail-3.html"
+                                                    class="1xl:w-30 xl:w-27 lg:w-25 sm:w-24 w-20 xl:h-25 lg:h-23 sm:h-22 h-18 bg-[#E0E0E0] p-2 rounded-sm flex items-center justify-center shrink-0">
+                                                    <img src="./image/product-3.webp" alt="product"
+                                                        class="w-full h-full object-contain" />
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="font-medium md:hidden block">Name</p>
+                                            <!-- Product Details -->
+                                            <div>
+                                                <a href="./product-detail-3.html">
+                                                    <p class="font-medium">Gaiam Yoga Starter Kit</p>
+                                                </a>
+                                                <div
+                                                    class="flex items-center md:justify-start justify-end gap-2 mt-0.5">
+                                                    <p class="p2 texrt-thunder-100/80">Color:</p>
+                                                    <span
+                                                        class="inline-block xl:size-5 size-4 bg-[#AC99CE] rounded-full"></span>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <!-- Price Column -->
+                                        <td>
+                                            <p class="font-medium md:hidden block">Price</p>
+                                            <p class="p2 text-thunder-100/80">$49.98</p>
+                                        </td>
+
+                                        <!-- Total Column -->
+                                        <td>
+                                            <p class="font-medium md:hidden block">Total</p>
+                                            <p class="p2 text-thunder-100/80">$49.98</p>
+                                        </td>
+                                    </tr>
+
+                                    <!-- product exclusive accesss -->
+                                    <tr>
+                                        <!-- Product Column -->
+                                        <td class="1xl:pt-6! md:pt-4! md:pb-0! align-top md:border-t border-primary/20 "
+                                            colspan="4">
+                                            <p class="font-medium text-[#1A1A1A]">Exclusive Access</p>
+                                        </td>
+                                    </tr>
+
+                                    <!-- wellness gift card -->
+                                    <tr class="gift-card">
+                                        <!-- Product Column -->
+                                        <td>
+                                            <div class="flex items-center justify-between w-full gap-3">
+                                                <p class="font-medium md:hidden block">Product</p>
+                                                <!-- Product Image -->
+                                                <a href="./gift-card.html"
+                                                    class="1xl:w-30 xl:w-27 lg:w-25 sm:w-24 w-20 xl:h-25 lg:h-23 sm:h-22 h-18 bg-[#E0E0E0] sm:p-4 p-3 rounded-sm flex items-center justify-center shrink-0">
+                                                    <img src="./image/gift-card.webp" alt="product"
+                                                        class="w-full h-full object-contain" />
+                                                </a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="font-medium md:hidden block">Name</p>
+                                            <!-- Product Details -->
+                                            <div>
+                                                <a href="./gift-card.html">
+                                                    <p class="font-medium">Wellness Gift Card</p>
+                                                </a>
+                                                <p class="p2 text-thunder-100/80 mt-0.5">
+                                                    Code: (YOGA20)
+                                                </p>
+                                            </div>
+                                        </td>
+
+                                        <!-- Price Column -->
+                                        <td>
+                                            <p class="font-medium md:hidden block">Price</p>
+                                            <p class="p2 text-thunder-100/80">$138.00</p>
+                                        </td>
+
+                                        <!-- Total Column -->
+                                        <td>
+                                            <p class="font-medium md:hidden block">Total</p>
+                                            <p class="p2 text-thunder-100/80">$138.00</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                                <!-- Table Footer -->
+                                <tfoot class="border border-[#EDEDED] sm:mt-5 mt-3.5">
+                                    <!-- Subtotal -->
+                                    <tr class="w-full">
+                                        <td colspan="4" class="text-right w-full">
+                                            <div class="flex items-center justify-between w-full">
+                                                <p class="font-medium">Sub Total</p>
+                                                <p class="font-medium">$228.96</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Shipping -->
+                                    <tr class="w-full">
+                                        <td colspan="4" class="px-5 text-right w-full">
+                                            <div class="flex items-center justify-between w-full">
+                                                <p class="font-medium">Shipping</p>
+                                                <p>Free</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Total -->
+                                    <tr class="border-t border-gray-200">
+                                        <td colspan="4" class="w-full">
+                                            <div class="flex items-center justify-between w-full">
+                                                <p class="font-medium">Total</p>
+                                                <p class="font-medium">$228.96</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+
+                        <div
+                            class="lt:w-1/2 w-full bg-whitesmoke-100 rounded-sm overflow-hidden sm:p-5 p-4 divide-y divide-primary/20">
+                            <p class="text-[#1A1A1A] font-medium pb-2.5 1xl:px-6 xl:px-5 px-4">Cart Total</p>
+                            <div class="xl:py-5.5 sm:py-4 py-3.5 xl:space-y-4 sm:space-y-2.5 space-y-2">
+                                <div class="flex items-center justify-between w-full gap-3 1xl:px-6 xl:px-5 sm:px-4 px-3">
+                                    <p class="class-[#1A1A1A]">Subtotal:</p>
+                                    <p class="p2">$474.85</p>
                                 </div>
-                                <div>
-                                    <button
-                                        class="btn btn-secondary px-7 capitalize font-normal lt:w-full w-fit">Submit</button>
+                                <div class="flex items-center justify-between w-full gap-3 1xl:px-6 xl:px-5 sm:px-4 px-3">
+                                    <p class="class-[#1A1A1A]">Shipping:</p>
+                                    <p class="p2">Free</p>
+                                </div>
+                                <div class="flex items-center justify-between w-full gap-3 1xl:px-6 xl:px-5 sm:px-4 px-3">
+                                    <p class="class-[#1A1A1A]">Tax (5%):</p>
+                                    <p class="p2">$23.74</p>
                                 </div>
                             </div>
 
-                            <div class="flex items-center justify-between w-full gap-3 sm:pt-5.5 pt-4">
-                                <p class="class-[#1A1A1A]">Code Applied (YOGA20)</p>
-                                <p class="p2">$22.59</p>
+                            <div class="xl:py-3 py-2.5">
+                                <div class="flex items-center justify-between w-full gap-3 1xl:px-6 xl:px-5 sm:px-4 px-3">
+                                    <p class="class-[#1A1A1A] font-medium">Sub Total</p>
+                                    <p class="p2 class-[#1A1A1A] font-medium">$498.59</p>
+                                </div>
                             </div>
 
-                        </div>
-                        <div class="xl:py-3 py-2">
-                            <div class="flex items-center justify-between w-full gap-4">
-                                <p class="class-[#1A1A1A] font-medium">Total</p>
-                                <p class="p2 class-[#1A1A1A] font-medium">$476.00</p>
+                            <div class="xl:py-4.5 py-3.5">
+                                <div class="flex items-center justify-between w-full gap-3 1xl:px-6 xl:px-5 sm:px-4 px-3">
+                                    <p class="class-[#1A1A1A]">Code Applied (YOGA20)</p>
+                                    <p class="p2">$22.59</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="1xl:pt-7.5 sm:pt-6 pt-4">
-                            <button class="btn btn-secondary lt:w-full w-fit capitalize font-normal">Proceed to
-                                Checkout</button>
-                            <a href="./shop.html"
-                                class="xl:mt-5 mt-3.5 lt:mx-auto p w-fit text-[#708090] hover:text-primary underline flex">
-                                Continue to shopping
-                            </a>
+
+                            <div class="xl:py-3 py-2 bg-white border-b border-primary/20">
+                                <div class="flex items-center justify-between w-full gap-3 1xl:px-6 xl:px-5 sm:px-4 px-3">
+                                    <p class="class-[#1A1A1A] font-medium">Total</p>
+                                    <p class="p2 class-[#1A1A1A] font-medium">$476.00</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
         <!-- ====== End Gift Cards ====== -->

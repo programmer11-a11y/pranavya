@@ -183,8 +183,7 @@
   src: url('../assets/font/Baskervville/Baskervville-Medium.eot');
   src: url('../assets/font/Baskervville/Baskervville-Medium.eot?#iefix')
       format('embedded-opentype'),
-    url('../assets/font/Baskervville/Baskervville-Medium.woff2')
-      format('woff2'),
+    url('../assets/font/Baskervville/Baskervville-Medium.woff2') format('woff2'),
     url('../assets/font/Baskervville/Baskervville-Medium.woff') format('woff'),
     url('../assets/font/Baskervville/Baskervville-Medium.ttf')
       format('truetype');
@@ -199,8 +198,7 @@
       format('embedded-opentype'),
     url('../assets/font/Baskervville/Baskervville-SemiBold.woff2')
       format('woff2'),
-    url('../assets/font/Baskervville/Baskervville-SemiBold.woff')
-      format('woff'),
+    url('../assets/font/Baskervville/Baskervville-SemiBold.woff') format('woff'),
     url('../assets/font/Baskervville/Baskervville-SemiBold.ttf')
       format('truetype');
   font-weight: 600;
@@ -452,6 +450,9 @@
   .p2 {
     @apply text-thunder-100 2xl:text-18 md:text-15 text-14 1xl:leading-[28px] xl:leading-[25px] leading-6 m-0;
   }
+  .page-main-title {
+    @apply 2xl:text-80 1xl:text-70 xl:text-60 lg:text-52 lt:text-40 md:text-34 text-28;
+  }
   button {
     @apply cursor-pointer;
   }
@@ -537,27 +538,24 @@
   /* Scroll container */
   /* 1st scroll */
   .scrollbar-custom {
-    overflow-y: auto;
+    @apply overflow-y-auto;
   }
 
   /* TOTAL scrollbar width (track width) */
   .scrollbar-custom::-webkit-scrollbar {
-    width: 20px;
+    @apply 1xl:w-5 sm:w-4.5 w-3.5;
   }
 
   /* TRACK */
   .scrollbar-custom::-webkit-scrollbar-track {
-    background: #f2f1f0;
+    @apply bg-[#f2f1f0];
   }
 
   /* THUMB */
   .scrollbar-custom::-webkit-scrollbar-thumb {
-    background-color: white;
-    border-radius: 9999px;
-
-    /* THIS creates left & right space */
-    border: 4.5px solid transparent;
-    background-clip: content-box;
+    @apply bg-white rounded-full border-[4.5px] border-transparent bg-clip-content;
+    /* border: 4.5px solid transparent;
+    background-clip: content-box; */
 
     /* grip lines */
     background-image: linear-gradient(
@@ -581,18 +579,15 @@
 
   /* native CSS — REQUIRED */
   .custom-scroll-2::-webkit-scrollbar {
-    height: 10px;
+    @apply h-2.5;
   }
 
   .custom-scroll-2::-webkit-scrollbar-thumb {
-    background-color: #fff;
-    border-radius: 999px;
-    border: 2px solid #673e2c;
+    @apply bg-white rounded-full border-2 border-primary;
   }
 
   .custom-scroll-2::-webkit-scrollbar-track {
-    background-color: #673e2c;
-    border-radius: 999px;
+    @apply bg-primary rounded-full;
   }
   /* scroll end */
 
@@ -615,7 +610,7 @@
   }
 
   .header-1 .all-header.scrolled .mega-panel .mega-menu {
-    @apply w-full max-w-full;
+    @apply w-full max-w-full px-4!;
   }
   .header-1 .all-header .mega-panel .mega-menu {
     @apply sm:max-w-[calc(100%-4%)] w-full;
@@ -648,16 +643,6 @@
     @apply text-black;
   }
 
-  /* When header has bg-white, icons should be primary color, text and SVG should be black */
-  /* .all-header.bg-white .nav-icon {
-    @apply text-primary!;
-  } */
-  /* .all-header.bg-white .site-search__open {
-    @apply text-primary!;
-  }
-  .all-header.bg-white .site-search__open .nav-icon {
-    @apply text-primary!;
-  } */
   .vertical-text {
     writing-mode: vertical-rl;
   }
@@ -668,14 +653,6 @@
   .all-header.bg-white .menu_link_text {
     @apply text-black;
   }
-  /* .all-header.bg-white .menu_link_text svg,
-  .all-header.bg-white .menu_link_text svg path {
-    @apply text-black!;
-  } */
-  /* General SVG elements in header (but not nav-icon) should be black when bg-white */
-  /* .all-header.bg-white svg:not(.nav-icon) {
-    @apply text-black;
-  } */
 
   .nav-icon,
   .menu_link_text {
@@ -946,7 +923,7 @@
     animation: marquee 28s linear infinite;
   }
   .schedule-tab {
-    @apply 2xl:text-24 1xl:text-20 lt:text-18 md:text-17 text-16 2xl:leading-[30px] 1xl:leading-[28px] leading-[26px] font-secondary font-normal bg-white;
+    @apply 2xl:text-24 1xl:text-20 lt:text-18 md:text-17 sm:text-16 text-14 2xl:leading-[30px] 1xl:leading-[28px] leading-[26px] font-secondary font-normal bg-white;
   }
 
   /* =============== INDEX-2.HTML ============== */
@@ -1055,7 +1032,7 @@
     @apply border border-[#673E2C33] md:border-none block md:table-row divide-y md:divide-y-0 hover:bg-whitesmoke-100;
   }
   .schedule-2 .schedule-panel table tbody tr td {
-    @apply flex md:justify-center justify-between md:table-cell 2xl:p-7 1xl:p-6 xl:p-4.5 lt:p-4 p-3 text-center group-hover:text-primary border border-[#673E2C33];
+    @apply flex md:justify-center items-center justify-between md:table-cell 2xl:p-7 1xl:p-6 xl:p-4.5 lt:p-4 p-3 text-center group-hover:text-primary border border-[#673E2C33];
   }
   #schedule .schedule-tab,
   #schedule .select-arrow option {
@@ -1217,7 +1194,7 @@
   @apply 2xl:h-[365px] xl:h-[320px] lt:h-[270px] sm:h-[250px] h-[200px];
 }
 .home-3_instagram .swiper-wrapper .swiper-slide-active .product-slide {
-  @apply 2xl:h-[505px] xl:h-[450px] lt:h-[370px] sm:h-[330px] h-[255px];
+  @apply 2xl:h-[505px] xl:h-[450px] lt:h-[370px] sm:h-[330px] h-[285px];
 }
 .home-3_instagram
   .swiper-wrapper
@@ -1227,7 +1204,7 @@
   .swiper-wrapper
   .swiper-slide.swiper-slide-prev
   .product-slide {
-  @apply 2xl:h-[436px] xl:h-[380px] lt:h-[315px] sm:h-[290px] h-[220px];
+  @apply 2xl:h-[436px] xl:h-[380px] lt:h-[315px] sm:h-[290px] h-[240px];
 }
 .home-3_instagram .slider-custom-arrow.swiper-button-prev::after,
 .home-3_instagram .slider-custom-arrow.swiper-button-next::after {
@@ -1367,7 +1344,7 @@
 
 .yoga-card-desc,
 .podcast-desc {
-  @apply 1xl:mb-6 sm:mb-4.5 mb-3;
+  @apply 1xl:mb-6 sm:mb-4.5 mb-4;
 }
 
 /* Footer */
@@ -1580,17 +1557,33 @@
 }
 
 .cms-content p {
-  @apply pt-2.5 pl-7.5;
+  @apply 1xl:pt-2.5 lt:pt-1.5 pt-1 1xl:pl-7.5 md:pl-6.5 pl-5.5;
 }
 .cms-content h5 {
-  @apply uppercase text-primary pt-7.5 pb-2.5;
+  @apply uppercase text-primary 1xl:pt-7.5 1xl:pb-2.5 xl:pt-5 pt-4 lt:pb-2 pb-1.5;
 }
 .cms-content ul {
-  @apply list-disc space-y-2 pl-12 pt-5 text-thunder-100 2xl:text-20 1xl:text-19 md:text-16 sm:text-15 text-14 2xl:leading-[34px] 1xl:leading-[30px] lg:leading-[28px] lt:leading-[26px] sm:leading-[24px] leading-[20px] font-primary m-0;
+  @apply list-disc 1xl:space-y-2 xl:space-y-1.5 space-y-1 1xl:pl-12 pl-11 1xl:pt-5 xl:pt-4 pt-2.5 text-thunder-100 2xl:text-20 1xl:text-19 md:text-16 sm:text-15 text-14 2xl:leading-[34px] 1xl:leading-[30px] lg:leading-[28px] lt:leading-[26px] sm:leading-[24px] leading-[20px] font-primary m-0;
 }
 .cms-content h3 {
-  @apply uppercase text-primary pb-2.5 pt-15;
+  @apply uppercase text-primary 1xl:pb-2.5 lt:pb-2 pb-1.5 1xl:pt-15 xl:pt-7 pt-5;
 }
 .cms-content a {
   @apply w-full font-normal text-thunder-100 hover:text-primary cursor-pointer 2xl:text-20 1xl:text-19 md:text-16 sm:text-15 text-14 2xl:leading-[34px] 1xl:leading-[30px] lg:leading-[28px] lt:leading-[26px] sm:leading-[24px] leading-[20px] font-primary m-0;
+}
+
+input[type='date'] {
+  @apply bg-white
+    bg-[url('../assets/image/calendor.svg')]
+    bg-no-repeat
+    appearance-none
+    pointer-events-none
+    bg-position-[right_12px_center]
+
+    bg-size-[16px]
+    lg:bg-size-[18px]
+    1xl:bg-size-[20px]
+
+    [&::-webkit-calendar-picker-indicator]:opacity-0
+    [&::-webkit-calendar-picker-indicator]:cursor-pointer;
 }

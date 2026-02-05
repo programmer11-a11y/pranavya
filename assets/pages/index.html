@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yoga Html</title>
-    <link rel="icon" type="image/x-icon" href="image/favicon.png" />
+    <link rel="icon" type="../image/x-icon" href="../image/favicon.png" />
     <link rel="preload" href="../css/magnific-popup.min.css" as="style" onload="this.rel='stylesheet'">
     <link rel="preload" href="../css/swiper-bundle.min.css" as="style" onload="this.rel='stylesheet'">
     <link rel="stylesheet" href="../../dist/output.css">
@@ -26,7 +26,7 @@
             <!-- ============================= -->
             <div id="wishlistSidebar"
                 class="fixed top-0 right-0 h-screen w-auto translate-x-full transition-transform duration-300 z-999999 flex flex-col items-end">
-                <div class="bg-white flex flex-col h-screen w-full 2xl:max-w-[440px] max-w-[375px]">
+                <div class="bg-white flex flex-col h-screen w-full 2xl:max-w-[440px] sm:max-w-[375px] max-w-[320px]">
                     <!-- Header -->
                     <div class="flex items-center justify-between bg-whitesmoke-100 2xl:p-[22px] sm:p-[18px] px-4 py-3">
                         <h5 class="text-[#6F4E37] w-full uppercase">My Wishlist</h5>
@@ -71,7 +71,7 @@
                                 </div>
 
                                 <p class="text-[#2D2D2DCC] p2">$138.00</p>
-                                <button class="btn btn-secondary font-normal text-[10px] 2xl:py-[7px] py-[5px]">
+                                <button class="btn btn-secondary font-normal text-[10px] 2xl:py-[7px] py-[5px] 2xl:px-6! px-5!">
                                     Add to Cart
                                 </button>
                             </div>
@@ -105,7 +105,7 @@
                                 </div>
 
                                 <p class="text-[#2D2D2DCC] p2">$49.98</p>
-                                <button class="btn btn-secondary font-normal text-[10px] 2xl:py-[7px] py-[5px]">
+                                <button class="btn btn-secondary font-normal text-[10px] 2xl:py-[7px] py-[5px] 2xl:px-6! px-5!">
                                     Add to Cart
                                 </button>
                             </div>
@@ -139,7 +139,7 @@
                                 </div>
 
                                 <p class="text-[#2D2D2DCC] p2">$49.98</p>
-                                <button class="btn btn-secondary font-normal text-[10px] 2xl:py-[7px] py-[5px]">
+                                <button class="btn btn-secondary font-normal text-[10px] 2xl:py-[7px] py-[5px] 2xl:px-6! px-5!">
                                     Add to Cart
                                 </button>
                             </div>
@@ -167,7 +167,7 @@
             <!-- ============================= -->
             <div id="cartSidebar"
                 class="fixed top-0 right-0 h-screen w-auto translate-x-full transition-transform duration-300 z-999999 flex flex-col items-end">
-                <div class="bg-white flex flex-col h-screen w-full 2xl:max-w-[440px] max-w-[375px]">
+                <div class="bg-white flex flex-col h-screen w-full 2xl:max-w-[440px] sm:max-w-[375px] max-w-[320px]">
                     <!-- Header -->
                     <div class="flex items-center justify-between bg-whitesmoke-100 2xl:p-[22px] sm:p-[18px] px-4 py-3">
                         <h5 class="text-[#6F4E37] w-full uppercase">MY CART</h5>
@@ -183,7 +183,7 @@
                     </div>
 
                     <!-- CART ITEM -->
-                    <div class="2xl:px-[22px] px-4 overflow-y-auto scrollbar-custom">
+                    <div class="2xl:px-[22px] px-4 overflow-y-auto scrollbar-custom sm:max-h-[calc(100vh-14vh)] max-h-[calc(100vh-40vh)]">
                         <!-- Item 1 -->
                         <div class="flex 2xl:gap-5 gap-4 2xl:py-5 py-4 border-b border-[#673E2C33]">
                             <div
@@ -204,33 +204,33 @@
                                     </p>
 
                                     <!-- Quantity -->
-                                    <div
-                                        class="flex items-center justify-between 2xl:gap-[14px] gap-3 px-2 rounded-full border border-[#673E2C80]">
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
-                                                <path
-                                                    d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                        <span
-                                            class="text-[12px] uppercase font-medium 2xl:leading-[28px] leading-[23px]">1</span>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
-                                                <path
-                                                    d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                    </div>
+<div class="flex items-center justify-start">
+    <div
+        class="flex items-center justify-between 1xl:w-22 lt:w-20 sm:w-18 w-15.5 h-full rounded-full border border-bronco-100 sm:px-1.5 px-1">
+        <!-- Minus -->
+        <button type="button" id="decrease" class="text-[#6B3F2A] hover:opacity-70">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                class="2xl:size-6 sm:size-5 size-4">
+                <path d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927" stroke="#673E2C"
+                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+
+        <!-- Quantity -->
+        <p id="quantity" class="sm:text-xs text-[10px] xl:leading-[29px] sm:leading-[27px] leading-[22px] select-none">1</p>
+
+        <!-- Plus -->
+        <button type="button" id="increase" class="text-[#6B3F2A] hover:opacity-70">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                class="2xl:size-6 sm:size-5 size-4">
+                <path d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927" stroke="#673E2C"
+                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357" stroke="#673E2C"
+                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+</div>
                                 </div>
 
                                 <div class="flex items-center justify-between">
@@ -286,33 +286,33 @@
                                     </p>
 
                                     <!-- Quantity -->
-                                    <div
-                                        class="flex items-center justify-between 2xl:gap-[14px] gap-3 px-2 rounded-full border border-[#673E2C80]">
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
-                                                <path
-                                                    d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                        <span
-                                            class="text-[12px] uppercase font-medium 2xl:leading-[28px] leading-[23px]">1</span>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
-                                                <path
-                                                    d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                    </div>
+<div class="flex items-center justify-start">
+    <div
+        class="flex items-center justify-between 1xl:w-22 lt:w-20 sm:w-18 w-15.5 h-full rounded-full border border-bronco-100 sm:px-1.5 px-1">
+        <!-- Minus -->
+        <button type="button" id="decrease" class="text-[#6B3F2A] hover:opacity-70">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                class="2xl:size-6 sm:size-5 size-4">
+                <path d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927" stroke="#673E2C"
+                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+
+        <!-- Quantity -->
+        <p id="quantity" class="sm:text-xs text-[10px] xl:leading-[29px] sm:leading-[27px] leading-[22px] select-none">1</p>
+
+        <!-- Plus -->
+        <button type="button" id="increase" class="text-[#6B3F2A] hover:opacity-70">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                class="2xl:size-6 sm:size-5 size-4">
+                <path d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927" stroke="#673E2C"
+                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357" stroke="#673E2C"
+                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+</div>
                                 </div>
 
                                 <div class="flex items-center justify-between">
@@ -368,33 +368,33 @@
                                     </p>
 
                                     <!-- Quantity -->
-                                    <div
-                                        class="flex items-center justify-between 2xl:gap-[14px] gap-3 px-2 rounded-full border border-[#673E2C80]">
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
-                                                <path
-                                                    d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                        <span
-                                            class="text-[12px] uppercase font-medium 2xl:leading-[28px] leading-[23px]">1</span>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
-                                                <path
-                                                    d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                    </div>
+<div class="flex items-center justify-start">
+    <div
+        class="flex items-center justify-between 1xl:w-22 lt:w-20 sm:w-18 w-15.5 h-full rounded-full border border-bronco-100 sm:px-1.5 px-1">
+        <!-- Minus -->
+        <button type="button" id="decrease" class="text-[#6B3F2A] hover:opacity-70">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                class="2xl:size-6 sm:size-5 size-4">
+                <path d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927" stroke="#673E2C"
+                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+
+        <!-- Quantity -->
+        <p id="quantity" class="sm:text-xs text-[10px] xl:leading-[29px] sm:leading-[27px] leading-[22px] select-none">1</p>
+
+        <!-- Plus -->
+        <button type="button" id="increase" class="text-[#6B3F2A] hover:opacity-70">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                class="2xl:size-6 sm:size-5 size-4">
+                <path d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927" stroke="#673E2C"
+                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357" stroke="#673E2C"
+                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+</div>
                                 </div>
 
                                 <div class="flex items-center justify-between">
@@ -446,33 +446,33 @@
                                     </p>
 
                                     <!-- Quantity -->
-                                    <div
-                                        class="flex items-center justify-between 2xl:gap-[14px] gap-3 px-2 rounded-full border border-[#673E2C80]">
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
-                                                <path
-                                                    d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                        <span
-                                            class="text-[12px] uppercase font-medium 2xl:leading-[28px] leading-[23px]">1</span>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
-                                                <path
-                                                    d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                    </div>
+<div class="flex items-center justify-start">
+    <div
+        class="flex items-center justify-between 1xl:w-22 lt:w-20 sm:w-18 w-15.5 h-full rounded-full border border-bronco-100 sm:px-1.5 px-1">
+        <!-- Minus -->
+        <button type="button" id="decrease" class="text-[#6B3F2A] hover:opacity-70">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                class="2xl:size-6 sm:size-5 size-4">
+                <path d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927" stroke="#673E2C"
+                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+
+        <!-- Quantity -->
+        <p id="quantity" class="sm:text-xs text-[10px] xl:leading-[29px] sm:leading-[27px] leading-[22px] select-none">1</p>
+
+        <!-- Plus -->
+        <button type="button" id="increase" class="text-[#6B3F2A] hover:opacity-70">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                class="2xl:size-6 sm:size-5 size-4">
+                <path d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927" stroke="#673E2C"
+                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357" stroke="#673E2C"
+                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+</div>
                                 </div>
 
                                 <div class="flex items-center justify-between">
@@ -539,7 +539,8 @@
                         <div
                             class="w-full 2xl:max-w-[183px] xl:max-w-[170px] lg:max-w-[150px] md:max-w-[130px] max-w-[113px] site-logo 2xl:py-5 lg:py-4 sm:py-3.5 py-2">
                             <a href="#" class="block w-full">
-                                <img src="../image/main-logo-white.svg" alt="Pranavya" class="w-full h-auto" />
+                                <img src="../image/main-logo-white.svg" alt="Pranavya" class="w-full h-auto"
+                                    decoding="async" />
                             </a>
                         </div>
                         <!-- ====== Mobile Menu (Offcanvas) ====== -->
@@ -550,7 +551,7 @@
                                 class="min-[1221px]:hidden flex items-center justify-between py-4 border-b border-primary/20">
                                 <div class="w-fit h-9">
                                     <img src="../image/main-logo-black.svg" alt="Pranavya"
-                                        class="h-full w-auto object-contain" />
+                                        class="h-full w-auto object-contain" decoding="async" />
                                 </div>
                                 <button name="close" aria-label="Close menu" class="text-thunder-100">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
@@ -564,7 +565,7 @@
                             </div>
                             <!-- Navigation -->
                             <nav
-                                class="max :overflow-y-auto max-[1221px]:h-[calc(100vh-21vh)] max-sm:h-[calc(100vh-15vh)] max-lt:pb-6">
+                                class="max:overflow-y-auto max-[1221px]:h-[calc(100vh-21vh)] max-sm:h-[calc(100vh-15vh)] max-lt:pb-6">
                                 <ul
                                     class="min-[1221px]:flex [1220px]:items-center max-[1221px]:divide-y max-[1221px]:divide-primary/20 h-[calc(100%-7%)]">
                                     <li>
@@ -590,7 +591,7 @@
                                                 <div
                                                     class="min-[1221px]:mt-0 sm:mt-6 mt-5 bg-white rounded-b-[10px] 2xl:p-[30px] min-[1221px]:p-6 mx-auto pointer-events-auto mega-menu sm:px-0 px-4">
                                                     <div
-                                                        class="grid grid-cols-1 sm:grid-cols-2 lt:grid-cols-3 lg:grid-cols-4 1xl:gap-10 gap-7 overflow-y-auto max-h-[calc(100vh-21vh)] scrollbar-custom">
+                                                        class="grid grid-cols-1 sm:grid-cols-2 lt:grid-cols-3 lg:grid-cols-4 1xl:gap-10 sm:gap-7 gap-4 overflow-y-auto max-h-[calc(100vh-21vh)] scrollbar-custom">
                                                         <div class="w-full rounded-sm border-2 border-primary">
                                                             <a href="./index.html"
                                                                 class="h-full block overflow-hidden border border-primary">
@@ -1779,7 +1780,7 @@
                                                 </svg>
                                             </a>
                                             <div
-                                                class="2xl:min-w-[256px] min-w-[185px] w-full min-[1221px]:absolute min-[1221px]:right-0 min-[1221px]:top-full hidden group-hover:block z-60 sm:top-0 top-[6px] mega-panel pt-px">
+                                                class="1xl:min-w-[256px] min-w-[200px] w-full min-[1221px]:absolute min-[1221px]:right-0 min-[1221px]:top-full hidden group-hover:block z-60 sm:top-0 top-[6px] mega-panel pt-px">
                                                 <div
                                                     class="min-[1221px]:mt-0 sm:mt-6 mt-5 bg-white min-[1221px]:rounded-b-[10px] lg:py-5 pb-5 mx-auto pointer-events-auto max-[1221px]:px-4">
                                                     <ul class="flex flex-col space-y-1">
@@ -1821,7 +1822,7 @@
                                                                 <ul class="bg-white 2xl:p-4 p-2 rounded-[10px]">
                                                                     <li>
                                                                         <p>
-                                                                            <a href="./classes-1.html"
+                                                                            <a href="./classes.html"
                                                                                 class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
                                                                                 Class 01
                                                                             </a>
@@ -2063,15 +2064,68 @@
                                                                 </a>
                                                             </p>
                                                         </li>
-                                                        <!-- 404 -->
-                                                        <li>
-                                                            <p>
-                                                                <a href="./404.html"
-                                                                    class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
-                                                                    404
-                                                                </a>
-                                                            </p>
+                                                        <!-- Empty -->
+                                                        <li class="group relative">
+                                                            <a href="javascript:;"
+                                                                class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
+                                                                <p>Empty Pages</p>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                    height="24" viewBox="0 0 24 24" fill="none">
+                                                                    <path d="M11 8.56055L15 12.5609L11 16.5605"
+                                                                        stroke="currentColor" stroke-width="1.3"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </a>
+                                                            <div
+                                                                class="absolute left-full top-0 hidden group-hover:block rounded-[10px] z-60 2xl:min-w-55 min-w-47 2xl:pl-3 pl-2 min-h-[170px] h-full overflow-auto">
+                                                                <span
+                                                                    class="absolute 2xl:left-1 left-[2px] right-auto top-6 2xl:w-4 2xl:h-4 w-3.5 h-3.5 rounded-xs bg-white rotate-45 sm:border border-gray-200 z-[-1] min-[1221px]:block hidden"></span>
+                                                                <ul class="bg-white 2xl:p-4 p-2 rounded-[10px]">
+                                                                    <li>
+                                                                        <p>
+                                                                            <a href="./empty-cart.html"
+                                                                                class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
+                                                                                Cart
+                                                                            </a>
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>
+                                                                            <a href="./empty-wishlist.html"
+                                                                                class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
+                                                                                Wishlist
+                                                                            </a>
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>
+                                                                            <a href="./confirm-order.html"
+                                                                                class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
+                                                                                Confirm Order
+                                                                            </a>
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>
+                                                                            <a href="./404.html"
+                                                                                class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
+                                                                                404
+                                                                            </a>
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>
+                                                                            <a href="./thank-you.html"
+                                                                                class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
+                                                                                Thank You
+                                                                            </a>
+                                                                        </p>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </li>
+
                                                     </ul>
                                                 </div>
                                             </div>
@@ -2082,8 +2136,7 @@
                                     class="sticky bottom-0 top-auto sm:hidden flex items-center justify-between gap-2 bg-white">
                                     <a href="javascript:void(0)" id="openWishlistMobile"
                                         class="btn btn-primary lg:inline-block w-full">Wishlist</a>
-                                    <a href="./login.html"
-                                        class="btn btn-secondary bg-white lg:inline-block w-full">login</a>
+                                    <a href="./login.html" class="btn btn-secondary lg:inline-block w-full">login</a>
                                 </div>
                             </nav>
                         </aside>
@@ -2706,7 +2759,7 @@
                                 </button>
                             </div>
                             <div class="lg:mt-10 mt-5">
-                                <a href="./classes.html" class="btn btn-secondary bg-white">explore More class</a>
+                                <a href="./classes.html" class="btn btn-secondary">explore More class</a>
                             </div>
                         </div>
                     </div>
@@ -2972,7 +3025,7 @@
                     <!-- Tables by Day -->
                     <div class="xl:mt-8 mt-5">
                         <!-- Sunday Table -->
-                        <div id="sun" class="schedule-panel">
+                        <div id="sun" class="schedule-panel ">
                             <div class="overflow-x-auto lt:space-y-0 sm:space-y-6 space-y-4">
                                 <!-- 1st row -->
                                 <div
@@ -3397,7 +3450,7 @@
                         </div>
 
                         <!-- Monday Table -->
-                        <div id="mon" class="schedule-panel hidden">
+                        <div id="mon" class="schedule-panel  hidden">
                             <div class="overflow-x-auto lt:space-y-0 sm:space-y-6 space-y-4">
                                 <!-- 1st row -->
                                 <div
@@ -3822,7 +3875,7 @@
                         </div>
 
                         <!-- Tuesday Table -->
-                        <div id="tue" class="schedule-panel hidden">
+                        <div id="tue" class="schedule-panel  hidden">
                             <div class="overflow-x-auto lt:space-y-0 sm:space-y-6 space-y-4">
                                 <!-- 1st row -->
                                 <div
@@ -4247,7 +4300,7 @@
                         </div>
 
                         <!-- Wednesday Table -->
-                        <div id="wed" class="schedule-panel hidden">
+                        <div id="wed" class="schedule-panel  hidden">
                             <div class="overflow-x-auto lt:space-y-0 sm:space-y-6 space-y-4">
                                 <!-- 1st row -->
                                 <div
@@ -4672,7 +4725,7 @@
                         </div>
 
                         <!-- Thursday Table -->
-                        <div id="thu" class="schedule-panel hidden">
+                        <div id="thu" class="schedule-panel  hidden">
                             <div class="overflow-x-auto lt:space-y-0 sm:space-y-6 space-y-4">
                                 <!-- 1st row -->
                                 <div
@@ -5097,7 +5150,7 @@
                         </div>
 
                         <!-- Friday Table -->
-                        <div id="fri" class="schedule-panel hidden">
+                        <div id="fri" class="schedule-panel  hidden">
                             <div class="overflow-x-auto lt:space-y-0 sm:space-y-6 space-y-4">
                                 <!-- 1st row -->
                                 <div
@@ -5522,7 +5575,7 @@
                         </div>
 
                         <!-- Saturday Table -->
-                        <div id="sat" class="schedule-panel hidden">
+                        <div id="sat" class="schedule-panel  hidden">
                             <div class="overflow-x-auto lt:space-y-0 sm:space-y-6 space-y-4">
                                 <!-- 1st row -->
                                 <div
@@ -6173,7 +6226,7 @@
         <section class="relative 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10 bg-white">
             <div class="container">
                 <div
-                    class="grid items-center md:grid-cols-2 grid-cols-1 2xl:gap-10 1xl:gap-9 xl:gap-8 lg:gap-7 md:gap-6 sm:gap-5 gap-4 2xl:mb-12.5 1xl:mb-12 xl:mb-11 lg:mb-10 md:mb-9 sm:mb-8 mb-7.5">
+                    class="grid items-center lt:grid-cols-2 grid-cols-1 2xl:gap-10 1xl:gap-9 xl:gap-8 lg:gap-7 lt:gap-6 gap-4 2xl:mb-12.5 1xl:mb-12 xl:mb-11 lg:mb-10 md:mb-9 sm:mb-8 mb-7.5">
                     <div class="max-w-[780px]">
                         <h3 class="text-thunder-100 font-primary italic font-medium 1xl:mb-6 sm:mb-4 mb-2.5">
                             Blog & Insights
@@ -6195,7 +6248,7 @@
 
                 <!-- Featured Post Row -->
                 <div
-                    class="grid lt:grid-cols-1 sm:grid-cols-2 grid-cols-1   2xl:gap-12.5 1xl:gap-10 xl:gap-9 md:gap-8 gap-5">
+                    class="grid lt:grid-cols-1 sm:grid-cols-2 grid-cols-1 2xl:gap-12.5 1xl:gap-10 xl:gap-9 lt:gap-8 md:gap-6 gap-5">
                     <!-- 1ST BLOG -->
                     <div class="flex lt:flex-row flex-col-reverse lt:justify-normal justify-end border border-primary/40 bg-white rounded group/blog"
                         data-aos="fade-up">
@@ -6543,7 +6596,8 @@
                             <div
                                 class="w-full 2xl:max-w-[332px] 1xl:max-w-[300px] lg:max-w-[230px] md:max-w-[200px] sm:max-w-[180px] max-w-[150px]">
                                 <a href="#" class="block w-full">
-                                    <img src="../image/main-logo-black.svg" alt="Pranavya" class="w-full h-auto" />
+                                    <img src="../image/main-logo-black.svg" alt="Pranavya" class="w-full h-auto"
+                                        decoding="async" />
                                 </a>
                             </div>
                             <p class="xl:text-start lt:text-center text-start">
@@ -6755,7 +6809,9 @@
     <script src="../js/custom.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script defer>
-        AOS.init();
+        AOS.init({
+            offset: 60,
+        });
     </script>
 </body>
 

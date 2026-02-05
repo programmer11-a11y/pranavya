@@ -5,24 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yoga Html</title>
-    <link rel="icon" type="image/x-icon" href="image/favicon.png" />
-
-    <!-- Magnific Popup Js & CSS  -->
-    <link rel="stylesheet" href="../css/magnific-popup.min.css" />
-    <!-- Magnific Popup Js & CSS  -->
-
-    <!-- Swiper Slider Js & CSS  -->
-    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
-    <!-- Swiper Slider Js & CSS  -->
-
-    <!-- font-awosome Js & CSS -->
-    <link rel="stylesheet" type="text/css" href="../css/all.min.css" />
-    <!-- font-awosome Js & CSS -->
-
-    <!-- style.css -->
+    <link rel="icon" type="../image/x-icon" href="../image/favicon.png" />
+    <link rel="preload" href="../css/magnific-popup.min.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="../css/swiper-bundle.min.css" as="style" onload="this.rel='stylesheet'">
     <link rel="stylesheet" href="../../dist/output.css">
-
-    <!-- style.css -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -36,7 +23,7 @@
             <!-- ============================= -->
             <div id="wishlistSidebar"
                 class="fixed top-0 right-0 h-screen w-auto translate-x-full transition-transform duration-300 z-999999 flex flex-col items-end">
-                <div class="bg-white flex flex-col h-screen w-full 2xl:max-w-[440px] max-w-[375px]">
+                <div class="bg-white flex flex-col h-screen w-full 2xl:max-w-[440px] sm:max-w-[375px] max-w-[320px]">
                     <!-- Header -->
                     <div class="flex items-center justify-between bg-whitesmoke-100 2xl:p-[22px] sm:p-[18px] px-4 py-3">
                         <h5 class="text-[#6F4E37] w-full uppercase">My Wishlist</h5>
@@ -57,8 +44,7 @@
                         <div class="flex 2xl:gap-5 gap-4 2xl:py-5 py-4 border-b border-[#673E2C33]">
                             <div
                                 class="bg-[#E0E0E0] rounded-sm p-[10px] border border-[#F4F1EF] relative 2xl:h-[150px] lt:h-[120px] h-[132px] 2xl:w-[120px] w-[110px] flex items-center justify-center group">
-                                <img decoding="async" src="../image/nav-product-1.webp" alt="product-1"
-                                    class="w-auto h-auto" />
+                                <img src="../image/nav-product-1.webp" alt="product-1" class="w-auto h-auto" />
                             </div>
 
                             <div class="flex-1 2xl:space-y-2 space-y-1">
@@ -82,7 +68,7 @@
                                 </div>
 
                                 <p class="text-[#2D2D2DCC] p2">$138.00</p>
-                                <button class="btn btn-secondary font-normal text-[10px] 2xl:py-[7px] py-[5px]">
+                                <button class="btn btn-secondary font-normal text-[10px] 2xl:py-[7px] py-[5px] 2xl:px-6! px-5!">
                                     Add to Cart
                                 </button>
                             </div>
@@ -92,8 +78,7 @@
                         <div class="flex 2xl:gap-5 gap-4 2xl:py-5 py-4 border-b border-[#673E2C33]">
                             <div
                                 class="bg-[#E0E0E0] rounded-sm 2xl:p-[10px] p-2 border border-[#F4F1EF] relative 2xl:h-[150px] lt:h-[120px] h-[132px] 2xl:w-[120px] w-[110px] flex items-center justify-center group/shop">
-                                <img decoding="async" src="../image/nav-product-2.webp" alt="product-1"
-                                    class="w-auto h-auto" />
+                                <img src="../image/nav-product-2.webp" alt="product-1" class="w-auto h-auto" />
                             </div>
 
                             <div class="flex-1 2xl:space-y-2 space-y-1">
@@ -117,7 +102,7 @@
                                 </div>
 
                                 <p class="text-[#2D2D2DCC] p2">$49.98</p>
-                                <button class="btn btn-secondary font-normal text-[10px] 2xl:py-[7px] py-[5px]">
+                                <button class="btn btn-secondary font-normal text-[10px] 2xl:py-[7px] py-[5px] 2xl:px-6! px-5!">
                                     Add to Cart
                                 </button>
                             </div>
@@ -127,8 +112,7 @@
                         <div class="flex 2xl:gap-5 gap-4 2xl:py-5 py-4 border-b border-[#673E2C33]">
                             <div
                                 class="bg-[#E0E0E0] rounded-sm 2xl:p-[10px] p-2 border border-[#F4F1EF] relative 2xl:h-[150px] lt:h-[120px] h-[132px] 2xl:w-[120px] w-[110px] flex items-center justify-center group/shop">
-                                <img decoding="async" src="../image/nav-product-3.webp" alt="product-1"
-                                    class="w-auto h-auto" />
+                                <img src="../image/nav-product-3.webp" alt="product-1" class="w-auto h-auto" />
                             </div>
 
                             <div class="flex-1 2xl:space-y-2 space-y-1">
@@ -152,7 +136,7 @@
                                 </div>
 
                                 <p class="text-[#2D2D2DCC] p2">$49.98</p>
-                                <button class="btn btn-secondary font-normal text-[10px] 2xl:py-[7px] py-[5px]">
+                                <button class="btn btn-secondary font-normal text-[10px] 2xl:py-[7px] py-[5px] 2xl:px-6! px-5!">
                                     Add to Cart
                                 </button>
                             </div>
@@ -163,11 +147,11 @@
                     <div class="mt-auto pt-6 sticky bottom-5 bg-white 2xl:px-[22px] px-4">
                         <!-- Buttons -->
                         <div class="flex flex-col 2xl:gap-6 gap-4">
-                            <a href="./cart.html" class="btn btn-secondary w-full 2xl:text-18 text-15 font-normal">
-                                View Cart
-                            </a>
-                            <a href="./checkout.html" class="btn btn-secondary w-full 2xl:text-18 text-15 font-normal">
-                                Checkout
+                            <button class="btn btn-secondary w-full 2xl:text-18 text-15 font-normal">
+                                Move All to Cart
+                            </button>
+                            <a href="./wishlist.html" class="btn btn-secondary w-full 2xl:text-18 text-15 font-normal">
+                                View Full Wishlist
                             </a>
                         </div>
                     </div>
@@ -179,7 +163,7 @@
             <!-- ============================= -->
             <div id="cartSidebar"
                 class="fixed top-0 right-0 h-screen w-auto translate-x-full transition-transform duration-300 z-999999 flex flex-col items-end">
-                <div class="bg-white flex flex-col h-screen w-full 2xl:max-w-[440px] max-w-[375px]">
+                <div class="bg-white flex flex-col h-screen w-full 2xl:max-w-[440px] sm:max-w-[375px] max-w-[320px]">
                     <!-- Header -->
                     <div class="flex items-center justify-between bg-whitesmoke-100 2xl:p-[22px] sm:p-[18px] px-4 py-3">
                         <h5 class="text-[#6F4E37] w-full uppercase">MY CART</h5>
@@ -195,13 +179,12 @@
                     </div>
 
                     <!-- CART ITEM -->
-                    <div class="2xl:px-[22px] px-4 overflow-y-auto scrollbar-custom">
+                    <div class="2xl:px-[22px] px-4 overflow-y-auto scrollbar-custom sm:max-h-[calc(100vh-14vh)] max-h-[calc(100vh-40vh)]">
                         <!-- Item 1 -->
                         <div class="flex 2xl:gap-5 gap-4 2xl:py-5 py-4 border-b border-[#673E2C33]">
                             <div
                                 class="bg-[#E0E0E0] rounded-sm 2xl:p-[10px] p-2 border border-[#F4F1EF] relative 2xl:h-[150px] lt:h-[120px] h-[132px] 2xl:w-[120px] w-[110px] flex items-center justify-center group/shop">
-                                <img decoding="async" src="../image/nav-product-1.webp" alt="product-1"
-                                    class="w-auto h-auto" />
+                                <img src="../image/nav-product-1.webp" alt="product-1" class="w-auto h-auto" />
                             </div>
 
                             <div class="flex-1 2xl:space-y-3 space-y-2">
@@ -217,33 +200,33 @@
                                     </p>
 
                                     <!-- Quantity -->
-                                    <div
-                                        class="flex items-center justify-between 2xl:gap-[14px] gap-3 px-2 rounded-full border border-[#673E2C80]">
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
-                                                <path
-                                                    d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                        <span
-                                            class="text-[12px] uppercase font-medium 2xl:leading-[28px] leading-[23px]">1</span>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
-                                                <path
-                                                    d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                    </div>
+<div class="flex items-center justify-start">
+    <div
+        class="flex items-center justify-between 1xl:w-22 lt:w-20 sm:w-18 w-15.5 h-full rounded-full border border-bronco-100 sm:px-1.5 px-1">
+        <!-- Minus -->
+        <button type="button" id="decrease" class="text-[#6B3F2A] hover:opacity-70">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                class="2xl:size-6 sm:size-5 size-4">
+                <path d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927" stroke="#673E2C"
+                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+
+        <!-- Quantity -->
+        <p id="quantity" class="sm:text-xs text-[10px] xl:leading-[29px] sm:leading-[27px] leading-[22px] select-none">1</p>
+
+        <!-- Plus -->
+        <button type="button" id="increase" class="text-[#6B3F2A] hover:opacity-70">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                class="2xl:size-6 sm:size-5 size-4">
+                <path d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927" stroke="#673E2C"
+                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357" stroke="#673E2C"
+                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+</div>
                                 </div>
 
                                 <div class="flex items-center justify-between">
@@ -283,8 +266,7 @@
                         <div class="flex 2xl:gap-5 gap-4 2xl:py-5 py-4 border-b border-[#673E2C33]">
                             <div
                                 class="bg-[#E0E0E0] rounded-sm 2xl:p-[10px] p-2 border border-[#F4F1EF] relative 2xl:h-[150px] lt:h-[120px] h-[132px] 2xl:w-[120px] w-[110px] flex items-center justify-center group/shop">
-                                <img decoding="async" src="../image/nav-product-2.webp" alt="product-1"
-                                    class="w-auto h-auto" />
+                                <img src="../image/nav-product-2.webp" alt="product-1" class="w-auto h-auto" />
                             </div>
 
                             <div class="flex-1 2xl:space-y-3 space-y-2">
@@ -300,33 +282,33 @@
                                     </p>
 
                                     <!-- Quantity -->
-                                    <div
-                                        class="flex items-center justify-between 2xl:gap-[14px] gap-3 px-2 rounded-full border border-[#673E2C80]">
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
-                                                <path
-                                                    d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                        <span
-                                            class="text-[12px] uppercase font-medium 2xl:leading-[28px] leading-[23px]">1</span>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
-                                                <path
-                                                    d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                    </div>
+<div class="flex items-center justify-start">
+    <div
+        class="flex items-center justify-between 1xl:w-22 lt:w-20 sm:w-18 w-15.5 h-full rounded-full border border-bronco-100 sm:px-1.5 px-1">
+        <!-- Minus -->
+        <button type="button" id="decrease" class="text-[#6B3F2A] hover:opacity-70">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                class="2xl:size-6 sm:size-5 size-4">
+                <path d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927" stroke="#673E2C"
+                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+
+        <!-- Quantity -->
+        <p id="quantity" class="sm:text-xs text-[10px] xl:leading-[29px] sm:leading-[27px] leading-[22px] select-none">1</p>
+
+        <!-- Plus -->
+        <button type="button" id="increase" class="text-[#6B3F2A] hover:opacity-70">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                class="2xl:size-6 sm:size-5 size-4">
+                <path d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927" stroke="#673E2C"
+                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357" stroke="#673E2C"
+                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+</div>
                                 </div>
 
                                 <div class="flex items-center justify-between">
@@ -366,8 +348,7 @@
                         <div class="flex 2xl:gap-5 gap-4 2xl:py-5 py-4 border-b border-[#673E2C33]">
                             <div
                                 class="bg-[#E0E0E0] rounded-sm 2xl:p-[10px] p-2 border border-[#F4F1EF] relative 2xl:h-[150px] lt:h-[120px] h-[132px] 2xl:w-[120px] w-[110px] flex items-center justify-center group/shop">
-                                <img decoding="async" src="../image/nav-product-3.webp" alt="product-1"
-                                    class="w-auto h-auto" />
+                                <img src="../image/nav-product-3.webp" alt="product-1" class="w-auto h-auto" />
                             </div>
 
                             <div class="flex-1 2xl:space-y-3 space-y-2">
@@ -383,33 +364,33 @@
                                     </p>
 
                                     <!-- Quantity -->
-                                    <div
-                                        class="flex items-center justify-between 2xl:gap-[14px] gap-3 px-2 rounded-full border border-[#673E2C80]">
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
-                                                <path
-                                                    d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                        <span
-                                            class="text-[12px] uppercase font-medium 2xl:leading-[28px] leading-[23px]">1</span>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
-                                                <path
-                                                    d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                    </div>
+<div class="flex items-center justify-start">
+    <div
+        class="flex items-center justify-between 1xl:w-22 lt:w-20 sm:w-18 w-15.5 h-full rounded-full border border-bronco-100 sm:px-1.5 px-1">
+        <!-- Minus -->
+        <button type="button" id="decrease" class="text-[#6B3F2A] hover:opacity-70">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                class="2xl:size-6 sm:size-5 size-4">
+                <path d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927" stroke="#673E2C"
+                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+
+        <!-- Quantity -->
+        <p id="quantity" class="sm:text-xs text-[10px] xl:leading-[29px] sm:leading-[27px] leading-[22px] select-none">1</p>
+
+        <!-- Plus -->
+        <button type="button" id="increase" class="text-[#6B3F2A] hover:opacity-70">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                class="2xl:size-6 sm:size-5 size-4">
+                <path d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927" stroke="#673E2C"
+                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357" stroke="#673E2C"
+                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+</div>
                                 </div>
 
                                 <div class="flex items-center justify-between">
@@ -449,8 +430,7 @@
                         <div class="flex 2xl:gap-5 gap-4 2xl:py-5 py-4 border-b border-[#673E2C33]">
                             <div
                                 class="bg-[#E0E0E0] rounded-sm 2xl:p-[10px] p-2 border border-[#F4F1EF] relative 2xl:h-[150px] lt:h-[120px] h-[132px] 2xl:w-[120px] w-[110px] flex items-center justify-center group/shop">
-                                <img decoding="async" src="../image/gift-card.webp" alt="product-1"
-                                    class="w-auto h-auto" />
+                                <img src="../image/gift-card.webp" alt="product-1" class="w-auto h-auto" />
                             </div>
 
                             <div class="flex-1 2xl:space-y-3 space-y-2">
@@ -462,33 +442,33 @@
                                     </p>
 
                                     <!-- Quantity -->
-                                    <div
-                                        class="flex items-center justify-between 2xl:gap-[14px] gap-3 px-2 rounded-full border border-[#673E2C80]">
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
-                                                <path
-                                                    d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                        <span
-                                            class="text-[12px] uppercase font-medium 2xl:leading-[28px] leading-[23px]">1</span>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
-                                                <path
-                                                    d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                    </div>
+<div class="flex items-center justify-start">
+    <div
+        class="flex items-center justify-between 1xl:w-22 lt:w-20 sm:w-18 w-15.5 h-full rounded-full border border-bronco-100 sm:px-1.5 px-1">
+        <!-- Minus -->
+        <button type="button" id="decrease" class="text-[#6B3F2A] hover:opacity-70">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                class="2xl:size-6 sm:size-5 size-4">
+                <path d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927" stroke="#673E2C"
+                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+
+        <!-- Quantity -->
+        <p id="quantity" class="sm:text-xs text-[10px] xl:leading-[29px] sm:leading-[27px] leading-[22px] select-none">1</p>
+
+        <!-- Plus -->
+        <button type="button" id="increase" class="text-[#6B3F2A] hover:opacity-70">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                class="2xl:size-6 sm:size-5 size-4">
+                <path d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927" stroke="#673E2C"
+                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357" stroke="#673E2C"
+                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </button>
+    </div>
+</div>
                                 </div>
 
                                 <div class="flex items-center justify-between">
@@ -552,9 +532,8 @@
                         <!-- Logo -->
                         <div
                             class="w-full 2xl:max-w-[183px] xl:max-w-[170px] lg:max-w-[150px] md:max-w-[130px] max-w-[113px] site-logo 2xl:py-5 lg:py-4 sm:py-3.5 py-2">
-                            <a href="./index-4.html" class="block w-full">
-                                <img decoding="async" src="image/main-logo-white.svg" alt="Pranavya"
-                                    class="w-full h-auto" />
+                            <a href="./index-2.html" class="block w-full">
+                                <img src="../image/main-logo-white.svg" alt="Pranavya" class="w-full h-auto" />
                             </a>
                         </div>
                         <!-- ====== Mobile Menu (Offcanvas) ====== -->
@@ -562,8 +541,8 @@
                             class="mainmenu max-[1221px]:fixed max-[1221px]:h-screen max-[1221px]:inset-y-0 max-[1221px]:left-0 max-[1221px]:top-0 max-[1221px]:z-60 max-[1221px]:w-screen max-[1221px]:max-w-screen max-[1221px]:bg-white max-[1221px]:border-r max-[1221px]:border-primary/20 max-[1221px]:transition-transform max-[1221px]:duration-300 max-[1221px]:ease-in-out min-[1221px]:px-0 px-4">
                             <div
                                 class="min-[1221px]:hidden flex items-center justify-between py-4 border-b border-primary/20">
-                                <div class="w-full h-9">
-                                    <img decoding="async" src="image/main-logo-black.svg" alt="Pranavya"
+                                <div class="w-fit h-9">
+                                    <img src="../image/main-logo-black.svg" alt="Pranavya"
                                         class="h-full w-auto object-contain" />
                                 </div>
                                 <button name="close" aria-label="Close menu" class="text-thunder-100">
@@ -578,7 +557,7 @@
                             </div>
                             <!-- Navigation -->
                             <nav
-                                class="max :overflow-y-auto max-[1221px]:h-[calc(100vh-21vh)] max-sm:h-[calc(100vh-15vh)] max-lt:pb-6">
+                                class="max:overflow-y-auto max-[1221px]:h-[calc(100vh-21vh)] max-sm:h-[calc(100vh-15vh)] max-lt:pb-6">
                                 <ul
                                     class="min-[1221px]:flex [1220px]:items-center max-[1221px]:divide-y max-[1221px]:divide-primary/20 h-[calc(100%-7%)]">
                                     <li>
@@ -604,13 +583,12 @@
                                                 <div
                                                     class="min-[1221px]:mt-0 sm:mt-6 mt-5 bg-white rounded-b-[10px] 2xl:p-[30px] min-[1221px]:p-6 sm:px-6 px-5 mx-auto pointer-events-auto mega-menu">
                                                     <div
-                                                        class="grid grid-cols-1 sm:grid-cols-2 lt:grid-cols-3 lg:grid-cols-4 1xl:gap-10 gap-7 overflow-y-auto max-h-[calc(100vh-21vh)] scrollbar-custom">
+                                                        class="grid grid-cols-1 sm:grid-cols-2 lt:grid-cols-3 lg:grid-cols-4 1xl:gap-10 sm:gap-7 gap-4 overflow-y-auto max-h-[calc(100vh-21vh)] scrollbar-custom">
                                                         <div class="w-full rounded-sm border-2 border-primary">
                                                             <a href="./index.html"
                                                                 class="h-full block overflow-hidden border border-primary">
                                                                 <div class="relative h-full group/backdrop">
-                                                                    <img decoding="async" src="../image/home-menu-1.webp"
-                                                                        alt="Home 1"
+                                                                    <img src="../image/home-menu-1.webp" alt="Home 1"
                                                                         class="w-full h-full object-cover transition-all duration-300 group-hover/backdrop:scale-105" />
                                                                     <div
                                                                         class="absolute inset-0 group-hover/backdrop:bg-black/69 bg-black/0 transition-all decoration-300">
@@ -629,8 +607,7 @@
                                                             <a href="./index-2.html"
                                                                 class="h-full block overflow-hidden border border-primary">
                                                                 <div class="relative h-full group/backdrop">
-                                                                    <img decoding="async" src="../image/home-menu-2.webp"
-                                                                        alt="Home 2"
+                                                                    <img src="../image/home-menu-2.webp" alt="Home 2"
                                                                         class="w-full h-full object-cover transition-all duration-300 group-hover/backdrop:scale-105" />
                                                                     <div
                                                                         class="absolute inset-0 group-hover/backdrop:bg-black/50 bg-black/0 transition-all decoration-300">
@@ -649,8 +626,7 @@
                                                             <a href="./index-3.html"
                                                                 class="h-full block overflow-hidden border border-primary">
                                                                 <div class="relative h-full group/backdrop">
-                                                                    <img decoding="async" src="../image/home-menu-3.webp"
-                                                                        alt="Home 3"
+                                                                    <img src="../image/home-menu-3.webp" alt="Home 3"
                                                                         class="w-full h-full object-cover transition-all duration-300 group-hover/backdrop:scale-105" />
                                                                     <div
                                                                         class="absolute inset-0 group-hover/backdrop:bg-black/50 bg-black/0 transition-all decoration-300">
@@ -669,8 +645,7 @@
                                                             <a href="./index-4.html"
                                                                 class="h-full block overflow-hidden border border-primary">
                                                                 <div class="relative h-full group/backdrop">
-                                                                    <img decoding="async" src="../image/home-menu-4.webp"
-                                                                        alt="Home 4"
+                                                                    <img src="../image/home-menu-4.webp" alt="Home 4"
                                                                         class="w-full h-full object-cover transition-all duration-300 group-hover/backdrop:scale-105" />
                                                                     <div
                                                                         class="absolute inset-0 group-hover/backdrop:bg-black/50 bg-black/0 transition-all decoration-300">
@@ -735,8 +710,7 @@
                                                         <!-- 1st class -->
                                                         <a href="./class-detail-1.html"
                                                             class="block overflow-hidden relative shrink-0 before:content-[''] before:pt-[119%] before:block w-full h-full group">
-                                                            <img decoding="async" src="../image/nav-class-1.webp"
-                                                                alt="Hatha Yoga"
+                                                            <img src="../image/nav-class-1.webp" alt="Hatha Yoga"
                                                                 class="w-full h-full object-cover absolute top-0 left-0 bottom-0 right-0 group-hover:scale-105 scale-100 transition-all ease-in-out duration-350" />
                                                             <div
                                                                 class="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent">
@@ -776,8 +750,7 @@
                                                         <!-- 2nd class -->
                                                         <a href="./class-detail-2.html"
                                                             class="block overflow-hidden relative shrink-0 before:content-[''] before:pt-[119%] before:block w-full h-full group">
-                                                            <img decoding="async" src="../image/nav-class-2.webp"
-                                                                alt="Vinyasa Flow"
+                                                            <img src="../image/nav-class-2.webp" alt="Vinyasa Flow"
                                                                 class="w-full h-full object-cover absolute top-0 left-0 bottom-0 right-0 group-hover:scale-105 scale-100 transition-all ease-in-out duration-350" />
                                                             <div
                                                                 class="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent">
@@ -817,8 +790,7 @@
                                                         <!-- 3rd class -->
                                                         <a href="./class-detail-3.html"
                                                             class="block overflow-hidden relative shrink-0 before:content-[''] before:pt-[119%] before:block w-full h-full group">
-                                                            <img decoding="async" src="../image/nav-class-3.webp"
-                                                                alt="Gentle Flow"
+                                                            <img src="../image/nav-class-3.webp" alt="Gentle Flow"
                                                                 class="w-full h-full object-cover absolute top-0 left-0 bottom-0 right-0 group-hover:scale-105 scale-100 transition-all ease-in-out duration-350" />
                                                             <div
                                                                 class="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent">
@@ -858,8 +830,7 @@
                                                         <!-- 4th class -->
                                                         <a href="./class-detail-4.html"
                                                             class="block overflow-hidden relative shrink-0 before:content-[''] before:pt-[119%] before:block w-full h-full group">
-                                                            <img decoding="async" src="../image/nav-class-4.webp"
-                                                                alt="Yin & Restore"
+                                                            <img src="../image/nav-class-4.webp" alt="Yin & Restore"
                                                                 class="w-full h-full object-cover absolute top-0 left-0 bottom-0 right-0 group-hover:scale-105 scale-100 transition-all ease-in-out duration-350" />
                                                             <div
                                                                 class="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent">
@@ -897,8 +868,7 @@
                                                         <!-- 5th class -->
                                                         <a href="./class-detail-5.html"
                                                             class="block overflow-hidden relative shrink-0 before:content-[''] before:pt-[119%] before:block w-full h-full group">
-                                                            <img decoding="async" src="../image/nav-class-5.webp"
-                                                                alt="Power Yoga"
+                                                            <img src="../image/nav-class-5.webp" alt="Power Yoga"
                                                                 class="w-full h-full object-cover absolute top-0 left-0 bottom-0 right-0 group-hover:scale-105 scale-100 transition-all ease-in-out duration-350" />
                                                             <div
                                                                 class="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent">
@@ -938,8 +908,7 @@
                                                         <!-- 6th class -->
                                                         <a href="./class-detail-6.html"
                                                             class="block overflow-hidden relative shrink-0 before:content-[''] before:pt-[119%] before:block w-full h-full group">
-                                                            <img decoding="async" src="../image/nav-class-1.webp"
-                                                                alt="Hatha Yoga"
+                                                            <img src="../image/nav-class-1.webp" alt="Hatha Yoga"
                                                                 class="w-full h-full object-cover absolute top-0 left-0 bottom-0 right-0 group-hover:scale-105 scale-100 transition-all ease-in-out duration-350" />
                                                             <div
                                                                 class="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent">
@@ -979,8 +948,7 @@
                                                         <!-- 7th class -->
                                                         <a href="./class-detail-7.html"
                                                             class="block overflow-hidden relative shrink-0 before:content-[''] before:pt-[119%] before:block w-full h-full group">
-                                                            <img decoding="async" src="../image/nav-class-2.webp"
-                                                                alt="Vinyasa Flow"
+                                                            <img src="../image/nav-class-2.webp" alt="Vinyasa Flow"
                                                                 class="w-full h-full object-cover absolute top-0 left-0 bottom-0 right-0 group-hover:scale-105 scale-100 transition-all ease-in-out duration-350" />
                                                             <div
                                                                 class="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent">
@@ -1020,8 +988,7 @@
                                                         <!-- 8th class -->
                                                         <a href="./class-detail-8.html"
                                                             class="block overflow-hidden relative shrink-0 before:content-[''] before:pt-[119%] before:block w-full h-full group">
-                                                            <img decoding="async" src="../image/nav-class-3.webp"
-                                                                alt="Gentle Flow"
+                                                            <img src="../image/nav-class-3.webp" alt="Gentle Flow"
                                                                 class="w-full h-full object-cover absolute top-0 left-0 bottom-0 right-0 group-hover:scale-105 scale-100 transition-all ease-in-out duration-350" />
                                                             <div
                                                                 class="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent">
@@ -1061,8 +1028,7 @@
                                                         <!-- 9th class -->
                                                         <a href="./class-detail-9.html"
                                                             class="block overflow-hidden relative shrink-0 before:content-[''] before:pt-[119%] before:block w-full h-full group">
-                                                            <img decoding="async" src="../image/nav-class-4.webp"
-                                                                alt="Yin & Restore"
+                                                            <img src="../image/nav-class-4.webp" alt="Yin & Restore"
                                                                 class="w-full h-full object-cover absolute top-0 left-0 bottom-0 right-0 group-hover:scale-105 scale-100 transition-all ease-in-out duration-350" />
                                                             <div
                                                                 class="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent">
@@ -1100,8 +1066,7 @@
                                                         <!-- 10th class -->
                                                         <a href="./class-detail-10.html"
                                                             class="block overflow-hidden relative shrink-0 before:content-[''] before:pt-[119%] before:block w-full h-full group">
-                                                            <img decoding="async" src="../image/nav-class-5.webp"
-                                                                alt="Power Yoga"
+                                                            <img src="../image/nav-class-5.webp" alt="Power Yoga"
                                                                 class="w-full h-full object-cover absolute top-0 left-0 bottom-0 right-0 group-hover:scale-105 scale-100 transition-all ease-in-out duration-350" />
                                                             <div
                                                                 class="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent">
@@ -1163,7 +1128,7 @@
                                             <div
                                                 class="w-full min-[1221px]:absolute min-[1221px]:left-0 min-[1221px]:top-[99%] hidden z-60 mega-panel pt-px top-1">
                                                 <div
-                                                    class="min-[1221px]:mt-0 sm:mt-6 mt-5 min-[1221px]:px-0 sm:px-6 px-5 bg-white min-[1221px]:rounded-b-[10px] mx-auto pointer-events-auto h-full max-h-[calc(100vh-12vh)] scrollbar-custom 2xl:py-[30px] min-[1221px]:py-6 mega-menu">
+                                                    class="min-[1221px]:mt-0 sm:mt-6 mt-5 min-[1221px]:px-0 sm:px-6 px-5 bg-white min-[1221px]:rounded-b-[10px] mx-auto pointer-events-auto h-full sm:max-h-[calc(100vh-12vh)] max-h-[calc(100vh-18vh)] scrollbar-custom 2xl:py-[30px] min-[1221px]:py-6 mega-menu">
                                                     <div
                                                         class="flex items-center lt:flex-row flex-col-reverse w-full lt:divide-x divide-[#673E2C80] lt:gap-0 gap-4">
                                                         <div
@@ -1173,9 +1138,8 @@
                                                                 <!-- 1st shop -->
                                                                 <div
                                                                     class="bg-[#E0E0E0] xl:p-3 p-[10px] border border-[#F4F1EF] relative 2xl:h-[200px] xl:h-[170px] lt:h-[125px] h-[132px] flex items-center justify-center group/shop">
-                                                                    <img decoding="async"
-                                                                        src="../image/nav-product-1.webp" alt="product-1"
-                                                                        class="w-auto h-full" />
+                                                                    <img src="../image/nav-product-1.webp"
+                                                                        alt="product-1" class="w-auto h-full" />
                                                                     <a href="./product-detail-1.html"
                                                                         class="bg-linear-to-t from-[#2D2D2D] to-[#2D2D2D00] absolute top-0 left-0 w-full h-full group-hover/shop:flex items-center justify-center hidden transition-all ease-in-out duration-350">
                                                                         <button class="btn-round-arrow btn-primary">
@@ -1196,9 +1160,8 @@
                                                                 <!-- 2nd shop -->
                                                                 <div
                                                                     class="bg-[#E0E0E0] xl:p-3 p-[10px] border border-[#F4F1EF] relative 2xl:h-[200px] xl:h-[170px] lt:h-[125px] h-[132px] flex items-center justify-center group/shop">
-                                                                    <img decoding="async"
-                                                                        src="../image/nav-product-2.webp" alt="product-1"
-                                                                        class="w-auto h-full" />
+                                                                    <img src="../image/nav-product-2.webp"
+                                                                        alt="product-1" class="w-auto h-full" />
                                                                     <a href="./product-detail-2.html"
                                                                         class="bg-linear-to-t from-[#2D2D2D] to-[#2D2D2D00] absolute top-0 left-0 w-full h-full group-hover/shop:flex items-center justify-center hidden transition-all ease-in-out duration-350">
                                                                         <button class="btn-round-arrow btn-primary">
@@ -1219,9 +1182,8 @@
                                                                 <!-- 3rd shop -->
                                                                 <div
                                                                     class="bg-[#E0E0E0] xl:p-3 p-[10px] border border-[#F4F1EF] relative 2xl:h-[200px] xl:h-[170px] lt:h-[125px] h-[132px] flex items-center justify-center group/shop">
-                                                                    <img decoding="async"
-                                                                        src="../image/nav-product-3.webp" alt="product-1"
-                                                                        class="w-auto h-full" />
+                                                                    <img src="../image/nav-product-3.webp"
+                                                                        alt="product-1" class="w-auto h-full" />
                                                                     <a href="./product-detail-3.html"
                                                                         class="bg-linear-to-t from-[#2D2D2D] to-[#2D2D2D00] absolute top-0 left-0 w-full h-full group-hover/shop:flex items-center justify-center hidden transition-all ease-in-out duration-350">
                                                                         <button class="btn-round-arrow btn-primary">
@@ -1242,9 +1204,8 @@
                                                                 <!-- 4th shop -->
                                                                 <div
                                                                     class="bg-[#E0E0E0] xl:p-3 p-[10px] border border-[#F4F1EF] relative 2xl:h-[200px] xl:h-[170px] lt:h-[125px] h-[132px] flex items-center justify-center group/shop">
-                                                                    <img decoding="async"
-                                                                        src="../image/nav-product-4.webp" alt="product-1"
-                                                                        class="w-auto h-full" />
+                                                                    <img src="../image/nav-product-4.webp"
+                                                                        alt="product-1" class="w-auto h-full" />
                                                                     <a href="./product-detail-4.html"
                                                                         class="bg-linear-to-t from-[#2D2D2D] to-[#2D2D2D00] absolute top-0 left-0 w-full h-full group-hover/shop:flex items-center justify-center hidden transition-all ease-in-out duration-350">
                                                                         <button class="btn-round-arrow btn-primary">
@@ -1265,9 +1226,8 @@
                                                                 <!-- 5th shop -->
                                                                 <div
                                                                     class="bg-[#E0E0E0] xl:p-3 p-[10px] border border-[#F4F1EF] relative 2xl:h-[200px] xl:h-[170px] lt:h-[125px] h-[132px] flex items-center justify-center group/shop">
-                                                                    <img decoding="async"
-                                                                        src="../image/nav-product-5.webp" alt="product-1"
-                                                                        class="w-auto h-full" />
+                                                                    <img src="../image/nav-product-5.webp"
+                                                                        alt="product-1" class="w-auto h-full" />
                                                                     <a href="./product-detail-5.html"
                                                                         class="bg-linear-to-t from-[#2D2D2D] to-[#2D2D2D00] absolute top-0 left-0 w-full h-full group-hover/shop:flex items-center justify-center hidden transition-all ease-in-out duration-350">
                                                                         <button class="btn-round-arrow btn-primary">
@@ -1288,9 +1248,8 @@
                                                                 <!-- 6th shop -->
                                                                 <div
                                                                     class="bg-[#E0E0E0] xl:p-3 p-[10px] border border-[#F4F1EF] relative 2xl:h-[200px] xl:h-[170px] lt:h-[125px] h-[132px] flex items-center justify-center group/shop">
-                                                                    <img decoding="async"
-                                                                        src="../image/nav-product-6.webp" alt="product-1"
-                                                                        class="w-auto h-full" />
+                                                                    <img src="../image/nav-product-6.webp"
+                                                                        alt="product-1" class="w-auto h-full" />
                                                                     <a href="./product-detail-6.html"
                                                                         class="bg-linear-to-t from-[#2D2D2D] to-[#2D2D2D00] absolute top-0 left-0 w-full h-full group-hover/shop:flex items-center justify-center hidden transition-all ease-in-out duration-350">
                                                                         <button class="btn-round-arrow btn-primary">
@@ -1311,9 +1270,8 @@
                                                                 <!-- 7th shop -->
                                                                 <div
                                                                     class="bg-[#E0E0E0] xl:p-3 p-[10px] border border-[#F4F1EF] relative 2xl:h-[200px] xl:h-[170px] lt:h-[125px] h-[132px] flex items-center justify-center group/shop">
-                                                                    <img decoding="async"
-                                                                        src="../image/nav-product-7.webp" alt="product-1"
-                                                                        class="w-auto h-full" />
+                                                                    <img src="../image/nav-product-7.webp"
+                                                                        alt="product-1" class="w-auto h-full" />
                                                                     <a href="./product-detail-7.html"
                                                                         class="bg-linear-to-t from-[#2D2D2D] to-[#2D2D2D00] absolute top-0 left-0 w-full h-full group-hover/shop:flex items-center justify-center hidden transition-all ease-in-out duration-350">
                                                                         <button class="btn-round-arrow btn-primary">
@@ -1334,9 +1292,8 @@
                                                                 <!-- 8th shop -->
                                                                 <div
                                                                     class="bg-[#E0E0E0] xl:p-3 p-[10px] border border-[#F4F1EF] relative 2xl:h-[200px] xl:h-[170px] lt:h-[125px] h-[132px] flex items-center justify-center group/shop">
-                                                                    <img decoding="async"
-                                                                        src="../image/nav-product-8.webp" alt="product-1"
-                                                                        class="w-auto h-full" />
+                                                                    <img src="../image/nav-product-8.webp"
+                                                                        alt="product-1" class="w-auto h-full" />
                                                                     <a href="./product-detail-8.html"
                                                                         class="bg-linear-to-t from-[#2D2D2D] to-[#2D2D2D00] absolute top-0 left-0 w-full h-full group-hover/shop:flex items-center justify-center hidden transition-all ease-in-out duration-350">
                                                                         <button class="btn-round-arrow btn-primary">
@@ -1366,8 +1323,7 @@
                                                                     <div class="swiper-slide h-auto!">
                                                                         <div
                                                                             class="rounded-sm my-auto overflow-hidden product-slide">
-                                                                            <img decoding="async"
-                                                                                src="../image/nav-shop-slide-1.webp"
+                                                                            <img src="../image/nav-shop-slide-1.webp"
                                                                                 alt="product"
                                                                                 class="w-full h-full object-cover" />
                                                                         </div>
@@ -1375,8 +1331,7 @@
                                                                     <div class="swiper-slide h-auto!">
                                                                         <div
                                                                             class="rounded-sm my-auto overflow-hidden product-slide">
-                                                                            <img decoding="async"
-                                                                                src="../image/nav-shop-slide-2.webp"
+                                                                            <img src="../image/nav-shop-slide-2.webp"
                                                                                 alt="product"
                                                                                 class="w-full h-full object-cover" />
                                                                         </div>
@@ -1384,8 +1339,7 @@
                                                                     <div class="swiper-slide h-auto!">
                                                                         <div
                                                                             class="rounded-sm my-auto overflow-hidden product-slide">
-                                                                            <img decoding="async"
-                                                                                src="../image/nav-shop-slide-3.webp"
+                                                                            <img src="../image/nav-shop-slide-3.webp"
                                                                                 alt="product"
                                                                                 class="w-full h-full object-cover" />
                                                                         </div>
@@ -1393,8 +1347,7 @@
                                                                     <div class="swiper-slide h-auto!">
                                                                         <div
                                                                             class="rounded-sm my-auto overflow-hidden product-slide">
-                                                                            <img decoding="async"
-                                                                                src="../image/nav-shop-slide-1.webp"
+                                                                            <img src="../image/nav-shop-slide-1.webp"
                                                                                 alt="product"
                                                                                 class="w-full h-full object-cover" />
                                                                         </div>
@@ -1402,8 +1355,7 @@
                                                                     <div class="swiper-slide h-auto!">
                                                                         <div
                                                                             class="rounded-sm my-auto overflow-hidden product-slide">
-                                                                            <img decoding="async"
-                                                                                src="../image/nav-shop-slide-2.webp"
+                                                                            <img src="../image/nav-shop-slide-2.webp"
                                                                                 alt="product"
                                                                                 class="w-full h-full object-cover" />
                                                                         </div>
@@ -1411,8 +1363,7 @@
                                                                     <div class="swiper-slide h-auto!">
                                                                         <div
                                                                             class="rounded-sm my-auto overflow-hidden product-slide">
-                                                                            <img decoding="async"
-                                                                                src="../image/nav-shop-slide-3.webp"
+                                                                            <img src="../image/nav-shop-slide-3.webp"
                                                                                 alt="product"
                                                                                 class="w-full h-full object-cover" />
                                                                         </div>
@@ -1471,7 +1422,7 @@
                                             <div
                                                 class="w-full min-[1221px]:absolute min-[1221px]:left-0 min-[1221px]:top-[99%] hidden z-60 mega-panel pt-px top-1">
                                                 <div
-                                                    class="min-[1221px]:mt-0 sm:mt-6 mt-5 min-[1221px]:px-0 sm:px-6 px-5 bg-white min-[1221px]:rounded-b-[10px] mx-auto pointer-events-auto h-full max-h-[calc(100vh-14vh)] scrollbar-custom mega-menu">
+                                                    class="min-[1221px]:mt-0 sm:mt-6 mt-5 min-[1221px]:px-0 sm:px-6 px-5 bg-white min-[1221px]:rounded-b-[10px] mx-auto pointer-events-auto h-full sm:max-h-[calc(100vh-14vh)] max-h-[calc(100vh-20vh)] scrollbar-custom mega-menu">
                                                     <div
                                                         class="flex lt:flex-row flex-col items-center justify-between lt:gap-0 gap-4">
                                                         <div
@@ -1482,13 +1433,12 @@
                                                                 <a href="./blog-detail-1.html"
                                                                     class="flex sm:flex-row flex-col items-center 2xl:gap-7 1xl:gap-6 gap-4 group">
                                                                     <div
-                                                                        class="rounded-sm block overflow-hidden relative shrink-0 2xl:w-[160px] 1xl:w-[145px] sm:w-[130px] w-full 2xl:h-[190px] 1xl:h-[170px] sm:h-[160px] h-[350px]">
-                                                                        <img decoding="async"
-                                                                            src="../image/nav-blog-1.webp" alt="blog"
+                                                                        class="rounded-sm block overflow-hidden relative shrink-0 2xl:w-[160px] 1xl:w-[145px] sm:w-[130px] w-full 2xl:h-[190px] 1xl:h-[170px] sm:h-[160px] h-[315px]">
+                                                                        <img src="../image/nav-blog-1.webp" alt="blog"
                                                                             class="w-full h-full object-cover" />
                                                                     </div>
                                                                     <div
-                                                                        class="flex flex-col items-start 2xl:gap-[30px] sm:gap-5 gap-4">
+                                                                        class="flex flex-col items-start 2xl:gap-[30px] sm:gap-5 gap-4 relative">
                                                                         <h5
                                                                             class="text-primary uppercase group-hover:text-thunder-100">
                                                                             Morning Stillness: The Power of a 6
@@ -1516,9 +1466,8 @@
                                                                 <a href="./blog-detail-2.html"
                                                                     class="flex sm:flex-row flex-col items-center 2xl:gap-7 1xl:gap-6 gap-4 group">
                                                                     <div
-                                                                        class="rounded-sm block overflow-hidden relative shrink-0 2xl:w-[160px] 1xl:w-[145px] sm:w-[130px] w-full 2xl:h-[190px] 1xl:h-[170px] sm:h-[160px] h-[350px]">
-                                                                        <img decoding="async"
-                                                                            src="../image/nav-blog-2.webp" alt="blog"
+                                                                        class="rounded-sm block overflow-hidden relative shrink-0 2xl:w-[160px] 1xl:w-[145px] sm:w-[130px] w-full 2xl:h-[190px] 1xl:h-[170px] sm:h-[160px] h-[315px]">
+                                                                        <img src="../image/nav-blog-2.webp" alt="blog"
                                                                             class="w-full h-full object-cover" />
                                                                     </div>
                                                                     <div
@@ -1549,9 +1498,8 @@
                                                                 <a href="./blog-detail-3.html"
                                                                     class="flex sm:flex-row flex-col items-center 2xl:gap-7 1xl:gap-6 gap-4 group">
                                                                     <div
-                                                                        class="rounded-sm block overflow-hidden relative shrink-0 2xl:w-[160px] 1xl:w-[145px] sm:w-[130px] w-full 2xl:h-[190px] 1xl:h-[170px] sm:h-[160px] h-[350px]">
-                                                                        <img decoding="async"
-                                                                            src="../image/nav-blog-3.webp" alt="blog"
+                                                                        class="rounded-sm block overflow-hidden relative shrink-0 2xl:w-[160px] 1xl:w-[145px] sm:w-[130px] w-full 2xl:h-[190px] 1xl:h-[170px] sm:h-[160px] h-[315px]">
+                                                                        <img src="../image/nav-blog-3.webp" alt="blog"
                                                                             class="w-full h-full object-cover" />
                                                                     </div>
                                                                     <div
@@ -1582,9 +1530,8 @@
                                                                 <a href="./blog-detail-4.html"
                                                                     class="flex sm:flex-row flex-col items-center 2xl:gap-7 1xl:gap-6 gap-4 group">
                                                                     <div
-                                                                        class="rounded-sm block overflow-hidden relative shrink-0 2xl:w-[160px] 1xl:w-[145px] sm:w-[130px] w-full 2xl:h-[190px] 1xl:h-[170px] sm:h-[160px] h-[350px]">
-                                                                        <img decoding="async"
-                                                                            src="../image/nav-blog-4.webp" alt="blog"
+                                                                        class="rounded-sm block overflow-hidden relative shrink-0 2xl:w-[160px] 1xl:w-[145px] sm:w-[130px] w-full 2xl:h-[190px] 1xl:h-[170px] sm:h-[160px] h-[315px]">
+                                                                        <img src="../image/nav-blog-4.webp" alt="blog"
                                                                             class="w-full h-full object-cover" />
                                                                     </div>
                                                                     <div
@@ -1623,8 +1570,7 @@
                                                                 <div class="relative">
                                                                     <div
                                                                         class="w-full 2xl:h-[250px] 1xl:h-[210px] lg:h-[180px] lt:h-[150px] h-[200px]">
-                                                                        <img decoding="async"
-                                                                            src="../image/nav-blog-5.webp"
+                                                                        <img src="../image/nav-blog-5.webp"
                                                                             alt="Yoga Class"
                                                                             class="w-full h-full object-cover" />
                                                                     </div>
@@ -1824,7 +1770,7 @@
                                                 </svg>
                                             </a>
                                             <div
-                                                class="2xl:min-w-[256px] min-w-[185px] w-full min-[1221px]:absolute min-[1221px]:right-0 min-[1221px]:top-full hidden group-hover:block z-60 sm:top-0 top-[6px] mega-panel pt-px">
+                                                class="1xl:min-w-[256px] min-w-[200px] w-full min-[1221px]:absolute min-[1221px]:right-0 min-[1221px]:top-full hidden group-hover:block z-60 sm:top-0 top-[6px] mega-panel pt-px">
                                                 <div
                                                     class="min-[1221px]:mt-0 sm:mt-6 mt-5 bg-white min-[1221px]:rounded-b-[10px] lg:py-5 pb-5 mx-auto pointer-events-auto min-[1221px]:px-0 sm:px-6 px-5">
                                                     <ul class="flex flex-col space-y-1">
@@ -1866,7 +1812,7 @@
                                                                 <ul class="bg-white 2xl:p-4 p-2 rounded-[10px]">
                                                                     <li>
                                                                         <p>
-                                                                            <a href="./classes-1.html"
+                                                                            <a href="./classes.html"
                                                                                 class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
                                                                                 Class 01
                                                                             </a>
@@ -2108,14 +2054,66 @@
                                                                 </a>
                                                             </p>
                                                         </li>
-                                                        <!-- 404 -->
-                                                        <li>
-                                                            <p>
-                                                                <a href="./404.html"
-                                                                    class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
-                                                                    404
-                                                                </a>
-                                                            </p>
+                                                      <!-- Empty -->
+                                                        <li class="group relative">
+                                                            <a href="javascript:;"
+                                                                class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
+                                                                <p>Empty Pages</p>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                    height="24" viewBox="0 0 24 24" fill="none">
+                                                                    <path d="M11 8.56055L15 12.5609L11 16.5605"
+                                                                        stroke="currentColor" stroke-width="1.3"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </a>
+                                                            <div
+                                                                class="absolute left-full top-0 hidden group-hover:block rounded-[10px] z-60 2xl:min-w-55 min-w-47 2xl:pl-3 pl-2 min-h-[170px] h-full overflow-auto">
+                                                                <span
+                                                                    class="absolute 2xl:left-1 left-[2px] right-auto top-6 2xl:w-4 2xl:h-4 w-3.5 h-3.5 rounded-xs bg-white rotate-45 sm:border border-gray-200 z-[-1] min-[1221px]:block hidden"></span>
+                                                                <ul class="bg-white 2xl:p-4 p-2 rounded-[10px]">
+                                                                    <li>
+                                                                        <p>
+                                                                            <a href="./empty-cart.html"
+                                                                                class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
+                                                                                Cart
+                                                                            </a>
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>
+                                                                            <a href="./empty-wishlist.html"
+                                                                                class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
+                                                                                Wishlist
+                                                                            </a>
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>
+                                                                            <a href="./confirm-order.html"
+                                                                                class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
+                                                                                Confirm Order
+                                                                            </a>
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>
+                                                                            <a href="./404.html"
+                                                                                class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
+                                                                                404
+                                                                            </a>
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>
+                                                                            <a href="./thank-you.html"
+                                                                                class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
+                                                                                Thank You
+                                                                            </a>
+                                                                        </p>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -2181,8 +2179,8 @@
                                                             class="flex sm:flex-row flex-col sm:items-center items-start 2xl:gap-7 1xl:gap-6 gap-4 w-full h-full">
                                                             <div
                                                                 class="rounded-sm block overflow-hidden relative shrink-0 2xl:w-[150px] 1xl:w-[140px] lg:w-[130px] w-[120px] 2xl:h-[150px] lg:h-[140px] sm:h-[135px] h-[118px]">
-                                                                <img decoding="async" src="../image/search-blog-1.webp"
-                                                                    alt="blog" class="w-full h-full object-cover" />
+                                                                <img src="../image/search-blog-1.webp" alt="blog"
+                                                                    class="w-full h-full object-cover" />
                                                             </div>
 
                                                             <div>
@@ -2206,8 +2204,8 @@
                                                             class="flex sm:flex-row flex-col sm:items-center items-start 2xl:gap-7 1xl:gap-6 gap-4 w-full h-full">
                                                             <div
                                                                 class="rounded-sm block overflow-hidden relative shrink-0 2xl:w-[150px] 1xl:w-[140px] lg:w-[130px] w-[120px] 2xl:h-[150px] lg:h-[140px] sm:h-[135px] h-[118px]">
-                                                                <img decoding="async" src="../image/search-blog-2.webp"
-                                                                    alt="blog" class="w-full h-full object-cover" />
+                                                                <img src="../image/search-blog-2.webp" alt="blog"
+                                                                    class="w-full h-full object-cover" />
                                                             </div>
 
                                                             <div>
@@ -2241,8 +2239,8 @@
                                                         <!-- 1st class -->
                                                         <div class="bg-whitesmoke-100">
                                                             <div class="2xl:h-[166px] h-[135px] overflow-hidden">
-                                                                <img decoding="async" src="../image/search-class-1.webp"
-                                                                    alt="class" class="w-full h-full object-cover" />
+                                                                <img src="../image/search-class-1.webp" alt="class"
+                                                                    class="w-full h-full object-cover" />
                                                             </div>
                                                             <div class="2xl:p-4 p-[14px]">
                                                                 <h5 class="uppercase text-primary mb-[10px]">
@@ -2267,8 +2265,8 @@
                                                         <!-- 2nd class -->
                                                         <div class="bg-whitesmoke-100">
                                                             <div class="2xl:h-[166px] h-[135px] overflow-hidden">
-                                                                <img decoding="async" src="../image/search-class-2.webp"
-                                                                    alt="class" class="w-full h-full object-cover" />
+                                                                <img src="../image/search-class-2.webp" alt="class"
+                                                                    class="w-full h-full object-cover" />
                                                             </div>
                                                             <div class="2xl:p-4 p-[14px]">
                                                                 <h5 class="uppercase text-primary mb-[10px]">
@@ -2293,8 +2291,8 @@
                                                         <!-- 3rd class -->
                                                         <div class="bg-whitesmoke-100">
                                                             <div class="2xl:h-[166px] h-[135px] overflow-hidden">
-                                                                <img decoding="async" src="../image/search-class-3.webp"
-                                                                    alt="class" class="w-full h-full object-cover" />
+                                                                <img src="../image/search-class-3.webp" alt="class"
+                                                                    class="w-full h-full object-cover" />
                                                             </div>
                                                             <div class="2xl:p-4 p-[14px]">
                                                                 <h5 class="uppercase text-primary mb-[10px]">
@@ -2414,7 +2412,7 @@
                         </p>
 
                         <!-- CTA Button -->
-                        <a href="./plans.html" class="btn btn-secondary bg-white">View
+                        <a href="./mwmbership.html" class="btn btn-secondary">View
                             Plans</a>
                     </div>
 
@@ -2424,7 +2422,8 @@
                         <div
                             class="bg-white rounded-[10px] shadow-xl 1xl:p-[30px] xl:p-7 lg:p-5.5 p-4 relative overflow-hidden lt:w-full md:w-[70%] sm:w-[81%] w-full">
                             <img src="../image/card-back-banner-1.webp" alt="banner"
-                                class="w-full h-full object-cover opacity-10 absolute top-0 left-0 pointer-events-none" />
+                                class="w-full h-full object-cover opacity-10 absolute top-0 left-0 pointer-events-none"
+                                loading="eager" fetchpriority="high" />
                             <!-- Discount Badge -->
                             <div
                                 class="absolute 1xl:top-0 1xl:right-0 lg:-top-2 lg:-right-2 lt:-top-3 lt:-right-3 -top-4 -right-4">
@@ -2594,7 +2593,7 @@
             <!-- center Image -->
             <div class="absolute right-0 top-0 w-full h-full flex flex-col">
                 <!-- Image -->
-                <img decoding="async" src="../image/home-4-hero-banner.webp" alt="Hero Images"
+                <img src="../image/home-4-hero-banner.webp" alt="Hero Images"
                     class="absolute inset-0 w-full h-full object-cover" />
 
                 <!-- Gradient Overlay -->
@@ -2634,7 +2633,7 @@
                             class="1xl:mt-7 sm:mt-5 mt-4 flex flex-col items-start justify-center 2xl:gap-5 1xl:gap-4 gap-3">
                             <li class="flex items-center md:gap-[11px] gap-2">
                                 <span class="shrink-0 whitespace-nowrap 1xl:w-7.5 xl:w-7 lg:w-6 md:w-5 w-4 h-full">
-                                    <img decoding="async" src="../image/bullets-point.svg" alt="Bullets Point" />
+                                    <img src="../image/bullets-point.svg" alt="Bullets Point" />
                                 </span>
                                 <p class="text-primary font-medium p2">
                                     Small class sizes for personal attention
@@ -2642,7 +2641,7 @@
                             </li>
                             <li class="flex items-center md:gap-[11px] gap-2">
                                 <span class="shrink-0 whitespace-nowrap 1xl:w-7.5 xl:w-7 lg:w-6 md:w-5 w-4 h-full">
-                                    <img decoding="async" src="../image/bullets-point.svg" alt="Bullets Point" />
+                                    <img src="../image/bullets-point.svg" alt="Bullets Point" />
                                 </span>
                                 <p class="text-primary font-medium p2">
                                     Certified, compassionate instructors
@@ -2650,7 +2649,7 @@
                             </li>
                             <li class="flex items-center md:gap-[11px] gap-2">
                                 <span class="shrink-0 whitespace-nowrap 1xl:w-7.5 xl:w-7 lg:w-6 md:w-5 w-4 h-full">
-                                    <img decoding="async" src="../image/bullets-point.svg" alt="Bullets Point" />
+                                    <img src="../image/bullets-point.svg" alt="Bullets Point" />
                                 </span>
                                 <p class="text-primary font-medium p2">
                                     Options for group, private, and virtual
@@ -2669,8 +2668,9 @@
                     <div class="w-full">
                         <div
                             class="overflow-hidden relative before:content-[''] before:block 2xl:before:pt-[96%] xl:before:pt-[100%] lg:before:pt-[116%] lt:before:pt-[125%] sm:before:pt-[65%] before:pt-[89%] w-full">
-                            <img decoding="async" src="../image/home-4_about-us.webp" alt="About Image"
-                                class="absolute top-0 left-0 w-full h-full object-cover" />
+                            <img src="../image/home-4_about-us.webp" alt="About Image"
+                                class="absolute top-0 left-0 w-full h-full object-cover" loading="lazy" decoding="async"
+                                loading="lazy" decoding="async" />
                         </div>
                     </div>
                 </div>
@@ -2699,8 +2699,8 @@
                 <!-- Featured Post Row -->
                 <div class="flex flex-col 1xl:gap-[30px] md:gap-[26px] sm:gap-5.5 gap-4">
                     <!-- 1st practice -->
-                    <div
-                        class="flex md:flex-row flex-col justify-between border-y border-primary/40 bg-white group/blog lg:gap-6 lt:gap-4 md:gap-2 gap-1">
+                    <div class="flex md:flex-row flex-col justify-between border-y border-primary/40 bg-white group/blog lg:gap-6 lt:gap-4 md:gap-2 gap-1"
+                        data-aos="fade-up">
                         <!-- Left: Content -->
                         <div class="w-full 1xl:p-[30px] lt:p-[26px] sm:p-5 p-4">
                             <div class="flex flex-col justify-center h-full">
@@ -2726,14 +2726,15 @@
                         <!-- Right: Image -->
                         <div
                             class="overflow-hidden block w-full md:h-auto h-full relative before:content-[''] before:block md:before:pt-[48%] before:pt-[44%] lg:max-w-[32.5%] md:max-w-[38%] max-w-full">
-                            <img decoding="async" src="../image/class_2-1.webp" alt="Blog Images"
-                                class="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" />
+                            <img src="../image/class_2-1.webp" alt="Blog Images"
+                                class="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" loading="lazy"
+                                decoding="async" />
                         </div>
                     </div>
 
                     <!-- 2nd practice -->
-                    <div
-                        class="flex md:flex-row flex-col justify-between border-y border-primary/40 bg-white group/blog lg:gap-6 lt:gap-4 md:gap-2 gap-1">
+                    <div class="flex md:flex-row flex-col justify-between border-y border-primary/40 bg-white group/blog lg:gap-6 lt:gap-4 md:gap-2 gap-1"
+                        data-aos="fade-up">
                         <!-- Left: Content -->
                         <div class="w-full 1xl:p-[30px] lt:p-[26px] sm:p-5 p-4">
                             <div class="flex flex-col justify-center h-full">
@@ -2760,14 +2761,15 @@
                         <!-- Right: Image -->
                         <div
                             class="overflow-hidden block w-full md:h-auto h-full relative before:content-[''] before:block md:before:pt-[48%] before:pt-[44%] lg:max-w-[32.5%] md:max-w-[38%] max-w-full">
-                            <img decoding="async" src="../image/class_2-2.webp" alt="Blog Images"
-                                class="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" />
+                            <img src="../image/class_2-2.webp" alt="Blog Images"
+                                class="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" loading="lazy"
+                                decoding="async" />
                         </div>
                     </div>
 
                     <!-- 3rd practice -->
-                    <div
-                        class="flex md:flex-row flex-col justify-between border-y border-primary/40 bg-white group/blog lg:gap-6 lt:gap-4 md:gap-2 gap-1">
+                    <div class="flex md:flex-row flex-col justify-between border-y border-primary/40 bg-white group/blog lg:gap-6 lt:gap-4 md:gap-2 gap-1"
+                        data-aos="fade-up">
                         <!-- Left: Content -->
                         <div class="w-full 1xl:p-[30px] lt:p-[26px] sm:p-5 p-4">
                             <div class="flex flex-col justify-center h-full">
@@ -2794,8 +2796,9 @@
                         <!-- Right: Image -->
                         <div
                             class="overflow-hidden block w-full md:h-auto h-full relative before:content-[''] before:block md:before:pt-[48%] before:pt-[44%] lg:max-w-[32.5%] md:max-w-[38%] max-w-full">
-                            <img decoding="async" src="../image/class_2-3.webp" alt="Blog Images"
-                                class="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" />
+                            <img src="../image/class_2-3.webp" alt="Blog Images"
+                                class="w-full h-full object-cover absolute top-0 left-0 right-0 bottom-0" loading="lazy"
+                                decoding="async" />
                         </div>
                     </div>
                 </div>
@@ -2885,8 +2888,9 @@
                         <div class="lt:w-[48%] w-full md:hidden block mt-7.5">
                             <div
                                 class="rounded overflow-hidden relative before:content-[''] before:block 1xl:before:pt-[98%] xl:before:pt-[106%] lt:before:pt-[122%] before:pt-[82%] w-full h-full">
-                                <img decoding="async" src="../image/home-4_whyChoose.webp" alt="About Image"
-                                    class="absolute top-0 left-0 w-full h-full object-cover" />
+                                <img src="../image/home-4_whyChoose.webp" alt="About Image"
+                                    class="absolute top-0 left-0 w-full h-full object-cover" loading="lazy"
+                                    decoding="async" loading="lazy" decoding="async" />
                             </div>
                         </div>
 
@@ -2899,8 +2903,8 @@
                                             <div class="bg-[#F7F5F4] 2xl:p-[33px] 1xl:p-[30px] p-6 rounded-sm h-full">
                                                 <div
                                                     class="bg-white rounded-[10px] 2xl:w-[84px] 2xl:h-[84px] 1xl:w-[80px] 1xl:h-[80px] md:w-[70px] md:h-[70x] sm:h-[65px] sm:w-[65px] w-[60px] h-[60px] 1xl:mb-10 md:mb-8 sm:mb-6 mb-4 p-2">
-                                                    <img src="../image/group-yoga.svg" alt="group yoga"
-                                                        class="w-hull h-full" />
+                                                    <img src="../image/group-yoga.svg" alt="group yoga" loading="lazy"
+                                                        decoding="async" loading="lazy" decoding="async" />
                                                 </div>
                                                 <h5 class="uppercase text-primary 1xl:mb-5 mb-3">
                                                     Group Yoga Classes
@@ -2917,8 +2921,8 @@
                                             <div class="bg-[#F7F5F4] 2xl:p-[33px] 1xl:p-[30px] p-6 rounded-sm h-full">
                                                 <div
                                                     class="bg-white rounded-[10px] 2xl:w-[84px] 2xl:h-[84px] 1xl:w-[80px] 1xl:h-[80px] md:w-[70px] md:h-[70x] sm:h-[65px] sm:w-[65px] w-[60px] h-[60px] 1xl:mb-10 md:mb-8 sm:mb-6 mb-4 p-2">
-                                                    <img src="../image/membership.svg" alt="group yoga"
-                                                        class="w-hull h-full" />
+                                                    <img src="../image/membership.svg" alt="group yoga" loading="lazy"
+                                                        decoding="async" loading="lazy" decoding="async" />
                                                 </div>
                                                 <h5 class="uppercase text-primary 1xl:mb-5 mb-3">
                                                     Online Membership
@@ -2935,8 +2939,8 @@
                                             <div class="bg-[#F7F5F4] 2xl:p-[33px] 1xl:p-[30px] p-6 rounded-sm h-full">
                                                 <div
                                                     class="bg-white rounded-[10px] 2xl:w-[84px] 2xl:h-[84px] 1xl:w-[80px] 1xl:h-[80px] md:w-[70px] md:h-[70x] sm:h-[65px] sm:w-[65px] w-[60px] h-[60px] 1xl:mb-10 md:mb-8 sm:mb-6 mb-4 p-2">
-                                                    <img src="../image/group-yoga.svg" alt="group yoga"
-                                                        class="w-hull h-full" />
+                                                    <img src="../image/group-yoga.svg" alt="group yoga" loading="lazy"
+                                                        decoding="async" loading="lazy" decoding="async" />
                                                 </div>
                                                 <h5 class="uppercase text-primary 1xl:mb-5 mb-3">
                                                     Group Yoga Classes
@@ -2954,7 +2958,7 @@
                                                 <div
                                                     class="bg-white rounded-[10px] 2xl:w-[84px] 2xl:h-[84px] 1xl:w-[80px] 1xl:h-[80px] md:w-[70px] md:h-[70x] sm:h-[65px] sm:w-[65px] w-[60px] h-[60px] 1xl:mb-10 md:mb-8 sm:mb-6 mb-4 p-2">
                                                     <img src="../image/membership.svg" alt="group yoga"
-                                                        class="w-hull h-full" />
+                                                        class="w-hull h-full" loading="lazy" decoding="async" />
                                                 </div>
                                                 <h5 class="uppercase text-primary 1xl:mb-5 mb-3">
                                                     Online Membership
@@ -2996,8 +3000,9 @@
                     <div class="lt:w-[48%] w-full md:block hidden rounded-sm overflow-hidden">
                         <div
                             class="rounded overflow-hidden relative before:content-[''] before:block 1xl:before:pt-[98%] xl:before:pt-[106%] lt:before:pt-[122%] before:pt-[82%] w-full h-full">
-                            <img decoding="async" src="../image/home-4_whyChoose.webp" alt="About Image"
-                                class="absolute top-0 left-0 w-full h-full object-cover" />
+                            <img src="../image/home-4_whyChoose.webp" alt="About Image"
+                                class="absolute top-0 left-0 w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
                         </div>
                     </div>
                 </div>
@@ -3022,8 +3027,7 @@
                         <p class="text-start text-thunder-100 xl:max-w-[83%] max-w-full w-full">
                             Experience daily guided sessions, mindful movement, and inner stillness.
                         </p>
-                        <a href="./book-class.html"
-                            class="btn btn-secondary bg-white 1xl:mt-[45px] xl:mt-8 sm:mt-6 mt-4">
+                        <a href="./book-class.html" class="btn btn-secondary 1xl:mt-[45px] xl:mt-8 sm:mt-6 mt-4">
                             Join the 14-Day trial</a>
                     </div>
                 </div>
@@ -3031,8 +3035,6 @@
             <div class="2xl:h-[680px] 1xl:h-[590px] xl:h-[550px] lg:h-[510px] md:h-[410px] sm:h-[350px] h-[272px]">
                 <div class="relative w-full bg-cover md:bg-center sm:bg-right bg-position-[80%] bg-no-repeat h-full"
                     style="background-image: url('../image/trial-banner.webp')"></div>
-                <!-- <img src="../image/find-your-flow-3-mobile.webp" alt="mobile"
-                    class="w-full h-full object-cover md:hidden block" /> -->
             </div>
         </section>
         <!-- ====== End Full Image Section ====== -->
@@ -3325,12 +3327,12 @@
 
                 <div class="grid lt:grid-cols-3 sm:grid-cols-2 grid-cols-1 1xl:gap-6 xl:gap-5 lt:gap-4 md:gap-6 gap-5">
                     <!-- 1st card -->
-                    <div class="bg-white rounded-sm overflow-hidden h-auto">
+                    <div class="bg-white rounded-sm overflow-hidden h-auto" data-aos="fade-up">
                         <!-- Image Wrapper -->
                         <div
                             class="relative overflow-hidden 2xl:h-[323px] 1xl:h-[270px] xl:h-[230px] lg:h-[205px] sm:h-[185px] h-[165px]">
-                            <img src="../image/blog-3_1.webp" alt="Personalized Yoga"
-                                class="w-full h-full object-cover" />
+                            <img src="../image/blog-3_1.webp" alt="Personalized Yoga" class="w-full h-full object-cover"
+                                loading="lazy" decoding="async" />
                         </div>
 
                         <!-- Content -->
@@ -3371,19 +3373,19 @@
                                     <p class="uppercase p2">July 15, 2025</p>
                                 </div>
                                 <a href="./blog-detail-1.html"
-                                    class="btn btn-secondary bg-white md:text-13 text-[10px] xl:py-2 xl:px-5 py-1.5 md:px-4.5 px-4">Read
+                                    class="btn btn-secondary md:text-13 text-[10px] xl:py-2 xl:px-5 py-1.5 md:px-4.5 px-4">Read
                                     More</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- 2nd card -->
-                    <div class="bg-white rounded-sm overflow-hidden h-auto">
+                    <div class="bg-white rounded-sm overflow-hidden h-auto" data-aos="fade-up">
                         <!-- Image Wrapper -->
                         <div
                             class="relative overflow-hidden 2xl:h-[323px] 1xl:h-[270px] xl:h-[230px] lg:h-[205px] sm:h-[185px] h-[165px]">
-                            <img src="../image/blog-3_2.webp" alt="Personalized Yoga"
-                                class="w-full h-full object-cover" />
+                            <img src="../image/blog-3_2.webp" alt="Personalized Yoga" class="w-full h-full object-cover"
+                                loading="lazy" decoding="async" />
                         </div>
 
                         <!-- Content -->
@@ -3424,19 +3426,19 @@
                                     <p class="uppercase p2">July 15, 2025</p>
                                 </div>
                                 <a href="./blog-detail-2.html"
-                                    class="btn btn-secondary bg-white md:text-13 text-[10px] xl:py-2 xl:px-5 py-1.5 md:px-4.5 px-4">Read
+                                    class="btn btn-secondary md:text-13 text-[10px] xl:py-2 xl:px-5 py-1.5 md:px-4.5 px-4">Read
                                     More</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- 3rd card -->
-                    <div class="bg-white rounded-sm overflow-hidden h-auto">
+                    <div class="bg-white rounded-sm overflow-hidden h-auto" data-aos="fade-up">
                         <!-- Image Wrapper -->
                         <div
                             class="relative overflow-hidden 2xl:h-[323px] 1xl:h-[270px] xl:h-[230px] lg:h-[205px] sm:h-[185px] h-[165px]">
-                            <img src="../image/blog-3_3.webp" alt="Personalized Yoga"
-                                class="w-full h-full object-cover" />
+                            <img src="../image/blog-3_3.webp" alt="Personalized Yoga" class="w-full h-full object-cover"
+                                loading="lazy" decoding="async" />
                         </div>
 
                         <!-- Content -->
@@ -3477,7 +3479,7 @@
                                     <p class="uppercase p2">July 15, 2025</p>
                                 </div>
                                 <a href="./blog-detail-3.html"
-                                    class="btn btn-secondary bg-white md:text-13 text-[10px] xl:py-2 xl:px-5 py-1.5 md:px-4.5 px-4">Read
+                                    class="btn btn-secondary md:text-13 text-[10px] xl:py-2 xl:px-5 py-1.5 md:px-4.5 px-4">Read
                                     More</a>
                             </div>
                         </div>
@@ -3492,7 +3494,8 @@
         <!-- ====== End Class Stories Section ====== -->
 
         <!-- ====== Blog & Insights Section ====== -->
-        <section class="relative 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10 overflow-hidden home-4_reviews">
+        <section
+            class="relative 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10 overflow-hidden home-4_reviews">
             <div class="container relative">
                 <!-- Intro -->
                 <div
@@ -3562,7 +3565,8 @@
                                             <div
                                                 class="1xl:w-12.5 1xl:h-12.5 xl:w-11.5 xl:h-11.5 md:w-10 md:h-10 sm:w-[35px] sm:h-[35px] w-7 h-7 rounded-full overflow-hidden">
                                                 <img src="../image/testimonial-1.webp" alt="client"
-                                                    class="w-full h-full object-cover" />
+                                                    class="w-full h-full object-cover" loading="lazy"
+                                                    decoding="async" />
                                             </div>
                                             <p class="p2 text-black uppercase">– Sarah L.</p>
                                         </div>
@@ -3609,7 +3613,8 @@
                                             <div
                                                 class="1xl:w-12.5 1xl:h-12.5 xl:w-11.5 xl:h-11.5 md:w-10 md:h-10 sm:w-[35px] sm:h-[35px] w-7 h-7 rounded-full overflow-hidden">
                                                 <img src="../image/testimonial-2.webp" alt="client"
-                                                    class="w-full h-full object-cover" />
+                                                    class="w-full h-full object-cover" loading="lazy"
+                                                    decoding="async" />
                                             </div>
                                             <p class="p2 text-black uppercase">– Lauren T.</p>
                                         </div>
@@ -3656,7 +3661,8 @@
                                             <div
                                                 class="1xl:w-12.5 1xl:h-12.5 xl:w-11.5 xl:h-11.5 md:w-10 md:h-10 sm:w-[35px] sm:h-[35px] w-7 h-7 rounded-full overflow-hidden">
                                                 <img src="../image/testimonial-3.webp" alt="client"
-                                                    class="w-full h-full object-cover" />
+                                                    class="w-full h-full object-cover" loading="lazy"
+                                                    decoding="async" />
                                             </div>
                                             <p class="p2 text-black uppercase">– Chris D.</p>
                                         </div>
@@ -3703,7 +3709,8 @@
                                             <div
                                                 class="1xl:w-12.5 1xl:h-12.5 xl:w-11.5 xl:h-11.5 md:w-10 md:h-10 sm:w-[35px] sm:h-[35px] w-7 h-7 rounded-full overflow-hidden">
                                                 <img src="../image/testimonial-1.webp" alt="client"
-                                                    class="w-full h-full object-cover" />
+                                                    class="w-full h-full object-cover" loading="lazy"
+                                                    decoding="async" />
                                             </div>
                                             <p class="p2 text-black uppercase">– Sarah L.</p>
                                         </div>
@@ -3750,7 +3757,8 @@
                                             <div
                                                 class="1xl:w-12.5 1xl:h-12.5 xl:w-11.5 xl:h-11.5 md:w-10 md:h-10 sm:w-[35px] sm:h-[35px] w-7 h-7 rounded-full overflow-hidden">
                                                 <img src="../image/testimonial-2.webp" alt="client"
-                                                    class="w-full h-full object-cover" />
+                                                    class="w-full h-full object-cover" loading="lazy"
+                                                    decoding="async" />
                                             </div>
                                             <p class="p2 text-black uppercase">– Lauren T.</p>
                                         </div>
@@ -3808,64 +3816,7 @@
                         <div class="slider-img">
                             <a href="https://www.instagram.com/" target="_blank" class="relative group cursor-pointer">
 
-                                <img decoding="async" src="../image/home-4_instagram-1.webp"
-                                    alt="instagram_style_1_images_1" class="w-full h-full object-cover object-center" />
-                                <div
-                                    class="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <div
-                                        class="bg-white rounded-full overflow-hidden sm:size-12 size-10 flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" class="sm:w-6 sm:h-6 w-5 h-5" fill="none">
-                                            <path
-                                                d="M6.76667 0H16.5667C20.3 0 23.3333 3.03333 23.3333 6.76667V16.5667C23.3333 18.3613 22.6204 20.0824 21.3514 21.3514C20.0824 22.6204 18.3613 23.3333 16.5667 23.3333H6.76667C3.03333 23.3333 0 20.3 0 16.5667V6.76667C0 4.97203 0.712915 3.25091 1.98191 1.98191C3.25091 0.712915 4.97203 0 6.76667 0ZM6.53333 2.33333C5.41942 2.33333 4.35114 2.77583 3.56348 3.56348C2.77583 4.35114 2.33333 5.41942 2.33333 6.53333V16.8C2.33333 19.1217 4.21167 21 6.53333 21H16.8C17.9139 21 18.9822 20.5575 19.7698 19.7698C20.5575 18.9822 21 17.9139 21 16.8V6.53333C21 4.21167 19.1217 2.33333 16.8 2.33333H6.53333ZM17.7917 4.08333C18.1784 4.08333 18.5494 4.23698 18.8229 4.51047C19.0964 4.78396 19.25 5.15489 19.25 5.54167C19.25 5.92844 19.0964 6.29937 18.8229 6.57286C18.5494 6.84635 18.1784 7 17.7917 7C17.4049 7 17.034 6.84635 16.7605 6.57286C16.487 6.29937 16.3333 5.92844 16.3333 5.54167C16.3333 5.15489 16.487 4.78396 16.7605 4.51047C17.034 4.23698 17.4049 4.08333 17.7917 4.08333ZM11.6667 5.83333C13.2138 5.83333 14.6975 6.44791 15.7915 7.54188C16.8854 8.63584 17.5 10.1196 17.5 11.6667C17.5 13.2138 16.8854 14.6975 15.7915 15.7915C14.6975 16.8854 13.2138 17.5 11.6667 17.5C10.1196 17.5 8.63584 16.8854 7.54188 15.7915C6.44791 14.6975 5.83333 13.2138 5.83333 11.6667C5.83333 10.1196 6.44791 8.63584 7.54188 7.54188C8.63584 6.44791 10.1196 5.83333 11.6667 5.83333ZM11.6667 8.16667C10.7384 8.16667 9.84817 8.53541 9.19179 9.19179C8.53541 9.84817 8.16667 10.7384 8.16667 11.6667C8.16667 12.5949 8.53541 13.4852 9.19179 14.1415C9.84817 14.7979 10.7384 15.1667 11.6667 15.1667C12.5949 15.1667 13.4852 14.7979 14.1415 14.1415C14.7979 13.4852 15.1667 12.5949 15.1667 11.6667C15.1667 10.7384 14.7979 9.84817 14.1415 9.19179C13.4852 8.53541 12.5949 8.16667 11.6667 8.16667Z"
-                                                fill="#673e2c" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slider-img">
-                            <a href="https://www.instagram.com/" target="_blank" class="relative group cursor-pointer">
-
-                                <img decoding="async" src="../image/home-4_instagram-2.webp"
-                                    alt="instagram_style_1_images_1" class="w-full h-full object-cover object-center" />
-                                <div
-                                    class="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <div
-                                        class="bg-white rounded-full overflow-hidden sm:size-12 size-10 flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" class="sm:w-6 sm:h-6 w-5 h-5" fill="none">
-                                            <path
-                                                d="M6.76667 0H16.5667C20.3 0 23.3333 3.03333 23.3333 6.76667V16.5667C23.3333 18.3613 22.6204 20.0824 21.3514 21.3514C20.0824 22.6204 18.3613 23.3333 16.5667 23.3333H6.76667C3.03333 23.3333 0 20.3 0 16.5667V6.76667C0 4.97203 0.712915 3.25091 1.98191 1.98191C3.25091 0.712915 4.97203 0 6.76667 0ZM6.53333 2.33333C5.41942 2.33333 4.35114 2.77583 3.56348 3.56348C2.77583 4.35114 2.33333 5.41942 2.33333 6.53333V16.8C2.33333 19.1217 4.21167 21 6.53333 21H16.8C17.9139 21 18.9822 20.5575 19.7698 19.7698C20.5575 18.9822 21 17.9139 21 16.8V6.53333C21 4.21167 19.1217 2.33333 16.8 2.33333H6.53333ZM17.7917 4.08333C18.1784 4.08333 18.5494 4.23698 18.8229 4.51047C19.0964 4.78396 19.25 5.15489 19.25 5.54167C19.25 5.92844 19.0964 6.29937 18.8229 6.57286C18.5494 6.84635 18.1784 7 17.7917 7C17.4049 7 17.034 6.84635 16.7605 6.57286C16.487 6.29937 16.3333 5.92844 16.3333 5.54167C16.3333 5.15489 16.487 4.78396 16.7605 4.51047C17.034 4.23698 17.4049 4.08333 17.7917 4.08333ZM11.6667 5.83333C13.2138 5.83333 14.6975 6.44791 15.7915 7.54188C16.8854 8.63584 17.5 10.1196 17.5 11.6667C17.5 13.2138 16.8854 14.6975 15.7915 15.7915C14.6975 16.8854 13.2138 17.5 11.6667 17.5C10.1196 17.5 8.63584 16.8854 7.54188 15.7915C6.44791 14.6975 5.83333 13.2138 5.83333 11.6667C5.83333 10.1196 6.44791 8.63584 7.54188 7.54188C8.63584 6.44791 10.1196 5.83333 11.6667 5.83333ZM11.6667 8.16667C10.7384 8.16667 9.84817 8.53541 9.19179 9.19179C8.53541 9.84817 8.16667 10.7384 8.16667 11.6667C8.16667 12.5949 8.53541 13.4852 9.19179 14.1415C9.84817 14.7979 10.7384 15.1667 11.6667 15.1667C12.5949 15.1667 13.4852 14.7979 14.1415 14.1415C14.7979 13.4852 15.1667 12.5949 15.1667 11.6667C15.1667 10.7384 14.7979 9.84817 14.1415 9.19179C13.4852 8.53541 12.5949 8.16667 11.6667 8.16667Z"
-                                                fill="#673e2c" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slider-img">
-                            <a href="https://www.instagram.com/" target="_blank" class="relative group cursor-pointer">
-
-                                <img decoding="async" src="../image/home-4_instagram-3.webp"
-                                    alt="instagram_style_1_images_1" class="w-full h-full object-cover object-center" />
-                                <div
-                                    class="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <div
-                                        class="bg-white rounded-full overflow-hidden sm:size-12 size-10 flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" class="sm:w-6 sm:h-6 w-5 h-5" fill="none">
-                                            <path
-                                                d="M6.76667 0H16.5667C20.3 0 23.3333 3.03333 23.3333 6.76667V16.5667C23.3333 18.3613 22.6204 20.0824 21.3514 21.3514C20.0824 22.6204 18.3613 23.3333 16.5667 23.3333H6.76667C3.03333 23.3333 0 20.3 0 16.5667V6.76667C0 4.97203 0.712915 3.25091 1.98191 1.98191C3.25091 0.712915 4.97203 0 6.76667 0ZM6.53333 2.33333C5.41942 2.33333 4.35114 2.77583 3.56348 3.56348C2.77583 4.35114 2.33333 5.41942 2.33333 6.53333V16.8C2.33333 19.1217 4.21167 21 6.53333 21H16.8C17.9139 21 18.9822 20.5575 19.7698 19.7698C20.5575 18.9822 21 17.9139 21 16.8V6.53333C21 4.21167 19.1217 2.33333 16.8 2.33333H6.53333ZM17.7917 4.08333C18.1784 4.08333 18.5494 4.23698 18.8229 4.51047C19.0964 4.78396 19.25 5.15489 19.25 5.54167C19.25 5.92844 19.0964 6.29937 18.8229 6.57286C18.5494 6.84635 18.1784 7 17.7917 7C17.4049 7 17.034 6.84635 16.7605 6.57286C16.487 6.29937 16.3333 5.92844 16.3333 5.54167C16.3333 5.15489 16.487 4.78396 16.7605 4.51047C17.034 4.23698 17.4049 4.08333 17.7917 4.08333ZM11.6667 5.83333C13.2138 5.83333 14.6975 6.44791 15.7915 7.54188C16.8854 8.63584 17.5 10.1196 17.5 11.6667C17.5 13.2138 16.8854 14.6975 15.7915 15.7915C14.6975 16.8854 13.2138 17.5 11.6667 17.5C10.1196 17.5 8.63584 16.8854 7.54188 15.7915C6.44791 14.6975 5.83333 13.2138 5.83333 11.6667C5.83333 10.1196 6.44791 8.63584 7.54188 7.54188C8.63584 6.44791 10.1196 5.83333 11.6667 5.83333ZM11.6667 8.16667C10.7384 8.16667 9.84817 8.53541 9.19179 9.19179C8.53541 9.84817 8.16667 10.7384 8.16667 11.6667C8.16667 12.5949 8.53541 13.4852 9.19179 14.1415C9.84817 14.7979 10.7384 15.1667 11.6667 15.1667C12.5949 15.1667 13.4852 14.7979 14.1415 14.1415C14.7979 13.4852 15.1667 12.5949 15.1667 11.6667C15.1667 10.7384 14.7979 9.84817 14.1415 9.19179C13.4852 8.53541 12.5949 8.16667 11.6667 8.16667Z"
-                                                fill="#673e2c" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slider-img">
-                            <a href="https://www.instagram.com/" target="_blank" class="relative group cursor-pointer">
-
-                                <img decoding="async" src="../image/class-5.webp" alt="instagram_style_1_images_1"
+                                <img src="../image/home-4_instagram-1.webp" alt="instagram_style_1_images_1"
                                     class="w-full h-full object-cover object-center" />
                                 <div
                                     class="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -3884,8 +3835,65 @@
                         <div class="slider-img">
                             <a href="https://www.instagram.com/" target="_blank" class="relative group cursor-pointer">
 
-                                <img decoding="async" src="../image/home-4_instagram-5.webp"
-                                    alt="instagram_style_1_images_1" class="w-full h-full object-cover object-center" />
+                                <img src="../image/home-4_instagram-2.webp" alt="instagram_style_1_images_1"
+                                    class="w-full h-full object-cover object-center" />
+                                <div
+                                    class="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <div
+                                        class="bg-white rounded-full overflow-hidden sm:size-12 size-10 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" class="sm:w-6 sm:h-6 w-5 h-5" fill="none">
+                                            <path
+                                                d="M6.76667 0H16.5667C20.3 0 23.3333 3.03333 23.3333 6.76667V16.5667C23.3333 18.3613 22.6204 20.0824 21.3514 21.3514C20.0824 22.6204 18.3613 23.3333 16.5667 23.3333H6.76667C3.03333 23.3333 0 20.3 0 16.5667V6.76667C0 4.97203 0.712915 3.25091 1.98191 1.98191C3.25091 0.712915 4.97203 0 6.76667 0ZM6.53333 2.33333C5.41942 2.33333 4.35114 2.77583 3.56348 3.56348C2.77583 4.35114 2.33333 5.41942 2.33333 6.53333V16.8C2.33333 19.1217 4.21167 21 6.53333 21H16.8C17.9139 21 18.9822 20.5575 19.7698 19.7698C20.5575 18.9822 21 17.9139 21 16.8V6.53333C21 4.21167 19.1217 2.33333 16.8 2.33333H6.53333ZM17.7917 4.08333C18.1784 4.08333 18.5494 4.23698 18.8229 4.51047C19.0964 4.78396 19.25 5.15489 19.25 5.54167C19.25 5.92844 19.0964 6.29937 18.8229 6.57286C18.5494 6.84635 18.1784 7 17.7917 7C17.4049 7 17.034 6.84635 16.7605 6.57286C16.487 6.29937 16.3333 5.92844 16.3333 5.54167C16.3333 5.15489 16.487 4.78396 16.7605 4.51047C17.034 4.23698 17.4049 4.08333 17.7917 4.08333ZM11.6667 5.83333C13.2138 5.83333 14.6975 6.44791 15.7915 7.54188C16.8854 8.63584 17.5 10.1196 17.5 11.6667C17.5 13.2138 16.8854 14.6975 15.7915 15.7915C14.6975 16.8854 13.2138 17.5 11.6667 17.5C10.1196 17.5 8.63584 16.8854 7.54188 15.7915C6.44791 14.6975 5.83333 13.2138 5.83333 11.6667C5.83333 10.1196 6.44791 8.63584 7.54188 7.54188C8.63584 6.44791 10.1196 5.83333 11.6667 5.83333ZM11.6667 8.16667C10.7384 8.16667 9.84817 8.53541 9.19179 9.19179C8.53541 9.84817 8.16667 10.7384 8.16667 11.6667C8.16667 12.5949 8.53541 13.4852 9.19179 14.1415C9.84817 14.7979 10.7384 15.1667 11.6667 15.1667C12.5949 15.1667 13.4852 14.7979 14.1415 14.1415C14.7979 13.4852 15.1667 12.5949 15.1667 11.6667C15.1667 10.7384 14.7979 9.84817 14.1415 9.19179C13.4852 8.53541 12.5949 8.16667 11.6667 8.16667Z"
+                                                fill="#673e2c" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="slider-img">
+                            <a href="https://www.instagram.com/" target="_blank" class="relative group cursor-pointer">
+
+                                <img src="../image/home-4_instagram-3.webp" alt="instagram_style_1_images_1"
+                                    class="w-full h-full object-cover object-center" />
+                                <div
+                                    class="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <div
+                                        class="bg-white rounded-full overflow-hidden sm:size-12 size-10 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" class="sm:w-6 sm:h-6 w-5 h-5" fill="none">
+                                            <path
+                                                d="M6.76667 0H16.5667C20.3 0 23.3333 3.03333 23.3333 6.76667V16.5667C23.3333 18.3613 22.6204 20.0824 21.3514 21.3514C20.0824 22.6204 18.3613 23.3333 16.5667 23.3333H6.76667C3.03333 23.3333 0 20.3 0 16.5667V6.76667C0 4.97203 0.712915 3.25091 1.98191 1.98191C3.25091 0.712915 4.97203 0 6.76667 0ZM6.53333 2.33333C5.41942 2.33333 4.35114 2.77583 3.56348 3.56348C2.77583 4.35114 2.33333 5.41942 2.33333 6.53333V16.8C2.33333 19.1217 4.21167 21 6.53333 21H16.8C17.9139 21 18.9822 20.5575 19.7698 19.7698C20.5575 18.9822 21 17.9139 21 16.8V6.53333C21 4.21167 19.1217 2.33333 16.8 2.33333H6.53333ZM17.7917 4.08333C18.1784 4.08333 18.5494 4.23698 18.8229 4.51047C19.0964 4.78396 19.25 5.15489 19.25 5.54167C19.25 5.92844 19.0964 6.29937 18.8229 6.57286C18.5494 6.84635 18.1784 7 17.7917 7C17.4049 7 17.034 6.84635 16.7605 6.57286C16.487 6.29937 16.3333 5.92844 16.3333 5.54167C16.3333 5.15489 16.487 4.78396 16.7605 4.51047C17.034 4.23698 17.4049 4.08333 17.7917 4.08333ZM11.6667 5.83333C13.2138 5.83333 14.6975 6.44791 15.7915 7.54188C16.8854 8.63584 17.5 10.1196 17.5 11.6667C17.5 13.2138 16.8854 14.6975 15.7915 15.7915C14.6975 16.8854 13.2138 17.5 11.6667 17.5C10.1196 17.5 8.63584 16.8854 7.54188 15.7915C6.44791 14.6975 5.83333 13.2138 5.83333 11.6667C5.83333 10.1196 6.44791 8.63584 7.54188 7.54188C8.63584 6.44791 10.1196 5.83333 11.6667 5.83333ZM11.6667 8.16667C10.7384 8.16667 9.84817 8.53541 9.19179 9.19179C8.53541 9.84817 8.16667 10.7384 8.16667 11.6667C8.16667 12.5949 8.53541 13.4852 9.19179 14.1415C9.84817 14.7979 10.7384 15.1667 11.6667 15.1667C12.5949 15.1667 13.4852 14.7979 14.1415 14.1415C14.7979 13.4852 15.1667 12.5949 15.1667 11.6667C15.1667 10.7384 14.7979 9.84817 14.1415 9.19179C13.4852 8.53541 12.5949 8.16667 11.6667 8.16667Z"
+                                                fill="#673e2c" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="slider-img">
+                            <a href="https://www.instagram.com/" target="_blank" class="relative group cursor-pointer">
+
+                                <img src="../image/class-5.webp" alt="instagram_style_1_images_1"
+                                    class="w-full h-full object-cover object-center" />
+                                <div
+                                    class="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <div
+                                        class="bg-white rounded-full overflow-hidden sm:size-12 size-10 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" class="sm:w-6 sm:h-6 w-5 h-5" fill="none">
+                                            <path
+                                                d="M6.76667 0H16.5667C20.3 0 23.3333 3.03333 23.3333 6.76667V16.5667C23.3333 18.3613 22.6204 20.0824 21.3514 21.3514C20.0824 22.6204 18.3613 23.3333 16.5667 23.3333H6.76667C3.03333 23.3333 0 20.3 0 16.5667V6.76667C0 4.97203 0.712915 3.25091 1.98191 1.98191C3.25091 0.712915 4.97203 0 6.76667 0ZM6.53333 2.33333C5.41942 2.33333 4.35114 2.77583 3.56348 3.56348C2.77583 4.35114 2.33333 5.41942 2.33333 6.53333V16.8C2.33333 19.1217 4.21167 21 6.53333 21H16.8C17.9139 21 18.9822 20.5575 19.7698 19.7698C20.5575 18.9822 21 17.9139 21 16.8V6.53333C21 4.21167 19.1217 2.33333 16.8 2.33333H6.53333ZM17.7917 4.08333C18.1784 4.08333 18.5494 4.23698 18.8229 4.51047C19.0964 4.78396 19.25 5.15489 19.25 5.54167C19.25 5.92844 19.0964 6.29937 18.8229 6.57286C18.5494 6.84635 18.1784 7 17.7917 7C17.4049 7 17.034 6.84635 16.7605 6.57286C16.487 6.29937 16.3333 5.92844 16.3333 5.54167C16.3333 5.15489 16.487 4.78396 16.7605 4.51047C17.034 4.23698 17.4049 4.08333 17.7917 4.08333ZM11.6667 5.83333C13.2138 5.83333 14.6975 6.44791 15.7915 7.54188C16.8854 8.63584 17.5 10.1196 17.5 11.6667C17.5 13.2138 16.8854 14.6975 15.7915 15.7915C14.6975 16.8854 13.2138 17.5 11.6667 17.5C10.1196 17.5 8.63584 16.8854 7.54188 15.7915C6.44791 14.6975 5.83333 13.2138 5.83333 11.6667C5.83333 10.1196 6.44791 8.63584 7.54188 7.54188C8.63584 6.44791 10.1196 5.83333 11.6667 5.83333ZM11.6667 8.16667C10.7384 8.16667 9.84817 8.53541 9.19179 9.19179C8.53541 9.84817 8.16667 10.7384 8.16667 11.6667C8.16667 12.5949 8.53541 13.4852 9.19179 14.1415C9.84817 14.7979 10.7384 15.1667 11.6667 15.1667C12.5949 15.1667 13.4852 14.7979 14.1415 14.1415C14.7979 13.4852 15.1667 12.5949 15.1667 11.6667C15.1667 10.7384 14.7979 9.84817 14.1415 9.19179C13.4852 8.53541 12.5949 8.16667 11.6667 8.16667Z"
+                                                fill="#673e2c" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="slider-img">
+                            <a href="https://www.instagram.com/" target="_blank" class="relative group cursor-pointer">
+
+                                <img src="../image/home-4_instagram-5.webp" alt="instagram_style_1_images_1"
+                                    class="w-full h-full object-cover object-center" />
                                 <div
                                     class="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                     <div
@@ -3909,26 +3917,7 @@
                         <div class="slider-img">
                             <a href="https://www.instagram.com/" target="_blank" class="relative group cursor-pointer">
 
-                                <img decoding="async" src="../image/home-4_instagram-6.webp"
-                                    alt="instagram_style_1_images_1" class="w-full h-full object-cover object-center" />
-                                <div
-                                    class="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                    <div
-                                        class="bg-white rounded-full overflow-hidden sm:size-12 size-10 flex items-center justify-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" class="sm:w-6 sm:h-6 w-5 h-5" fill="none">
-                                            <path
-                                                d="M6.76667 0H16.5667C20.3 0 23.3333 3.03333 23.3333 6.76667V16.5667C23.3333 18.3613 22.6204 20.0824 21.3514 21.3514C20.0824 22.6204 18.3613 23.3333 16.5667 23.3333H6.76667C3.03333 23.3333 0 20.3 0 16.5667V6.76667C0 4.97203 0.712915 3.25091 1.98191 1.98191C3.25091 0.712915 4.97203 0 6.76667 0ZM6.53333 2.33333C5.41942 2.33333 4.35114 2.77583 3.56348 3.56348C2.77583 4.35114 2.33333 5.41942 2.33333 6.53333V16.8C2.33333 19.1217 4.21167 21 6.53333 21H16.8C17.9139 21 18.9822 20.5575 19.7698 19.7698C20.5575 18.9822 21 17.9139 21 16.8V6.53333C21 4.21167 19.1217 2.33333 16.8 2.33333H6.53333ZM17.7917 4.08333C18.1784 4.08333 18.5494 4.23698 18.8229 4.51047C19.0964 4.78396 19.25 5.15489 19.25 5.54167C19.25 5.92844 19.0964 6.29937 18.8229 6.57286C18.5494 6.84635 18.1784 7 17.7917 7C17.4049 7 17.034 6.84635 16.7605 6.57286C16.487 6.29937 16.3333 5.92844 16.3333 5.54167C16.3333 5.15489 16.487 4.78396 16.7605 4.51047C17.034 4.23698 17.4049 4.08333 17.7917 4.08333ZM11.6667 5.83333C13.2138 5.83333 14.6975 6.44791 15.7915 7.54188C16.8854 8.63584 17.5 10.1196 17.5 11.6667C17.5 13.2138 16.8854 14.6975 15.7915 15.7915C14.6975 16.8854 13.2138 17.5 11.6667 17.5C10.1196 17.5 8.63584 16.8854 7.54188 15.7915C6.44791 14.6975 5.83333 13.2138 5.83333 11.6667C5.83333 10.1196 6.44791 8.63584 7.54188 7.54188C8.63584 6.44791 10.1196 5.83333 11.6667 5.83333ZM11.6667 8.16667C10.7384 8.16667 9.84817 8.53541 9.19179 9.19179C8.53541 9.84817 8.16667 10.7384 8.16667 11.6667C8.16667 12.5949 8.53541 13.4852 9.19179 14.1415C9.84817 14.7979 10.7384 15.1667 11.6667 15.1667C12.5949 15.1667 13.4852 14.7979 14.1415 14.1415C14.7979 13.4852 15.1667 12.5949 15.1667 11.6667C15.1667 10.7384 14.7979 9.84817 14.1415 9.19179C13.4852 8.53541 12.5949 8.16667 11.6667 8.16667Z"
-                                                fill="#673e2c" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="slider-img">
-                            <a href="https://www.instagram.com/" target="_blank" class="relative group cursor-pointer">
-
-                                <img decoding="async" src="../image/blog-3_13.webp" alt="instagram_style_1_images_1"
+                                <img src="../image/home-4_instagram-6.webp" alt="instagram_style_1_images_1"
                                     class="w-full h-full object-cover object-center" />
                                 <div
                                     class="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -3947,8 +3936,8 @@
                         <div class="slider-img">
                             <a href="https://www.instagram.com/" target="_blank" class="relative group cursor-pointer">
 
-                                <img decoding="async" src="../image/home-4_instagram-8.webp"
-                                    alt="instagram_style_1_images_1" class="w-full h-full object-cover object-center" />
+                                <img src="../image/blog-3_13.webp" alt="instagram_style_1_images_1"
+                                    class="w-full h-full object-cover object-center" />
                                 <div
                                     class="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                     <div
@@ -3966,8 +3955,8 @@
                         <div class="slider-img">
                             <a href="https://www.instagram.com/" target="_blank" class="relative group cursor-pointer">
 
-                                <img decoding="async" src="../image/home-4_instagram-9.webp"
-                                    alt="instagram_style_1_images_1" class="w-full h-full object-cover object-center" />
+                                <img src="../image/home-4_instagram-8.webp" alt="instagram_style_1_images_1"
+                                    class="w-full h-full object-cover object-center" />
                                 <div
                                     class="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                                     <div
@@ -3985,7 +3974,26 @@
                         <div class="slider-img">
                             <a href="https://www.instagram.com/" target="_blank" class="relative group cursor-pointer">
 
-                                <img decoding="async" src="../image/blog-3_17.webp" alt="instagram_style_1_images_1"
+                                <img src="../image/home-4_instagram-9.webp" alt="instagram_style_1_images_1"
+                                    class="w-full h-full object-cover object-center" />
+                                <div
+                                    class="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <div
+                                        class="bg-white rounded-full overflow-hidden sm:size-12 size-10 flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" class="sm:w-6 sm:h-6 w-5 h-5" fill="none">
+                                            <path
+                                                d="M6.76667 0H16.5667C20.3 0 23.3333 3.03333 23.3333 6.76667V16.5667C23.3333 18.3613 22.6204 20.0824 21.3514 21.3514C20.0824 22.6204 18.3613 23.3333 16.5667 23.3333H6.76667C3.03333 23.3333 0 20.3 0 16.5667V6.76667C0 4.97203 0.712915 3.25091 1.98191 1.98191C3.25091 0.712915 4.97203 0 6.76667 0ZM6.53333 2.33333C5.41942 2.33333 4.35114 2.77583 3.56348 3.56348C2.77583 4.35114 2.33333 5.41942 2.33333 6.53333V16.8C2.33333 19.1217 4.21167 21 6.53333 21H16.8C17.9139 21 18.9822 20.5575 19.7698 19.7698C20.5575 18.9822 21 17.9139 21 16.8V6.53333C21 4.21167 19.1217 2.33333 16.8 2.33333H6.53333ZM17.7917 4.08333C18.1784 4.08333 18.5494 4.23698 18.8229 4.51047C19.0964 4.78396 19.25 5.15489 19.25 5.54167C19.25 5.92844 19.0964 6.29937 18.8229 6.57286C18.5494 6.84635 18.1784 7 17.7917 7C17.4049 7 17.034 6.84635 16.7605 6.57286C16.487 6.29937 16.3333 5.92844 16.3333 5.54167C16.3333 5.15489 16.487 4.78396 16.7605 4.51047C17.034 4.23698 17.4049 4.08333 17.7917 4.08333ZM11.6667 5.83333C13.2138 5.83333 14.6975 6.44791 15.7915 7.54188C16.8854 8.63584 17.5 10.1196 17.5 11.6667C17.5 13.2138 16.8854 14.6975 15.7915 15.7915C14.6975 16.8854 13.2138 17.5 11.6667 17.5C10.1196 17.5 8.63584 16.8854 7.54188 15.7915C6.44791 14.6975 5.83333 13.2138 5.83333 11.6667C5.83333 10.1196 6.44791 8.63584 7.54188 7.54188C8.63584 6.44791 10.1196 5.83333 11.6667 5.83333ZM11.6667 8.16667C10.7384 8.16667 9.84817 8.53541 9.19179 9.19179C8.53541 9.84817 8.16667 10.7384 8.16667 11.6667C8.16667 12.5949 8.53541 13.4852 9.19179 14.1415C9.84817 14.7979 10.7384 15.1667 11.6667 15.1667C12.5949 15.1667 13.4852 14.7979 14.1415 14.1415C14.7979 13.4852 15.1667 12.5949 15.1667 11.6667C15.1667 10.7384 14.7979 9.84817 14.1415 9.19179C13.4852 8.53541 12.5949 8.16667 11.6667 8.16667Z"
+                                                fill="#673e2c" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="slider-img">
+                            <a href="https://www.instagram.com/" target="_blank" class="relative group cursor-pointer">
+
+                                <img src="../image/blog-3_17.webp" alt="instagram_style_1_images_1"
                                     class="w-full h-full object-cover object-center" />
                                 <div
                                     class="absolute inset-0 bg-linear-to-b from-primary/0 to-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
@@ -4032,23 +4040,7 @@
                             </p>
                         </div>
                         <div class="lg:w-auto md:w-[45%] sm:w-1/2 w-full">
-                            <!-- <form id="validate-form" data-endpoint novalidate data-endpoint
-                            class="validate-form w-full max-w-full bg-white flex items-center gap-2 px-4 py-0 border-b border-[#673E2C33] newsletter">
-                                <input type="email" placeholder="Enter your Email" name="email" required
-                                    class="p2 lt:py-3 md:py-2.5 py-2 flex-1 w-full text-gray-800 placeholder-gray-500 focus:outline-none" />
-                                <button type="submit"
-                                    class="text-black hover:text-primary focus:text-primary active:text-primary h-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="31" viewBox="0 0 20 31"
-                                        fill="none">
-                                        <g clip-path="url(#clip0_5521_369)">
-                                            <path
-                                                d="M2.8667 20.6157C2.8667 20.6157 10.8435 12.6388 14.166 9.31624M14.166 9.31624L14.4907 17.8238M14.166 9.31624L5.65782 8.99212"
-                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                        </g>
-                                    </svg>
-                                </button>
-                            </form> -->
+
                             <div class="relative mb-6 ">
                                 <form id="validate-form" novalidate
                                     class="validate-form w-full max-w-full bg-white flex items-center gap-2 px-4 py-0 border-b border-[#673E2C33] newsletter home-4_newsletter">
@@ -4249,15 +4241,16 @@
     </footer>
     <!-- ====== End Footer ====== -->
 
-    <script type="text/javascript" src="../js/jquery.min.js" defer></script>
-    <!-- Magnific Popup Js & CSS  -->
-    <script type="text/javascript" src="../js/jquery.magnific-popup.min.js" defer></script>
-    <!-- Swiper Slider Js & CSS  -->
-    <script type="text/javascript" src="../js/swiper-bundle.min.js" defer></script>
-    <!-- font-awosome Js & CSS -->
-    <script type="text/javascript" src="../js/all.min.js" defer></script>
-    <!-- style.css -->
-    <script type="text/javascript" src="../js/custom.js" defer></script>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jquery.magnific-popup.min.js" defer></script>
+    <script src="../js/swiper-bundle.min.js" defer></script>
+    <script src="../js/custom.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script defer>
+        AOS.init({
+            offset: 60,
+        });
+    </script>
 </body>
 
 </html>

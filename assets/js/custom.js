@@ -1509,7 +1509,7 @@ var swiper = new Swiper(".home-3_classes", {
 
 // NAVBAR SHOP
 var swiper = new Swiper(".home-3_instagram", {
-  slidesPerView: 1.9,
+  slidesPerView: 1.7,
   spaceBetween: 10,
   centeredSlides: true,
   loop: true,
@@ -1694,22 +1694,23 @@ $(document).ready(function () {
     arrow.toggleClass("rotate-180");
   });
 
+  // ✅ THIS LINE FIXES CHECKBOX ISSUE
+  $(".dropdown-menu").on("click", function (e) {
+    e.stopPropagation();
+  });
+
   $(".dropdown-item").on("click", function () {
     const dropdown = $(this).closest(".dropdown");
     const textEl = dropdown.find(".dropdown-text");
     const hiddenInput = dropdown.find("input[type='hidden']");
     const selectedText = $(this).text().trim();
 
-    // set UI text
     textEl.text(selectedText)
       .removeClass("text-thunder-100/50")
       .addClass("text-thunder-100");
 
-    // 🔥 set real value for validation
     hiddenInput.val(selectedText).trigger("change");
 
-
-    // 🔥 Color logic
     if (selectedText === "All Category") {
       textEl
         .removeClass("text-thunder-100")
@@ -1729,6 +1730,7 @@ $(document).ready(function () {
     $(".dropdown-arrow").removeClass("rotate-180");
   });
 });
+
 
 // =============== END CLASSES =================================
 
@@ -1932,13 +1934,6 @@ $(document).ready(function () {
       const $panel = $(".shop-filter-panel");
       const $panelIcon = $(".shop-filter-mobile-icon");
 
-      // Keep inner sections open (no per-section dropdown)
-      $(".filter-box").each(function () {
-        const $box = $(this);
-        $box.find(".filter-content").show();
-        $box.find(".toggle-icon").text("−");
-      });
-
       if (mobileMode) {
         // Closed by default on mobile
         $panel.hide();
@@ -1968,10 +1963,21 @@ $(document).ready(function () {
       });
     });
 
-    // Disable per-section toggles (full section dropdown per design)
-    $(".filter-toggle").on("click", function (e) {
+    // Per-section toggles: collapse/expand each filter group
+    $(document).on("click", ".filter-toggle", function (e) {
       e.preventDefault();
-      return false;
+
+      const $toggle = $(this);
+      const $box = $toggle.closest(".filter-box");
+      const $content = $box.find(".filter-content").first();
+      const $icon = $toggle.find(".toggle-icon").first();
+
+      if ($content.length === 0) return;
+
+      $content.stop(true, true).slideToggle(200, function () {
+        const isOpen = $content.is(":visible");
+        if ($icon.length) $icon.text(isOpen ? "−" : "+");
+      });
     });
   });
 });
@@ -2034,12 +2040,12 @@ $(document).ready(function () {
         .removeClass('hidden')
         .hide()
         .stop(true, true)
-        .slideDown(400);
+        .slideDown(150);
       $('.shipping-detail :input').prop('required', true);
     } else {
       $('.shipping-detail')
         .stop(true, true)
-        .slideUp(400, function () {
+        .slideUp(150, function () {
           $(this).addClass('hidden');
         });
       $('.shipping-detail :input').prop('required', false);

@@ -4,25 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yoga Html - Gift Card</title>
-    <link rel="icon" type="image/x-icon" href="image/favicon.png" />
-
-    <!-- Magnific Popup Js & CSS  -->
-    <link rel="stylesheet" href="../css/magnific-popup.min.css" />
-    <!-- Magnific Popup Js & CSS  -->
-
-    <!-- Swiper Slider Js & CSS  -->
-    <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
-    <!-- Swiper Slider Js & CSS  -->
-
-    <!-- font-awosome Js & CSS -->
-    <link rel="stylesheet" type="text/css" href="../css/all.min.css" />
-    <!-- font-awosome Js & CSS -->
-
-    <!-- style.css -->
+    <title>Yoga Html - Cart</title>
+    <link rel="icon" type="../image/x-icon" href="../image/favicon.png" />
+    <link rel="preload" href="../css/magnific-popup.min.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="../css/swiper-bundle.min.css" as="style" onload="this.rel='stylesheet'">
     <link rel="stylesheet" href="../../dist/output.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-    <!-- style.css -->
 </head>
 
 <body>
@@ -37,7 +25,7 @@
             <!-- ============================= -->
             <div id="wishlistSidebar"
                 class="fixed top-0 right-0 h-screen w-auto translate-x-full transition-transform duration-300 z-999999 flex flex-col items-end">
-                <div class="bg-white flex flex-col h-screen w-full 2xl:max-w-[440px] max-w-[375px]">
+                <div class="bg-white flex flex-col h-screen w-full 2xl:max-w-[440px] sm:max-w-[375px] max-w-[320px]">
                     <!-- Header -->
                     <div class="flex items-center justify-between bg-whitesmoke-100 2xl:p-[22px] sm:p-[18px] px-4 py-3">
                         <h5 class="text-[#6F4E37] w-full uppercase">My Wishlist</h5>
@@ -83,7 +71,8 @@
                                 </div>
 
                                 <p class="text-[#2D2D2DCC] p2">$138.00</p>
-                                <button class="btn btn-secondary font-normal text-[10px] 2xl:py-[7px] py-[5px]">
+                                <button
+                                    class="btn btn-secondary font-normal text-[10px] 2xl:py-[7px] py-[5px] 2xl:px-6! px-5!">
                                     Add to Cart
                                 </button>
                             </div>
@@ -118,7 +107,8 @@
                                 </div>
 
                                 <p class="text-[#2D2D2DCC] p2">$49.98</p>
-                                <button class="btn btn-secondary font-normal text-[10px] 2xl:py-[7px] py-[5px]">
+                                <button
+                                    class="btn btn-secondary font-normal text-[10px] 2xl:py-[7px] py-[5px] 2xl:px-6! px-5!">
                                     Add to Cart
                                 </button>
                             </div>
@@ -153,7 +143,8 @@
                                 </div>
 
                                 <p class="text-[#2D2D2DCC] p2">$49.98</p>
-                                <button class="btn btn-secondary font-normal text-[10px] 2xl:py-[7px] py-[5px]">
+                                <button
+                                    class="btn btn-secondary font-normal text-[10px] 2xl:py-[7px] py-[5px] 2xl:px-6! px-5!">
                                     Add to Cart
                                 </button>
                             </div>
@@ -180,7 +171,7 @@
             <!-- ============================= -->
             <div id="cartSidebar"
                 class="fixed top-0 right-0 h-screen w-auto translate-x-full transition-transform duration-300 z-999999 flex flex-col items-end">
-                <div class="bg-white flex flex-col h-screen w-full 2xl:max-w-[440px] max-w-[375px]">
+                <div class="bg-white flex flex-col h-screen w-full 2xl:max-w-[440px] sm:max-w-[375px] max-w-[320px]">
                     <!-- Header -->
                     <div class="flex items-center justify-between bg-whitesmoke-100 2xl:p-[22px] sm:p-[18px] px-4 py-3">
                         <h5 class="text-[#6F4E37] w-full uppercase">MY CART</h5>
@@ -196,355 +187,334 @@
                     </div>
 
                     <!-- CART ITEM -->
-                    <div class="2xl:px-[22px] px-4 overflow-y-auto scrollbar-custom">
+                    <div class="2xl:px-[22px] px-4 overflow-y-auto scrollbar-custom sm:max-h-[calc(100vh-14vh)] max-h-[calc(100vh-40vh)]">
                         <!-- Item 1 -->
-                        <div class="flex 2xl:gap-5 gap-4 2xl:py-5 py-4 border-b border-[#673E2C33]">
-                            <div
-                                class="bg-[#E0E0E0] rounded-sm 2xl:p-[10px] p-2 border border-[#F4F1EF] relative 2xl:h-[150px] lt:h-[120px] h-[132px] 2xl:w-[120px] w-[110px] flex items-center justify-center group/shop">
-                                <img decoding="async" src="../image/nav-product-1.webp" alt="product-1"
-                                    class="w-auto h-auto" />
-                            </div>
-
-                            <div class="flex-1 2xl:space-y-3 space-y-2">
-                                <p class="font-primary text-[#2D2D22]">
-                                    Manduka PRO Yoga Mat 6mm
-                                </p>
-
-                                <div class="flex items-center justify-between w-full gap-3">
-                                    <p class="flex items-center gap-2 text-[#2D2D2DCC] p2">
-                                        Color:
-                                        <span
-                                            class="inline-block 2xl:w-[19px] 2xl:h-[19px] w-[17px] h-[17px] rounded-full bg-[#B4C7E2] ml-1"></span>
-                                    </p>
-
-                                    <!-- Quantity -->
-                                    <div
-                                        class="flex items-center justify-between 2xl:gap-[14px] gap-3 px-2 rounded-full border border-[#673E2C80]">
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
-                                                <path
-                                                    d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                        <span
-                                            class="text-[12px] uppercase font-medium 2xl:leading-[28px] leading-[23px]">1</span>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
-                                                <path
-                                                    d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div class="flex items-center justify-between">
-                                    <p class="text-[#2D2D2DCC] p2">$138.00</p>
-                                    <button class="flex items-center">
-                                        <p class="flex items-center gap-2 p2">
-                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16"
-                                                viewBox="0 0 16 16" fill="none"
-                                                class="2xl:w-4 2xl:h-4 w-[14px] h-[14px]">
-                                                <mask id="mask0_3923_7940" style="mask-type: alpha"
-                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
-                                                    <rect width="16" height="16" fill="url(#pattern0_3923_7940)" />
-                                                </mask>
-                                                <g mask="url(#mask0_3923_7940)">
-                                                    <rect width="16" height="16" fill="#673E2C" />
-                                                </g>
-                                                <defs>
-                                                    <pattern id="pattern0_3923_7940"
-                                                        patternContentUnits="objectBoundingBox" width="1" height="1">
-                                                        <use xlink:href="#image0_3923_7940"
-                                                            transform="scale(0.0078125)" />
-                                                    </pattern>
-                                                    <image id="image0_3923_7940" width="128" height="128"
-                                                        preserveAspectRatio="none"
-                                                        xlink:href="data:image/png;base64,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" />
-                                                </defs>
-                                            </svg>
-                                            Remove
-                                        </p>
-                                    </button>
-                                </div>
-                            </div>
+                        <div class=" flex 2xl:gap-5 gap-4 2xl:py-5 py-4 border-b border-[#673E2C33]">
+                        <div
+                            class="bg-[#E0E0E0] rounded-sm 2xl:p-[10px] p-2 border border-[#F4F1EF] relative 2xl:h-[150px] lt:h-[120px] h-[132px] 2xl:w-[120px] w-[110px] flex items-center justify-center group/shop">
+                            <img decoding="async" src="../image/nav-product-1.webp" alt="product-1"
+                                class="w-auto h-auto" />
                         </div>
 
-                        <!-- Item 2 -->
-                        <div class="flex 2xl:gap-5 gap-4 2xl:py-5 py-4 border-b border-[#673E2C33]">
-                            <div
-                                class="bg-[#E0E0E0] rounded-sm 2xl:p-[10px] p-2 border border-[#F4F1EF] relative 2xl:h-[150px] lt:h-[120px] h-[132px] 2xl:w-[120px] w-[110px] flex items-center justify-center group/shop">
-                                <img decoding="async" src="../image/nav-product-2.webp" alt="product-1"
-                                    class="w-auto h-auto" />
-                            </div>
+                        <div class="flex-1 2xl:space-y-3 space-y-2">
+                            <p class="font-primary text-[#2D2D22]">
+                                Manduka PRO Yoga Mat 6mm
+                            </p>
 
-                            <div class="flex-1 2xl:space-y-3 space-y-2">
-                                <p class="font-primary text-[#2D2D22]">
-                                    Buddha Teas Organic Calm Tea
+                            <div class="flex items-center justify-between w-full gap-3">
+                                <p class="flex items-center gap-2 text-[#2D2D2DCC] p2">
+                                    Color:
+                                    <span
+                                        class="inline-block 2xl:w-[19px] 2xl:h-[19px] w-[17px] h-[17px] rounded-full bg-[#B4C7E2] ml-1"></span>
                                 </p>
 
-                                <div class="flex items-center justify-between w-full gap-3">
-                                    <p class="flex items-center gap-2 text-[#2D2D2DCC] p2">
-                                        Color:
-                                        <span
-                                            class="inline-block 2xl:w-[19px] 2xl:h-[19px] w-[17px] h-[17px] rounded-full bg-[#B4C7E2] ml-1"></span>
-                                    </p>
-
-                                    <!-- Quantity -->
-                                    <div
-                                        class="flex items-center justify-between 2xl:gap-[14px] gap-3 px-2 rounded-full border border-[#673E2C80]">
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
-                                                <path
-                                                    d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                        <span
-                                            class="text-[12px] uppercase font-medium 2xl:leading-[28px] leading-[23px]">1</span>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
-                                                <path
-                                                    d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div class="flex items-center justify-between">
-                                    <p class="text-[#2D2D2DCC] p2">$49.98</p>
-                                    <button class="flex items-center">
-                                        <p class="flex items-center gap-2 p2">
-                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16"
-                                                viewBox="0 0 16 16" fill="none"
-                                                class="2xl:w-4 2xl:h-4 w-[14px] h-[14px]">
-                                                <mask id="mask0_3923_7940" style="mask-type: alpha"
-                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
-                                                    <rect width="16" height="16" fill="url(#pattern0_3923_7940)" />
-                                                </mask>
-                                                <g mask="url(#mask0_3923_7940)">
-                                                    <rect width="16" height="16" fill="#673E2C" />
-                                                </g>
-                                                <defs>
-                                                    <pattern id="pattern0_3923_7940"
-                                                        patternContentUnits="objectBoundingBox" width="1" height="1">
-                                                        <use xlink:href="#image0_3923_7940"
-                                                            transform="scale(0.0078125)" />
-                                                    </pattern>
-                                                    <image id="image0_3923_7940" width="128" height="128"
-                                                        preserveAspectRatio="none"
-                                                        xlink:href="data:image/png;base64,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" />
-                                                </defs>
-                                            </svg>
-                                            Remove
-                                        </p>
+                                <!-- Quantity -->
+                                <div
+                                    class="flex items-center justify-between 2xl:gap-[14px] gap-3 px-2 rounded-full border border-[#673E2C80]">
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
+                                            <path d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
+                                                stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                    <span
+                                        class="text-[12px] uppercase font-medium 2xl:leading-[28px] leading-[23px]">1</span>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
+                                            <path d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
+                                                stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
+                                                stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
                                     </button>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Item 3 -->
-                        <div class="flex 2xl:gap-5 gap-4 2xl:py-5 py-4 border-b border-[#673E2C33]">
-                            <div
-                                class="bg-[#E0E0E0] rounded-sm 2xl:p-[10px] p-2 border border-[#F4F1EF] relative 2xl:h-[150px] lt:h-[120px] h-[132px] 2xl:w-[120px] w-[110px] flex items-center justify-center group/shop">
-                                <img decoding="async" src="../image/nav-product-3.webp" alt="product-1"
-                                    class="w-auto h-auto" />
-                            </div>
-
-                            <div class="flex-1 2xl:space-y-3 space-y-2">
-                                <p class="font-primary text-[#2D2D22]">
-                                    Gaiam Yoga Starter Kit
-                                </p>
-
-                                <div class="flex items-center justify-between w-full gap-3">
-                                    <p class="flex items-center gap-2 text-[#2D2D2DCC] p2">
-                                        Color:
-                                        <span
-                                            class="inline-block 2xl:w-[19px] 2xl:h-[19px] w-[17px] h-[17px] rounded-full bg-[#9581B9] ml-1"></span>
+                            <div class="flex items-center justify-between">
+                                <p class="text-[#2D2D2DCC] p2">$138.00</p>
+                                <button class="flex items-center">
+                                    <p class="flex items-center gap-2 p2">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16"
+                                            viewBox="0 0 16 16" fill="none" class="2xl:w-4 2xl:h-4 w-[14px] h-[14px]">
+                                            <mask id="mask0_3923_7940" style="mask-type: alpha"
+                                                maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                                <rect width="16" height="16" fill="url(#pattern0_3923_7940)" />
+                                            </mask>
+                                            <g mask="url(#mask0_3923_7940)">
+                                                <rect width="16" height="16" fill="#673E2C" />
+                                            </g>
+                                            <defs>
+                                                <pattern id="pattern0_3923_7940" patternContentUnits="objectBoundingBox"
+                                                    width="1" height="1">
+                                                    <use xlink:href="#image0_3923_7940" transform="scale(0.0078125)" />
+                                                </pattern>
+                                                <image id="image0_3923_7940" width="128" height="128"
+                                                    preserveAspectRatio="none"
+                                                    xlink:href="data:image/png;base64,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" />
+                                            </defs>
+                                        </svg>
+                                        Remove
                                     </p>
-
-                                    <!-- Quantity -->
-                                    <div
-                                        class="flex items-center justify-between 2xl:gap-[14px] gap-3 px-2 rounded-full border border-[#673E2C80]">
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
-                                                <path
-                                                    d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                        <span
-                                            class="text-[12px] uppercase font-medium 2xl:leading-[28px] leading-[23px]">1</span>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
-                                                <path
-                                                    d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div class="flex items-center justify-between">
-                                    <p class="text-[#2D2D2DCC] p2">$49.98</p>
-                                    <button class="flex items-center">
-                                        <p class="flex items-center gap-2 p2">
-                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16"
-                                                viewBox="0 0 16 16" fill="none"
-                                                class="2xl:w-4 2xl:h-4 w-[14px] h-[14px]">
-                                                <mask id="mask0_3923_7940" style="mask-type: alpha"
-                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
-                                                    <rect width="16" height="16" fill="url(#pattern0_3923_7940)" />
-                                                </mask>
-                                                <g mask="url(#mask0_3923_7940)">
-                                                    <rect width="16" height="16" fill="#673E2C" />
-                                                </g>
-                                                <defs>
-                                                    <pattern id="pattern0_3923_7940"
-                                                        patternContentUnits="objectBoundingBox" width="1" height="1">
-                                                        <use xlink:href="#image0_3923_7940"
-                                                            transform="scale(0.0078125)" />
-                                                    </pattern>
-                                                    <image id="image0_3923_7940" width="128" height="128"
-                                                        preserveAspectRatio="none"
-                                                        xlink:href="data:image/png;base64,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" />
-                                                </defs>
-                                            </svg>
-                                            Remove
-                                        </p>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item 4 -->
-                        <div class="flex 2xl:gap-5 gap-4 2xl:py-5 py-4 border-b border-[#673E2C33]">
-                            <div
-                                class="bg-[#E0E0E0] rounded-sm 2xl:p-[10px] p-2 border border-[#F4F1EF] relative 2xl:h-[150px] lt:h-[120px] h-[132px] 2xl:w-[120px] w-[110px] flex items-center justify-center group/shop">
-                                <img decoding="async" src="../image/gift-card.webp" alt="product-1"
-                                    class="w-auto h-auto" />
-                            </div>
-
-                            <div class="flex-1 2xl:space-y-3 space-y-2">
-                                <p class="font-primary text-[#2D2D22]">Wellness Gift Card</p>
-
-                                <div class="flex items-center justify-between w-full gap-[10px]">
-                                    <p class="flex items-center gap-2 text-[#2D2D2DCC] p2">
-                                        Code:(YOGA20)
-                                    </p>
-
-                                    <!-- Quantity -->
-                                    <div
-                                        class="flex items-center justify-between 2xl:gap-[14px] gap-3 px-2 rounded-full border border-[#673E2C80]">
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
-                                                <path
-                                                    d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                        <span
-                                            class="text-[12px] uppercase font-medium 2xl:leading-[28px] leading-[23px]">1</span>
-                                        <button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
-                                                <path
-                                                    d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
-                                                    stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div class="flex items-center justify-between">
-                                    <p class="text-[#2D2D2DCC] p2">$39.00</p>
-                                    <button class="flex items-center">
-                                        <p class="flex items-center gap-2 p2">
-                                            <svg xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16"
-                                                viewBox="0 0 16 16" fill="none"
-                                                class="2xl:w-4 2xl:h-4 w-[14px] h-[14px]">
-                                                <mask id="mask0_3923_7940" style="mask-type: alpha"
-                                                    maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
-                                                    <rect width="16" height="16" fill="url(#pattern0_3923_7940)" />
-                                                </mask>
-                                                <g mask="url(#mask0_3923_7940)">
-                                                    <rect width="16" height="16" fill="#673E2C" />
-                                                </g>
-                                                <defs>
-                                                    <pattern id="pattern0_3923_7940"
-                                                        patternContentUnits="objectBoundingBox" width="1" height="1">
-                                                        <use xlink:href="#image0_3923_7940"
-                                                            transform="scale(0.0078125)" />
-                                                    </pattern>
-                                                    <image id="image0_3923_7940" width="128" height="128"
-                                                        preserveAspectRatio="none"
-                                                        xlink:href="data:image/png;base64,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" />
-                                                </defs>
-                                            </svg>
-                                            Remove
-                                        </p>
-                                    </button>
-                                </div>
+                                </button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Subtotal & Buttons (Sticky bottom) -->
-                    <div class="mt-auto pt-6 sticky bottom-5 bg-white 2xl:px-[22px] px-4">
+                    <!-- Item 2 -->
+                    <div class="flex 2xl:gap-5 gap-4 2xl:py-5 py-4 border-b border-[#673E2C33]">
                         <div
-                            class="flex items-center justify-between font-medium 2xl:mb-6 mb-[18px] 2xl:py-[15px] py-3 border-y border-[#673E2C33]">
-                            <p class="font-medium font-primary">Sub Total</p>
-                            <p class="font-medium font-primary">$449.00</p>
+                            class="bg-[#E0E0E0] rounded-sm 2xl:p-[10px] p-2 border border-[#F4F1EF] relative 2xl:h-[150px] lt:h-[120px] h-[132px] 2xl:w-[120px] w-[110px] flex items-center justify-center group/shop">
+                            <img decoding="async" src="../image/nav-product-2.webp" alt="product-1"
+                                class="w-auto h-auto" />
                         </div>
 
-                        <!-- Buttons -->
-                        <div class="flex flex-col 2xl:gap-6 gap-4">
-                            <a href="./cart.html" class="btn btn-secondary w-full 2xl:text-18 text-15 font-normal">
-                                View Cart
-                            </a>
-                            <a href="./checkout.html" class="btn btn-secondary w-full 2xl:text-18 text-15 font-normal">
-                                Checkout
-                            </a>
+                        <div class="flex-1 2xl:space-y-3 space-y-2">
+                            <p class="font-primary text-[#2D2D22]">
+                                Buddha Teas Organic Calm Tea
+                            </p>
+
+                            <div class="flex items-center justify-between w-full gap-3">
+                                <p class="flex items-center gap-2 text-[#2D2D2DCC] p2">
+                                    Color:
+                                    <span
+                                        class="inline-block 2xl:w-[19px] 2xl:h-[19px] w-[17px] h-[17px] rounded-full bg-[#B4C7E2] ml-1"></span>
+                                </p>
+
+                                <!-- Quantity -->
+                                <div
+                                    class="flex items-center justify-between 2xl:gap-[14px] gap-3 px-2 rounded-full border border-[#673E2C80]">
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
+                                            <path d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
+                                                stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                    <span
+                                        class="text-[12px] uppercase font-medium 2xl:leading-[28px] leading-[23px]">1</span>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
+                                            <path d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
+                                                stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
+                                                stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <p class="text-[#2D2D2DCC] p2">$49.98</p>
+                                <button class="flex items-center">
+                                    <p class="flex items-center gap-2 p2">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16"
+                                            viewBox="0 0 16 16" fill="none" class="2xl:w-4 2xl:h-4 w-[14px] h-[14px]">
+                                            <mask id="mask0_3923_7940" style="mask-type: alpha"
+                                                maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                                <rect width="16" height="16" fill="url(#pattern0_3923_7940)" />
+                                            </mask>
+                                            <g mask="url(#mask0_3923_7940)">
+                                                <rect width="16" height="16" fill="#673E2C" />
+                                            </g>
+                                            <defs>
+                                                <pattern id="pattern0_3923_7940" patternContentUnits="objectBoundingBox"
+                                                    width="1" height="1">
+                                                    <use xlink:href="#image0_3923_7940" transform="scale(0.0078125)" />
+                                                </pattern>
+                                                <image id="image0_3923_7940" width="128" height="128"
+                                                    preserveAspectRatio="none"
+                                                    xlink:href="data:image/png;base64,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" />
+                                            </defs>
+                                        </svg>
+                                        Remove
+                                    </p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="flex 2xl:gap-5 gap-4 2xl:py-5 py-4 border-b border-[#673E2C33]">
+                        <div
+                            class="bg-[#E0E0E0] rounded-sm 2xl:p-[10px] p-2 border border-[#F4F1EF] relative 2xl:h-[150px] lt:h-[120px] h-[132px] 2xl:w-[120px] w-[110px] flex items-center justify-center group/shop">
+                            <img decoding="async" src="../image/nav-product-3.webp" alt="product-1"
+                                class="w-auto h-auto" />
+                        </div>
+
+                        <div class="flex-1 2xl:space-y-3 space-y-2">
+                            <p class="font-primary text-[#2D2D22]">
+                                Gaiam Yoga Starter Kit
+                            </p>
+
+                            <div class="flex items-center justify-between w-full gap-3">
+                                <p class="flex items-center gap-2 text-[#2D2D2DCC] p2">
+                                    Color:
+                                    <span
+                                        class="inline-block 2xl:w-[19px] 2xl:h-[19px] w-[17px] h-[17px] rounded-full bg-[#9581B9] ml-1"></span>
+                                </p>
+
+                                <!-- Quantity -->
+                                <div
+                                    class="flex items-center justify-between 2xl:gap-[14px] gap-3 px-2 rounded-full border border-[#673E2C80]">
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
+                                            <path d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
+                                                stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                    <span
+                                        class="text-[12px] uppercase font-medium 2xl:leading-[28px] leading-[23px]">1</span>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
+                                            <path d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
+                                                stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
+                                                stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <p class="text-[#2D2D2DCC] p2">$49.98</p>
+                                <button class="flex items-center">
+                                    <p class="flex items-center gap-2 p2">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16"
+                                            viewBox="0 0 16 16" fill="none" class="2xl:w-4 2xl:h-4 w-[14px] h-[14px]">
+                                            <mask id="mask0_3923_7940" style="mask-type: alpha"
+                                                maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                                <rect width="16" height="16" fill="url(#pattern0_3923_7940)" />
+                                            </mask>
+                                            <g mask="url(#mask0_3923_7940)">
+                                                <rect width="16" height="16" fill="#673E2C" />
+                                            </g>
+                                            <defs>
+                                                <pattern id="pattern0_3923_7940" patternContentUnits="objectBoundingBox"
+                                                    width="1" height="1">
+                                                    <use xlink:href="#image0_3923_7940" transform="scale(0.0078125)" />
+                                                </pattern>
+                                                <image id="image0_3923_7940" width="128" height="128"
+                                                    preserveAspectRatio="none"
+                                                    xlink:href="data:image/png;base64,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" />
+                                            </defs>
+                                        </svg>
+                                        Remove
+                                    </p>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="flex 2xl:gap-5 gap-4 2xl:py-5 py-4 border-b border-[#673E2C33]">
+                        <div
+                            class="bg-[#E0E0E0] rounded-sm 2xl:p-[10px] p-2 border border-[#F4F1EF] relative 2xl:h-[150px] lt:h-[120px] h-[132px] 2xl:w-[120px] w-[110px] flex items-center justify-center group/shop">
+                            <img decoding="async" src="../image/gift-card.webp" alt="product-1" class="w-auto h-auto" />
+                        </div>
+
+                        <div class="flex-1 2xl:space-y-3 space-y-2">
+                            <p class="font-primary text-[#2D2D22]">Wellness Gift Card</p>
+
+                            <div class="flex items-center justify-between w-full gap-[10px]">
+                                <p class="flex items-center gap-2 text-[#2D2D2DCC] p2">
+                                    Code:(YOGA20)
+                                </p>
+
+                                <!-- Quantity -->
+                                <div
+                                    class="flex items-center justify-between 2xl:gap-[14px] gap-3 px-2 rounded-full border border-[#673E2C80]">
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
+                                            <path d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
+                                                stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                    <span
+                                        class="text-[12px] uppercase font-medium 2xl:leading-[28px] leading-[23px]">1</span>
+                                    <button>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" class="2xl:w-6 2xl:h-6 w-5 h-5">
+                                            <path d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
+                                                stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
+                                                stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <p class="text-[#2D2D2DCC] p2">$39.00</p>
+                                <button class="flex items-center">
+                                    <p class="flex items-center gap-2 p2">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16"
+                                            viewBox="0 0 16 16" fill="none" class="2xl:w-4 2xl:h-4 w-[14px] h-[14px]">
+                                            <mask id="mask0_3923_7940" style="mask-type: alpha"
+                                                maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                                                <rect width="16" height="16" fill="url(#pattern0_3923_7940)" />
+                                            </mask>
+                                            <g mask="url(#mask0_3923_7940)">
+                                                <rect width="16" height="16" fill="#673E2C" />
+                                            </g>
+                                            <defs>
+                                                <pattern id="pattern0_3923_7940" patternContentUnits="objectBoundingBox"
+                                                    width="1" height="1">
+                                                    <use xlink:href="#image0_3923_7940" transform="scale(0.0078125)" />
+                                                </pattern>
+                                                <image id="image0_3923_7940" width="128" height="128"
+                                                    preserveAspectRatio="none"
+                                                    xlink:href="data:image/png;base64,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" />
+                                            </defs>
+                                        </svg>
+                                        Remove
+                                    </p>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Subtotal & Buttons (Sticky bottom) -->
+                <div class="mt-auto pt-6 sticky bottom-5 bg-white 2xl:px-[22px] px-4">
+                    <div
+                        class="flex items-center justify-between font-medium 2xl:mb-6 mb-[18px] 2xl:py-[15px] py-3 border-y border-[#673E2C33]">
+                        <p class="font-medium font-primary">Sub Total</p>
+                        <p class="font-medium font-primary">$449.00</p>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="flex flex-col 2xl:gap-6 gap-4">
+                        <a href="./cart.html" class="btn btn-secondary w-full 2xl:text-18 text-15 font-normal">
+                            View Cart
+                        </a>
+                        <a href="./checkout.html" class="btn btn-secondary w-full 2xl:text-18 text-15 font-normal">
+                            Checkout
+                        </a>
+                    </div>
+                </div>
+            </div>
             </div>
 
             <div class="all-header">
@@ -554,7 +524,7 @@
                         <div
                             class="w-full 2xl:max-w-[183px] xl:max-w-[170px] lg:max-w-[150px] md:max-w-[130px] max-w-[113px] site-logo 2xl:py-5 lg:py-4 sm:py-3.5 py-2">
                             <a href="./index.html" class="block w-full">
-                                <img decoding="async" src="image/main-logo-white.svg" alt="Pranavya"
+                                <img decoding="async" src="../image/main-logo-white.svg" alt="Pranavya"
                                     class="w-full h-auto" />
                             </a>
                         </div>
@@ -563,9 +533,9 @@
                             class="mainmenu max-[1221px]:fixed max-[1221px]:h-screen max-[1221px]:inset-y-0 left-0! top-0! max-[1221px]:z-60 max-[1221px]:w-screen max-[1221px]:max-w-screen max-[1221px]:bg-white max-[1221px]:border-r max-[1221px]:border-primary/20 max-[1221px]:transition-transform max-[1221px]:duration-300 max-[1221px]:ease-in-out min-[1221px]:px-0 px-4">
                             <div
                                 class="min-[1221px]:hidden flex items-center justify-between py-4 border-b border-primary/20">
-                                <div class="flex items-center xl:gap-2 gap-1.5">
-                                    <img decoding="async" src="image/main-logo-black.svg" alt="Pranavya"
-                                        class="w-full h-9" />
+                                <div class="w-full h-9">
+                                    <img decoding="async" src="../image/main-logo-black.svg" alt="Pranavya"
+                                        class="h-full w-auto object-contain" />
                                 </div>
                                 <button name="close" aria-label="Close menu" class="text-thunder-100">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
@@ -579,7 +549,7 @@
                             </div>
                             <!-- Navigation -->
                             <nav
-                                class="max :overflow-y-auto max-[1221px]:h-[calc(100vh-21vh)] max-sm:h-[calc(100vh-15vh)] max-lt:pb-6">
+                                class="max:overflow-y-auto max-[1221px]:h-[calc(100vh-21vh)] max-sm:h-[calc(100vh-15vh)] max-lt:pb-6">
                                 <ul
                                     class="min-[1221px]:flex [1220px]:items-center max-[1221px]:divide-y max-[1221px]:divide-primary/20 h-[calc(100%-7%)]">
                                     <li>
@@ -605,13 +575,13 @@
                                                 <div
                                                     class="min-[1221px]:mt-0 sm:mt-6 mt-5 bg-white rounded-b-[10px] 2xl:p-[30px] min-[1221px]:p-6 sm:px-6 px-5 mx-auto pointer-events-auto mega-menu">
                                                     <div
-                                                        class="grid grid-cols-1 sm:grid-cols-2 lt:grid-cols-3 lg:grid-cols-4 1xl:gap-10 gap-7 overflow-y-auto max-h-[calc(100vh-21vh)] scrollbar-custom">
+                                                        class="grid grid-cols-1 sm:grid-cols-2 lt:grid-cols-3 lg:grid-cols-4 1xl:gap-10 sm:gap-7 gap-4 overflow-y-auto max-h-[calc(100vh-21vh)] scrollbar-custom">
                                                         <div class="w-full rounded-sm border-2 border-primary">
                                                             <a href="./index.html"
                                                                 class="h-full block overflow-hidden border border-primary">
                                                                 <div class="relative h-full group/backdrop">
-                                                                    <img decoding="async" src="../image/home-menu-1.webp"
-                                                                        alt="Home 1"
+                                                                    <img decoding="async"
+                                                                        src="../image/home-menu-1.webp" alt="Home 1"
                                                                         class="w-full h-full object-cover transition-all duration-300 group-hover/backdrop:scale-105" />
                                                                     <div
                                                                         class="absolute inset-0 group-hover/backdrop:bg-black/69 bg-black/0 transition-all decoration-300">
@@ -630,8 +600,8 @@
                                                             <a href="./index-2.html"
                                                                 class="h-full block overflow-hidden border border-primary">
                                                                 <div class="relative h-full group/backdrop">
-                                                                    <img decoding="async" src="../image/home-menu-2.webp"
-                                                                        alt="Home 2"
+                                                                    <img decoding="async"
+                                                                        src="../image/home-menu-2.webp" alt="Home 2"
                                                                         class="w-full h-full object-cover transition-all duration-300 group-hover/backdrop:scale-105" />
                                                                     <div
                                                                         class="absolute inset-0 group-hover/backdrop:bg-black/50 bg-black/0 transition-all decoration-300">
@@ -650,8 +620,8 @@
                                                             <a href="./index-3.html"
                                                                 class="h-full block overflow-hidden border border-primary">
                                                                 <div class="relative h-full group/backdrop">
-                                                                    <img decoding="async" src="../image/home-menu-3.webp"
-                                                                        alt="Home 3"
+                                                                    <img decoding="async"
+                                                                        src="../image/home-menu-3.webp" alt="Home 3"
                                                                         class="w-full h-full object-cover transition-all duration-300 group-hover/backdrop:scale-105" />
                                                                     <div
                                                                         class="absolute inset-0 group-hover/backdrop:bg-black/50 bg-black/0 transition-all decoration-300">
@@ -670,8 +640,8 @@
                                                             <a href="./index-4.html"
                                                                 class="h-full block overflow-hidden border border-primary">
                                                                 <div class="relative h-full group/backdrop">
-                                                                    <img decoding="async" src="../image/home-menu-4.webp"
-                                                                        alt="Home 4"
+                                                                    <img decoding="async"
+                                                                        src="../image/home-menu-4.webp" alt="Home 4"
                                                                         class="w-full h-full object-cover transition-all duration-300 group-hover/backdrop:scale-105" />
                                                                     <div
                                                                         class="absolute inset-0 group-hover/backdrop:bg-black/50 bg-black/0 transition-all decoration-300">
@@ -1164,7 +1134,7 @@
                                             <div
                                                 class="w-full min-[1221px]:absolute min-[1221px]:left-0 min-[1221px]:top-[99%] hidden z-60 mega-panel pt-px top-1">
                                                 <div
-                                                    class="min-[1221px]:mt-0 sm:mt-6 mt-5 min-[1221px]:px-0 sm:px-6 px-5 bg-white min-[1221px]:rounded-b-[10px] mx-auto pointer-events-auto h-full max-h-[calc(100vh-12vh)] scrollbar-custom 2xl:py-[30px] min-[1221px]:py-6 mega-menu">
+                                                    class="min-[1221px]:mt-0 sm:mt-6 mt-5 min-[1221px]:px-0 sm:px-6 px-5 bg-white min-[1221px]:rounded-b-[10px] mx-auto pointer-events-auto h-full sm:max-h-[calc(100vh-12vh)] max-h-[calc(100vh-18vh)] scrollbar-custom 2xl:py-[30px] min-[1221px]:py-6 mega-menu">
                                                     <div
                                                         class="flex items-center lt:flex-row flex-col-reverse w-full lt:divide-x divide-[#673E2C80] lt:gap-0 gap-4">
                                                         <div
@@ -1175,8 +1145,8 @@
                                                                 <div
                                                                     class="bg-[#E0E0E0] xl:p-3 p-[10px] border border-[#F4F1EF] relative 2xl:h-[200px] xl:h-[170px] lt:h-[125px] h-[132px] flex items-center justify-center group/shop">
                                                                     <img decoding="async"
-                                                                        src="../image/nav-product-1.webp" alt="product-1"
-                                                                        class="w-auto h-full" />
+                                                                        src="../image/nav-product-1.webp"
+                                                                        alt="product-1" class="w-auto h-full" />
                                                                     <a href="./product-detail-1.html"
                                                                         class="bg-linear-to-t from-[#2D2D2D] to-[#2D2D2D00] absolute top-0 left-0 w-full h-full group-hover/shop:flex items-center justify-center hidden transition-all ease-in-out duration-350">
                                                                         <button class="btn-round-arrow btn-primary">
@@ -1194,13 +1164,12 @@
                                                                         </button>
                                                                     </a>
                                                                 </div>
-
                                                                 <!-- 2nd shop -->
                                                                 <div
                                                                     class="bg-[#E0E0E0] xl:p-3 p-[10px] border border-[#F4F1EF] relative 2xl:h-[200px] xl:h-[170px] lt:h-[125px] h-[132px] flex items-center justify-center group/shop">
                                                                     <img decoding="async"
-                                                                        src="../image/nav-product-2.webp" alt="product-1"
-                                                                        class="w-auto h-full" />
+                                                                        src="../image/nav-product-2.webp"
+                                                                        alt="product-1" class="w-auto h-full" />
                                                                     <a href="./product-detail-2.html"
                                                                         class="bg-linear-to-t from-[#2D2D2D] to-[#2D2D2D00] absolute top-0 left-0 w-full h-full group-hover/shop:flex items-center justify-center hidden transition-all ease-in-out duration-350">
                                                                         <button class="btn-round-arrow btn-primary">
@@ -1222,8 +1191,8 @@
                                                                 <div
                                                                     class="bg-[#E0E0E0] xl:p-3 p-[10px] border border-[#F4F1EF] relative 2xl:h-[200px] xl:h-[170px] lt:h-[125px] h-[132px] flex items-center justify-center group/shop">
                                                                     <img decoding="async"
-                                                                        src="../image/nav-product-3.webp" alt="product-1"
-                                                                        class="w-auto h-full" />
+                                                                        src="../image/nav-product-3.webp"
+                                                                        alt="product-1" class="w-auto h-full" />
                                                                     <a href="./product-detail-3.html"
                                                                         class="bg-linear-to-t from-[#2D2D2D] to-[#2D2D2D00] absolute top-0 left-0 w-full h-full group-hover/shop:flex items-center justify-center hidden transition-all ease-in-out duration-350">
                                                                         <button class="btn-round-arrow btn-primary">
@@ -1245,8 +1214,8 @@
                                                                 <div
                                                                     class="bg-[#E0E0E0] xl:p-3 p-[10px] border border-[#F4F1EF] relative 2xl:h-[200px] xl:h-[170px] lt:h-[125px] h-[132px] flex items-center justify-center group/shop">
                                                                     <img decoding="async"
-                                                                        src="../image/nav-product-4.webp" alt="product-1"
-                                                                        class="w-auto h-full" />
+                                                                        src="../image/nav-product-4.webp"
+                                                                        alt="product-1" class="w-auto h-full" />
                                                                     <a href="./product-detail-4.html"
                                                                         class="bg-linear-to-t from-[#2D2D2D] to-[#2D2D2D00] absolute top-0 left-0 w-full h-full group-hover/shop:flex items-center justify-center hidden transition-all ease-in-out duration-350">
                                                                         <button class="btn-round-arrow btn-primary">
@@ -1268,8 +1237,8 @@
                                                                 <div
                                                                     class="bg-[#E0E0E0] xl:p-3 p-[10px] border border-[#F4F1EF] relative 2xl:h-[200px] xl:h-[170px] lt:h-[125px] h-[132px] flex items-center justify-center group/shop">
                                                                     <img decoding="async"
-                                                                        src="../image/nav-product-5.webp" alt="product-1"
-                                                                        class="w-auto h-full" />
+                                                                        src="../image/nav-product-5.webp"
+                                                                        alt="product-1" class="w-auto h-full" />
                                                                     <a href="./product-detail-5.html"
                                                                         class="bg-linear-to-t from-[#2D2D2D] to-[#2D2D2D00] absolute top-0 left-0 w-full h-full group-hover/shop:flex items-center justify-center hidden transition-all ease-in-out duration-350">
                                                                         <button class="btn-round-arrow btn-primary">
@@ -1291,8 +1260,8 @@
                                                                 <div
                                                                     class="bg-[#E0E0E0] xl:p-3 p-[10px] border border-[#F4F1EF] relative 2xl:h-[200px] xl:h-[170px] lt:h-[125px] h-[132px] flex items-center justify-center group/shop">
                                                                     <img decoding="async"
-                                                                        src="../image/nav-product-6.webp" alt="product-1"
-                                                                        class="w-auto h-full" />
+                                                                        src="../image/nav-product-6.webp"
+                                                                        alt="product-1" class="w-auto h-full" />
                                                                     <a href="./product-detail-6.html"
                                                                         class="bg-linear-to-t from-[#2D2D2D] to-[#2D2D2D00] absolute top-0 left-0 w-full h-full group-hover/shop:flex items-center justify-center hidden transition-all ease-in-out duration-350">
                                                                         <button class="btn-round-arrow btn-primary">
@@ -1314,8 +1283,8 @@
                                                                 <div
                                                                     class="bg-[#E0E0E0] xl:p-3 p-[10px] border border-[#F4F1EF] relative 2xl:h-[200px] xl:h-[170px] lt:h-[125px] h-[132px] flex items-center justify-center group/shop">
                                                                     <img decoding="async"
-                                                                        src="../image/nav-product-7.webp" alt="product-1"
-                                                                        class="w-auto h-full" />
+                                                                        src="../image/nav-product-7.webp"
+                                                                        alt="product-1" class="w-auto h-full" />
                                                                     <a href="./product-detail-7.html"
                                                                         class="bg-linear-to-t from-[#2D2D2D] to-[#2D2D2D00] absolute top-0 left-0 w-full h-full group-hover/shop:flex items-center justify-center hidden transition-all ease-in-out duration-350">
                                                                         <button class="btn-round-arrow btn-primary">
@@ -1337,8 +1306,8 @@
                                                                 <div
                                                                     class="bg-[#E0E0E0] xl:p-3 p-[10px] border border-[#F4F1EF] relative 2xl:h-[200px] xl:h-[170px] lt:h-[125px] h-[132px] flex items-center justify-center group/shop">
                                                                     <img decoding="async"
-                                                                        src="../image/nav-product-8.webp" alt="product-1"
-                                                                        class="w-auto h-full" />
+                                                                        src="../image/nav-product-8.webp"
+                                                                        alt="product-1" class="w-auto h-full" />
                                                                     <a href="./product-detail-8.html"
                                                                         class="bg-linear-to-t from-[#2D2D2D] to-[#2D2D2D00] absolute top-0 left-0 w-full h-full group-hover/shop:flex items-center justify-center hidden transition-all ease-in-out duration-350">
                                                                         <button class="btn-round-arrow btn-primary">
@@ -1473,7 +1442,7 @@
                                             <div
                                                 class="w-full min-[1221px]:absolute min-[1221px]:left-0 min-[1221px]:top-[99%] hidden z-60 mega-panel pt-px top-1">
                                                 <div
-                                                    class="min-[1221px]:mt-0 sm:mt-6 mt-5 min-[1221px]:px-0 sm:px-6 px-5 bg-white min-[1221px]:rounded-b-[10px] mx-auto pointer-events-auto h-full max-h-[calc(100vh-14vh)] scrollbar-custom mega-menu">
+                                                    class="min-[1221px]:mt-0 sm:mt-6 mt-5 min-[1221px]:px-0 sm:px-6 px-5 bg-white min-[1221px]:rounded-b-[10px] mx-auto pointer-events-auto h-full sm:max-h-[calc(100vh-14vh)] max-h-[calc(100vh-20vh)] scrollbar-custom mega-menu">
                                                     <div
                                                         class="flex lt:flex-row flex-col items-center justify-between lt:gap-0 gap-4">
                                                         <div
@@ -1826,7 +1795,7 @@
                                                 </svg>
                                             </a>
                                             <div
-                                                class="2xl:min-w-[256px] min-w-[185px] w-full min-[1221px]:absolute min-[1221px]:right-0 min-[1221px]:top-full hidden group-hover:block z-60 sm:top-0 top-[6px] mega-panel pt-px">
+                                                class="1xl:min-w-[256px] min-w-[200px] w-full min-[1221px]:absolute min-[1221px]:right-0 min-[1221px]:top-full hidden group-hover:block z-60 sm:top-0 top-[6px] mega-panel pt-px">
                                                 <div
                                                     class="min-[1221px]:mt-0 sm:mt-6 mt-5 bg-white min-[1221px]:rounded-b-[10px] lg:py-5 pb-5 mx-auto pointer-events-auto min-[1221px]:px-0 sm:px-6 px-5">
                                                     <ul class="flex flex-col space-y-1">
@@ -1868,7 +1837,7 @@
                                                                 <ul class="bg-white 2xl:p-4 p-2 rounded-[10px]">
                                                                     <li>
                                                                         <p>
-                                                                            <a href="./classes-1.html"
+                                                                            <a href="./classes.html"
                                                                                 class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
                                                                                 Class 01
                                                                             </a>
@@ -2110,14 +2079,66 @@
                                                                 </a>
                                                             </p>
                                                         </li>
-                                                        <!-- 404 -->
-                                                        <li>
-                                                            <p>
-                                                                <a href="./404.html"
-                                                                    class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
-                                                                    404
-                                                                </a>
-                                                            </p>
+                                                        <!-- Empty -->
+                                                        <li class="group relative">
+                                                            <a href="javascript:;"
+                                                                class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
+                                                                <p>Empty Pages</p>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                    height="24" viewBox="0 0 24 24" fill="none">
+                                                                    <path d="M11 8.56055L15 12.5609L11 16.5605"
+                                                                        stroke="currentColor" stroke-width="1.3"
+                                                                        stroke-linecap="round"
+                                                                        stroke-linejoin="round" />
+                                                                </svg>
+                                                            </a>
+                                                            <div
+                                                                class="absolute left-full top-0 hidden group-hover:block rounded-[10px] z-60 2xl:min-w-55 min-w-47 2xl:pl-3 pl-2 min-h-[170px] h-full overflow-auto">
+                                                                <span
+                                                                    class="absolute 2xl:left-1 left-[2px] right-auto top-6 2xl:w-4 2xl:h-4 w-3.5 h-3.5 rounded-xs bg-white rotate-45 sm:border border-gray-200 z-[-1] min-[1221px]:block hidden"></span>
+                                                                <ul class="bg-white 2xl:p-4 p-2 rounded-[10px]">
+                                                                    <li>
+                                                                        <p>
+                                                                            <a href="./empty-cart.html"
+                                                                                class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
+                                                                                Cart
+                                                                            </a>
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>
+                                                                            <a href="./empty-wishlist.html"
+                                                                                class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
+                                                                                Wishlist
+                                                                            </a>
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>
+                                                                            <a href="./confirm-order.html"
+                                                                                class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
+                                                                                Confirm Order
+                                                                            </a>
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>
+                                                                            <a href="./404.html"
+                                                                                class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
+                                                                                404
+                                                                            </a>
+                                                                        </p>
+                                                                    </li>
+                                                                    <li>
+                                                                        <p>
+                                                                            <a href="./thank-you.html"
+                                                                                class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
+                                                                                Thank You
+                                                                            </a>
+                                                                        </p>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -2396,7 +2417,7 @@
         </section>
         <!-- ====== End Page Heading ====== -->
 
-        <!-- ====== Start Gift Cards ====== -->
+        <!-- ====== Start cart products ====== -->
         <section class="relative 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10 w-full">
             <div class="container">
                 <div
@@ -2934,19 +2955,20 @@
                             </div>
                         </div>
                         <div class="1xl:pt-7.5 sm:pt-6 pt-4">
-                            <button class="btn btn-secondary lt:w-full w-fit capitalize font-normal">Proceed to
-                                Checkout</button>
-                            <a href="./shop.html"
-                                class="xl:mt-5 mt-3.5 lt:mx-auto p w-fit text-[#708090] hover:text-primary underline flex">
-                                Continue to shopping
-                            </a>
+                            <a href="./checkout.html"
+                                class="btn btn-secondary lt:w-full w-fit capitalize font-normal">Proceed to
+                                Checkout</>
+                                <a href="./shop.html"
+                                    class="xl:mt-5 mt-3.5 lt:mx-auto p w-fit text-[#708090] hover:text-primary underline flex">
+                                    Continue to shopping
+                                </a>
                         </div>
                     </div>
                 </div>
 
             </div>
         </section>
-        <!-- ====== End Gift Cards ====== -->
+        <!-- ====== End cart products ====== -->
 
     </main>
     <!-- ====== End-Main-Content ====== -->
@@ -3173,15 +3195,16 @@
     </footer>
     <!-- ====== End Footer ====== -->
 
-    <script type="text/javascript" src="../js/jquery.min.js" defer></script>
-    <!-- Magnific Popup Js & CSS  -->
-    <script type="text/javascript" src="../js/jquery.magnific-popup.min.js" defer></script>
-    <!-- Swiper Slider Js & CSS  -->
-    <script type="text/javascript" src="../js/swiper-bundle.min.js" defer></script>
-    <!-- font-awosome Js & CSS -->
-    <script type="text/javascript" src="../js/all.min.js" defer></script>
-    <!-- style.css -->
-    <script type="text/javascript" src="../js/custom.js" defer></script>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jquery.magnific-popup.min.js" defer></script>
+    <script src="../js/swiper-bundle.min.js" defer></script>
+    <script src="../js/custom.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script defer>
+        AOS.init({
+            offset: 60,
+        });
+    </script>
 </body>
 
 </html>

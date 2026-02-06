@@ -478,7 +478,7 @@
     @apply uppercase border font-medium text-black border-thunder-100 bg-white hover:text-white focus:text-white active:text-white hover:bg-black active:bg-black focus:bg-black;
   }
   .btn-link {
-    @apply flex items-center justify-center 2xl:gap-3 bg-white gap-[10px] text-black hover:text-primary active:text-primary focus:text-primary underline underline-offset-3;
+    @apply flex items-center justify-center 2xl:gap-3 bg-transparent gap-[10px] text-black hover:text-primary active:text-primary focus:text-primary underline underline-offset-3;
   }
   .reveal-more {
     @apply uppercase border font-medium text-primary border-primary bg-[#FBFAF9];
@@ -924,6 +924,17 @@
   }
   .schedule-tab {
     @apply 2xl:text-24 1xl:text-20 lt:text-18 md:text-17 sm:text-16 text-14 2xl:leading-[30px] 1xl:leading-[28px] leading-[26px] font-secondary font-normal bg-white;
+  }
+
+  .class-tab.active {
+    @apply bg-primary rounded;
+  }
+  .class-tab.active .tab-inner a,
+  .class-tab.active .tab-inner h3 {
+    @apply text-white!;
+  }
+  .class-tab.active .tab-inner span {
+    @apply text-white/8!;
   }
 
   /* =============== INDEX-2.HTML ============== */

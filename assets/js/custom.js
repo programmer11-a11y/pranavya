@@ -468,7 +468,17 @@ jQuery(document).ready(function () {
 
   jQuery(".site-search__close").click(function () {
     jQuery("#nav-site-search").removeClass("search_bar");
-    hideOverlay();
+
+    // Only hide overlay if nothing else (mega, sidebar, wishlist, cart) is open
+    const megaOpen = jQuery(".mega-panel:visible").length > 0;
+    const sidebarOpen = jQuery("#mainmenu").hasClass("active");
+    const wishlistOpen =
+      !jQuery("#wishlistSidebar").hasClass("translate-x-full");
+    const cartOpen = !jQuery("#cartSidebar").hasClass("translate-x-full");
+
+    if (!megaOpen && !sidebarOpen && !wishlistOpen && !cartOpen) {
+      hideOverlay();
+    }
 
     setTimeout(() => {
       jQuery("#nav-site-search").removeClass("open");
@@ -487,12 +497,26 @@ jQuery(document).ready(function () {
   });
 
   jQuery(document).click(function (event) {
+    // If search is not open, don't touch the overlay here
+    const searchIsOpen = jQuery("#nav-site-search").hasClass("open");
+    if (!searchIsOpen) return;
+
     if (
       !jQuery(event.target).closest("#nav-site-search, .site-search__open")
         .length
     ) {
       jQuery("#nav-site-search").removeClass("search_bar");
-      hideOverlay();
+
+      // Only hide overlay if nothing else (mega, sidebar, wishlist, cart) is open
+      const megaOpen = jQuery(".mega-panel:visible").length > 0;
+      const sidebarOpen = jQuery("#mainmenu").hasClass("active");
+      const wishlistOpen =
+        !jQuery("#wishlistSidebar").hasClass("translate-x-full");
+      const cartOpen = !jQuery("#cartSidebar").hasClass("translate-x-full");
+
+      if (!megaOpen && !sidebarOpen && !wishlistOpen && !cartOpen) {
+        hideOverlay();
+      }
       setTimeout(() => {
         jQuery("#nav-site-search").removeClass("open");
         // On mobile, if page is not scrolled, remove bg-white when search closes
@@ -1038,7 +1062,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const slideImg = document.querySelector(".slide-img");
   const slideIcon = document.querySelector(".slide-icon");
   const viewBtn = document.querySelector(".slide-button");
-  const navBtns = document.querySelectorAll(".nav-btn");
+  const classTab = document.querySelectorAll(".class-tab");
 
   // ✅ STOP if slider markup does not exist
   if (
@@ -1048,7 +1072,7 @@ document.addEventListener("DOMContentLoaded", () => {
     !slideImg ||
     !slideIcon ||
     !viewBtn ||
-    !navBtns.length
+    !classTab.length
   ) {
     return;
   }
@@ -1099,15 +1123,15 @@ document.addEventListener("DOMContentLoaded", () => {
     viewBtn.href = s.link;
 
     // Active state
-    navBtns.forEach((btn) => btn.classList.remove("active"));
-    navBtns[index].classList.add("active");
+    classTab.forEach((btn) => btn.classList.remove("active"));
+    classTab[index].classList.add("active");
   }
 
   // Init first slide
   updateSlide(0);
 
   // Click handling
-  navBtns.forEach((btn) => {
+  classTab.forEach((btn) => {
     btn.addEventListener("click", () => {
       const index = parseInt(btn.dataset.slide, 10);
       updateSlide(index);

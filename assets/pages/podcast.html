@@ -15,7 +15,7 @@
 
 <body>
     <!-- ====== Main-Content ====== -->
-    <main class="h-full 2xl:pt-20.5 xl:pt-19.5 lg:pt-17.5 md:pt-14.5 sm:pt-13.5 pt-10.5">
+    <main class="h-full 2xl:pt-20.5 xl:pt-19.5 lg:pt-16.5 md:pt-14 sm:pt-13 pt-10">
         <!-- ====== Header ====== -->
         <div class="bg_body_box fixed inset-0 w-full h-full backdrop-blur-xl bg-primary/35 z-50"></div>
         <header class="header fixed top-0 left-0 right-0 z-50 bg-whitesmoke-100 no-toggle-color">
@@ -2054,7 +2054,7 @@
                                                                 <ul class="bg-white 2xl:p-4 p-2 rounded-[10px]">
                                                                     <li>
                                                                         <p>
-                                                                            <a href="./blog-1.html"
+                                                                            <a href="./blog.html"
                                                                                 class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
                                                                                 Blogs 01
                                                                             </a>
@@ -2146,10 +2146,11 @@
                                                                 </svg>
                                                             </a>
                                                             <div
-                                                                class="absolute left-full top-0 hidden group-hover:block rounded-[10px] z-60 2xl:min-w-55 min-w-47 2xl:pl-3 pl-2 min-h-[170px] h-full overflow-auto">
+                                                                class="absolute left-full top-0 hidden group-hover:block rounded-[10px] z-60 2xl:min-w-60 1xl:min-w-55 min-w-47 2xl:pl-3 pl-2 h-full">
                                                                 <span
                                                                     class="absolute 2xl:left-1 left-[2px] right-auto top-6 2xl:w-4 2xl:h-4 w-3.5 h-3.5 rounded-xs bg-white rotate-45 sm:border border-gray-200 z-[-1] min-[1221px]:block hidden"></span>
-                                                                <ul class="bg-white 2xl:p-4 p-2 rounded-[10px]">
+                                                                <ul
+                                                                    class="bg-white 2xl:p-4 p-2 rounded-[10px] overflow-auto min-h-[170px] h-full">
                                                                     <li>
                                                                         <p>
                                                                             <a href="./empty-cart.html"
@@ -2203,7 +2204,7 @@
                                     class="sticky bottom-0 top-auto sm:hidden flex items-center justify-between gap-2 bg-white">
                                     <a href="javascript:void(0)" id="openWishlistMobile"
                                         class="btn btn-primary lg:inline-block w-full">Wishlist</a>
-                                    <a href="javascript:;" class="btn btn-secondary lg:inline-block w-full">login</a>
+                                    <a href="./login.html" class="btn btn-secondary lg:inline-block w-full">login</a>
                                 </div>
                             </nav>
                         </aside>
@@ -2222,7 +2223,7 @@
                                 </button>
 
                                 <!-- Search form -->
-                                <div class="site-search__form-wrap rounded-full">
+                                <div class="site-search__form-wrap">
                                     <form class="site-search__search-form flex grow flex-nowrap">
                                         <!-- Search submit button -->
                                         <button class="site-search__search-submit" title="search">
@@ -2313,10 +2314,10 @@
                                                 </p>
                                                 <div class="w-full h-full">
                                                     <div
-                                                        class="w-full h-full grid 1xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:gap-[65px] sm:gap-9 gap-4">
+                                                        class="w-full h-full grid 1xl:grid-cols-4 sm:grid-cols-3 grid-cols-1 lg:gap-[65px] lt:gap-9 sm:gap-5 gap-4">
                                                         <!-- 1st class -->
-                                                        <div class="bg-whitesmoke-100">
-                                                            <div class="2xl:h-[166px] h-[135px] overflow-hidden">
+                                                        <div class="bg-whitesmoke-100 flex flex-col">
+                                                            <div class="xl:h-[155px] h-[135px] overflow-hidden">
                                                                 <img decoding="async" src="../image/search-class-1.webp"
                                                                     alt="class" class="w-full h-full object-cover" />
                                                             </div>
@@ -2341,8 +2342,8 @@
                                                         </div>
 
                                                         <!-- 2nd class -->
-                                                        <div class="bg-whitesmoke-100">
-                                                            <div class="2xl:h-[166px] h-[135px] overflow-hidden">
+                                                        <div class="bg-whitesmoke-100 flex flex-col">
+                                                            <div class="xl:h-[155px] h-[135px] overflow-hidden">
                                                                 <img decoding="async" src="../image/search-class-2.webp"
                                                                     alt="class" class="w-full h-full object-cover" />
                                                             </div>
@@ -2367,8 +2368,8 @@
                                                         </div>
 
                                                         <!-- 3rd class -->
-                                                        <div class="bg-whitesmoke-100">
-                                                            <div class="2xl:h-[166px] h-[135px] overflow-hidden">
+                                                        <div class="bg-whitesmoke-100 flex flex-col">
+                                                            <div class="xl:h-[155px] h-[135px] overflow-hidden">
                                                                 <img decoding="async" src="../image/search-class-3.webp"
                                                                     alt="class" class="w-full h-full object-cover" />
                                                             </div>
@@ -2447,7 +2448,7 @@
                                         stroke="currentColor" stroke-width="1.5" />
                                 </svg>
                             </a>
-                            <a href="javascript:;" class="btn btn-secondary hidden min-[1221px]:inline-block">login</a>
+                            <a href="./login.html" class="btn btn-secondary hidden min-[1221px]:inline-block">login</a>
                             <button name="mobile-menu-view" aria-label="Open menu"
                                 class="min-[1221px]:hidden flex border-0 bg-transparent">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14"
@@ -2469,7 +2470,7 @@
                 <div
                     class="flex flex-col items-center justify-center lt:max-w-[73%] md:max-w-[90%] max-w-full w-full text-center mx-auto space-y-2.5">
                     <h1 class="uppercase text-primary text-center" data-aos="fade-up">Tune Into Your Practice</h1>
-                    <p class="xl:max-w-[95%] w-full" data-aos="fade-up" data-aos-delay="150">
+                    <p class="xl:max-w-[95%] w-full" data-aos="fade-up" >
                         Experience yoga and mindfulness wherever you are—listen at your pace, on your time. Our
                         thoughtfully curated podcast episodes inspire your body, calm your mind, and uplift your
                         spirit—one conversation at a time.
@@ -2550,7 +2551,7 @@
                         personal growth.
                     </p>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:gap-6 gap-5">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:gap-6 gap-5">
                     <!-- 1st class -->
                     <div class="podcast-card" data-aos="fade-up">
                         <!-- Image -->
@@ -2616,7 +2617,9 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 text-14">Jessica
+                                    <p
+                                        class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 sm:text-14 text-xs">
+                                        Jessica
                                         Moore</p>
                                 </div>
                             </div>
@@ -2800,7 +2803,9 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 text-14">Priya
+                                    <p
+                                        class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 sm:text-14 text-xs">
+                                        Priya
                                         Sharma</p>
                                 </div>
                             </div>
@@ -2985,7 +2990,9 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 text-14">Daniel
+                                    <p
+                                        class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 sm:text-14 text-xs">
+                                        Daniel
                                         Lee</p>
                                 </div>
                             </div>
@@ -3170,7 +3177,9 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 text-14">David
+                                    <p
+                                        class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 sm:text-14 text-xs">
+                                        David
                                         Lin</p>
                                 </div>
                             </div>
@@ -3354,7 +3363,9 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 text-14">Priya
+                                    <p
+                                        class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 sm:text-14 text-xs">
+                                        Priya
                                         Kapoor</p>
                                 </div>
                             </div>
@@ -3539,7 +3550,9 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 text-14">Marcus
+                                    <p
+                                        class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 sm:text-14 text-xs">
+                                        Marcus
                                         Hale</p>
                                 </div>
                             </div>
@@ -3724,7 +3737,9 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 text-14">Aisha
+                                    <p
+                                        class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 sm:text-14 text-xs">
+                                        Aisha
                                         Monroe</p>
                                 </div>
                             </div>
@@ -3908,7 +3923,9 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 text-14">Ethan
+                                    <p
+                                        class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 sm:text-14 text-xs">
+                                        Ethan
                                         Rivera</p>
                                 </div>
                             </div>
@@ -4093,7 +4110,9 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 text-14">Ethan
+                                    <p
+                                        class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 sm:text-14 text-xs">
+                                        Ethan
                                         Rivera</p>
                                 </div>
                             </div>
@@ -4278,7 +4297,9 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 text-14">Jonah
+                                    <p
+                                        class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 sm:text-14 text-xs">
+                                        Jonah
                                         Kim</p>
                                 </div>
                             </div>
@@ -4462,7 +4483,9 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 text-14">Naomi
+                                    <p
+                                        class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 sm:text-14 text-xs">
+                                        Naomi
                                         Ellis</p>
                                 </div>
                             </div>
@@ -4647,7 +4670,9 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 text-14">Omar
+                                    <p
+                                        class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 sm:text-14 text-xs">
+                                        Omar
                                         Bennett</p>
                                 </div>
                             </div>
@@ -4832,7 +4857,9 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 text-14">Meera
+                                    <p
+                                        class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 sm:text-14 text-xs">
+                                        Meera
                                         Patel</p>
                                 </div>
                             </div>
@@ -5016,7 +5043,9 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 text-14">James
+                                    <p
+                                        class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 sm:text-14 text-xs">
+                                        James
                                         Holloway</p>
                                 </div>
                             </div>
@@ -5200,7 +5229,9 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 text-14">Aria
+                                    <p
+                                        class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 sm:text-14 text-xs">
+                                        Aria
                                         Thompson</p>
                                 </div>
                             </div>
@@ -5384,7 +5415,9 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 text-14">Alex
+                                    <p
+                                        class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 sm:text-14 text-xs">
+                                        Alex
                                         Romero</p>
                                 </div>
                             </div>
@@ -5568,7 +5601,9 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 text-14">Sofia
+                                    <p
+                                        class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 sm:text-14 text-xs">
+                                        Sofia
                                         Nguyen</p>
                                 </div>
                             </div>
@@ -5752,7 +5787,9 @@
                                             </defs>
                                         </svg>
                                     </div>
-                                    <p class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 text-14">Thomas
+                                    <p
+                                        class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 sm:text-14 text-xs">
+                                        Thomas
                                         Reed</p>
                                 </div>
                             </div>
@@ -5978,7 +6015,7 @@
                                             </svg>
                                         </div>
                                         <p id="featuredName"
-                                            class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 text-14">
+                                            class="uppercase font-medium 2xl:text-18 1xl:text-16 xl:text-15 sm:text-14 text-xs">
                                         </p>
                                     </div>
                                 </div>

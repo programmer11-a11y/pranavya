@@ -14,7 +14,7 @@
 
 <body>
     <!-- ====== Main-Content ====== -->
-    <main class="h-full 2xl:pt-20.5 xl:pt-19.5 lg:pt-17.5 md:pt-14.5 sm:pt-13.5 pt-10.5">
+    <main class="h-full 2xl:pt-20.5 xl:pt-19.5 lg:pt-16.5 md:pt-14 sm:pt-13 pt-10">
         <!-- ====== Header ====== -->
         <div class="bg_body_box fixed inset-0 w-full h-full backdrop-blur-xl bg-primary/35 z-50"></div>
         <header class="header fixed top-0 left-0 right-0 z-50 bg-whitesmoke-100 no-toggle-color">
@@ -69,7 +69,8 @@
                                 </div>
 
                                 <p class="text-[#2D2D2DCC] p2">$138.00</p>
-                                <button class="btn btn-secondary font-normal text-[10px] 2xl:py-[7px] py-[5px] 2xl:px-6! px-5!">
+                                <button
+                                    class="btn btn-secondary font-normal text-[10px] 2xl:py-[7px] py-[5px] 2xl:px-6! px-5!">
                                     Add to Cart
                                 </button>
                             </div>
@@ -104,7 +105,8 @@
                                 </div>
 
                                 <p class="text-[#2D2D2DCC] p2">$49.98</p>
-                                <button class="btn btn-secondary font-normal text-[10px] 2xl:py-[7px] py-[5px] 2xl:px-6! px-5!">
+                                <button
+                                    class="btn btn-secondary font-normal text-[10px] 2xl:py-[7px] py-[5px] 2xl:px-6! px-5!">
                                     Add to Cart
                                 </button>
                             </div>
@@ -139,7 +141,8 @@
                                 </div>
 
                                 <p class="text-[#2D2D2DCC] p2">$49.98</p>
-                                <button class="btn btn-secondary font-normal text-[10px] 2xl:py-[7px] py-[5px] 2xl:px-6! px-5!">
+                                <button
+                                    class="btn btn-secondary font-normal text-[10px] 2xl:py-[7px] py-[5px] 2xl:px-6! px-5!">
                                     Add to Cart
                                 </button>
                             </div>
@@ -182,7 +185,8 @@
                     </div>
 
                     <!-- CART ITEM -->
-                    <div class="2xl:px-[22px] px-4 overflow-y-auto scrollbar-custom sm:max-h-[calc(100vh-14vh)] max-h-[calc(100vh-40vh)]">
+                    <div
+                        class="2xl:px-[22px] px-4 overflow-y-auto scrollbar-custom sm:max-h-[calc(100vh-14vh)] max-h-[calc(100vh-40vh)]">
                         <!-- Item 1 -->
                         <div class="flex 2xl:gap-5 gap-4 2xl:py-5 py-4 border-b border-[#673E2C33]">
                             <div
@@ -204,33 +208,41 @@
                                     </p>
 
                                     <!-- Quantity -->
-<div class="flex items-center justify-start">
-    <div
-        class="flex items-center justify-between 1xl:w-22 lt:w-20 sm:w-18 w-15.5 h-full rounded-full border border-bronco-100 sm:px-1.5 px-1">
-        <!-- Minus -->
-        <button type="button" id="decrease" class="text-[#6B3F2A] hover:opacity-70">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                class="2xl:size-6 sm:size-5 size-4">
-                <path d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927" stroke="#673E2C"
-                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-        </button>
+                                    <div class="flex items-center justify-start">
+                                        <div
+                                            class="flex items-center justify-between 1xl:w-22 lt:w-20 sm:w-18 w-15.5 h-full rounded-full border border-bronco-100 sm:px-1.5 px-1">
+                                            <!-- Minus -->
+                                            <button type="button" id="decrease" class="text-[#6B3F2A] hover:opacity-70">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" class="2xl:size-6 sm:size-5 size-4">
+                                                    <path
+                                                        d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
+                                                        stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </button>
 
-        <!-- Quantity -->
-        <p id="quantity" class="sm:text-xs text-[10px] xl:leading-[29px] sm:leading-[27px] leading-[22px] select-none">1</p>
+                                            <!-- Quantity -->
+                                            <p id="quantity"
+                                                class="sm:text-xs text-[10px] xl:leading-[29px] sm:leading-[27px] leading-[22px] select-none">
+                                                1</p>
 
-        <!-- Plus -->
-        <button type="button" id="increase" class="text-[#6B3F2A] hover:opacity-70">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                class="2xl:size-6 sm:size-5 size-4">
-                <path d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927" stroke="#673E2C"
-                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357" stroke="#673E2C"
-                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-        </button>
-    </div>
-</div>
+                                            <!-- Plus -->
+                                            <button type="button" id="increase" class="text-[#6B3F2A] hover:opacity-70">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" class="2xl:size-6 sm:size-5 size-4">
+                                                    <path
+                                                        d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
+                                                        stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
+                                                        stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="flex items-center justify-between">
@@ -287,33 +299,41 @@
                                     </p>
 
                                     <!-- Quantity -->
-<div class="flex items-center justify-start">
-    <div
-        class="flex items-center justify-between 1xl:w-22 lt:w-20 sm:w-18 w-15.5 h-full rounded-full border border-bronco-100 sm:px-1.5 px-1">
-        <!-- Minus -->
-        <button type="button" id="decrease" class="text-[#6B3F2A] hover:opacity-70">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                class="2xl:size-6 sm:size-5 size-4">
-                <path d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927" stroke="#673E2C"
-                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-        </button>
+                                    <div class="flex items-center justify-start">
+                                        <div
+                                            class="flex items-center justify-between 1xl:w-22 lt:w-20 sm:w-18 w-15.5 h-full rounded-full border border-bronco-100 sm:px-1.5 px-1">
+                                            <!-- Minus -->
+                                            <button type="button" id="decrease" class="text-[#6B3F2A] hover:opacity-70">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" class="2xl:size-6 sm:size-5 size-4">
+                                                    <path
+                                                        d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
+                                                        stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </button>
 
-        <!-- Quantity -->
-        <p id="quantity" class="sm:text-xs text-[10px] xl:leading-[29px] sm:leading-[27px] leading-[22px] select-none">1</p>
+                                            <!-- Quantity -->
+                                            <p id="quantity"
+                                                class="sm:text-xs text-[10px] xl:leading-[29px] sm:leading-[27px] leading-[22px] select-none">
+                                                1</p>
 
-        <!-- Plus -->
-        <button type="button" id="increase" class="text-[#6B3F2A] hover:opacity-70">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                class="2xl:size-6 sm:size-5 size-4">
-                <path d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927" stroke="#673E2C"
-                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357" stroke="#673E2C"
-                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-        </button>
-    </div>
-</div>
+                                            <!-- Plus -->
+                                            <button type="button" id="increase" class="text-[#6B3F2A] hover:opacity-70">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" class="2xl:size-6 sm:size-5 size-4">
+                                                    <path
+                                                        d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
+                                                        stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
+                                                        stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="flex items-center justify-between">
@@ -370,33 +390,41 @@
                                     </p>
 
                                     <!-- Quantity -->
-<div class="flex items-center justify-start">
-    <div
-        class="flex items-center justify-between 1xl:w-22 lt:w-20 sm:w-18 w-15.5 h-full rounded-full border border-bronco-100 sm:px-1.5 px-1">
-        <!-- Minus -->
-        <button type="button" id="decrease" class="text-[#6B3F2A] hover:opacity-70">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                class="2xl:size-6 sm:size-5 size-4">
-                <path d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927" stroke="#673E2C"
-                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-        </button>
+                                    <div class="flex items-center justify-start">
+                                        <div
+                                            class="flex items-center justify-between 1xl:w-22 lt:w-20 sm:w-18 w-15.5 h-full rounded-full border border-bronco-100 sm:px-1.5 px-1">
+                                            <!-- Minus -->
+                                            <button type="button" id="decrease" class="text-[#6B3F2A] hover:opacity-70">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" class="2xl:size-6 sm:size-5 size-4">
+                                                    <path
+                                                        d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
+                                                        stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </button>
 
-        <!-- Quantity -->
-        <p id="quantity" class="sm:text-xs text-[10px] xl:leading-[29px] sm:leading-[27px] leading-[22px] select-none">1</p>
+                                            <!-- Quantity -->
+                                            <p id="quantity"
+                                                class="sm:text-xs text-[10px] xl:leading-[29px] sm:leading-[27px] leading-[22px] select-none">
+                                                1</p>
 
-        <!-- Plus -->
-        <button type="button" id="increase" class="text-[#6B3F2A] hover:opacity-70">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                class="2xl:size-6 sm:size-5 size-4">
-                <path d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927" stroke="#673E2C"
-                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357" stroke="#673E2C"
-                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-        </button>
-    </div>
-</div>
+                                            <!-- Plus -->
+                                            <button type="button" id="increase" class="text-[#6B3F2A] hover:opacity-70">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" class="2xl:size-6 sm:size-5 size-4">
+                                                    <path
+                                                        d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
+                                                        stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
+                                                        stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="flex items-center justify-between">
@@ -449,33 +477,41 @@
                                     </p>
 
                                     <!-- Quantity -->
-<div class="flex items-center justify-start">
-    <div
-        class="flex items-center justify-between 1xl:w-22 lt:w-20 sm:w-18 w-15.5 h-full rounded-full border border-bronco-100 sm:px-1.5 px-1">
-        <!-- Minus -->
-        <button type="button" id="decrease" class="text-[#6B3F2A] hover:opacity-70">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                class="2xl:size-6 sm:size-5 size-4">
-                <path d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927" stroke="#673E2C"
-                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-        </button>
+                                    <div class="flex items-center justify-start">
+                                        <div
+                                            class="flex items-center justify-between 1xl:w-22 lt:w-20 sm:w-18 w-15.5 h-full rounded-full border border-bronco-100 sm:px-1.5 px-1">
+                                            <!-- Minus -->
+                                            <button type="button" id="decrease" class="text-[#6B3F2A] hover:opacity-70">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" class="2xl:size-6 sm:size-5 size-4">
+                                                    <path
+                                                        d="M16.4053 11.4928C16.4053 11.4928 9.75608 11.4927 6.98658 11.4927"
+                                                        stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </button>
 
-        <!-- Quantity -->
-        <p id="quantity" class="sm:text-xs text-[10px] xl:leading-[29px] sm:leading-[27px] leading-[22px] select-none">1</p>
+                                            <!-- Quantity -->
+                                            <p id="quantity"
+                                                class="sm:text-xs text-[10px] xl:leading-[29px] sm:leading-[27px] leading-[22px] select-none">
+                                                1</p>
 
-        <!-- Plus -->
-        <button type="button" id="increase" class="text-[#6B3F2A] hover:opacity-70">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                class="2xl:size-6 sm:size-5 size-4">
-                <path d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927" stroke="#673E2C"
-                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
-                <path d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357" stroke="#673E2C"
-                    stroke-width="1.17883" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-        </button>
-    </div>
-</div>
+                                            <!-- Plus -->
+                                            <button type="button" id="increase" class="text-[#6B3F2A] hover:opacity-70">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none" class="2xl:size-6 sm:size-5 size-4">
+                                                    <path
+                                                        d="M7.20703 11.4928C7.20703 11.4928 13.8562 11.4927 16.6257 11.4927"
+                                                        stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M11.9151 16.2023C11.9151 16.2023 11.9151 9.55307 11.915 6.78357"
+                                                        stroke="#673E2C" stroke-width="1.17883" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="flex items-center justify-between">
@@ -2017,7 +2053,7 @@
                                                                 <ul class="bg-white 2xl:p-4 p-2 rounded-[10px]">
                                                                     <li>
                                                                         <p>
-                                                                            <a href="./blog-1.html"
+                                                                            <a href="./blog.html"
                                                                                 class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
                                                                                 Blogs 01
                                                                             </a>
@@ -2095,7 +2131,7 @@
                                                                 </a>
                                                             </p>
                                                         </li>
-                                                      <!-- Empty -->
+                                                        <!-- Empty -->
                                                         <li class="group relative">
                                                             <a href="javascript:;"
                                                                 class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
@@ -2109,10 +2145,11 @@
                                                                 </svg>
                                                             </a>
                                                             <div
-                                                                class="absolute left-full top-0 hidden group-hover:block rounded-[10px] z-60 2xl:min-w-55 min-w-47 2xl:pl-3 pl-2 min-h-[170px] h-full overflow-auto">
+                                                                class="absolute left-full top-0 hidden group-hover:block rounded-[10px] z-60 2xl:min-w-60 1xl:min-w-55 min-w-47 2xl:pl-3 pl-2 h-full">
                                                                 <span
                                                                     class="absolute 2xl:left-1 left-[2px] right-auto top-6 2xl:w-4 2xl:h-4 w-3.5 h-3.5 rounded-xs bg-white rotate-45 sm:border border-gray-200 z-[-1] min-[1221px]:block hidden"></span>
-                                                                <ul class="bg-white 2xl:p-4 p-2 rounded-[10px]">
+                                                                <ul
+                                                                    class="bg-white 2xl:p-4 p-2 rounded-[10px] overflow-auto min-h-[170px] h-full">
                                                                     <li>
                                                                         <p>
                                                                             <a href="./empty-cart.html"
@@ -2166,7 +2203,7 @@
                                     class="sticky bottom-0 top-auto sm:hidden flex items-center justify-between gap-2 bg-white">
                                     <a href="javascript:void(0)" id="openWishlistMobile"
                                         class="btn btn-primary lg:inline-block w-full">Wishlist</a>
-                                    <a href="javascript:;" class="btn btn-secondary lg:inline-block w-full">login</a>
+                                    <a href="./login.html" class="btn btn-secondary lg:inline-block w-full">login</a>
                                 </div>
                             </nav>
                         </aside>
@@ -2185,7 +2222,7 @@
                                 </button>
 
                                 <!-- Search form -->
-                                <div class="site-search__form-wrap rounded-full">
+                                <div class="site-search__form-wrap">
                                     <form class="site-search__search-form flex grow flex-nowrap">
                                         <!-- Search submit button -->
                                         <button class="site-search__search-submit" title="search">
@@ -2276,10 +2313,10 @@
                                                 </p>
                                                 <div class="w-full h-full">
                                                     <div
-                                                        class="w-full h-full grid 1xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:gap-[65px] sm:gap-9 gap-4">
+                                                        class="w-full h-full grid 1xl:grid-cols-4 sm:grid-cols-3 grid-cols-1 lg:gap-[65px] lt:gap-9 sm:gap-5 gap-4">
                                                         <!-- 1st class -->
-                                                        <div class="bg-whitesmoke-100">
-                                                            <div class="2xl:h-[166px] h-[135px] overflow-hidden">
+                                                        <div class="bg-whitesmoke-100 flex flex-col">
+                                                            <div class="xl:h-[155px] h-[135px] overflow-hidden">
                                                                 <img decoding="async" src="../image/search-class-1.webp"
                                                                     alt="class" class="w-full h-full object-cover" />
                                                             </div>
@@ -2304,8 +2341,8 @@
                                                         </div>
 
                                                         <!-- 2nd class -->
-                                                        <div class="bg-whitesmoke-100">
-                                                            <div class="2xl:h-[166px] h-[135px] overflow-hidden">
+                                                        <div class="bg-whitesmoke-100 flex flex-col">
+                                                            <div class="xl:h-[155px] h-[135px] overflow-hidden">
                                                                 <img decoding="async" src="../image/search-class-2.webp"
                                                                     alt="class" class="w-full h-full object-cover" />
                                                             </div>
@@ -2330,8 +2367,8 @@
                                                         </div>
 
                                                         <!-- 3rd class -->
-                                                        <div class="bg-whitesmoke-100">
-                                                            <div class="2xl:h-[166px] h-[135px] overflow-hidden">
+                                                        <div class="bg-whitesmoke-100 flex flex-col">
+                                                            <div class="xl:h-[155px] h-[135px] overflow-hidden">
                                                                 <img decoding="async" src="../image/search-class-3.webp"
                                                                     alt="class" class="w-full h-full object-cover" />
                                                             </div>
@@ -2410,7 +2447,7 @@
                                         stroke="currentColor" stroke-width="1.5" />
                                 </svg>
                             </a>
-                            <a href="javascript:;" class="btn btn-secondary hidden min-[1221px]:inline-block">login</a>
+                            <a href="./login.html" class="btn btn-secondary hidden min-[1221px]:inline-block">login</a>
                             <button name="mobile-menu-view" aria-label="Open menu"
                                 class="min-[1221px]:hidden flex border-0 bg-transparent">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14"
@@ -2440,7 +2477,7 @@
 
                 <div class="flex lt:flex-row flex-col 2xl:gap-17.5 1xl:gap-15 xl:gap-12 md:gap-8 sm:gap-6 gap-4">
                     <!-- Sidebar - SINGLE INSTANCE -->
-                    <div class="lg:w-[21%] lt:w-[27%]  w-full shrink-0">
+                    <div class="lg:w-[21%] lt:w-[27%] w-full shrink-0">
                         <!-- Mobile: single FILTER dropdown bar (full section) -->
                         <button type="button"
                             class="shop-filter-mobile-toggle lt:hidden w-full flex items-center justify-between border-b border-primary/30 bg-white sm:pb-3 pb-2">
@@ -2453,7 +2490,7 @@
                                     FILTER
                                 </h5>
                             </div>
-                            <span class="shop-filter-mobile-icon text-black font-medium leading-none">+</span>
+                            <span class="shop-filter-mobile-icon text-black font-medium leading-none lg:block hidden">+</span>
                         </button>
 
                         <div
@@ -2468,39 +2505,94 @@
                                     <p class="font-medium">Shop by Category</p>
                                     <p class="toggle-icon">−</p>
                                 </button>
-                                <!-- Default open -->
                                 <ul class="filter-content mt-2 space-y-1.5">
-                                    <li class="flex justify-between items-center cursor-pointer group">
-                                        <p class="group-hover:text-primary">Yoga Mats</p>
-                                        <p class="group-hover:text-primary">(44)</p>
+                                    <li>
+                                        <input id="1" type="checkbox" class="hidden peer" name="preferred_activities[]"
+                                            value="1">
+                                        <label for="1"
+                                            class="cursor-pointer w-full inline-flex items-center justify-between peer-checked:**:text-primary peer-checked:**:font-medium transition-all ease-in-out">
+                                            <div class="flex items-center justify-between w-full">
+                                                <p class="group-hover:text-primary">Yoga Mats</p>
+                                                <p class="group-hover:text-primary">(44)</p>
+                                            </div>
+                                        </label>
                                     </li>
-                                    <li class="flex justify-between items-center cursor-pointer group">
-                                        <p class="group-hover:text-primary">Yoga Apparel</p>
-                                        <p class="group-hover:text-primary">(56)</p>
+                                    <li>
+                                        <input id="2" type="checkbox" class="hidden peer" name="preferred_activities[]"
+                                            value="2">
+                                        <label for="2"
+                                            class="cursor-pointer w-full inline-flex items-center justify-between peer-checked:**:text-primary peer-checked:**:font-medium transition-all ease-in-out">
+                                            <div class="flex items-center justify-between w-full">
+                                                <p class="group-hover:text-primary">Yoga Apparel</p>
+                                                <p class="group-hover:text-primary">(56)</p>
+                                            </div>
+                                        </label>
                                     </li>
-                                    <li class="flex justify-between items-center cursor-pointer group">
-                                        <p class="group-hover:text-primary">yoga Props</p>
-                                        <p class="group-hover:text-primary">(66)</p>
+                                    <li>
+                                        <input id="3" type="checkbox" class="hidden peer" name="preferred_activities[]"
+                                            value="3">
+                                        <label for="3"
+                                            class="cursor-pointer w-full inline-flex items-center justify-between peer-checked:**:text-primary peer-checked:**:font-medium transition-all ease-in-out">
+                                            <div class="flex items-center justify-between w-full">
+                                                <p class="group-hover:text-primary">yoga Props</p>
+                                                <p class="group-hover:text-primary">(66)</p>
+                                            </div>
+                                        </label>
                                     </li>
-                                    <li class="flex justify-between items-center cursor-pointer group">
-                                        <p class="group-hover:text-primary">Accessories</p>
-                                        <p class="group-hover:text-primary">(45)</p>
+                                    <li>
+                                        <input id="4" type="checkbox" class="hidden peer" name="preferred_activities[]"
+                                            value="4">
+                                        <label for="4"
+                                            class="cursor-pointer w-full inline-flex items-center justify-between peer-checked:**:text-primary peer-checked:**:font-medium transition-all ease-in-out">
+                                            <div class="flex items-center justify-between w-full">
+                                                <p class="group-hover:text-primary">Accessories</p>
+                                                <p class="group-hover:text-primary">(45)</p>
+                                            </div>
+                                        </label>
                                     </li>
-                                    <li class="flex justify-between items-center cursor-pointer group">
-                                        <p class="group-hover:text-primary">Wellness </p>
-                                        <p class="group-hover:text-primary">(56)</p>
+                                    <li>
+                                        <input id="5" type="checkbox" class="hidden peer" name="preferred_activities[]"
+                                            value="5">
+                                        <label for="5"
+                                            class="cursor-pointer w-full inline-flex items-center justify-between peer-checked:**:text-primary peer-checked:**:font-medium transition-all ease-in-out">
+                                            <div class="flex items-center justify-between w-full">
+                                                <p class="group-hover:text-primary">Wellness </p>
+                                                <p class="group-hover:text-primary">(56)</p>
+                                            </div>
+                                        </label>
                                     </li>
-                                    <li class="flex justify-between items-center cursor-pointer group">
-                                        <p class="group-hover:text-primary">Skincare</p>
-                                        <p class="group-hover:text-primary">(33)</p>
+                                    <li>
+                                        <input id="6" type="checkbox" class="hidden peer" name="preferred_activities[]"
+                                            value="6">
+                                        <label for="6"
+                                            class="cursor-pointer w-full inline-flex items-center justify-between peer-checked:**:text-primary peer-checked:**:font-medium transition-all ease-in-out">
+                                            <div class="flex items-center justify-between w-full">
+                                                <p class="group-hover:text-primary">Skincare</p>
+                                                <p class="group-hover:text-primary">(33)</p>
+                                            </div>
+                                        </label>
                                     </li>
-                                    <li class="flex justify-between items-center cursor-pointer group">
-                                        <p class="group-hover:text-primary">Books & Guides</p>
-                                        <p class="group-hover:text-primary">(56)</p>
+                                    <li>
+                                        <input id="7" type="checkbox" class="hidden peer" name="preferred_activities[]"
+                                            value="7">
+                                        <label for="7"
+                                            class="cursor-pointer w-full inline-flex items-center justify-between peer-checked:**:text-primary peer-checked:**:font-medium transition-all ease-in-out">
+                                            <div class="flex items-center justify-between w-full">
+                                                <p class="group-hover:text-primary">Books & Guides</p>
+                                                <p class="group-hover:text-primary">(56)</p>
+                                            </div>
+                                        </label>
                                     </li>
-                                    <li class="flex justify-between items-center cursor-pointer group">
-                                        <p class="group-hover:text-primary">Gift Cards</p>
-                                        <p class="group-hover:text-primary">(33)</p>
+                                    <li>
+                                        <input id="8" type="checkbox" class="hidden peer" name="preferred_activities[]"
+                                            value="8">
+                                        <label for="8"
+                                            class="cursor-pointer w-full inline-flex items-center justify-between peer-checked:**:text-primary peer-checked:**:font-medium transition-all ease-in-out">
+                                            <div class="flex items-center justify-between w-full">
+                                                <p class="group-hover:text-primary">Gift Cards</p>
+                                                <p class="group-hover:text-primary">(33)</p>
+                                            </div>
+                                        </label>
                                     </li>
 
                                 </ul>
@@ -2695,68 +2787,99 @@
                                     <p class="font-medium">Filter by Color</p>
                                     <p class="toggle-icon">−</p>
                                 </button>
-                                <!-- Default open -->
+
                                 <div class="filter-content mt-2 flex flex-wrap 1xl:gap-3.5 xl:gap-[11px] gap-2">
-                                    <button
-                                        class="hover:scale-105 active:p-0.5 focus:p-0.5 1xl:size-7.5 xl:size-6.5 size-6 rounded-sm overflow-hidden border border-primary/30 p-0 group">
-                                        <div
-                                            class="bg-[#B9AC39] w-full h-full group-active:rounded-sm group-focus:rounded-sm">
-                                        </div>
-                                    </button>
-                                    <button
-                                        class="hover:scale-105 active:p-0.5 focus:p-0.5 1xl:size-7.5 xl:size-6.5 size-6 rounded-sm overflow-hidden border border-primary/30 p-0 group">
-                                        <div
-                                            class="bg-[#53871D] w-full h-full group-active:rounded-sm group-focus:rounded-sm">
-                                        </div>
-                                    </button>
-                                    <button
-                                        class="hover:scale-105 active:p-0.5 focus:p-0.5 1xl:size-7.5 xl:size-6.5 size-6 rounded-sm overflow-hidden border border-primary/30 p-0 group">
-                                        <div
-                                            class="bg-[#8EC9E2] w-full h-full group-active:rounded-sm group-focus:rounded-sm">
-                                        </div>
-                                    </button>
-                                    <button
-                                        class="hover:scale-105 active:p-0.5 focus:p-0.5 1xl:size-7.5 xl:size-6.5 size-6 rounded-sm overflow-hidden border border-primary/30 p-0 group">
-                                        <div
-                                            class="bg-[#8EB0E2] w-full h-full group-active:rounded-sm group-focus:rounded-sm">
-                                        </div>
-                                    </button>
-                                    <button
-                                        class="hover:scale-105 active:p-0.5 focus:p-0.5 1xl:size-7.5 xl:size-6.5 size-6 rounded-sm overflow-hidden border border-primary/30 p-0 group">
-                                        <div
-                                            class="bg-[#9E8EE2] w-full h-full group-active:rounded-sm group-focus:rounded-sm">
-                                        </div>
-                                    </button>
-                                    <button
-                                        class="hover:scale-105 active:p-0.5 focus:p-0.5 1xl:size-7.5 xl:size-6.5 size-6 rounded-sm overflow-hidden border border-primary/30 p-0 group">
-                                        <div
-                                            class="bg-[#B78EE2] w-full h-full group-active:rounded-sm group-focus:rounded-sm">
-                                        </div>
-                                    </button>
-                                    <button
-                                        class="hover:scale-105 active:p-0.5 focus:p-0.5 1xl:size-7.5 xl:size-6.5 size-6 rounded-sm overflow-hidden border border-primary/30 p-0 group">
-                                        <div
-                                            class="bg-[#E28EDA] w-full h-full group-active:rounded-sm group-focus:rounded-sm">
-                                        </div>
-                                    </button>
-                                    <button
-                                        class="hover:scale-105 active:p-0.5 focus:p-0.5 1xl:size-7.5 xl:size-6.5 size-6 rounded-sm overflow-hidden border border-primary/30 p-0 group">
-                                        <div
-                                            class="bg-[#E28EA8] w-full h-full group-active:rounded-sm group-focus:rounded-sm">
-                                        </div>
-                                    </button>
-                                    <button
-                                        class="hover:scale-105 active:p-0.5 focus:p-0.5 1xl:size-7.5 xl:size-6.5 size-6 rounded-sm overflow-hidden border border-primary/30 p-0 group">
-                                        <div
-                                            class="bg-[#C54191] w-full h-full group-active:rounded-sm group-focus:rounded-sm">
-                                        </div>
-                                    </button>
-                                    <button
-                                        class="hover:scale-105 active:p-0.5 focus:p-0.5 1xl:size-7.5 xl:size-6.5 size-6 rounded-sm overflow-hidden border border-primary/30 p-0 group">
-                                        <div
-                                            class="bg-[#E28EC1] w-full h-full group-active:rounded-sm group-focus:rounded-sm">
-                                        </div>
-                                    </button>
+                                    <div>
+                                        <input id="9" type="checkbox" class="hidden peer" name="preferred_activities[]"
+                                            value="9">
+                                        <label for="9"
+                                            class="cursor-pointer 1xl:size-7.5 xl:size-6.5 size-6 rounded-sm overflow-hidden border border-primary/30 p-0 flex peer-checked:border peer-checked:border-primary transition-all ease-in-out">
+                                            <div class="bg-[#B9AC39] w-full h-full peer-checked:rounded-sm">
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input id="10" type="checkbox" class="hidden peer" name="preferred_activities[]"
+                                            value="10">
+                                        <label for="10"
+                                            class="cursor-pointer 1xl:size-7.5 xl:size-6.5 size-6 rounded-sm overflow-hidden border border-primary/30 p-0 flex peer-checked:border peer-checked:border-primary transition-all ease-in-out">
+                                            <div class="bg-[#53871D] w-full h-full peer-checked:rounded-sm">
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input id="11" type="checkbox" class="hidden peer" name="preferred_activities[]"
+                                            value="11">
+                                        <label for="11"
+                                            class="cursor-pointer 1xl:size-7.5 xl:size-6.5 size-6 rounded-sm overflow-hidden border border-primary/30 p-0 flex peer-checked:border peer-checked:border-primary transition-all ease-in-out">
+                                            <div class="bg-[#8EC9E2] w-full h-full peer-checked:rounded-sm">
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input id="12" type="checkbox" class="hidden peer" name="preferred_activities[]"
+                                            value="12">
+                                        <label for="12"
+                                            class="cursor-pointer 1xl:size-7.5 xl:size-6.5 size-6 rounded-sm overflow-hidden border border-primary/30 p-0 flex peer-checked:border peer-checked:border-primary transition-all ease-in-out">
+                                            <div class="bg-[#8EB0E2] w-full h-full peer-checked:rounded-sm">
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input id="13" type="checkbox" class="hidden peer" name="preferred_activities[]"
+                                            value="13">
+                                        <label for="13"
+                                            class="cursor-pointer 1xl:size-7.5 xl:size-6.5 size-6 rounded-sm overflow-hidden border border-primary/30 p-0 flex peer-checked:border peer-checked:border-primary transition-all ease-in-out">
+                                            <div class="bg-[#9E8EE2] w-full h-full peer-checked:rounded-sm">
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input id="14" type="checkbox" class="hidden peer" name="preferred_activities[]"
+                                            value="14">
+                                        <label for="14"
+                                            class="cursor-pointer 1xl:size-7.5 xl:size-6.5 size-6 rounded-sm overflow-hidden border border-primary/30 p-0 flex peer-checked:border peer-checked:border-primary transition-all ease-in-out">
+                                            <div class="bg-[#B78EE2] w-full h-full peer-checked:rounded-sm">
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input id="15" type="checkbox" class="hidden peer" name="preferred_activities[]"
+                                            value="15">
+                                        <label for="15"
+                                            class="cursor-pointer 1xl:size-7.5 xl:size-6.5 size-6 rounded-sm overflow-hidden border border-primary/30 p-0 flex peer-checked:border peer-checked:border-primary transition-all ease-in-out">
+                                            <div class="bg-[#E28EDA] w-full h-full peer-checked:rounded-sm">
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input id="15" type="checkbox" class="hidden peer" name="preferred_activities[]"
+                                            value="15">
+                                        <label for="15"
+                                            class="cursor-pointer 1xl:size-7.5 xl:size-6.5 size-6 rounded-sm overflow-hidden border border-primary/30 p-0 flex peer-checked:border peer-checked:border-primary transition-all ease-in-out">
+                                            <div class="bg-[#E28EA8] w-full h-full peer-checked:rounded-sm">
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input id="15" type="checkbox" class="hidden peer" name="preferred_activities[]"
+                                            value="15">
+                                        <label for="15"
+                                            class="cursor-pointer 1xl:size-7.5 xl:size-6.5 size-6 rounded-sm overflow-hidden border border-primary/30 p-0 flex peer-checked:border peer-checked:border-primary transition-all ease-in-out">
+                                            <div class="bg-[#C54191] w-full h-full peer-checked:rounded-sm">
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <input id="16" type="checkbox" class="hidden peer" name="preferred_activities[]"
+                                            value="16">
+                                        <label for="16"
+                                            class="cursor-pointer 1xl:size-7.5 xl:size-6.5 size-6 rounded-sm overflow-hidden border border-primary/30 p-0 flex peer-checked:border peer-checked:border-primary transition-all ease-in-out">
+                                            <div class="bg-[#E28EC1] w-full h-full peer-checked:rounded-sm">
+                                            </div>
+                                        </label>
+                                    </div>
+
                                 </div>
                             </div>
 
@@ -2987,7 +3110,7 @@
                                     </button>
                                 </div>
 
-                                <div class="relative dropdown shop-dropdown">
+                                <div class="relative dropdown pointer-events-auto shop-dropdown">
                                     <!-- Button -->
                                     <button type="button" class="dropdown-btn">
                                         <p class="dropdown-text">Sort by</p>
@@ -3001,7 +3124,7 @@
 
                                     <!-- Dropdown Menu -->
                                     <div
-                                        class="dropdown-menu max-h-0 opacity-0 absolute transition-[max-height,opacity] duration-300 ease-in-out">
+                                        class="dropdown-menu pointer-events-all max-h-0 opacity-0 absolute transition-[max-height,opacity] duration-300 ease-in-out">
                                         <div class="filter-box bg-whitesmoke-100 1xl:p-5.5 lg:p-4.5 sm:p-4 p-3">
                                             <div class="filter-content 1xl:space-y-1.5 space-y-1">
                                                 <label
@@ -3165,7 +3288,7 @@
 
                         <!-- GRID VIEW - Product Grid -->
                         <div id="grid-view"
-                            class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 2xl:gap-7.5 1xl:gap-6 gap-4.5">
+                            class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 2xl:gap-7.5 1xl:gap-6 md:gap-5 gap-4.5">
                             <!-- Product 1 -->
                             <div class="product-card-wrapper group">
                                 <div
@@ -3176,18 +3299,33 @@
                                     </a>
                                     <div
                                         class="absolute 1xl:top-5 1xl:right-5 top-4 right-4 flex flex-col 1xl:gap-4 gap-3.5">
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#7CD2E8] w-full h-full rounded-full"></div>
-                                        </button>
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#D19EF6] w-full h-full rounded-full"></div>
-                                        </button>
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#B4C7E2] w-full h-full rounded-full"></div>
-                                        </button>
+
+                                        <!-- Color 1 -->
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color" class="peer hidden" />
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 p-0 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#7CD2E8]"></span>
+                                            </span>
+                                        </label>
+
+                                        <!-- Color 2 -->
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color" class="peer hidden" />
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 p-0 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#D19EF6]"></span>
+                                            </span>
+                                        </label>
+
+                                        <!-- Color 3 -->
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color" class="peer hidden" checked />
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 p-0 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#B4C7E2]"></span>
+                                            </span>
+                                        </label>
                                     </div>
 
                                     <div
@@ -3318,18 +3456,32 @@
                                     </a>
                                     <div
                                         class="absolute 1xl:top-5 1xl:right-5 top-4 right-4 flex flex-col 1xl:gap-4 gap-3.5">
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#AC99CE] w-full h-full rounded-full"></div>
-                                        </button>
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#A8D5A7] w-full h-full rounded-full"></div>
-                                        </button>
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#A7CDD5] w-full h-full rounded-full"></div>
-                                        </button>
+                                        <!-- 1 -->
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color-set-1" class="peer hidden" checked>
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent p-0 peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#AC99CE]"></span>
+                                            </span>
+                                        </label>
+
+                                        <!-- 2 -->
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color-set-1" class="peer hidden">
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#A8D5A7]"></span>
+                                            </span>
+                                        </label>
+
+                                        <!-- 3 -->
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color-set-1" class="peer hidden">
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#A7CDD5]"></span>
+                                            </span>
+                                        </label>
                                     </div>
 
                                     <div
@@ -3461,18 +3613,29 @@
                                     </a>
                                     <div
                                         class="absolute 1xl:top-5 1xl:right-5 top-4 right-4 flex flex-col 1xl:gap-4 gap-3.5">
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#435F72] w-full h-full rounded-full"></div>
-                                        </button>
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#72434C] w-full h-full rounded-full"></div>
-                                        </button>
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#292832] w-full h-full rounded-full"></div>
-                                        </button>
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color-set-2" class="peer hidden">
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#435F72]"></span>
+                                            </span>
+                                        </label>
+
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color-set-2" class="peer hidden">
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#72434C]"></span>
+                                            </span>
+                                        </label>
+
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color-set-2" class="peer hidden" checked>
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#292832]"></span>
+                                            </span>
+                                        </label>
                                     </div>
                                     <div
                                         class="absolute bottom-0 w-full 1xl:p-5 p-3.5 rounded-sm overflow-hidden bg-linear-to-t from-thunder-100 via-thunder-100/50 to-thunder-100/25 backdrop-blur-xs">
@@ -3603,18 +3766,29 @@
                                     </a>
                                     <div
                                         class="absolute 1xl:top-5 1xl:right-5 top-4 right-4 flex flex-col 1xl:gap-4 gap-3.5">
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#8E9C9B] w-full h-full rounded-full"></div>
-                                        </button>
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#767985] w-full h-full rounded-full"></div>
-                                        </button>
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#969C8E] w-full h-full rounded-full"></div>
-                                        </button>
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color-set-3" class="peer hidden">
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-4.5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#8E9C9B]"></span>
+                                            </span>
+                                        </label>
+
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color-set-3" class="peer hidden" checked>
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-4.5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#767985]"></span>
+                                            </span>
+                                        </label>
+
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color-set-3" class="peer hidden">
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-4.5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#969C8E]"></span>
+                                            </span>
+                                        </label>
                                     </div>
 
                                     <div
@@ -3682,18 +3856,29 @@
                                     </a>
                                     <div
                                         class="absolute 1xl:top-5 1xl:right-5 top-4 right-4 flex flex-col 1xl:gap-4 gap-3.5">
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#DB5091] w-full h-full rounded-full"></div>
-                                        </button>
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#60D1AA] w-full h-full rounded-full"></div>
-                                        </button>
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#38ACC5] w-full h-full rounded-full"></div>
-                                        </button>
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color-set-4" class="peer hidden">
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#DB5091]"></span>
+                                            </span>
+                                        </label>
+
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color-set-4" class="peer hidden">
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#60D1AA]"></span>
+                                            </span>
+                                        </label>
+
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color-set-4" class="peer hidden" checked>
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#38ACC5]"></span>
+                                            </span>
+                                        </label>
                                     </div>
 
                                     <div
@@ -3826,18 +4011,29 @@
                                     </a>
                                     <div
                                         class="absolute 1xl:top-5 1xl:right-5 top-4 right-4 flex flex-col 1xl:gap-4 gap-3.5">
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#9D0B09] w-full h-full rounded-full"></div>
-                                        </button>
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#D5480D] w-full h-full rounded-full"></div>
-                                        </button>
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#0E5DCD] w-full h-full rounded-full"></div>
-                                        </button>
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color-set-5" class="peer hidden" checked>
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#9D0B09]"></span>
+                                            </span>
+                                        </label>
+
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color-set-5" class="peer hidden">
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#D5480D]"></span>
+                                            </span>
+                                        </label>
+
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color-set-5" class="peer hidden">
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#0E5DCD]"></span>
+                                            </span>
+                                        </label>
                                     </div>
 
                                     <div
@@ -4031,18 +4227,30 @@
                                     </a>
                                     <div
                                         class="absolute 1xl:top-5 1xl:right-5 top-4 right-4 flex flex-col 1xl:gap-4 gap-3.5">
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#6B6B6B] w-full h-full rounded-full"></div>
-                                        </button>
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#0E1235] w-full h-full rounded-full"></div>
-                                        </button>
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#282627] w-full h-full rounded-full"></div>
-                                        </button>
+
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color-set-6" class="peer hidden">
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#6B6B6B]"></span>
+                                            </span>
+                                        </label>
+
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color-set-6" class="peer hidden">
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#0E1235]"></span>
+                                            </span>
+                                        </label>
+
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color-set-6" class="peer hidden" checked>
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#282627]"></span>
+                                            </span>
+                                        </label>
                                     </div>
 
                                     <div
@@ -4110,18 +4318,29 @@
                                     </a>
                                     <div
                                         class="absolute 1xl:top-5 1xl:right-5 top-4 right-4 flex flex-col 1xl:gap-4 gap-3.5">
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#7D5942] w-full h-full rounded-full"></div>
-                                        </button>
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#77427D] w-full h-full rounded-full"></div>
-                                        </button>
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#1C1B1B] w-full h-full rounded-full"></div>
-                                        </button>
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color-set-7" class="peer hidden">
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#7D5942]"></span>
+                                            </span>
+                                        </label>
+
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color-set-7" class="peer hidden">
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#77427D]"></span>
+                                            </span>
+                                        </label>
+
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color-set-7" class="peer hidden" checked>
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#1C1B1B]"></span>
+                                            </span>
+                                        </label>
                                     </div>
 
                                     <div
@@ -4189,18 +4408,29 @@
                                     </a>
                                     <div
                                         class="absolute 1xl:top-5 1xl:right-5 top-4 right-4 flex flex-col 1xl:gap-4 gap-3.5">
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#C5C0B5] w-full h-full rounded-full"></div>
-                                        </button>
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#DA98E4] w-full h-full rounded-full"></div>
-                                        </button>
-                                        <button
-                                            class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 flex items-center justify-center">
-                                            <div class="bg-[#33AAAE] w-full h-full rounded-full"></div>
-                                        </button>
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color-set-8" class="peer hidden">
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#C5C0B5]"></span>
+                                            </span>
+                                        </label>
+
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color-set-8" class="peer hidden">
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#0E1235]"></span>
+                                            </span>
+                                        </label>
+
+                                        <label class="cursor-pointer">
+                                            <input type="radio" name="color-set-8" class="peer hidden" checked>
+                                            <span
+                                                class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                <span class="block w-full h-full rounded-full bg-[#33AAAE]"></span>
+                                            </span>
+                                        </label>
                                     </div>
 
                                     <div
@@ -4274,18 +4504,32 @@
                                         </a>
                                         <div
                                             class="absolute 1xl:top-5 1xl:right-5 lg:top-4 lg:right-4 top-2.5 right-2.5 flex flex-col 1xl:gap-4 gap-3.5">
-                                            <button
-                                                class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-4.5 flex items-center justify-center">
-                                                <div class="bg-[#7CD2E8] w-full h-full rounded-full"></div>
-                                            </button>
-                                            <button
-                                                class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-4.5 flex items-center justify-center">
-                                                <div class="bg-[#D19EF6] w-full h-full rounded-full"></div>
-                                            </button>
-                                            <button
-                                                class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-4.5 flex items-center justify-center">
-                                                <div class="bg-[#B4C7E2] w-full h-full rounded-full"></div>
-                                            </button>
+                                            <!-- Color 1 -->
+                                            <label class="cursor-pointer">
+                                                <input type="radio" name="color-set-10" class="peer hidden" />
+                                                <span
+                                                    class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 p-0 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                    <span class="block w-full h-full rounded-full bg-[#7CD2E8]"></span>
+                                                </span>
+                                            </label>
+
+                                            <!-- Color 2 -->
+                                            <label class="cursor-pointer">
+                                                <input type="radio" name="color-set-10" class="peer hidden" />
+                                                <span
+                                                    class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 p-0 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                    <span class="block w-full h-full rounded-full bg-[#D19EF6]"></span>
+                                                </span>
+                                            </label>
+
+                                            <!-- Color 3 -->
+                                            <label class="cursor-pointer">
+                                                <input type="radio" name="color-set-10" class="peer hidden" checked />
+                                                <span
+                                                    class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 p-0 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                    <span class="block w-full h-full rounded-full bg-[#B4C7E2]"></span>
+                                                </span>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
@@ -4414,18 +4658,32 @@
                                         </a>
                                         <div
                                             class="absolute 1xl:top-5 1xl:right-5 lg:top-4 lg:right-4 top-2.5 right-2.5 flex flex-col 1xl:gap-4 gap-3.5">
-                                            <button
-                                                class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-4.5 flex items-center justify-center">
-                                                <div class="bg-[#AC99CE] w-full h-full rounded-full"></div>
-                                            </button>
-                                            <button
-                                                class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-4.5 flex items-center justify-center">
-                                                <div class="bg-[#A8D5A7] w-full h-full rounded-full"></div>
-                                            </button>
-                                            <button
-                                                class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-4.5 flex items-center justify-center">
-                                                <div class="bg-[#A7CDD5] w-full h-full rounded-full"></div>
-                                            </button>
+                                            <!-- 1 -->
+                                            <label class="cursor-pointer">
+                                                <input type="radio" name="color-set-11" class="peer hidden" checked>
+                                                <span
+                                                    class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent p-0 peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                    <span class="block w-full h-full rounded-full bg-[#AC99CE]"></span>
+                                                </span>
+                                            </label>
+
+                                            <!-- 2 -->
+                                            <label class="cursor-pointer">
+                                                <input type="radio" name="color-set-11" class="peer hidden">
+                                                <span
+                                                    class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                    <span class="block w-full h-full rounded-full bg-[#A8D5A7]"></span>
+                                                </span>
+                                            </label>
+
+                                            <!-- 3 -->
+                                            <label class="cursor-pointer">
+                                                <input type="radio" name="color-set-11" class="peer hidden">
+                                                <span
+                                                    class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                    <span class="block w-full h-full rounded-full bg-[#A7CDD5]"></span>
+                                                </span>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
@@ -4551,18 +4809,29 @@
                                         </a>
                                         <div
                                             class="absolute 1xl:top-5 1xl:right-5 lg:top-4 lg:right-4 top-2.5 right-2.5 flex flex-col 1xl:gap-4 gap-3.5">
-                                            <button
-                                                class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-4.5 flex items-center justify-center">
-                                                <div class="bg-[#435F72] w-full h-full rounded-full"></div>
-                                            </button>
-                                            <button
-                                                class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-4.5 flex items-center justify-center">
-                                                <div class="bg-[#72434C] w-full h-full rounded-full"></div>
-                                            </button>
-                                            <button
-                                                class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-4.5 flex items-center justify-center">
-                                                <div class="bg-[#292832] w-full h-full rounded-full"></div>
-                                            </button>
+                                            <label class="cursor-pointer">
+                                                <input type="radio" name="color-set-12" class="peer hidden">
+                                                <span
+                                                    class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                    <span class="block w-full h-full rounded-full bg-[#435F72]"></span>
+                                                </span>
+                                            </label>
+
+                                            <label class="cursor-pointer">
+                                                <input type="radio" name="color-set-12" class="peer hidden">
+                                                <span
+                                                    class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                    <span class="block w-full h-full rounded-full bg-[#72434C]"></span>
+                                                </span>
+                                            </label>
+
+                                            <label class="cursor-pointer">
+                                                <input type="radio" name="color-set-12" class="peer hidden" checked>
+                                                <span
+                                                    class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                    <span class="block w-full h-full rounded-full bg-[#292832]"></span>
+                                                </span>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
@@ -4627,18 +4896,29 @@
                                         </a>
                                         <div
                                             class="absolute 1xl:top-5 1xl:right-5 lg:top-4 lg:right-4 top-2.5 right-2.5 flex flex-col 1xl:gap-4 gap-3.5">
-                                            <button
-                                                class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-4.5 flex items-center justify-center">
-                                                <div class="bg-[#F0C265] w-full h-full rounded-full"></div>
-                                            </button>
-                                            <button
-                                                class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-4.5 flex items-center justify-center">
-                                                <div class="bg-[#D177C0] w-full h-full rounded-full"></div>
-                                            </button>
-                                            <button
-                                                class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-4.5 flex items-center justify-center">
-                                                <div class="bg-[#B465F0] w-full h-full rounded-full"></div>
-                                            </button>
+                                            <label class="cursor-pointer">
+                                                <input type="radio" name="color-set-13" class="peer hidden">
+                                                <span
+                                                    class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-4.5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                    <span class="block w-full h-full rounded-full bg-[#F0C265]"></span>
+                                                </span>
+                                            </label>
+
+                                            <label class="cursor-pointer">
+                                                <input type="radio" name="color-set-13" class="peer hidden">
+                                                <span
+                                                    class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-4.5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                    <span class="block w-full h-full rounded-full bg-[#D177C0]"></span>
+                                                </span>
+                                            </label>
+
+                                            <label class="cursor-pointer">
+                                                <input type="radio" name="color-set-13" class="peer hidden" checked>
+                                                <span
+                                                    class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-4.5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                    <span class="block w-full h-full rounded-full bg-[#B465F0]"></span>
+                                                </span>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
@@ -4703,18 +4983,29 @@
                                         </a>
                                         <div
                                             class="absolute 1xl:top-5 1xl:right-5 lg:top-4 lg:right-4 top-2.5 right-2.5 flex flex-col 1xl:gap-4 gap-3.5">
-                                            <button
-                                                class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-4.5 flex items-center justify-center">
-                                                <div class="bg-[#8E9C9B] w-full h-full rounded-full"></div>
-                                            </button>
-                                            <button
-                                                class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-4.5 flex items-center justify-center">
-                                                <div class="bg-[#767985] w-full h-full rounded-full"></div>
-                                            </button>
-                                            <button
-                                                class="hover:p-0.5 active:p-0.5 focus:p-0.5 hover:border focus:border active:border border-primary rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-4.5 flex items-center justify-center">
-                                                <div class="bg-[#969C8E] w-full h-full rounded-full"></div>
-                                            </button>
+                                            <label class="cursor-pointer">
+                                                <input type="radio" name="color-set-14" class="peer hidden">
+                                                <span
+                                                    class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-4.5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                    <span class="block w-full h-full rounded-full bg-[#8E9C9B]"></span>
+                                                </span>
+                                            </label>
+
+                                            <label class="cursor-pointer">
+                                                <input type="radio" name="color-set-14" class="peer hidden" checked>
+                                                <span
+                                                    class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-4.5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                    <span class="block w-full h-full rounded-full bg-[#767985]"></span>
+                                                </span>
+                                            </label>
+
+                                            <label class="cursor-pointer">
+                                                <input type="radio" name="color-set-14" class="peer hidden">
+                                                <span
+                                                    class="block rounded-full overflow-hidden 1xl:size-6 xl:size-5.5 size-4.5 border border-transparent peer-checked:border-primary peer-checked:p-0.5 hover:border-primary hover:p-0.5 transition">
+                                                    <span class="block w-full h-full rounded-full bg-[#969C8E]"></span>
+                                                </span>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
@@ -4770,6 +5061,18 @@
                 </div>
             </div>
         </section>
+
+        <section class="relative bg-white 2xl:mb-[100px] 1xl:mb-20 xl:mb-17 lg:mb-14 md:mb-12 sm:mb-11 mb-10">
+            <div class="container">
+                <nav aria-label="Pagination">
+                    <ul class="flex items-center justify-center 1xl:gap-4 lg:gap-3 gap-2.5" id="pagination">
+                        <!-- Pagination will be generated here -->
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+
         <!-- ====== End Shop Section ====== -->
     </main>
     <!-- ====== End-Main-Content ====== -->

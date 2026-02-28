@@ -2049,7 +2049,6 @@ $(document).ready(function () {
       counter.text(qty);
     }
   });
-
 });
 
 
@@ -2079,3 +2078,461 @@ $(document).ready(function () {
 
 
 
+// SHOP PAGE PAGINATION
+$(document).ready(function () {
+  let currentPage = 1;
+  let totalPages = 5;
+  const visibleTabs = 4;
+
+  function renderPagination() {
+    const $pagination = $('#pagination');
+    $pagination.empty();
+
+    /* ===== PREVIOUS BUTTON ===== */
+    if (currentPage > 1) {
+      $pagination.append(`
+        <li>
+          <a href="#" id="prevBtn" class="nav-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+              <g clip-path="url(#clip0_184_131)">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M4.97462 6.77552C4.86214 6.88803 4.79895 7.04062 4.79895 7.19972C4.79895 7.35882 4.86214 7.5114 4.97462 7.62392L8.36882 11.0181C8.42417 11.0754 8.49037 11.1211 8.56357 11.1526C8.63678 11.184 8.71551 11.2006 8.79518 11.2013C8.87484 11.202 8.95385 11.1868 9.02759 11.1566C9.10133 11.1264 9.16832 11.0819 9.22465 11.0256C9.28099 10.9692 9.32554 10.9022 9.35571 10.8285C9.38588 10.7548 9.40106 10.6757 9.40037 10.5961C9.39968 10.5164 9.38312 10.4377 9.35168 10.3645C9.32023 10.2913 9.27452 10.2251 9.21722 10.1697L6.24722 7.19972L9.21722 4.22972C9.32651 4.11656 9.38699 3.96499 9.38562 3.80768C9.38426 3.65036 9.32115 3.49987 9.20991 3.38863C9.09866 3.27738 8.94818 3.21428 8.79086 3.21291C8.63354 3.21155 8.48198 3.27202 8.36882 3.38132L4.97462 6.77552Z" fill="#2D2D2D"/>
+              </g>
+            </svg>     
+         </a>
+        </li>
+      `);
+    }
+
+    /* ===== CALCULATE PAGE WINDOW ===== */
+    let startPage, endPage;
+
+    if (currentPage <= 2) {
+      startPage = 1;
+      endPage = visibleTabs;
+    } else if (currentPage >= totalPages - 1) {
+      endPage = totalPages;
+      startPage = totalPages - visibleTabs + 1;
+    } else {
+      startPage = currentPage - 1;
+      endPage = startPage + visibleTabs - 1;
+    }
+
+    startPage = Math.max(1, startPage);
+    endPage = Math.min(totalPages, endPage);
+
+    /* ===== LEFT ELLIPSIS ===== */
+    if (startPage > 1) {
+      $pagination.append(`<li><span class="ellipsis">...</span></li>`);
+    }
+
+    /* ===== PAGE NUMBERS ===== */
+    for (let i = startPage; i <= endPage; i++) {
+      $pagination.append(`
+        <li>
+          <a href="#"
+            class="page-link ${currentPage === i ? 'active' : ''}"
+            data-page="${i}">
+            ${i}
+          </a>
+        </li>
+      `);
+    }
+
+    /* ===== RIGHT ELLIPSIS ===== */
+    if (endPage < totalPages) {
+      $pagination.append(`<li><span class="ellipsis">...</span></li>`);
+    }
+
+    /* ===== NEXT BUTTON ===== */
+    if (currentPage < totalPages) {
+      $pagination.append(`
+        <li>
+          <a href="#" id="nextBtn" class="nav-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+              <g clip-path="url(#clip0_3549_60696)">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.42577 6.77747C9.53826 6.88999 9.60144 7.04257 9.60144 7.20167C9.60144 7.36077 9.53826 7.51335 9.42577 7.62587L6.03157 11.0201C5.97623 11.0774 5.91002 11.1231 5.83682 11.1545C5.76361 11.186 5.68488 11.2025 5.60521 11.2032C5.52555 11.2039 5.44654 11.1887 5.3728 11.1586C5.29906 11.1284 5.23207 11.0838 5.17574 11.0275C5.1194 10.9712 5.07485 10.9042 5.04468 10.8304C5.01451 10.7567 4.99933 10.6777 5.00002 10.598C5.00071 10.5184 5.01727 10.4396 5.04871 10.3664C5.08016 10.2932 5.12587 10.227 5.18317 10.1717L8.15317 7.20167L5.18317 4.23167C5.07388 4.11851 5.0134 3.96695 5.01477 3.80963C5.01614 3.65231 5.07924 3.50182 5.19048 3.39058C5.30173 3.27933 5.45221 3.21623 5.60953 3.21487C5.76685 3.2135 5.91841 3.27398 6.03157 3.38327L9.42577 6.77747Z" fill="#2D2D2D"/>
+              </g>
+            </svg>
+          </a>
+        </li>
+      `);
+    }
+
+    attachEvents();
+  }
+
+  function attachEvents() {
+    $('.page-link').off().on('click', function (e) {
+      e.preventDefault();
+      currentPage = parseInt($(this).data('page'));
+      renderPagination();
+    });
+
+    $('#prevBtn').off().on('click', function (e) {
+      e.preventDefault();
+      if (currentPage > 1) {
+        currentPage--;
+        renderPagination();
+      }
+    });
+
+    $('#nextBtn').off().on('click', function (e) {
+      e.preventDefault();
+      if (currentPage < totalPages) {
+        currentPage++;
+        renderPagination();
+      }
+    });
+  }
+
+  /* ===== INITIAL RENDER ===== */
+  renderPagination();
+});
+
+
+
+// DASHBOARD PAGE TURN 
+$(document).ready(function () {
+  $('.view-order').on('click', function () {
+    $('#ordersList').hide();
+    $('#orderDetails').fadeIn(300); // smooth show
+    $('html, body').animate({ scrollTop: 0 }, 300);
+  });
+
+  // optional back button
+  $('.back-to-orders').on('click', function () {
+    $('#orderDetails').hide();
+    $('#ordersList').fadeIn(300);
+  });
+});
+
+// cancel order
+$(document).ready(function () {
+  function disableScroll() {
+    $('html, body').addClass('lock-scroll');
+  }
+  function enableScroll() {
+    $('html, body').removeClass('lock-scroll');
+  }
+
+  $('#cancelOrderBtn').on('click', function () {
+    $('#cancelPopup').removeClass('hidden').addClass('flex');
+    disableScroll();
+  });
+
+  // ❌ close button
+  $('#closePopup, #keepOrder').on('click', function () {
+    $('#cancelPopup').removeClass('flex').addClass('hidden');
+    enableScroll();
+  });
+
+  $('#confirmCancel').on('click', function () {
+    $('#cancelPopup').removeClass('flex').addClass('hidden');
+
+    $('#successPopup').removeClass('hidden').addClass('flex');
+
+    setTimeout(function () {
+      $('#successPopup').removeClass('flex').addClass('hidden');
+      enableScroll();
+    }, 3000);
+  });
+
+});
+
+// DASHBOARD CLASS
+$(document).ready(function () {
+
+  /* ===============================
+     CACHE POPUPS
+  =============================== */
+  const $orderPopup = $('#orderPopup');
+  const $cancelPopup = $('#cancelClassPopup');   // dashboard classes cancel
+  const $successPopup = $('#successClassPopup'); // dashboard classes success
+  const $membershipPopup = $('#membershipPopup');
+  const $billingPopup = $('#billingHistoryPopup');
+  const $autoPaymentPopup = $('#autoPaymentPopup');
+  const $cancelAutoPopup = $('#cancelConfirmPopup');
+  const $successAutoPopup = $('#successAutoPopup');
+
+  const $allPopups = $('.popup'); // All popups must have class="popup"
+
+  function disableScroll() {
+    $('html, body').addClass('lock-scroll');
+  }
+  function enableScroll() {
+    $('html, body').removeClass('lock-scroll');
+  }
+
+  /* ===============================
+     OPEN POPUP FUNCTION
+  =============================== */
+  function openPopup($popup) {
+    $allPopups.addClass('hidden').removeClass('flex'); // close all first
+    $popup.removeClass('hidden').addClass('flex');
+    $('body').addClass('overflow-hidden');
+    disableScroll();
+  }
+  /* ===================================
+     MEMBERSHIP FLOW
+  =================================== */
+
+  // View Details → Membership
+  $(document).on('click', '.plan-detail', function (e) {
+    e.preventDefault();
+    openPopup($membershipPopup);
+  });
+
+  // Membership → Billing History
+  $(document).on('click', '.open-billing-history', function () {
+    openPopup($billingPopup);
+  });
+
+  // Billing → Auto Payment
+  $(document).on('click', '.open-auto-payment', function () {
+    openPopup($autoPaymentPopup);
+  });
+
+  // Auto Payment → Cancel Confirm
+  $(document).on('click', '.confirm-cancel', function () {
+    openPopup($cancelAutoPopup);
+  });
+
+  // Confirm Cancel → Success (show immediately, auto-hide after 3s)
+  $(document).on('click', '.confirm-final-cancel', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    // Make 100% sure cancel confirm popup closes first
+    $cancelAutoPopup.addClass('hidden').removeClass('flex');
+
+    // Open success popup immediately
+    openPopup($successAutoPopup);
+
+    // Auto-close after 3 seconds
+    setTimeout(function () {
+      closeAllPopups();
+    }, 3000);
+
+    return false;
+  });
+
+  /* ===============================
+     ACCOUNT HEADER DROPDOWN (ACCOUNT PAGE ONLY)
+  =============================== */
+  (function () {
+    const $dropdown = $('#accountMenuDropdown');
+    const $toggle = $('#accountMenuToggle');
+
+    if (!$dropdown.length || !$toggle.length) return;
+
+    // Toggle dropdown
+    $toggle.on('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      $dropdown.toggleClass('hidden');
+    });
+
+    // Keep clicks inside dropdown from bubbling
+    $dropdown.on('click', function (e) {
+      e.stopPropagation();
+    });
+
+    // Close on outside click
+    $(document).on('click', function () {
+      $dropdown.addClass('hidden');
+    });
+
+    // Menu item → switch account tab
+    $(document).on('click', '.account-menu-item', function (e) {
+      e.preventDefault();
+
+      const target = $(this).data('target');
+      if (target && $('#schedule').length) {
+        const $tab = $('.schedule-tab[data-target="' + target + '"]');
+        if ($tab.length) {
+          $tab.trigger('click');
+          // Smooth scroll to dashboard section
+          const $section = $('#schedule');
+          if ($section.length) {
+            $('html, body').animate(
+              { scrollTop: $section.offset().top - 120 },
+              350,
+            );
+          }
+        }
+      }
+
+      $dropdown.addClass('hidden');
+    });
+  })();
+
+  /* ===============================
+     CLOSE ALL POPUPS
+  =============================== */
+  function closeAllPopups() {
+    $allPopups.addClass('hidden').removeClass('flex');
+    $('body').removeClass('overflow-hidden');
+    enableScroll();
+  }
+
+  /* ===============================
+     VIEW DETAILS CLICK
+  =============================== */
+  $(document).on('click', '.view-details', function (e) {
+    e.preventDefault();
+
+    const status = $(this).data('status');
+    const className = $(this).data('classname');
+    const date = $(this).data('date');
+    const image = $(this).data('image');
+    const instructor = $(this).data('instructor');
+    const programDuration = $(this).data('programduration');
+    const sessionDuration = $(this).data('sessionduration');
+    const format = $(this).data('format');
+    const detail = $(this).data('detail');
+
+    $('#pStatus').text(status);
+    $('#pMainTitle').text(className);
+    $('#pClassName').text(className);
+    $('#pDate').text(date);
+    $('#pImage').attr('src', image);
+    $('#pInstructor').text(instructor);
+    $('#pProgramDuration').text(programDuration);
+    $('#pSessionDuration').text(sessionDuration);
+    $('#pFormat').text(format);
+    $('#pDetail').text(detail);
+
+    openPopup($orderPopup);
+  });
+
+  /* ===============================
+     OPEN CANCEL POPUP
+  =============================== */
+  $(document).on('click', '#openCancelPopup', function (e) {
+    e.preventDefault();
+    openPopup($cancelPopup);
+  });
+
+  /* ===============================
+     CLOSE BUTTON (USE CLASS)
+  =============================== */
+  $(document).on('click', '.popup-close', function (e) {
+    e.preventDefault();
+    closeAllPopups();
+  });
+
+  /* ===============================
+     CLICK OUTSIDE TO CLOSE
+  =============================== */
+  $(document).on('click', '.popup', function (e) {
+    if ($(e.target).hasClass('popup')) {
+      closeAllPopups();
+    }
+  });
+
+  /* ===============================
+     SUBMIT CANCEL → SUCCESS POPUP
+  =============================== */
+  $(document).on('click', '#submitCancel', function (e) {
+    e.preventDefault();
+
+    openPopup($successPopup);
+
+    setTimeout(function () {
+      closeAllPopups();
+    }, 3000);
+  });
+});
+
+// ADD ADDRESS DETAIL
+$(document).ready(function () {
+
+  $('#addAddress').on('click', function () {
+
+    let count = $('.address-block').length + 1;
+
+    // clone first address block
+    let $clone = $('.address-block').first().clone();
+
+    // clear inputs
+    $clone.find('input').val('');
+
+    // update title text
+    $clone.find('.address-title')
+      .text(`Address Details (Address ${count})`);
+
+    // remove "+" button from cloned block
+    $clone.find('#addAddress').remove();
+
+    // add remove button on RIGHT
+    if ($clone.find('.removeAddress').length === 0) {
+      $clone.find('.address-header').append(`
+        <button type="button"
+          class="removeAddress 1xl:text-34 md:text-32 text-30 leading-none font-light text-primary">
+          −
+        </button>
+      `);
+    }
+
+    $('#addressWrapper').append($clone);
+  });
+
+  // remove address
+  $(document).on('click', '.removeAddress', function () {
+    $(this).closest('.address-block').remove();
+  });
+
+});
+
+
+$(document).ready(function () {
+
+  /* ================================
+     PROFILE IMAGE CHANGE (PENCIL / IMAGE CLICK)
+     ================================ */
+
+  // Open file chooser on image OR pencil click
+  $('#editProfileImg, #profilePreview').on('click', function () {
+    $('#profileImageInput').trigger('click');
+  });
+
+  // Preview selected image
+  $('#profileImageInput').on('change', function () {
+    const file = this.files[0];
+
+    if (!file) return;
+
+    // Allow only image files
+    if (!file.type.startsWith('image/')) {
+      alert('Please select a valid image file');
+      $(this).val('');
+      return;
+    }
+
+    // Preview image
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      $('#profilePreview').attr('src', e.target.result);
+    };
+    reader.readAsDataURL(file);
+  });
+
+});
+
+
+
+// PASSWORD SHOW/HIDE
+$(document).on('click', '.password-toggle', function () {
+  const $wrapper = $(this);
+  const $input = $wrapper.siblings('.password-input');
+
+  if ($input.attr('type') === 'password') {
+      $input.attr('type', 'text');
+      $wrapper.find('.eye-open').addClass('hidden');
+      $wrapper.find('.eye-closed').removeClass('hidden');
+  } else {
+      $input.attr('type', 'password');
+      $wrapper.find('.eye-closed').addClass('hidden');
+      $wrapper.find('.eye-open').removeClass('hidden');
+  }
+});

@@ -15,7 +15,7 @@
 
 <body>
     <!-- ====== Main-Content ====== -->
-    <main class="h-full 2xl:pt-20.5 xl:pt-19.5 lg:pt-17.5 md:pt-14.5 sm:pt-13.5 pt-10.5">
+    <main class="h-full 2xl:pt-20.5 xl:pt-19.5 lg:pt-16.5 md:pt-14 sm:pt-13 pt-10">
         <!-- ====== Header ====== -->
         <div class="bg_body_box fixed inset-0 w-full h-full backdrop-blur-xl bg-primary/35 z-50"></div>
         <header class="header fixed top-0 left-0 right-0 z-50 bg-whitesmoke-100 no-toggle-color">
@@ -2054,7 +2054,7 @@
                                                                 <ul class="bg-white 2xl:p-4 p-2 rounded-[10px]">
                                                                     <li>
                                                                         <p>
-                                                                            <a href="./blog-1.html"
+                                                                            <a href="./blog.html"
                                                                                 class="inline-flex items-center justify-between w-full min-[1221px]:px-4 2xl:py-2 sm:py-[6px] py-1 hover:bg-primary/30 hover:text-primary text-thunder-100 capitalize font-normal">
                                                                                 Blogs 01
                                                                             </a>
@@ -2146,10 +2146,11 @@
                                                                 </svg>
                                                             </a>
                                                             <div
-                                                                class="absolute left-full top-0 hidden group-hover:block rounded-[10px] z-60 2xl:min-w-55 min-w-47 2xl:pl-3 pl-2 min-h-[170px] h-full overflow-auto">
+                                                                class="absolute left-full top-0 hidden group-hover:block rounded-[10px] z-60 2xl:min-w-60 1xl:min-w-55 min-w-47 2xl:pl-3 pl-2 h-full">
                                                                 <span
                                                                     class="absolute 2xl:left-1 left-[2px] right-auto top-6 2xl:w-4 2xl:h-4 w-3.5 h-3.5 rounded-xs bg-white rotate-45 sm:border border-gray-200 z-[-1] min-[1221px]:block hidden"></span>
-                                                                <ul class="bg-white 2xl:p-4 p-2 rounded-[10px]">
+                                                                <ul
+                                                                    class="bg-white 2xl:p-4 p-2 rounded-[10px] overflow-auto min-h-[170px] h-full">
                                                                     <li>
                                                                         <p>
                                                                             <a href="./empty-cart.html"
@@ -2203,7 +2204,7 @@
                                     class="sticky bottom-0 top-auto sm:hidden flex items-center justify-between gap-2 bg-white">
                                     <a href="javascript:void(0)" id="openWishlistMobile"
                                         class="btn btn-primary lg:inline-block w-full">Wishlist</a>
-                                    <a href="javascript:;" class="btn btn-secondary lg:inline-block w-full">login</a>
+                                    <a href="./login.html" class="btn btn-secondary lg:inline-block w-full">login</a>
                                 </div>
                             </nav>
                         </aside>
@@ -2222,7 +2223,7 @@
                                 </button>
 
                                 <!-- Search form -->
-                                <div class="site-search__form-wrap rounded-full">
+                                <div class="site-search__form-wrap">
                                     <form class="site-search__search-form flex grow flex-nowrap">
                                         <!-- Search submit button -->
                                         <button class="site-search__search-submit" title="search">
@@ -2313,10 +2314,10 @@
                                                 </p>
                                                 <div class="w-full h-full">
                                                     <div
-                                                        class="w-full h-full grid 1xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:gap-[65px] sm:gap-9 gap-4">
+                                                        class="w-full h-full grid 1xl:grid-cols-4 sm:grid-cols-3 grid-cols-1 lg:gap-[65px] lt:gap-9 sm:gap-5 gap-4">
                                                         <!-- 1st class -->
-                                                        <div class="bg-whitesmoke-100">
-                                                            <div class="2xl:h-[166px] h-[135px] overflow-hidden">
+                                                        <div class="bg-whitesmoke-100 flex flex-col">
+                                                            <div class="xl:h-[155px] h-[135px] overflow-hidden">
                                                                 <img decoding="async" src="../image/search-class-1.webp"
                                                                     alt="class" class="w-full h-full object-cover" />
                                                             </div>
@@ -2341,8 +2342,8 @@
                                                         </div>
 
                                                         <!-- 2nd class -->
-                                                        <div class="bg-whitesmoke-100">
-                                                            <div class="2xl:h-[166px] h-[135px] overflow-hidden">
+                                                        <div class="bg-whitesmoke-100 flex flex-col">
+                                                            <div class="xl:h-[155px] h-[135px] overflow-hidden">
                                                                 <img decoding="async" src="../image/search-class-2.webp"
                                                                     alt="class" class="w-full h-full object-cover" />
                                                             </div>
@@ -2367,8 +2368,8 @@
                                                         </div>
 
                                                         <!-- 3rd class -->
-                                                        <div class="bg-whitesmoke-100">
-                                                            <div class="2xl:h-[166px] h-[135px] overflow-hidden">
+                                                        <div class="bg-whitesmoke-100 flex flex-col">
+                                                            <div class="xl:h-[155px] h-[135px] overflow-hidden">
                                                                 <img decoding="async" src="../image/search-class-3.webp"
                                                                     alt="class" class="w-full h-full object-cover" />
                                                             </div>
@@ -2447,7 +2448,7 @@
                                         stroke="currentColor" stroke-width="1.5" />
                                 </svg>
                             </a>
-                            <a href="javascript:;" class="btn btn-secondary hidden min-[1221px]:inline-block">login</a>
+                            <a href="./login.html" class="btn btn-secondary hidden min-[1221px]:inline-block">login</a>
                             <button name="mobile-menu-view" aria-label="Open menu"
                                 class="min-[1221px]:hidden flex border-0 bg-transparent">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14"
@@ -2469,7 +2470,7 @@
                 <div
                     class="flex flex-col items-center justify-center lt:max-w-[73%] md:max-w-[90%] max-w-full w-full text-center mx-auto space-y-2.5">
                     <h1 class="uppercase text-primary text-center" data-aos="fade-up">Retreat Detail</h1>
-                    <p data-aos="fade-up" data-aos-delay="150">
+                    <p data-aos="fade-up" >
                         From gentle stretches to dynamic flows, our diverse classes are designed to match your needs.
                         Find your pace, your practice, and your peace-on your terms.
                     </p>
@@ -2654,23 +2655,24 @@
                                 rel="noopener noreferrer" aria-label="Open location in Google Maps"
                                 class="flex items-start 1xl:gap-3 xl:gap-2.5 gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 16 16"
-                                    class="text-primary shrink-0 2xl:w-9 1xl:w-8 xl:w-7 lt:w-6 w-5 h-full 1xl:mt-1.5 sm:mt-1 mt-0.5">
+                                    class="text-primary shrink-0 2xl:w-9 1xl:w-8 xl:w-7 lt:w-6 lg:w-6.5 sm:w-5 w-4.5 h-full 1xl:mt-1.5 sm:mt-1 mt-0.5">
                                     <path fill="currentColor" fill-rule="evenodd"
                                         d="M8 1a5 5 0 0 0-5 5c0 1.14.56 2.488 1.377 3.934c.827 1.463 1.967 3.107 3.216 4.857l.407.57l.407-.57c1.25-1.75 2.389-3.394 3.216-4.857C12.44 8.488 13 7.14 13 6a5 5 0 0 0-5-5m0 2.5a2.5 2.5 0 1 0 0 5a2.5 2.5 0 0 0 0-5"
                                         clip-rule="evenodd" />
                                 </svg>
-                                <p class="font-medium uppercase 2xl:text-20 1xl:text-19 lt:text-16 text-14">
+                                <p class="font-medium uppercase 2xl:text-20 1xl:text-19 lg:text-16 sm:text-14 text-xs">
                                     Satchidananda Ashram, Yogaville Way, Buckingham, VA
                                     23921</p>
                             </a>
                             <a href="tel:+26800859642" class="flex items-center 1xl:gap-3 xl:gap-2.5 gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
-                                    class="text-primary 2xl:w-9 1xl:w-8 xl:w-7 lt:w-6 w-5 h-full 1xl:mt-1.5 sm:mt-1 mt-0.5 shrink-0 ">
+                                    class="text-primary 2xl:w-9 1xl:w-8 xl:w-7 lt:w-6 lg:w-6.5 sm:w-5 w-4.5 h-full 1xl:mt-1.5 sm:mt-1 mt-0.5 shrink-0 ">
                                     <path fill="currentColor"
                                         d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.98.98 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02c-.37-1.11-.56-2.3-.56-3.53c0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99" />
                                 </svg>
-                                <p class="font-medium uppercase 2xl:text-20 1xl:text-19 lt:text-16 text-14">+26 800
-                                    859642</p>
+                                <p class="font-medium uppercase 2xl:text-20 1xl:text-19 lg:text-16 sm:text-14 text-xs">
+                                    +26 800 859642
+                                </p>
                             </a>
                         </div>
                         <a href="./contact-us.html" class="btn btn-secondary 1xl:mb-7 mb-5">book Retreats</a>

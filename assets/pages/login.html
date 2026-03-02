@@ -2204,7 +2204,7 @@
                                     class="sticky bottom-0 top-auto sm:hidden flex items-center justify-between gap-2 bg-white">
                                     <a href="javascript:void(0)" id="openWishlistMobile"
                                         class="btn btn-primary lg:inline-block w-full">Wishlist</a>
-                                    <a href="./login.html" class="btn btn-secondary lg:inline-block w-full">login</a>
+                                    <a href="./account.html" class="btn btn-secondary lg:inline-block w-full">login</a>
                                 </div>
                             </nav>
                         </aside>
@@ -2448,7 +2448,8 @@
                                         stroke="currentColor" stroke-width="1.5" />
                                 </svg>
                             </a>
-                            <a href="./login.html" class="btn btn-secondary hidden min-[1221px]:inline-block">login</a>
+                            <a href="./account.html"
+                                class="btn btn-secondary hidden min-[1221px]:inline-block">login</a>
                             <button name="mobile-menu-view" aria-label="Open menu"
                                 class="min-[1221px]:hidden flex border-0 bg-transparent">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14"
@@ -2463,40 +2464,40 @@
         </header>
         <!-- ====== Header ====== -->
 
-
         <section class="relative 2xl:my-[100px] 1xl:my-20 xl:my-17 lg:my-14 md:my-12 sm:my-11 my-10">
-            <div class="container w-[1480px] mx-auto">
-                <div class="flex items-center 1xl:gap-20 gap-16">
-                    <div class="rounded-sm border border-primary/20 1xl:p-16 p-14 w-full">
-                        <div class="1xl:mb-10 mb-7">
-                            <h3 class="uppercase text-primary mb-2.5">Login</h3>
-                            <p class="font-medium">New user? Create an account.</p>
+            <div class="container 2xl:max-w-[1480px] mx-auto">
+                <div class="flex items-start justify-center gap-20">
+                    <div class="rounded-sm border border-primary/20 1xl:p-16 lg:p-14 lt:p-11 sm:p-8 p-6 w-full">
+                        <div class="mb-5">
+                            <h3 class="uppercase text-primary lg:mb-2.5 mb-2">Login</h3>
+                            <p class="font-medium mb-10">New user? Create an account.</p>
                         </div>
-                        <div class="mb-7">
+                        <div>
                             <form id="book-class-form" class="book-class-form validate-form"
                                 data-popup="booking-success-popup" novalidate>
                                 <!-- email -->
-                                <div class="1xl:mb-5 mb-4">
+                                <div>
                                     <label class="block p lg:mb-2.5 mb-2">Email *</label>
                                     <input type="email" name="email" placeholder="your@email.com"
                                         class="w-full type-filed p2 placeholder:text-thunder-100/35 bg-white border-primary/20! focus:border-primary active:border-primary"
                                         required>
                                 </div>
 
-                                <div class="relative 1xl:mb-7 mb-6">
-                                    <label class="block p lg:mb-2.5 mb-2">Password *</label>
+                                <div class="relative">
+                                    <label class="block p lg:mb-2.5 mb-2">Password*</label>
                                     <div class="relative">
 
-                                        <input type="password" name="password" placeholder="Enter password"
+                                        <input type="password" name="password" placeholder="Enter Your Password"
                                             class="w-full type-filed p2 pr-12 placeholder:text-thunder-100/35 bg-white border-primary/20! focus:border-primary active:border-primary password-input"
                                             required>
 
                                         <!-- Eye Icon -->
                                         <span
-                                            class="password-toggle absolute right-4 top-5 cursor-pointer text-primary">
+                                            class="password-toggle absolute right-4 1xl:top-5 lg:top-4.5 top-3.5 cursor-pointer text-primary">
                                             <!-- Eye (visible) -->
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15"
-                                                viewBox="0 0 20 15" fill="none" class="eye-open">
+                                                viewBox="0 0 20 15" fill="none"
+                                                class="eye-open lg:w-5 lg:h-4 w-4.5 h-3.5">
                                                 <path
                                                     d="M19.8661 6.96401C19.2263 5.77555 15.7077 -0.188155 9.73011 0.00456762C4.2023 0.154463 1.00358 5.35798 0.133921 6.96401C0.046188 7.12677 0 7.3114 0 7.49935C0 7.68729 0.046188 7.87192 0.133921 8.03469C0.763671 9.20173 4.13233 14.9941 10.02 14.9941H10.2699C15.7977 14.8442 19.0064 9.64071 19.8661 8.03469C19.9538 7.87192 20 7.68729 20 7.49935C20 7.3114 19.9538 7.12677 19.8661 6.96401ZM10.2199 12.8528C5.91163 12.9598 3.10274 9.00901 2.22309 7.49935C3.22269 5.77555 5.83166 2.253 9.83007 2.14593C14.1184 2.02816 16.9372 5.98968 17.8269 7.49935C16.7973 9.22315 14.2183 12.7457 10.2199 12.8528Z"
                                                     fill="#2D2D2D" />
@@ -2507,7 +2508,8 @@
 
                                             <!-- Eye Slash (hidden) -->
                                             <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg" class="eye-closed hidden">
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                class="eye-closed hidden lg:w-5 lg:h-4.5 w-4.5 h-4">
                                                 <path
                                                     d="M19.8661 7.84486C19.2263 6.65641 15.7077 0.692704 9.73011 0.885427C4.2023 1.03532 1.00358 6.23884 0.133921 7.84486C0.046188 8.00763 0 8.19226 0 8.38021C0 8.56815 0.046188 8.75278 0.133921 8.91555C0.763671 10.0826 4.13233 15.875 10.02 15.875H10.2699C15.7977 15.7251 19.0064 10.5216 19.8661 8.91555C19.9538 8.75278 20 8.56815 20 8.38021C20 8.19226 19.9538 8.00763 19.8661 7.84486ZM10.2199 13.7336C5.91163 13.8407 3.10274 9.88987 2.22309 8.38021C3.22269 6.65641 5.83166 3.13386 9.83007 3.02679C14.1184 2.90902 16.9372 6.87054 17.8269 8.38021C16.7973 10.104 14.2183 13.6265 10.2199 13.7336Z"
                                                     fill="#2D2D2D" />
@@ -2522,56 +2524,53 @@
                                     </div>
                                 </div>
 
-                                <div class="flex items-center justify-between w-full 1xl:mb-12.5 mb-8">
+                                <div class="flex items-center justify-between gap-2">
                                     <div class="flex items-center gap-2.5">
                                         <input type="checkbox" id="condition" name="condition"
-                                            class="accent-primary cursor-pointer size-5 shrink-0" />
+                                            class="accent-primary cursor-pointer 1xl:size-7 xl:size-6.5 lg:size-6 size-5 shrink-0" />
                                         <label for="condition" class="p2 cursor-pointer">
-                                            Remember me
+                                            I agree to the terms & conditions and studio policy.
                                         </label>
                                     </div>
-                                    <div>
-                                        <a href="./forgot-password.html"
-                                            class="underline opacity-50 hover:opacity-100">Forget
-                                            password</a>
-                                    </div>
                                 </div>
-                                <button type="submit" class="btn btn-secondary">Login</button>
+
+                                <button type="submit" class="btn btn-secondary 1xl:mt-12.5 lg:mt-8 mt-6">Log in</button>
                             </form>
                         </div>
                     </div>
 
-                    <div class="rounded-sm border border-primary/20 1xl:p-16 p-14 w-full">
-                        <div class="1xl:mb-10 mb-7">
-                            <h3 class="uppercase text-primary mb-2.5">register</h3>
-                            <p class="font-medium">Join us — create your account.</p>
-                        </div>
 
-                        <div class="mb-7">
+                    <div class="rounded-sm border border-primary/20 1xl:p-16 lg:p-14 lt:p-11 sm:p-8 p-6 w-full">
+                        <div class="mb-5">
+                            <h3 class="uppercase text-primary lg:mb-2.5 mb-2">register</h3>
+                            <p class="font-medium mb-10">Join us — create your account.</p>
+                        </div>
+                        <div>
                             <form id="book-class-form" class="book-class-form validate-form"
                                 data-popup="booking-success-popup" novalidate>
                                 <!-- email -->
-                                <div class="1xl:mb-5 mb-4">
+                                <div>
                                     <label class="block p lg:mb-2.5 mb-2">Email *</label>
                                     <input type="email" name="email" placeholder="your@email.com"
                                         class="w-full type-filed p2 placeholder:text-thunder-100/35 bg-white border-primary/20! focus:border-primary active:border-primary"
                                         required>
                                 </div>
 
-                                <div class="relative 1xl:mb-7 mb-6">
-                                    <label class="block p lg:mb-2.5 mb-2">Password *</label>
+                                <div class="relative">
+                                    <label class="block p lg:mb-2.5 mb-2">Password*</label>
                                     <div class="relative">
 
-                                        <input type="password" name="password" placeholder="Enter password"
+                                        <input type="password" name="password" placeholder="Enter Your Password"
                                             class="w-full type-filed p2 pr-12 placeholder:text-thunder-100/35 bg-white border-primary/20! focus:border-primary active:border-primary password-input"
                                             required>
 
                                         <!-- Eye Icon -->
                                         <span
-                                            class="password-toggle absolute right-4 top-5 cursor-pointer text-primary">
+                                            class="password-toggle absolute right-4 1xl:top-5 lg:top-4.5 top-3.5 cursor-pointer text-primary">
                                             <!-- Eye (visible) -->
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15"
-                                                viewBox="0 0 20 15" fill="none" class="eye-open">
+                                                viewBox="0 0 20 15" fill="none"
+                                                class="eye-open lg:w-5 lg:h-4 w-4.5 h-3.5">
                                                 <path
                                                     d="M19.8661 6.96401C19.2263 5.77555 15.7077 -0.188155 9.73011 0.00456762C4.2023 0.154463 1.00358 5.35798 0.133921 6.96401C0.046188 7.12677 0 7.3114 0 7.49935C0 7.68729 0.046188 7.87192 0.133921 8.03469C0.763671 9.20173 4.13233 14.9941 10.02 14.9941H10.2699C15.7977 14.8442 19.0064 9.64071 19.8661 8.03469C19.9538 7.87192 20 7.68729 20 7.49935C20 7.3114 19.9538 7.12677 19.8661 6.96401ZM10.2199 12.8528C5.91163 12.9598 3.10274 9.00901 2.22309 7.49935C3.22269 5.77555 5.83166 2.253 9.83007 2.14593C14.1184 2.02816 16.9372 5.98968 17.8269 7.49935C16.7973 9.22315 14.2183 12.7457 10.2199 12.8528Z"
                                                     fill="#2D2D2D" />
@@ -2582,7 +2581,8 @@
 
                                             <!-- Eye Slash (hidden) -->
                                             <svg width="20" height="18" viewBox="0 0 20 18" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg" class="eye-closed hidden">
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                class="eye-closed hidden lg:w-5 lg:h-4.5 w-4.5 h-4">
                                                 <path
                                                     d="M19.8661 7.84486C19.2263 6.65641 15.7077 0.692704 9.73011 0.885427C4.2023 1.03532 1.00358 6.23884 0.133921 7.84486C0.046188 8.00763 0 8.19226 0 8.38021C0 8.56815 0.046188 8.75278 0.133921 8.91555C0.763671 10.0826 4.13233 15.875 10.02 15.875H10.2699C15.7977 15.7251 19.0064 10.5216 19.8661 8.91555C19.9538 8.75278 20 8.56815 20 8.38021C20 8.19226 19.9538 8.00763 19.8661 7.84486ZM10.2199 13.7336C5.91163 13.8407 3.10274 9.88987 2.22309 8.38021C3.22269 6.65641 5.83166 3.13386 9.83007 3.02679C14.1184 2.90902 16.9372 6.87054 17.8269 8.38021C16.7973 10.104 14.2183 13.6265 10.2199 13.7336Z"
                                                     fill="#2D2D2D" />
@@ -2597,16 +2597,8 @@
                                     </div>
                                 </div>
 
-                                <div class="flex items-center justify-between w-full 1xl:mb-12.5 mb-8">
-                                    <div class="flex items-center gap-2.5">
-                                        <input type="checkbox" id="condition" name="condition"
-                                            class="accent-primary cursor-pointer size-5 shrink-0" />
-                                        <label for="condition" class="p2 cursor-pointer">
-                                            I agree to the Terms & Conditions
-                                        </label>
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn btn-secondary">Create Account</button>
+                                <button type="submit" class="btn btn-secondary 1xl:mt-12.5 lg:mt-8 mt-6">Create
+                                    Account</button>
                             </form>
                         </div>
                     </div>
@@ -2614,11 +2606,7 @@
             </div>
         </section>
 
-
     </main>
-
-
-
 
     <!-- ====== Footer ====== -->
     <footer>

@@ -2246,8 +2246,8 @@ $(document).ready(function () {
      CACHE POPUPS
   =============================== */
   const $orderPopup = $('#orderPopup');
-  const $cancelPopup = $('#cancelClassPopup');   // dashboard classes cancel
-  const $successPopup = $('#successClassPopup'); // dashboard classes success
+  const $cancelPopup = $('#cancelClassPopup');
+  const $successPopup = $('#successClassPopup');
   const $membershipPopup = $('#membershipPopup');
   const $billingPopup = $('#billingHistoryPopup');
   const $autoPaymentPopup = $('#autoPaymentPopup');
@@ -2435,9 +2435,7 @@ $(document).ready(function () {
   =============================== */
   $(document).on('click', '#submitCancel', function (e) {
     e.preventDefault();
-
     openPopup($successPopup);
-
     setTimeout(function () {
       closeAllPopups();
     }, 3000);
@@ -2446,9 +2444,7 @@ $(document).ready(function () {
 
 // ADD ADDRESS DETAIL
 $(document).ready(function () {
-
   $('#addAddress').on('click', function () {
-
     let count = $('.address-block').length + 1;
 
     // clone first address block
@@ -2473,7 +2469,6 @@ $(document).ready(function () {
         </button>
       `);
     }
-
     $('#addressWrapper').append($clone);
   });
 
@@ -2481,16 +2476,10 @@ $(document).ready(function () {
   $(document).on('click', '.removeAddress', function () {
     $(this).closest('.address-block').remove();
   });
-
 });
 
 
 $(document).ready(function () {
-
-  /* ================================
-     PROFILE IMAGE CHANGE (PENCIL / IMAGE CLICK)
-     ================================ */
-
   // Open file chooser on image OR pencil click
   $('#editProfileImg, #profilePreview').on('click', function () {
     $('#profileImageInput').trigger('click');
@@ -2516,10 +2505,7 @@ $(document).ready(function () {
     };
     reader.readAsDataURL(file);
   });
-
 });
-
-
 
 // PASSWORD SHOW/HIDE
 $(document).on('click', '.password-toggle', function () {
@@ -2527,12 +2513,91 @@ $(document).on('click', '.password-toggle', function () {
   const $input = $wrapper.siblings('.password-input');
 
   if ($input.attr('type') === 'password') {
-      $input.attr('type', 'text');
-      $wrapper.find('.eye-open').addClass('hidden');
-      $wrapper.find('.eye-closed').removeClass('hidden');
+    $input.attr('type', 'text');
+    $wrapper.find('.eye-open').addClass('hidden');
+    $wrapper.find('.eye-closed').removeClass('hidden');
   } else {
-      $input.attr('type', 'password');
-      $wrapper.find('.eye-closed').addClass('hidden');
-      $wrapper.find('.eye-open').removeClass('hidden');
+    $input.attr('type', 'password');
+    $wrapper.find('.eye-closed').addClass('hidden');
+    $wrapper.find('.eye-open').removeClass('hidden');
+  }
+});
+
+// REPLY FORM OPEN ON REPLY BUTTON 
+$(document).ready(function () {
+
+  let activeReplyForm = null;
+  let activeReplyBtn = null;
+
+  $(".reply-btn").on("click", function () {
+
+    // If clicking the same reply button → toggle close
+    if (activeReplyBtn && activeReplyBtn.is(this)) {
+      activeReplyForm.stop(true, true).slideUp(250, function () {
+        $(this).remove();
+      });
+      activeReplyForm = null;
+      activeReplyBtn = null;
+      return;
+    }
+
+    // Close existing form if opened elsewhere
+    if (activeReplyForm) {
+      activeReplyForm.stop(true, true).slideUp(250, function () {
+        $(this).remove();
+      });
+    }
+
+    // Clone form
+    const replyForm = $("#inlineReplyTemplate .reply-form").clone();
+    replyForm.hide();
+
+    // Append under current comment
+    $(this)
+      .closest(".1xl\\:pl-18\\.5, .lg\\:pl-18, .sm\\:pl-17")
+      .append(replyForm);
+
+    // Animate open
+    replyForm
+      .stop(true, true)
+      .slideDown(300)
+      .animate({ opacity: 1 }, { queue: false, duration: 300 });
+
+    activeReplyForm = replyForm;
+    activeReplyBtn = $(this);
+
+    // Focus textarea
+    setTimeout(() => {
+      replyForm.find("textarea").focus();
+    }, 350);
+  });
+
+  // Cancel button behavior
+  $(document).on("click", ".cancel-reply", function () {
+    $(this).closest(".reply-form").stop(true, true).slideUp(250, function () {
+      $(this).remove();
+    });
+    activeReplyForm = null;
+    activeReplyBtn = null;
+  });
+});
+
+
+
+// image uoload name color change
+$(document).on('change', '.file-input', function () {
+  const $upload = $(this).closest('.file-upload');
+  const $fileName = $upload.find('.file-name');
+
+  if (this.files && this.files.length) {
+      $fileName
+          .text(this.files[0].name)
+          .removeClass('text-thunder-100/35')
+          .addClass('text-thunder-100');
+  } else {
+      $fileName
+          .text('No chosen file')
+          .removeClass('text-thunder-100')
+          .addClass('text-thunder-100/35');
   }
 });

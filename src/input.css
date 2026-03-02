@@ -1670,3 +1670,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
   overflow: hidden;
   height: 100vh;
 }
+
+.file-upload .error-msg {
+  @apply absolute 2xl:top-15 1xl:top-14 md:top-13 top-11 left-0;
+}

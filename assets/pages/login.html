@@ -2466,11 +2466,11 @@
 
         <section class="relative 2xl:my-[100px] 1xl:my-20 xl:my-17 lg:my-14 md:my-12 sm:my-11 my-10">
             <div class="container 2xl:max-w-[1480px] mx-auto">
-                <div class="flex items-start justify-center gap-20">
+                <div class="flex md:flex-row flex-col items-start justify-center 2xl:gap-20 1xl:gap-18 xl:gap-16 lt:gap-14 sm:gap-8 gap-5">
                     <div class="rounded-sm border border-primary/20 1xl:p-16 lg:p-14 lt:p-11 sm:p-8 p-6 w-full">
                         <div class="mb-5">
                             <h3 class="uppercase text-primary lg:mb-2.5 mb-2">Login</h3>
-                            <p class="font-medium mb-10">New user? Create an account.</p>
+                            <p class="font-medium 2xl:mb-10 1xl:mb-8 mb-6">New user? Create an account.</p>
                         </div>
                         <div>
                             <form id="book-class-form" class="book-class-form validate-form"
@@ -2524,14 +2524,17 @@
                                     </div>
                                 </div>
 
-                                <div class="flex items-center justify-between gap-2">
+                                <div class="flex flex-wrap items-center justify-between gap-2 1xl:mt-7 mt-5">
                                     <div class="flex items-center gap-2.5">
-                                        <input type="checkbox" id="condition" name="condition"
-                                            class="accent-primary cursor-pointer 1xl:size-7 xl:size-6.5 lg:size-6 size-5 shrink-0" />
-                                        <label for="condition" class="p2 cursor-pointer">
-                                            I agree to the terms & conditions and studio policy.
+                                        <input type="checkbox" id="remember" name="remember"
+                                            class="accent-primary cursor-pointer size-5 shrink-0" />
+                                        <label for="remember" class="p2 cursor-pointer">
+                                            Remember me
                                         </label>
                                     </div>
+
+                                    <a href="./forgot-password.html" class="opacity-50 p hover:opacity-100 underline">Forget
+                                        password</a>
                                 </div>
 
                                 <button type="submit" class="btn btn-secondary 1xl:mt-12.5 lg:mt-8 mt-6">Log in</button>
@@ -2543,7 +2546,7 @@
                     <div class="rounded-sm border border-primary/20 1xl:p-16 lg:p-14 lt:p-11 sm:p-8 p-6 w-full">
                         <div class="mb-5">
                             <h3 class="uppercase text-primary lg:mb-2.5 mb-2">register</h3>
-                            <p class="font-medium mb-10">Join us — create your account.</p>
+                            <p class="font-medium 2xl:mb-10 1xl:mb-8 mb-6">Join us — create your account.</p>
                         </div>
                         <div>
                             <form id="book-class-form" class="book-class-form validate-form"
@@ -2594,6 +2597,16 @@
                                             </svg>
 
                                         </span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-wrap items-center justify-between gap-2 1xl:mt-7 mt-5">
+                                    <div class="flex items-center gap-2.5">
+                                        <input type="checkbox" id="terms" name="terms"
+                                            class="accent-primary cursor-pointer size-5 shrink-0" />
+                                        <label for="terms" class="p2 cursor-pointer">
+                                            I agree to the Terms & Conditions
+                                        </label>
                                     </div>
                                 </div>
 

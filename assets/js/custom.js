@@ -2189,8 +2189,6 @@ $(document).ready(function () {
   renderPagination();
 });
 
-
-
 // DASHBOARD PAGE TURN 
 $(document).ready(function () {
   $('.view-order').on('click', function () {
